@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Next on DanaCoding</title>
+    <link>https://danacoding.github.io/react/next/</link>
+    <description>Recent content in Next on DanaCoding</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <copyright>&amp;copy;{year}, DanaCoding</copyright>
+    <lastBuildDate>Tue, 28 Jan 2020 00:34:39 +0900</lastBuildDate>
+    
+        <atom:link href="https://danacoding.github.io/react/next/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>Next 基础</title>
+        <link>https://danacoding.github.io/react/next/base/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react/next/base/</guid>
+        <description>一、创建 Next.js 应用 yarn create next-app --typescript // 命名为 next-app-bronze yarn dev 二、路由（文件系统路由, pages中的文件） Step1. 创建新页面 pages/posts/first-post.tsx export default function FirstPost() { return &amp;lt;h1&amp;gt;First Post&amp;lt;/h1&amp;gt; } 通过 http://localhost:3000/posts/first-post 访问 Step2. 在页面之间导航 &amp;lt;Link</description>
+      </item>
+      
+    
+  </channel>
+</rss>
