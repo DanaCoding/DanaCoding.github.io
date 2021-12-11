@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PHP on DanaCoding</title>
+    <link>https://danacoding.github.io/others/php/</link>
+    <description>Recent content in PHP on DanaCoding</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <copyright>&amp;copy;{year}, DanaCoding</copyright>
+    <lastBuildDate>Tue, 28 Jan 2020 00:34:39 +0900</lastBuildDate>
+    
+        <atom:link href="https://danacoding.github.io/others/php/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>IIS PHP</title>
+        <link>https://danacoding.github.io/others/php/iis/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/others/php/iis/</guid>
+        <description>Windows Server 2012 R2 x64 IIS服务器 PHP环境搭建 阿里云服务器ECS Windows Server 2012 R2 64位中文标准版下手动搭建PHP环境。 IIS8.5 + MySQL5.6.15 + PHP5.5.19 + FastCGI + phpMyAdmin4.2.12 特别注意：服务器内存不</description>
+      </item>
+      
+    
+  </channel>
+</rss>

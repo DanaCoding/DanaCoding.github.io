@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Collect.js &amp; Ramda.js on DanaCoding</title>
+    <link>https://danacoding.github.io/javascript/collect-ramda.md/</link>
+    <description>Recent content in Collect.js &amp; Ramda.js on DanaCoding</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <copyright>&amp;copy;{year}, DanaCoding</copyright>
+    <lastBuildDate>Tue, 28 Jan 2020 00:34:39 +0900</lastBuildDate>
+    
+        <atom:link href="https://danacoding.github.io/javascript/collect-ramda.md/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>最佳实践</title>
+        <link>https://danacoding.github.io/javascript/collect-ramda.md/bp/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/javascript/collect-ramda.md/bp/</guid>
+        <description>collect.js &amp;amp; ramda（ 处理数组和对象的好帮手 ） Step1. 安装 yarn add collect.js yarn add ramda Step2. 导入 import collect from &#39;collect.js&#39; import * as R from &#39;ramda&#39; Step.3 （项目实例，用来渲染多屏，每屏里面有 8 张卡片） 使用 collect.js 示</description>
+      </item>
+      
+    
+  </channel>
+</rss>
