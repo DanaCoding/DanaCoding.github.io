@@ -20,7 +20,7 @@
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/javascript/collect-ramda.md/bp/</guid>
-        <description>collect.js &amp;amp; ramda（ 处理数组和对象的好帮手 ） Step1. 安装 yarn add collect.js yarn add ramda Step2. 导入 import collect from &#39;collect.js&#39; import * as R from &#39;ramda&#39; Step.3 （项目实例，用来渲染多屏，每屏里面有 8 张卡片） 使用 collect.js 示</description>
+        <description>collect.js &amp;amp; ramda（ 处理数组和对象的好帮手 ） Step1. 安装 yarn add collect.js yarn add ramda Step2. 导入 import collect from &#39;collect.js&#39; import * as R from &#39;ramda&#39; Step3. （项目实例，用来渲染多屏，每屏里面有 8 张卡片） 使用 collect.js 示</description>
       </item>
       
     
