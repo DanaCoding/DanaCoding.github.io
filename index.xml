@@ -191,6 +191,15 @@
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/others/webpack/webpack-base/</guid>
+        <description>一、入口 （entry） #.单个入口（简写/数组）语法 用法：entry: string | [string] 优缺点：通过一个入口（例如一个库）为应用程序设置 webpack 配置时，单一入</description>
+      </item>
+      
+      <item>
+        <title>webpack 实践</title>
+        <link>https://danacoding.github.io/others/webpack/webpack-adv/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/others/webpack/webpack-adv/</guid>
         <description>静态网站，多个html页面（非SPA），WebPack配置 (基础篇) Step1. 初始化项目 mkdir multiple-htmlpages &amp;amp;&amp;amp; cd multiple-htmlpages yarn init yarn add -D webpack webpack-cli webpack-dev-server html-webpack-plugin mkdir src &amp;amp;&amp;amp; cd src echo &amp;gt;index.html echo &amp;gt;index.js //index</description>
       </item>
       
@@ -285,6 +294,15 @@
       </item>
       
       <item>
+        <title>Win &#43; Office</title>
+        <link>https://danacoding.github.io/others/windows/win-office/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/others/windows/win-office/</guid>
+        <description>操作系统 系统激活 Office激活 U盘系统安装：</description>
+      </item>
+      
+      <item>
         <title>Remix 进阶（待完善）</title>
         <link>https://danacoding.github.io/react/remix/remix-adv/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -294,12 +312,30 @@
       </item>
       
       <item>
+        <title>yarn 最佳实践</title>
+        <link>https://danacoding.github.io/others/yarn/yarn-bp/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/others/yarn/yarn-bp/</guid>
+        <description>一、全局配置yarn Step1. 获取yarn的安装位置 yarn global bin Step2. 配置yarn全局变量</description>
+      </item>
+      
+      <item>
         <title>Storybook 基础</title>
         <link>https://danacoding.github.io/react/storybook/sb-base/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/react/storybook/sb-base/</guid>
         <description>一、安装配置 在next.js项目中执行 npx sb init yarn storybook .storybook/preview.js 为 Storybook 配置 Next.js Images + import * as NextImage from &amp;quot;next/image&amp;quot;; + const OriginalNextImage = NextImage.default; + Object.defineProperty(NextImage, &amp;quot;default&amp;quot;, { configurable: true, value: (props) =&amp;gt; ( &amp;lt;OriginalNextImage {...props} unoptimized /&amp;gt; ), }); package.json 为 Storybook 提供 Next.js 公共目录 {</description>
+      </item>
+      
+      <item>
+        <title>右键添加cmd和psl窗口命令</title>
+        <link>https://danacoding.github.io/others/cmd/cmdpsl/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/others/cmd/cmdpsl/</guid>
+        <description>直接新建txt，粘贴进去保存，然后选择另存为，保存类型选所有文件、编码选ANSI、文件名为CmdAndPowershellAll.reg(名</description>
       </item>
       
       <item>
