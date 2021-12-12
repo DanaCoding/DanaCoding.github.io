@@ -138,7 +138,17 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/react-native/expo/base/</loc>
+    <loc>https://danacoding.github.io/jsts/cr/cr/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/others/cors/cors/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react-native/expo/expo-base/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -158,42 +168,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/others/git/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/others/git/bp/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/react/hooks/bp/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/others/php/iis/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/javascript/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/javascript/javascript/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/javascript/javascript/bp/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/react/next/base/</loc>
+    <loc>https://danacoding.github.io/jsts/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -208,17 +183,12 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/others/php/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://danacoding.github.io/react/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/react/react/</loc>
+    <loc>https://danacoding.github.io/react/react/react-bp/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -233,37 +203,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/react-native/react-native/base/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/react/react/bp/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/react/recoil/bp/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/react/remix/base/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/react/storybook/base/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/javascript/typescript/bp/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/javascript/typescript/</loc>
+    <loc>https://danacoding.github.io/react-native/react-native/rn-base/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -273,27 +213,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/react-native/ui/ui-kitten/base/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/nodejs/webpack/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/nodejs/webpack/bp/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/react/zustand/base/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/javascript/collect-ramda.md/bp/</loc>
+    <loc>https://danacoding.github.io/react-native/ui/ui-kitten/kitten-base/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -318,32 +238,32 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/react-native/expo/bp/</loc>
+    <loc>https://danacoding.github.io/react-native/expo/expo-bp/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/react/hooks/</loc>
+    <loc>https://danacoding.github.io/react/hooks/hooks-bp/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/react-native/react-native/bp/</loc>
+    <loc>https://danacoding.github.io/react-native/react-native/rn-bp/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/react/remix/adv/</loc>
+    <loc>https://danacoding.github.io/react-native/ui/ui-kitten/kitten-bp/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/react-native/ui/ui-kitten/bp/</loc>
+    <loc>https://danacoding.github.io/others/webpack/webpack-base/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/javascript/collect-ramda.md/</loc>
+    <loc>https://danacoding.github.io/others/git/git-bp/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -363,7 +283,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/react/zustand/</loc>
+    <loc>https://danacoding.github.io/react/zustand/zustand-base/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -373,12 +293,22 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/react/recoil/</loc>
+    <loc>https://danacoding.github.io/others/php/iisphp/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/react/next/</loc>
+    <loc>https://danacoding.github.io/react/recoil/recoil-bp/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react/next/next-base/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react/remix/remix-base/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -388,12 +318,12 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/react/remix/</loc>
+    <loc>https://danacoding.github.io/react/remix/remix-adv/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/react/storybook/</loc>
+    <loc>https://danacoding.github.io/react/storybook/sb-base/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   

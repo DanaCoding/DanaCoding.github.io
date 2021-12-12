@@ -96,183 +96,111 @@
       </item>
       
       <item>
-        <title>Expo 基础</title>
-        <link>https://danacoding.github.io/react-native/expo/base/</link>
+        <title>Collect &amp; Ramda</title>
+        <link>https://danacoding.github.io/jsts/cr/cr/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/react-native/expo/base/</guid>
-        <description>一、运行设备 Expo客户端App 浏览器 模拟器(使用genymotion) 下载并安装 Android Studio 3.0+ 在Android Studio中，转到首选项&amp;gt;外</description>
-      </item>
-      
-      <item>
-        <title>Git 最佳实践</title>
-        <link>https://danacoding.github.io/others/git/bp/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/others/git/bp/</guid>
-        <description>1. git clone/git pull/git push 报错 fatal: unable to access &amp;lsquo;https://github.com/mofengfs/baorun.co.git/&#39;: OpenSSL SSL_connect: Connection was reset in connection to github.com:443 解决办法：这个办法可以让git速度更快。 git config --global --add remote.origin.proxy &amp;quot;127.0.0.1:(proxy http port number)&amp;quot; //我的是 git config --global --add remote.origin.proxy &amp;quot;127.0.0.1:1080&amp;quot; 2. ! [rejected] main -&amp;gt; main (fetch first) 由</description>
-      </item>
-      
-      <item>
-        <title>Hooks最佳实践</title>
-        <link>https://danacoding.github.io/react/hooks/bp/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/react/hooks/bp/</guid>
-        <description>Hooks最佳实践</description>
-      </item>
-      
-      <item>
-        <title>IIS PHP</title>
-        <link>https://danacoding.github.io/others/php/iis/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/others/php/iis/</guid>
-        <description>Windows Server 2012 R2 x64 IIS服务器 PHP环境搭建 阿里云服务器ECS Windows Server 2012 R2 64位中文标准版下手动搭建PHP环境。 IIS8.5 + MySQL5.6.15 + PHP5.5.19 + FastCGI + phpMyAdmin4.2.12 特别注意：服务器内存不</description>
-      </item>
-      
-      <item>
-        <title>JS最佳实践</title>
-        <link>https://danacoding.github.io/javascript/javascript/bp/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/javascript/javascript/bp/</guid>
-        <description>JS最佳实践</description>
-      </item>
-      
-      <item>
-        <title>Next 基础</title>
-        <link>https://danacoding.github.io/react/next/base/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/react/next/base/</guid>
-        <description>一、创建 Next.js 应用 yarn create next-app --typescript // 命名为 next-app-bronze yarn dev 二、路由（文件系统路由, pages中的文件） Step1. 创建新页面 pages/posts/first-post.tsx export default function FirstPost() { return &amp;lt;h1&amp;gt;First Post&amp;lt;/h1&amp;gt; } 通过 http://localhost:3000/posts/first-post 访问 Step2. 在页面之间导航 &amp;lt;Link</description>
-      </item>
-      
-      <item>
-        <title>React-Native 基础</title>
-        <link>https://danacoding.github.io/react-native/react-native/base/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/react-native/react-native/base/</guid>
-        <description>开发平台：Windows 目标平台：Android ReactNative 版本：0.62.2 一、安装依赖 Node (&amp;gt;=12) Python2 (Windows x86 MSI installer) Java SE Development Kit (JDK) (1.8 版本) 注意：要最新版本，要时常更新</description>
-      </item>
-      
-      <item>
-        <title>React最佳实践</title>
-        <link>https://danacoding.github.io/react/react/bp/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/react/react/bp/</guid>
-        <description>React最佳实践</description>
-      </item>
-      
-      <item>
-        <title>Recoil 最佳实践</title>
-        <link>https://danacoding.github.io/react/recoil/bp/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/react/recoil/bp/</guid>
-        <description>Recoil 是 React 官方 meta (facebook) 官方实验室的状态管理库，贴合 React hooks，自由度很高，所以要在项目中做一些规范，以便提供最佳的实践。 官方文档有对核心概念的解释</description>
-      </item>
-      
-      <item>
-        <title>Remix 基础</title>
-        <link>https://danacoding.github.io/react/remix/base/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/react/remix/base/</guid>
-        <description>一、创建 Remix 应用 npx create-remix@latest yarn dev 二、创建文件路由 app/root.tsx Layout 组件中 &amp;lt;li&amp;gt; &amp;lt;Link to=&amp;quot;/posts&amp;quot;&amp;gt;Posts&amp;lt;/Link&amp;gt; &amp;lt;/li&amp;gt; 创建 app/routes/posts/index.tsx export default function Posts() { return ( &amp;lt;div&amp;gt; &amp;lt;h1&amp;gt;Posts&amp;lt;/h1&amp;gt; &amp;lt;/div&amp;gt; ) } 三、加载数据 Remix 的路由文件相当于后端的模板视图，也是控制</description>
-      </item>
-      
-      <item>
-        <title>Storybook 基础</title>
-        <link>https://danacoding.github.io/react/storybook/base/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/react/storybook/base/</guid>
-        <description>一、安装配置 在next.js项目中执行 npx sb init yarn storybook .storybook/preview.js 为 Storybook 配置 Next.js Images + import * as NextImage from &amp;quot;next/image&amp;quot;; + const OriginalNextImage = NextImage.default; + Object.defineProperty(NextImage, &amp;quot;default&amp;quot;, { configurable: true, value: (props) =&amp;gt; ( &amp;lt;OriginalNextImage {...props} unoptimized /&amp;gt; ), }); package.json 为 Storybook 提供 Next.js 公共目录 {</description>
-      </item>
-      
-      <item>
-        <title>TS最佳实践</title>
-        <link>https://danacoding.github.io/javascript/typescript/bp/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/javascript/typescript/bp/</guid>
-        <description>TS最佳实践</description>
-      </item>
-      
-      <item>
-        <title>UI-Kitten 基础</title>
-        <link>https://danacoding.github.io/react-native/ui/ui-kitten/base/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/react-native/ui/ui-kitten/base/</guid>
-        <description>一、安装 //确保已安装 React Native CLI npm un -g react-native-cli &amp;amp;&amp;amp; npm i -g @react-native-community/cli //用 Kitten 模板创建新项目 npx react-native init MyApp --template @ui-kitten/template-js //启动应用 yarn android 二、配置路由（配置应用程序在屏幕之间导航，基</description>
-      </item>
-      
-      <item>
-        <title>webpack 基础</title>
-        <link>https://danacoding.github.io/nodejs/webpack/bp/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/nodejs/webpack/bp/</guid>
-        <description>静态网站，多个html页面（非SPA），WebPack配置 (基础篇) Step1. 初始化项目 mkdir multiple-htmlpages &amp;amp;&amp;amp; cd multiple-htmlpages yarn init yarn add -D webpack webpack-cli webpack-dev-server html-webpack-plugin mkdir src &amp;amp;&amp;amp; cd src echo &amp;gt;index.html echo &amp;gt;index.js //index</description>
-      </item>
-      
-      <item>
-        <title>zustand 精炼文档</title>
-        <link>https://danacoding.github.io/react/zustand/base/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/react/zustand/base/</guid>
-        <description>zustand 基于 hooks 的 api，小型、快速且可扩展的状态管理解决方案。 一、安装 yarn add zustand 二、最简使用方法 Step1. 创建一个 Store import create from &#39;zustand&#39; const useCount = create(set =&amp;gt; ({ count: 0, plus: () =&amp;gt; set(state =&amp;gt; ({ count: state.count +</description>
-      </item>
-      
-      <item>
-        <title>最佳实践</title>
-        <link>https://danacoding.github.io/javascript/collect-ramda.md/bp/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/javascript/collect-ramda.md/bp/</guid>
+        <guid>https://danacoding.github.io/jsts/cr/cr/</guid>
         <description>collect.js &amp;amp; ramda（ 处理数组和对象的好帮手 ） Step1. 安装 yarn add collect.js yarn add ramda Step2. 导入 import collect from &#39;collect.js&#39; import * as R from &#39;ramda&#39; Step3. （项目实例，用来渲染多屏，每屏里面有 8 张卡片） 使用 collect.js 示</description>
       </item>
       
       <item>
-        <title>Expo 最佳实践</title>
-        <link>https://danacoding.github.io/react-native/expo/bp/</link>
+        <title>CORS 跨域资源共享</title>
+        <link>https://danacoding.github.io/others/cors/cors/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/react-native/expo/bp/</guid>
+        <guid>https://danacoding.github.io/others/cors/cors/</guid>
+        <description>CORS (跨域资源共享)，它是浏览器获取内容的方式的一部分。 一、没有 CORS 的跨域访问存在不安全问题 这不是我们的错，只能说这是WEB技术发展的历史问题 &amp;lt;script</description>
+      </item>
+      
+      <item>
+        <title>Expo 基础</title>
+        <link>https://danacoding.github.io/react-native/expo/expo-base/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react-native/expo/expo-base/</guid>
+        <description>一、运行设备 Expo客户端App 浏览器 模拟器(使用genymotion) 下载并安装 Android Studio 3.0+ 在Android Studio中，转到首选项&amp;gt;外</description>
+      </item>
+      
+      <item>
+        <title>React 最佳实践</title>
+        <link>https://danacoding.github.io/react/react/react-bp/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react/react/react-bp/</guid>
+        <description>React 最佳实践</description>
+      </item>
+      
+      <item>
+        <title>React-Native 基础</title>
+        <link>https://danacoding.github.io/react-native/react-native/rn-base/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react-native/react-native/rn-base/</guid>
+        <description>开发平台：Windows 目标平台：Android ReactNative 版本：0.62.2 一、安装依赖 Node (&amp;gt;=12) Python2 (Windows x86 MSI installer) Java SE Development Kit (JDK) (1.8 版本) 注意：要最新版本，要时常更新</description>
+      </item>
+      
+      <item>
+        <title>UI-Kitten 基础</title>
+        <link>https://danacoding.github.io/react-native/ui/ui-kitten/kitten-base/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react-native/ui/ui-kitten/kitten-base/</guid>
+        <description>一、安装 //确保已安装 React Native CLI npm un -g react-native-cli &amp;amp;&amp;amp; npm i -g @react-native-community/cli //用 Kitten 模板创建新项目 npx react-native init MyApp --template @ui-kitten/template-js //启动应用 yarn android 二、配置路由（配置应用程序在屏幕之间导航，基</description>
+      </item>
+      
+      <item>
+        <title>Expo 最佳实践</title>
+        <link>https://danacoding.github.io/react-native/expo/expo-bp/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react-native/expo/expo-bp/</guid>
         <description>一、创建项目 expo init MyProject 创建项目，选择托管工作流的TypeScript的空白模板，然后用 expo eject 退出到裸漏工作流。 之所以选择这种方式创建项目，是因为灵</description>
       </item>
       
       <item>
-        <title>React-Native 最佳实践</title>
-        <link>https://danacoding.github.io/react-native/react-native/bp/</link>
+        <title>Hooks 最佳实践</title>
+        <link>https://danacoding.github.io/react/hooks/hooks-bp/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/react-native/react-native/bp/</guid>
+        <guid>https://danacoding.github.io/react/hooks/hooks-bp/</guid>
+        <description>Hooks 最佳实践</description>
+      </item>
+      
+      <item>
+        <title>React-Native 最佳实践</title>
+        <link>https://danacoding.github.io/react-native/react-native/rn-bp/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react-native/react-native/rn-bp/</guid>
         <description>一、将.pk8 和.pem 转换成 react-native 的 debug.keystore Step1. 安装 openssl 参考：https://stackoverflow.com/questions/42918916/</description>
       </item>
       
       <item>
-        <title>Remix 进阶（待完善）</title>
-        <link>https://danacoding.github.io/react/remix/adv/</link>
+        <title>UI-Kitten 最佳实践</title>
+        <link>https://danacoding.github.io/react-native/ui/ui-kitten/kitten-bp/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/react/remix/adv/</guid>
-        <description>一、创建 Remix 项目 npx create-remix@latest yarn yarn dev 二、目录结构 app/ - 所有Remix应用程序代码的位置 app/entry.client.tsx- JavaScript 的第一部分，它将在应用程序在浏览器中加载时运行。我们使用此文件来</description>
+        <guid>https://danacoding.github.io/react-native/ui/ui-kitten/kitten-bp/</guid>
+        <description>一、DrawerGroup （UI-Kitten ） DrawerGroup 导航问题 xxx 这个问题没有解决 UI-Kitten Version@5.0.0 @ui-kitten/components DrawerGroup const DrawerContent = ({ navigation, state }) =&amp;gt; { const routes = [//1.定义对应的组件（组件名</description>
       </item>
       
       <item>
-        <title>UI-Kitten 最佳实践</title>
-        <link>https://danacoding.github.io/react-native/ui/ui-kitten/bp/</link>
+        <title>webpack 基础</title>
+        <link>https://danacoding.github.io/others/webpack/webpack-base/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/react-native/ui/ui-kitten/bp/</guid>
-        <description>一、DrawerGroup （UI-Kitten ） DrawerGroup 导航问题 xxx 这个问题没有解决 UI-Kitten Version@5.0.0 @ui-kitten/components DrawerGroup const DrawerContent = ({ navigation, state }) =&amp;gt; { const routes = [//1.定义对应的组件（组件名</description>
+        <guid>https://danacoding.github.io/others/webpack/webpack-base/</guid>
+        <description>静态网站，多个html页面（非SPA），WebPack配置 (基础篇) Step1. 初始化项目 mkdir multiple-htmlpages &amp;amp;&amp;amp; cd multiple-htmlpages yarn init yarn add -D webpack webpack-cli webpack-dev-server html-webpack-plugin mkdir src &amp;amp;&amp;amp; cd src echo &amp;gt;index.html echo &amp;gt;index.js //index</description>
+      </item>
+      
+      <item>
+        <title>Git 最佳实践</title>
+        <link>https://danacoding.github.io/others/git/git-bp/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/others/git/git-bp/</guid>
+        <description>1. git clone/git pull/git push 报错 fatal: unable to access &amp;lsquo;https://github.com/mofengfs/baorun.co.git/&#39;: OpenSSL SSL_connect: Connection was reset in connection to github.com:443 解决办法：这个办法可以让git速度更快。 git config --global --add remote.origin.proxy &amp;quot;127.0.0.1:(proxy http port number)&amp;quot; //我的是 git config --global --add remote.origin.proxy &amp;quot;127.0.0.1:1080&amp;quot; 2. ! [rejected] main -&amp;gt; main (fetch first) 由</description>
       </item>
       
       <item>
@@ -294,6 +222,15 @@
       </item>
       
       <item>
+        <title>zustand 精炼文档</title>
+        <link>https://danacoding.github.io/react/zustand/zustand-base/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react/zustand/zustand-base/</guid>
+        <description>zustand 基于 hooks 的 api，小型、快速且可扩展的状态管理解决方案。 一、安装 yarn add zustand 二、最简使用方法 Step1. 创建一个 Store import create from &#39;zustand&#39; const useCount = create(set =&amp;gt; ({ count: 0, plus: () =&amp;gt; set(state =&amp;gt; ({ count: state.count +</description>
+      </item>
+      
+      <item>
         <title>expo-video-player</title>
         <link>https://danacoding.github.io/react-native/expo/expo-video-player/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -303,12 +240,66 @@
       </item>
       
       <item>
+        <title>IIS PHP</title>
+        <link>https://danacoding.github.io/others/php/iisphp/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/others/php/iisphp/</guid>
+        <description>Windows Server 2012 R2 x64 IIS服务器 PHP环境搭建 阿里云服务器ECS Windows Server 2012 R2 64位中文标准版下手动搭建PHP环境。 IIS8.5 + MySQL5.6.15 + PHP5.5.19 + FastCGI + phpMyAdmin4.2.12 特别注意：服务器内存不</description>
+      </item>
+      
+      <item>
+        <title>Recoil 最佳实践</title>
+        <link>https://danacoding.github.io/react/recoil/recoil-bp/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react/recoil/recoil-bp/</guid>
+        <description>Recoil 是 React 官方 meta (facebook) 官方实验室的状态管理库，贴合 React hooks，自由度很高，所以要在项目中做一些规范，以便提供最佳的实践。 官方文档有对核心概念的解释</description>
+      </item>
+      
+      <item>
+        <title>Next 基础</title>
+        <link>https://danacoding.github.io/react/next/next-base/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react/next/next-base/</guid>
+        <description>一、创建 Next.js 应用 yarn create next-app --typescript // 命名为 next-app-bronze yarn dev 二、路由（文件系统路由, pages中的文件） Step1. 创建新页面 pages/posts/first-post.tsx export default function FirstPost() { return &amp;lt;h1&amp;gt;First Post&amp;lt;/h1&amp;gt; } 通过 http://localhost:3000/posts/first-post 访问 Step2. 在页面之间导航 &amp;lt;Link</description>
+      </item>
+      
+      <item>
+        <title>Remix 基础</title>
+        <link>https://danacoding.github.io/react/remix/remix-base/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react/remix/remix-base/</guid>
+        <description>一、创建 Remix 应用 npx create-remix@latest yarn dev 二、创建文件路由 app/root.tsx Layout 组件中 &amp;lt;li&amp;gt; &amp;lt;Link to=&amp;quot;/posts&amp;quot;&amp;gt;Posts&amp;lt;/Link&amp;gt; &amp;lt;/li&amp;gt; 创建 app/routes/posts/index.tsx export default function Posts() { return ( &amp;lt;div&amp;gt; &amp;lt;h1&amp;gt;Posts&amp;lt;/h1&amp;gt; &amp;lt;/div&amp;gt; ) } 三、加载数据 Remix 的路由文件相当于后端的模板视图，也是控制</description>
+      </item>
+      
+      <item>
         <title>Spritespin.js &amp; krpano </title>
         <link>https://danacoding.github.io/react-native/expo/spritespin-krpano/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/react-native/expo/spritespin-krpano/</guid>
         <description>Spritespin 图片排序 在用数字标志图片名称的时候，图片的旋转顺序应该为逆时针，这样在用鼠标拖拽的时候才能按照鼠标拖拽的方向旋转。 否则，图片旋转方向看起来</description>
+      </item>
+      
+      <item>
+        <title>Remix 进阶（待完善）</title>
+        <link>https://danacoding.github.io/react/remix/remix-adv/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react/remix/remix-adv/</guid>
+        <description>一、创建 Remix 项目 npx create-remix@latest yarn yarn dev 二、目录结构 app/ - 所有Remix应用程序代码的位置 app/entry.client.tsx- JavaScript 的第一部分，它将在应用程序在浏览器中加载时运行。我们使用此文件来</description>
+      </item>
+      
+      <item>
+        <title>Storybook 基础</title>
+        <link>https://danacoding.github.io/react/storybook/sb-base/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react/storybook/sb-base/</guid>
+        <description>一、安装配置 在next.js项目中执行 npx sb init yarn storybook .storybook/preview.js 为 Storybook 配置 Next.js Images + import * as NextImage from &amp;quot;next/image&amp;quot;; + const OriginalNextImage = NextImage.default; + Object.defineProperty(NextImage, &amp;quot;default&amp;quot;, { configurable: true, value: (props) =&amp;gt; ( &amp;lt;OriginalNextImage {...props} unoptimized /&amp;gt; ), }); package.json 为 Storybook 提供 Next.js 公共目录 {</description>
       </item>
       
       <item>

@@ -16,19 +16,19 @@
       
       <item>
         <title>Expo 基础</title>
-        <link>https://danacoding.github.io/react-native/expo/base/</link>
+        <link>https://danacoding.github.io/react-native/expo/expo-base/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/react-native/expo/base/</guid>
+        <guid>https://danacoding.github.io/react-native/expo/expo-base/</guid>
         <description>一、运行设备 Expo客户端App 浏览器 模拟器(使用genymotion) 下载并安装 Android Studio 3.0+ 在Android Studio中，转到首选项&amp;gt;外</description>
       </item>
       
       <item>
         <title>Expo 最佳实践</title>
-        <link>https://danacoding.github.io/react-native/expo/bp/</link>
+        <link>https://danacoding.github.io/react-native/expo/expo-bp/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/react-native/expo/bp/</guid>
+        <guid>https://danacoding.github.io/react-native/expo/expo-bp/</guid>
         <description>一、创建项目 expo init MyProject 创建项目，选择托管工作流的TypeScript的空白模板，然后用 expo eject 退出到裸漏工作流。 之所以选择这种方式创建项目，是因为灵</description>
       </item>
       
