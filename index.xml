@@ -114,6 +114,15 @@
       </item>
       
       <item>
+        <title>Docker</title>
+        <link>https://danacoding.github.io/nodejs/docker/docker/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/nodejs/docker/docker/</guid>
+        <description></description>
+      </item>
+      
+      <item>
         <title>Expo 基础</title>
         <link>https://danacoding.github.io/react-native/expo/expo-base/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -129,6 +138,24 @@
         
         <guid>https://danacoding.github.io/nodejs/hapi/hapi-base/</guid>
         <description>Hapi起初是给沃尔玛的“黑色星期五”开发的，是企业级的开发框架。 Express等开发框架的大部分功能都严重依赖中间件，中间件只是不良设计的</description>
+      </item>
+      
+      <item>
+        <title>Kali Linux</title>
+        <link>https://danacoding.github.io/nodejs/kali/kali/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/nodejs/kali/kali/</guid>
+        <description></description>
+      </item>
+      
+      <item>
+        <title>Nginx</title>
+        <link>https://danacoding.github.io/nodejs/nginx/nginx/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/nodejs/nginx/nginx/</guid>
+        <description></description>
       </item>
       
       <item>
@@ -150,12 +177,30 @@
       </item>
       
       <item>
+        <title>Ubuntu</title>
+        <link>https://danacoding.github.io/nodejs/ubuntu/ubuntu/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/nodejs/ubuntu/ubuntu/</guid>
+        <description></description>
+      </item>
+      
+      <item>
         <title>UI-Kitten 基础</title>
         <link>https://danacoding.github.io/react-native/ui/ui-kitten/kitten-base/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/react-native/ui/ui-kitten/kitten-base/</guid>
         <description>一、安装 //确保已安装 React Native CLI npm un -g react-native-cli &amp;amp;&amp;amp; npm i -g @react-native-community/cli //用 Kitten 模板创建新项目 npx react-native init MyApp --template @ui-kitten/template-js //启动应用 yarn android 二、配置路由（配置应用程序在屏幕之间导航，基</description>
+      </item>
+      
+      <item>
+        <title>在 JavaScript 中实现单例</title>
+        <link>https://danacoding.github.io/jsts/function/single/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/jsts/function/single/</guid>
+        <description>单例是一种面向对象的软件设计模式，它确保给定的类只被实例化一次。 比如，数据库连接。 使用 Proxy 对象构建 Proxy 对象用于定义所谓的陷阱。 陷阱是允许为某些操</description>
       </item>
       
       <item>
@@ -210,6 +255,15 @@
         
         <guid>https://danacoding.github.io/others/webpack/webpack-adv/</guid>
         <description>静态网站，多个html页面（非SPA），WebPack配置 (基础篇) Step1. 初始化项目 mkdir multiple-htmlpages &amp;amp;&amp;amp; cd multiple-htmlpages yarn init yarn add -D webpack webpack-cli webpack-dev-server html-webpack-plugin mkdir src &amp;amp;&amp;amp; cd src echo &amp;gt;index.html echo &amp;gt;index.js //index</description>
+      </item>
+      
+      <item>
+        <title>零散式 vs 函数式 vs 链式</title>
+        <link>https://danacoding.github.io/jsts/function/for/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/jsts/function/for/</guid>
+        <description>这里用 For 循环举例 零散式 这是我自己给起的名字，当然同行可能并不喜欢这个称呼 1 2 3 4 5 6 7 8 9 10 11 12 13 const files = [&amp;#34;foo.txt &amp;#34;, &amp;#34;.bar&amp;#34;, &amp;#34; &amp;#34;, &amp;#34;baz.foo&amp;#34;]; let filePaths = []; for (let file of files) { const fileName</description>
       </item>
       
       <item>

@@ -23,6 +23,24 @@
         <description>collect.js &amp;amp; ramda（ 处理数组和对象的好帮手 ） Step1. 安装 yarn add collect.js yarn add ramda Step2. 导入 import collect from &#39;collect.js&#39; import * as R from &#39;ramda&#39; Step3. （项目实例，用来渲染多屏，每屏里面有 8 张卡片） 使用 collect.js 示</description>
       </item>
       
+      <item>
+        <title>在 JavaScript 中实现单例</title>
+        <link>https://danacoding.github.io/jsts/function/single/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/jsts/function/single/</guid>
+        <description>单例是一种面向对象的软件设计模式，它确保给定的类只被实例化一次。 比如，数据库连接。 使用 Proxy 对象构建 Proxy 对象用于定义所谓的陷阱。 陷阱是允许为某些操</description>
+      </item>
+      
+      <item>
+        <title>零散式 vs 函数式 vs 链式</title>
+        <link>https://danacoding.github.io/jsts/function/for/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/jsts/function/for/</guid>
+        <description>这里用 For 循环举例 零散式 这是我自己给起的名字，当然同行可能并不喜欢这个称呼 1 2 3 4 5 6 7 8 9 10 11 12 13 const files = [&amp;#34;foo.txt &amp;#34;, &amp;#34;.bar&amp;#34;, &amp;#34; &amp;#34;, &amp;#34;baz.foo&amp;#34;]; let filePaths = []; for (let file of files) { const fileName</description>
+      </item>
+      
     
   </channel>
 </rss>
