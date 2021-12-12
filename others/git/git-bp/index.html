@@ -1114,7 +1114,7 @@
     "datePublished": "2020-01-28T00:34:39+09:00",
     "dateModified": "2020-01-28T00:34:39+09:00",
     "url" : "https://danacoding.github.io/others/git/git-bp/",
-    "description": "1. git clone/git pull/git push 报错 fatal: unable to access \u0026lsquo;https://github.com/mofengfs/baorun.co.git/': OpenSSL SSL_connect: Connection was reset in connection to …",
+    "description": "一、OpenSSL SSL_connect git clone/git pull/git push 报错 fatal: unable to access 'https://github.com/xxx.git/': OpenSSL SSL_connect: Connection was reset in connection to …",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://danacoding.github.io/"
@@ -1779,7 +1779,11 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <h3 id="1-git-clonegit-pullgit-push-报错-fatal-unable-to-access-httpsgithubcommofengfsbaoruncogit-openssl-ssl_connect-connection-was-reset-in-connection-to-githubcom443">1. git clone/git pull/git push 报错 fatal: unable to access &lsquo;<a href="https://github.com/mofengfs/baorun.co.git/%27" target="_blank">https://github.com/mofengfs/baorun.co.git/'</a>: OpenSSL SSL_connect: Connection was reset in connection to github.com:443</h3>
+    <h3 id="一openssl-ssl_connect">一、OpenSSL SSL_connect</h3>
+<ul>
+<li>git clone/git pull/git push 报错</li>
+</ul>
+<p><code>fatal: unable to access 'https://github.com/xxx.git/': OpenSSL SSL_connect: Connection was reset in connection to github.com:443</code></p>
 <blockquote>
 <p>解决办法：这个办法可以让git速度更快。</p>
 </blockquote>
@@ -1789,17 +1793,20 @@ git config --global --add remote.origin.proxy &quot;127.0.0.1:1080&quot;
 </code></pre><p><p class="md__image">
   <img src="https://1.bp.blogspot.com/-N7fAoUkU92Q/YFPI0YcU_3I/AAAAAAAAAto/c5YyL5CGnbAwpUxgEhpelP-ugVE6nycWACLcBGAsYHQ/s320/QQ%25E6%2588%25AA%25E5%259B%25BE20210319053939.png" alt=""  />
 </p></p>
-<h3 id="2--rejected--------main---main-fetch-first">2. ! [rejected]        main -&gt; main (fetch first)</h3>
+<h3 id="二-rejected--------main---main-fetch-first">二、! [rejected]        main -&gt; main (fetch first)</h3>
 <p>由于在github上进行了修改，而本地还没有修改就push，所以才会出现这个错误。最好先pull下来，但是如果本地已经修改了，那么就用下面这个方法：</p>
 <pre tabindex="0"><code class="language-base" data-lang="base">git push origin main --force
-</code></pre><h3 id="3-git-push-的时候提示not-found很大可能是之前已经有git的就用户在该台电脑最直接的办法就是">3. <code>git push</code> 的时候，提示<code>not found</code>,很大可能是之前已经有git的就用户在该台电脑。最直接的办法就是：</h3>
+</code></pre><h3 id="三not-found">三、not found</h3>
+<ul>
+<li><code>git push</code> 的时候，提示<code>not found</code>,很大可能是之前已经有git的就用户在该台电脑。最直接的办法就是：</li>
+</ul>
 <ol>
 <li>控制面板&gt;查看方式 &gt; 小图标</li>
 <li>凭据管理器 &gt; windows凭据</li>
 <li>删除相关凭据即可</li>
 <li>之后在git push 的时候会提示输入新用户名和邮箱，按步骤提交就可以正常使用了</li>
 </ol>
-<h3 id="github一个仓库管理多个项目">github一个仓库管理多个项目</h3>
+<h3 id="四github一个仓库管理多个项目">四、github一个仓库管理多个项目</h3>
 <h4 id="step1-github上创建一个仓库-testco-名为test公司的项目">Step1. github上创建一个仓库 test.co (名为test公司的项目)</h4>
 <p><p class="md__image">
   <img src="https://1.bp.blogspot.com/-jXkJyn0W4wk/X-1ogwPNy6I/AAAAAAAAAdM/-p8k4aa_5lQTaW99sNPf0TCNXthw9iRaQCLcBGAsYHQ/s560/QQ%25E6%2588%25AA%25E5%259B%25BE20201231135723.png" alt=""  />
@@ -1889,10 +1896,10 @@ web-build/
   <ul>
     <li>
       <ul>
-        <li><a href="#1-git-clonegit-pullgit-push-报错-fatal-unable-to-access-httpsgithubcommofengfsbaoruncogit-openssl-ssl_connect-connection-was-reset-in-connection-to-githubcom443">1. git clone/git pull/git push 报错 fatal: unable to access &lsquo;<a href="https://github.com/mofengfs/baorun.co.git/'">https://github.com/mofengfs/baorun.co.git/'</a>: OpenSSL SSL_connect: Connection was reset in connection to github.com:443</a></li>
-        <li><a href="#2--rejected--------main---main-fetch-first">2. ! [rejected]        main -&gt; main (fetch first)</a></li>
-        <li><a href="#3-git-push-的时候提示not-found很大可能是之前已经有git的就用户在该台电脑最直接的办法就是">3. <code>git push</code> 的时候，提示<code>not found</code>,很大可能是之前已经有git的就用户在该台电脑。最直接的办法就是：</a></li>
-        <li><a href="#github一个仓库管理多个项目">github一个仓库管理多个项目</a>
+        <li><a href="#一openssl-ssl_connect">一、OpenSSL SSL_connect</a></li>
+        <li><a href="#二-rejected--------main---main-fetch-first">二、! [rejected]        main -&gt; main (fetch first)</a></li>
+        <li><a href="#三not-found">三、not found</a></li>
+        <li><a href="#四github一个仓库管理多个项目">四、github一个仓库管理多个项目</a>
           <ul>
             <li><a href="#step1-github上创建一个仓库-testco-名为test公司的项目">Step1. github上创建一个仓库 test.co (名为test公司的项目)</a></li>
             <li><a href="#step2-git-到本地">Step2. git 到本地</a></li>
