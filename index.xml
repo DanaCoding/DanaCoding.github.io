@@ -123,6 +123,15 @@
       </item>
       
       <item>
+        <title>Hapi</title>
+        <link>https://danacoding.github.io/nodejs/hapi/hapi-base/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/nodejs/hapi/hapi-base/</guid>
+        <description>Hapi起初是给沃尔玛的“黑色星期五”开发的，是企业级的开发框架。 Express等开发框架的大部分功能都严重依赖中间件，中间件只是不良设计的</description>
+      </item>
+      
+      <item>
         <title>React 最佳实践</title>
         <link>https://danacoding.github.io/react/react/react-bp/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
