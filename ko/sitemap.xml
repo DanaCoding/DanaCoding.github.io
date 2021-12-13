@@ -298,7 +298,22 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/jsts/function/new/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/jsts/function/for/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/jsts/function/arrow/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/jsts/function/callback/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -328,12 +343,22 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/jsts/function/try-catch/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react-native/expo/expo-video-player/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://danacoding.github.io/others/php/iisphp/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/jsts/function/promise/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   

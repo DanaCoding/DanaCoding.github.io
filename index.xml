@@ -200,7 +200,7 @@
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/jsts/function/single/</guid>
-        <description>单例是一种面向对象的软件设计模式，它确保给定的类只被实例化一次。 比如，数据库连接。 使用 Proxy 对象构建 Proxy 对象用于定义所谓的陷阱。 陷阱是允许为某些操</description>
+        <description>单例是一种面向对象的软件设计模式，它确保给定的类只被实例化一次。 比如，数据库连接。 Proxy Proxy 对象用于创建一个对象的代理，从而实现基本操作的拦截和自</description>
       </item>
       
       <item>
@@ -258,12 +258,39 @@
       </item>
       
       <item>
-        <title>零散式 vs 函数式 vs 链式</title>
+        <title>{...} vs 构造器 vs class</title>
+        <link>https://danacoding.github.io/jsts/function/new/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/jsts/function/new/</guid>
+        <description>Object 概述 Object 是 JavaScript 的一种 数据类型 。它用于存储各种键值集合和更复杂的实体。 Objects 可以通过 对象字面量、构造函数 或者 class 的方式创建 一、Object {} (对象字面</description>
+      </item>
+      
+      <item>
+        <title>松散式 vs 函数式 vs 链式</title>
         <link>https://danacoding.github.io/jsts/function/for/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/jsts/function/for/</guid>
-        <description>这里用 For 循环举例 零散式 这是我自己给起的名字，当然同行可能并不喜欢这个称呼 1 2 3 4 5 6 7 8 9 10 11 12 13 const files = [&amp;#34;foo.txt &amp;#34;, &amp;#34;.bar&amp;#34;, &amp;#34; &amp;#34;, &amp;#34;baz.foo&amp;#34;]; let filePaths = []; for (let file of files) { const fileName</description>
+        <description>这里用 For 循环举例 松散式 这是我自己给起的名字，当然同行可能并不喜欢这个称呼 1 2 3 4 5 6 7 8 9 10 11 12 13 const files = [&amp;#34;foo.txt &amp;#34;, &amp;#34;.bar&amp;#34;, &amp;#34; &amp;#34;, &amp;#34;baz.foo&amp;#34;]; let filePaths = []; for (let file of files) { const fileName</description>
+      </item>
+      
+      <item>
+        <title>箭头函数 vs 常规函数</title>
+        <link>https://danacoding.github.io/jsts/function/arrow/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/jsts/function/arrow/</guid>
+        <description>JavaScript 的箭头函数从表面上看可能与常规函数相同，但它们有一些非常重要的区别： 关键区别 语法 this 值（执行上下文） 用作类方法 用作构造函数 arguments 参数绑定 #. 语法 1</description>
+      </item>
+      
+      <item>
+        <title>闭包、递归和回调</title>
+        <link>https://danacoding.github.io/jsts/function/callback/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/jsts/function/callback/</guid>
+        <description>闭包 涉及变量作用域 内部函数使用外部函数的变量 1 2 3 4 5 6 7 8 9 10 11 12 13 function outerFunc() { const outerVal = 100; function interFunc() { console.log(outerVal); } return interFunc; // 记得返回你的内部函数 } const inter = outerFunc(); inter(); //100 递归 自</description>
       </item>
       
       <item>
@@ -303,6 +330,15 @@
       </item>
       
       <item>
+        <title>错误处理，try{...}catch{...}</title>
+        <link>https://danacoding.github.io/jsts/function/try-catch/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/jsts/function/try-catch/</guid>
+        <description>try&amp;hellip;catch语句标记要尝试的语句块，并指定一个出现异常时抛出的响应。 1 2 3 4 5 6 7 8 9 10 11 try { // 尝试运行这段代码 } catch(err) { //</description>
+      </item>
+      
+      <item>
         <title>expo-video-player</title>
         <link>https://danacoding.github.io/react-native/expo/expo-video-player/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -318,6 +354,15 @@
         
         <guid>https://danacoding.github.io/others/php/iisphp/</guid>
         <description>Windows Server 2012 R2 x64 IIS服务器 PHP环境搭建 阿里云服务器ECS Windows Server 2012 R2 64位中文标准版下手动搭建PHP环境。 IIS8.5 + MySQL5.6.15 + PHP5.5.19 + FastCGI + phpMyAdmin4.2.12 特别注意：服务器内存不</description>
+      </item>
+      
+      <item>
+        <title>Promise, async/await</title>
+        <link>https://danacoding.github.io/jsts/function/promise/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/jsts/function/promise/</guid>
+        <description>一、Promise 概述 Promise 对象用于表示一个异步操作的最终完成 (或失败)及其结果值。 #. Promise 有 3 个状态 待定（pending）: 初始状态，既没有被兑现</description>
       </item>
       
       <item>

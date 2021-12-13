@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>在 JavaScript 中实现单例 – DanaCoding</title>
+    <title>Promise, async/await – DanaCoding</title>
     
 
 
@@ -30,7 +30,7 @@
     
     var baseurl = JSON.parse("\"https://danacoding.github.io/\"");
     
-    var permalink = JSON.parse("\"https://danacoding.github.io/jsts/function/single/\"");
+    var permalink = JSON.parse("\"https://danacoding.github.io/jsts/function/promise/\"");
 
     
     var toggleSidebarElem = document.getElementById("toggle-sidebar");
@@ -1072,21 +1072,21 @@
 <link rel="stylesheet" href="/css/main.min.css">
 
 
-    <meta name="description" content="单例是一种面向对象的软件设计模式，它确保给定的类只被实例化一次" />
+    <meta name="description" content="Promise 对象用于表示一个异步操作的最终完成 (或失败)及其结果值。" />
 <meta name="keywords" content="">
 <meta name="created" content="2020-01-28T00:34:39&#43;0900">
 <meta name="modified" content="2020-01-28T00:34:39&#43;0900">
 
 
 <meta property="og:site_name" content="DanaCoding">
-<meta property="og:title" content="在 JavaScript 中实现单例">
-<meta property="og:url" content="https://danacoding.github.io/jsts/function/single/">
+<meta property="og:title" content="Promise, async/await">
+<meta property="og:url" content="https://danacoding.github.io/jsts/function/promise/">
 <meta property="og:type" content="article">
 
 <meta name="generator" content="Hugo 0.90.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
-<link rel="canonical" href="https://danacoding.github.io/jsts/function/single/">
+<link rel="canonical" href="https://danacoding.github.io/jsts/function/promise/">
 <link rel="manifest" href="/manifest.json">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
@@ -1110,11 +1110,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "在 JavaScript 中实现单例",
+    "headline": "Promise, async/await",
     "datePublished": "2020-01-28T00:34:39+09:00",
     "dateModified": "2020-01-28T00:34:39+09:00",
-    "url" : "https://danacoding.github.io/jsts/function/single/",
-    "description": "单例是一种面向对象的软件设计模式，它确保给定的类只被实例化一次",
+    "url" : "https://danacoding.github.io/jsts/function/promise/",
+    "description": "Promise 对象用于表示一个异步操作的最终完成 (或失败)及其结果值。",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://danacoding.github.io/"
@@ -1163,7 +1163,7 @@
     <div class="menu">
   <h6 class="menu__label">
     
-      在 JavaScript 中实现单例
+      Promise, async/await
     
   </h6>
   <ul>
@@ -1208,9 +1208,9 @@
   
   
   
-  <li class="active">
+  <li class="">
     <a href="https://danacoding.github.io/jsts/function/single/"
-      class="menu__title active">在 JavaScript 中实现单例</a>
+      class="menu__title ">在 JavaScript 中实现单例</a>
   </li>
   
 
@@ -1346,9 +1346,9 @@
   
   
   
-  <li class="">
+  <li class="active">
     <a href="https://danacoding.github.io/jsts/function/promise/"
-      class="menu__title ">Promise, async/await</a>
+      class="menu__title active">Promise, async/await</a>
   </li>
   
 
@@ -1685,7 +1685,7 @@
   <div class="header__wrapper bgcolor__header">
     <div class="divider">
       <div class="lmr">
-        <h2 class="title">在 JavaScript 中实现单例</h2>
+        <h2 class="title">Promise, async/await</h2>
       </div>
     </div>
   </div>
@@ -1719,7 +1719,7 @@
   
   <li  class="is-active" >
     
-      <span>在 JavaScript 中实现单例</span>
+      <span>Promise, async/await</span>
     
   </li>
   
@@ -1761,7 +1761,7 @@
         <div class="menu">
   <h6 class="menu__label">
     
-      在 JavaScript 中实现单例
+      Promise, async/await
     
   </h6>
   <ul>
@@ -1806,9 +1806,9 @@
   
   
   
-  <li class="active">
+  <li class="">
     <a href="https://danacoding.github.io/jsts/function/single/"
-      class="menu__title active">在 JavaScript 中实现单例</a>
+      class="menu__title ">在 JavaScript 中实现单例</a>
   </li>
   
 
@@ -1944,9 +1944,9 @@
   
   
   
-  <li class="">
+  <li class="active">
     <a href="https://danacoding.github.io/jsts/function/promise/"
-      class="menu__title ">Promise, async/await</a>
+      class="menu__title active">Promise, async/await</a>
   </li>
   
 
@@ -1963,68 +1963,55 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <p>单例是一种面向对象的软件设计模式，它确保给定的类只被实例化一次。<br />
-比如，数据库连接。</p>
-<h3 id="proxy">Proxy</h3>
-<p>Proxy 对象用于创建一个对象的代理，从而实现基本操作的拦截和自定义（如属性查找、赋值、枚举、函数调用等）。</p>
-<h4 id="-语法">#. 语法</h4>
+    <h3 id="一promise-概述">一、Promise 概述</h3>
+<p>Promise <code>对象</code>用于表示一个<code>异步操作</code>的最终完成 (或失败)及其结果值。</p>
+<h4 id="-promise-有-3-个状态">#. Promise 有 3 个状态</h4>
+<ul>
+<li>待定（pending）: 初始状态，既没有被兑现，也没有被拒绝。</li>
+<li>已兑现（fulfilled）: 意味着操作成功完成。</li>
+<li>已拒绝（rejected）: 意味着操作失败。</li>
+</ul>
+<h4 id="-promise-有-2-个方法">#. Promise 有 2 个方法</h4>
+<ul>
+<li><code>Promise.prototype.then</code></li>
+<li><code>Promise.prototype.catch</code></li>
+</ul>
+<p><p class="md__image">
+  <img src="https://media.prod.mdn.mozit.cloud/attachments/2014/09/18/8633/51a934a714e191f53e588bff719bc321/promises.png" alt=""  />
+</p></p>
+<p>当然，就像常规 <code>try {...} catch {...}</code> 中的 finally 子句一样，promise 中也有 finally。<br />
+<code>finally</code> 是执行清理（cleanup）的很好的处理程序（handler），例如无论结果如何，都停止使用不再需要的加载指示符（indicator）</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="k">new</span> <span class="nb">Proxy</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">handler</span><span class="p">)</span>
+<span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="cm">/* 做一些需要时间的事儿，然后调用 resolve/reject */</span>
+<span class="p">})</span>
+  <span class="c1">// 在 promise 为 settled 时运行，无论成功与否
+</span><span class="c1"></span>  <span class="p">.</span><span class="k">finally</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">stop</span> <span class="nx">loading</span> <span class="nx">indicator</span><span class="p">)</span>
+  <span class="c1">// 所以，加载指示器（loading indicator）始终会在我们处理结果/错误之前停止
+</span><span class="c1"></span>  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="p">=&gt;</span> <span class="nx">show</span> <span class="nx">result</span><span class="p">,</span> <span class="nx">err</span> <span class="p">=&gt;</span> <span class="nx">show</span> <span class="nx">error</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="-术语">#. 术语</h4>
+</div><h4 id="-promise-有-2-个参数">#. Promise 有 2 个参数</h4>
 <ul>
-<li><code>handler</code> 包含捕捉器（trap）的占位符对象（处理器对象）。</li>
-<li><code>traps</code> 允许为某些操作（例如属性查找、赋值等）定义自定义行为的方法。这类似于操作系统中捕获器的概念。</li>
-<li><code>target</code> 被 Proxy 代理虚拟化的对象。它常被作为代理的存储后端。根据目标验证关于对象不可扩展性或不可配置属性的不变量（保持不变的语义）。</li>
+<li><code>resolve(value)</code> — 如果任务成功完成并带有结果 value。</li>
+<li><code>reject(error)</code> — 如果出现了 error，error 即为 error 对象。</li>
 </ul>
-<h4 id="-proxy-有2个参数">#. Proxy 有2个参数</h4>
-<ul>
-<li><code>target</code> 被代理的对象。它可以是任何类型的对象，包括内置的数组，函数甚至是另一个代理对象。</li>
-<li><code>handler</code> 被代理对象上的自定义行为。它是一个对象，它的属性提供了部分操作时所发生的处理函数。</li>
-</ul>
-<h3 id="使用-proxy-构建单例模式">使用 Proxy 构建单例模式</h3>
-<ul>
-<li><code>单例模式</code>规定给定的类只能有一个实例。</li>
-<li>这意味着最有用的捕获器（注意：proxy中有多种捕获器）是 <code>handler.construct()</code>。</li>
-<li><code>handler.construct()</code> 方法用于拦截 <code>new</code> 操作符. <br />
-为了使new操作符在生成的Proxy对象上生效，用于初始化代理的目标对象自身必须具有[[Construct]]内部方法（即 new target 必须是有效的）。</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="kr">const</span> <span class="nx">singletonify</span> <span class="o">=</span> <span class="p">(</span><span class="nx">className</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="k">new</span> <span class="nb">Proxy</span><span class="p">(</span><span class="nx">className</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">constructor</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">instance</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="nx">construct</span><span class="o">:</span> <span class="p">(</span><span class="nx">target</span><span class="p">,</span> <span class="nx">argumentsList</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">instance</span><span class="p">)</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">instance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">target</span><span class="p">(...</span><span class="nx">argumentsList</span><span class="p">);</span>
-      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">instance</span><span class="p">;</span>
-    <span class="p">}</span>
-  <span class="p">});</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="使用示例">使用示例</h3>
+<p><p class="md__image">
+  <img src="https://zh.javascript.info/article/promise-basics/promise-resolve-reject.svg" alt=""  />
+</p></p>
+<h3 id="二promise-使用方法">二、Promise 使用方法</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2044,30 +2031,111 @@
 </span><span class="lnt">15
 </span><span class="lnt">16
 </span><span class="lnt">17
+</span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="kr">class</span> <span class="nx">MyClass</span> <span class="p">{</span>
-  <span class="nx">constructor</span><span class="p">(</span><span class="nx">msg</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">msg</span> <span class="o">=</span> <span class="nx">msg</span><span class="p">;</span>
-  <span class="p">}</span>
+<span class="c1">// 创建Promise
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">myPromise</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">myResolve</span><span class="p">,</span> <span class="nx">myReject</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">myResolve</span><span class="p">();</span> <span class="c1">// when successful
+</span><span class="c1"></span>
+  <span class="nx">myReject</span><span class="p">();</span> <span class="c1">// when error
+</span><span class="c1"></span><span class="p">});</span>
 
-  <span class="nx">printMsg</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">msg</span><span class="p">);</span>
+<span class="c1">// 使用Promise
+</span><span class="c1"></span><span class="nx">myPromise</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span>
+  <span class="kd">function</span> <span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="cm">/* code if successful */</span>
+  <span class="p">},</span>
+
+  <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+    <span class="cm">/* code if some error */</span>
+  <span class="p">}</span>
+<span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>实例</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">res</span><span class="p">,</span> <span class="nx">rej</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">res</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="mi">1000</span><span class="p">);</span>
+<span class="p">})</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span> <span class="c1">// 1
+</span><span class="c1"></span>    <span class="k">return</span> <span class="nx">res</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+  <span class="p">})</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span> <span class="c1">// 2
+</span><span class="c1"></span>  <span class="p">});</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="三asyncawait">三、async/await</h3>
+<ul>
+<li>简单来说，它们是基于 promises 的语法糖，使异步代码更易于编写和阅读。</li>
+<li>通过使用它们，异步代码看起来更像是老式同步代码。</li>
+<li>！！！这才是所有回调的<code>最佳</code>（至少目前来说）使用方式！！！</li>
+</ul>
+<h4 id="-function-中的使用方法">#. function 中的使用方法</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="p">(</span><span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">response</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;/article/promise-chaining/user.json&#39;</span><span class="p">);</span>
+  <span class="kd">let</span> <span class="nx">user</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
+  <span class="p">...</span>
+<span class="p">})();</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="-class-中的使用方法">#. class 中的使用方法</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">class</span> <span class="nx">Waiter</span> <span class="p">{</span>
+  <span class="kr">async</span> <span class="nx">wait</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kr">await</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
   <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="nx">MySingletonClass</span> <span class="o">=</span> <span class="nx">singletonify</span><span class="p">(</span><span class="nx">MyClass</span><span class="p">);</span>
-
-<span class="kr">const</span> <span class="nx">myObj</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MySingletonClass</span><span class="p">(</span><span class="s1">&#39;first&#39;</span><span class="p">);</span>
-<span class="nx">myObj</span><span class="p">.</span><span class="nx">printMsg</span><span class="p">();</span>           <span class="c1">// &#39;first&#39;
-</span><span class="c1"></span><span class="kr">const</span> <span class="nx">myObj2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">MySingletonClass</span><span class="p">(</span><span class="s1">&#39;second&#39;</span><span class="p">);</span>
-<span class="nx">myObj2</span><span class="p">.</span><span class="nx">printMsg</span><span class="p">();</span>          <span class="c1">// &#39;first&#39;
+<span class="k">new</span> <span class="nx">Waiter</span><span class="p">()</span>
+  <span class="p">.</span><span class="nx">wait</span><span class="p">()</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">alert</span><span class="p">);</span> <span class="c1">// 1（alert 等同于 result =&gt; alert(result)）
 </span></code></pre></td></tr></table>
 </div>
-</div><p>可以看到 <code>第二次</code> <code>MySingletonClass</code> 被实例化了，但什么都没有发生。</p>
-<p>这是因为一个实例已经存在，所以它被 <code>返回</code> 而不是创建一个新对象。</p>
-
+</div>
   </article>
 </div>
       
@@ -2075,21 +2143,14 @@
 <nav class="pagination-single">
   
     
-      <a href="https://danacoding.github.io/jsts/cr/cr/" title="Collect &amp; Ramda" class="pagination-single__left">
+      <a href="https://danacoding.github.io/jsts/function/try-catch/" title="错误处理，try{...}catch{...}" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__right-title">Collect &amp; Ramda</div>
+        <div class="pagination-single__right-title">错误处理，try{...}catch{...}</div>
       </a>
     
     <div class="grow"></div>
-    
-      <a href="https://danacoding.github.io/jsts/function/new/" title="{...} vs 构造器 vs class" class="pagination-single__right">
-        <div class="pagination-single__left-title">{...} vs 构造器 vs class</div>
-        <div class="pagination-single__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
-        </div>
-      </a>
     
   
 </nav>
@@ -2107,15 +2168,20 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#proxy">Proxy</a>
+        <li><a href="#一promise-概述">一、Promise 概述</a>
           <ul>
-            <li><a href="#-语法">#. 语法</a></li>
-            <li><a href="#-术语">#. 术语</a></li>
-            <li><a href="#-proxy-有2个参数">#. Proxy 有2个参数</a></li>
+            <li><a href="#-promise-有-3-个状态">#. Promise 有 3 个状态</a></li>
+            <li><a href="#-promise-有-2-个方法">#. Promise 有 2 个方法</a></li>
+            <li><a href="#-promise-有-2-个参数">#. Promise 有 2 个参数</a></li>
           </ul>
         </li>
-        <li><a href="#使用-proxy-构建单例模式">使用 Proxy 构建单例模式</a></li>
-        <li><a href="#使用示例">使用示例</a></li>
+        <li><a href="#二promise-使用方法">二、Promise 使用方法</a></li>
+        <li><a href="#三asyncawait">三、async/await</a>
+          <ul>
+            <li><a href="#-function-中的使用方法">#. function 中的使用方法</a></li>
+            <li><a href="#-class-中的使用方法">#. class 中的使用方法</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
