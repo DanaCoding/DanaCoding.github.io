@@ -1972,7 +1972,10 @@
 <li>定义一个异步 <code>run</code> 函数，该函数将运行提供的<code>回调 fn</code>，同时根据需要使用 <code>dispatch</code> 更新 <code>state</code>。</li>
 <li>返回一个包含<code>state</code>( <code>value</code>,<code>error</code>和<code>loading</code>) 和<code>run</code>函数的对象。</li>
 </ul>
-<h4 id="-封装-customhooksuseasyncts">#. 封装 <code>./customHooks/useAsync.ts</code></h4>
+<h4 id="-封装自定义hooks">#. 封装自定义hooks</h4>
+<ul>
+<li><code>./customHooks/useAsync.ts</code></li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2003,31 +2006,35 @@
 </span><span class="lnt">26
 </span><span class="lnt">27
 </span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="kr">export</span> <span class="kr">const</span> <span class="nx">useAsync</span> <span class="o">=</span> <span class="nx">fn</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="c1">//创建一个接受处理函数的自定义钩子，`fn`.
-</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">initialState</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">loading</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">error</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="kc">null</span> <span class="p">};</span> <span class="c1">//初始化状态
-</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">stateReducer</span> <span class="o">=</span> <span class="p">(</span><span class="nx">_</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span><span class="c1">//处理状态的逻辑
-</span><span class="c1"></span>    <span class="k">switch</span> <span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts">
+<span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useReducer</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;react&#39;</span>
+
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">useAsync</span> <span class="o">=</span> <span class="nx">fn</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="c1">//创建一个接受处理函数的自定义钩子，`fn`.
+</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">initialState</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">loading</span>: <span class="kt">false</span><span class="p">,</span> <span class="nx">error</span>: <span class="kt">null</span><span class="p">,</span> <span class="nx">value</span>: <span class="kt">null</span> <span class="p">};</span> <span class="c1">//初始化状态
+</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">stateReducer</span> <span class="o">=</span> <span class="p">(</span><span class="nx">_</span><span class="p">,</span> <span class="nx">action</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="c1">//处理状态的逻辑
+</span><span class="c1"></span>    <span class="k">switch</span> <span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="kr">type</span><span class="p">)</span> <span class="p">{</span>
       <span class="k">case</span> <span class="s1">&#39;start&#39;</span><span class="o">:</span>
-        <span class="k">return</span> <span class="p">{</span> <span class="nx">loading</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">error</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="kc">null</span> <span class="p">};</span>
+        <span class="k">return</span> <span class="p">{</span> <span class="nx">loading</span>: <span class="kt">true</span><span class="p">,</span> <span class="nx">error</span>: <span class="kt">null</span><span class="p">,</span> <span class="nx">value</span>: <span class="kt">null</span> <span class="p">};</span>
       <span class="k">case</span> <span class="s1">&#39;finish&#39;</span><span class="o">:</span>
-        <span class="k">return</span> <span class="p">{</span> <span class="nx">loading</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">error</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="nx">action</span><span class="p">.</span><span class="nx">value</span> <span class="p">};</span>
+        <span class="k">return</span> <span class="p">{</span> <span class="nx">loading</span>: <span class="kt">false</span><span class="p">,</span> <span class="nx">error</span>: <span class="kt">null</span><span class="p">,</span> <span class="nx">value</span>: <span class="kt">action.value</span> <span class="p">};</span>
       <span class="k">case</span> <span class="s1">&#39;error&#39;</span><span class="o">:</span>
-        <span class="k">return</span> <span class="p">{</span> <span class="nx">loading</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">error</span><span class="o">:</span> <span class="nx">action</span><span class="p">.</span><span class="nx">error</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="kc">null</span> <span class="p">};</span>
+        <span class="k">return</span> <span class="p">{</span> <span class="nx">loading</span>: <span class="kt">false</span><span class="p">,</span> <span class="nx">error</span>: <span class="kt">action.error</span><span class="p">,</span> <span class="nx">value</span>: <span class="kt">null</span> <span class="p">};</span>
     <span class="p">}</span>
   <span class="p">};</span>
 
-  <span class="kr">const</span> <span class="p">[</span><span class="nx">state</span><span class="p">,</span> <span class="nx">dispatch</span><span class="p">]</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">useReducer</span><span class="p">(</span><span class="nx">stateReducer</span><span class="p">,</span> <span class="nx">initialState</span><span class="p">);</span><span class="c1">//使用`useReducer()`钩子初始化`state`变量和`dispatch`函数
+  <span class="kr">const</span> <span class="p">[</span><span class="nx">state</span><span class="p">,</span> <span class="nx">dispatch</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useReducer</span><span class="p">(</span><span class="nx">stateReducer</span><span class="p">,</span> <span class="nx">initialState</span><span class="p">);</span><span class="c1">//使用`useReducer()`钩子初始化`state`变量和`dispatch`函数
 </span><span class="c1"></span>
-  <span class="kr">const</span> <span class="nx">run</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">args</span> <span class="o">=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span><span class="c1">//定义一个异步 `run` 函数，该函数将运行提供的`回调 fn`，同时根据需要使用 `dispatch` 更新 `state`
+  <span class="kr">const</span> <span class="nx">run</span> <span class="o">=</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">args</span> <span class="o">=</span> <span class="kc">null</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="c1">//定义一个异步 `run` 函数，该函数将运行提供的`回调 fn`，同时根据需要使用 `dispatch` 更新 `state`
 </span><span class="c1"></span>    <span class="k">try</span> <span class="p">{</span>
-      <span class="nx">dispatch</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;start&#39;</span> <span class="p">});</span>
-      <span class="kr">const</span> <span class="nx">value</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">fn</span><span class="p">(</span><span class="nx">args</span><span class="p">);</span>
-      <span class="nx">dispatch</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;finish&#39;</span><span class="p">,</span> <span class="nx">value</span> <span class="p">});</span>
+      <span class="nx">dispatch</span><span class="p">({</span> <span class="kr">type</span><span class="o">:</span> <span class="s1">&#39;start&#39;</span> <span class="p">});</span>
+      <span class="kr">const</span> <span class="nx">value</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">fn</span><span class="p">(</span><span class="nx">args</span><span class="p">);</span>
+      <span class="nx">dispatch</span><span class="p">({</span> <span class="kr">type</span><span class="o">:</span> <span class="s1">&#39;finish&#39;</span><span class="p">,</span> <span class="nx">value</span> <span class="p">});</span>
     <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">dispatch</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;error&#39;</span><span class="p">,</span> <span class="nx">error</span> <span class="p">});</span>
+      <span class="nx">dispatch</span><span class="p">({</span> <span class="kr">type</span><span class="o">:</span> <span class="s1">&#39;error&#39;</span><span class="p">,</span> <span class="nx">error</span> <span class="p">});</span>
     <span class="p">}</span>
   <span class="p">};</span>
 
@@ -2036,6 +2043,9 @@
 </code></pre></td></tr></table>
 </div>
 </div><h4 id="-在组件中使用">#. 在组件中使用</h4>
+<ul>
+<li><code>component</code></li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2069,35 +2079,37 @@
 </span><span class="lnt">29
 </span><span class="lnt">30
 </span><span class="lnt">31
+</span><span class="lnt">32
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useAsync</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;./customHooks/useAsync&#39;</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts">
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">useAsync</span> <span class="p">}</span> <span class="kr">from</span> <span class="s1">&#39;./customHooks/useAsync&#39;</span><span class="p">;</span>
 
-<span class="kr">const</span> <span class="nx">RandomImage</span> <span class="o">=</span> <span class="nx">props</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">imgFetch</span> <span class="o">=</span> <span class="nx">useAsync</span><span class="p">(</span><span class="nx">url</span> <span class="p">=&gt;</span>
-    <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="p">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+<span class="kr">const</span> <span class="nx">RandomImage</span> <span class="o">=</span> <span class="nx">props</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">imgFetch</span> <span class="o">=</span> <span class="nx">useAsync</span><span class="p">(</span><span class="nx">url</span> <span class="o">=&gt;</span>
+    <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
   <span class="p">);</span>
 
   <span class="k">return</span> <span class="p">(</span>
-    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
-      <span class="o">&lt;</span><span class="nx">button</span>
-        <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="nx">imgFetch</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="s1">&#39;https://dog.ceo/api/breeds/image/random&#39;</span><span class="p">)}</span>
-        <span class="nx">disabled</span><span class="o">=</span><span class="p">{</span><span class="nx">imgFetch</span><span class="p">.</span><span class="nx">isLoading</span><span class="p">}</span>
-      <span class="o">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">button</span>
+        <span class="na">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="o">=&gt;</span> <span class="nx">imgFetch</span><span class="p">.</span><span class="nx">run</span><span class="p">(</span><span class="s1">&#39;https://dog.ceo/api/breeds/image/random&#39;</span><span class="p">)}</span>
+        <span class="na">disabled</span><span class="o">=</span><span class="p">{</span><span class="nx">imgFetch</span><span class="p">.</span><span class="nx">isLoading</span><span class="p">}</span>
+      <span class="p">&gt;</span>
         <span class="nx">Load</span> <span class="nx">image</span>
-      <span class="o">&lt;</span><span class="err">/button&gt;</span>
-      <span class="o">&lt;</span><span class="nx">br</span> <span class="o">/&gt;</span>
-      <span class="p">{</span><span class="nx">imgFetch</span><span class="p">.</span><span class="nx">loading</span> <span class="o">&amp;&amp;</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Loading</span><span class="p">...</span><span class="o">&lt;</span><span class="err">/div&gt;}</span>
-      <span class="p">{</span><span class="nx">imgFetch</span><span class="p">.</span><span class="nx">error</span> <span class="o">&amp;&amp;</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nb">Error</span> <span class="p">{</span><span class="nx">imgFetch</span><span class="p">.</span><span class="nx">error</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/div&gt;}</span>
+      <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+      <span class="p">{</span><span class="nx">imgFetch</span><span class="p">.</span><span class="nx">loading</span> <span class="o">&amp;&amp;</span> <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span><span class="nx">Loading</span><span class="p">...&lt;/</span><span class="nt">div</span><span class="p">&gt;}</span>
+      <span class="p">{</span><span class="nx">imgFetch</span><span class="p">.</span><span class="nx">error</span> <span class="o">&amp;&amp;</span> <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span><span class="nb">Error</span> <span class="p">{</span><span class="nx">imgFetch</span><span class="p">.</span><span class="nx">error</span><span class="p">}&lt;/</span><span class="nt">div</span><span class="p">&gt;}</span>
       <span class="p">{</span><span class="nx">imgFetch</span><span class="p">.</span><span class="nx">value</span> <span class="o">&amp;&amp;</span> <span class="p">(</span>
-        <span class="o">&lt;</span><span class="nx">img</span>
-          <span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="nx">imgFetch</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span>
-          <span class="nx">alt</span><span class="o">=</span><span class="s2">&#34;avatar&#34;</span>
-          <span class="nx">width</span><span class="o">=</span><span class="p">{</span><span class="mi">400</span><span class="p">}</span>
-          <span class="nx">height</span><span class="o">=</span><span class="s2">&#34;auto&#34;</span>
-        <span class="o">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">img</span>
+          <span class="na">src</span><span class="o">=</span><span class="p">{</span><span class="nx">imgFetch</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">message</span><span class="p">}</span>
+          <span class="na">alt</span><span class="o">=</span><span class="s">&#34;avatar&#34;</span>
+          <span class="na">width</span><span class="o">=</span><span class="p">{</span><span class="mi">400</span><span class="p">}</span>
+          <span class="na">height</span><span class="o">=</span><span class="s">&#34;auto&#34;</span>
+        <span class="p">/&gt;</span>
       <span class="p">)}</span>
-    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
   <span class="p">);</span>
 <span class="p">};</span>
 
@@ -2146,7 +2158,7 @@
       <ul>
         <li><a href="#封装一个-useasync">封装一个 useAsync</a>
           <ul>
-            <li><a href="#-封装-customhooksuseasyncts">#. 封装 <code>./customHooks/useAsync.ts</code></a></li>
+            <li><a href="#-封装自定义hooks">#. 封装自定义hooks</a></li>
             <li><a href="#-在组件中使用">#. 在组件中使用</a></li>
           </ul>
         </li>
