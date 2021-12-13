@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{...} vs 构造器 vs class – DanaCoding</title>
+    <title>字面量 vs 构造器 vs class – DanaCoding</title>
     
 
 
@@ -1072,14 +1072,14 @@
 <link rel="stylesheet" href="/css/main.min.css">
 
 
-    <meta name="description" content="Object字面量 vs 构造器&#43;new vs class 创建对象" />
+    <meta name="description" content="Object 三剑客" />
 <meta name="keywords" content="">
 <meta name="created" content="2020-01-28T00:34:39&#43;0900">
 <meta name="modified" content="2020-01-28T00:34:39&#43;0900">
 
 
 <meta property="og:site_name" content="DanaCoding">
-<meta property="og:title" content="{...} vs 构造器 vs class">
+<meta property="og:title" content="字面量 vs 构造器 vs class">
 <meta property="og:url" content="https://danacoding.github.io/jsts/function/new/">
 <meta property="og:type" content="article">
 
@@ -1110,11 +1110,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "{...} vs 构造器 vs class",
+    "headline": "字面量 vs 构造器 vs class",
     "datePublished": "2020-01-28T00:34:39+09:00",
     "dateModified": "2020-01-28T00:34:39+09:00",
     "url" : "https://danacoding.github.io/jsts/function/new/",
-    "description": "Object字面量 vs 构造器+new vs class 创建对象",
+    "description": "Object 三剑客",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://danacoding.github.io/"
@@ -1163,7 +1163,7 @@
     <div class="menu">
   <h6 class="menu__label">
     
-      {...} vs 构造器 vs class
+      字面量 vs 构造器 vs class
     
   </h6>
   <ul>
@@ -1233,7 +1233,7 @@
   
   <li class="active">
     <a href="https://danacoding.github.io/jsts/function/new/"
-      class="menu__title active">{...} vs 构造器 vs class</a>
+      class="menu__title active">字面量 vs 构造器 vs class</a>
   </li>
   
 
@@ -1685,7 +1685,7 @@
   <div class="header__wrapper bgcolor__header">
     <div class="divider">
       <div class="lmr">
-        <h2 class="title">{...} vs 构造器 vs class</h2>
+        <h2 class="title">字面量 vs 构造器 vs class</h2>
       </div>
     </div>
   </div>
@@ -1719,7 +1719,7 @@
   
   <li  class="is-active" >
     
-      <span>{...} vs 构造器 vs class</span>
+      <span>字面量 vs 构造器 vs class</span>
     
   </li>
   
@@ -1761,7 +1761,7 @@
         <div class="menu">
   <h6 class="menu__label">
     
-      {...} vs 构造器 vs class
+      字面量 vs 构造器 vs class
     
   </h6>
   <ul>
@@ -1831,7 +1831,7 @@
   
   <li class="active">
     <a href="https://danacoding.github.io/jsts/function/new/"
-      class="menu__title active">{...} vs 构造器 vs class</a>
+      class="menu__title active">字面量 vs 构造器 vs class</a>
   </li>
   
 
@@ -1966,7 +1966,7 @@
     <h3 id="object-概述">Object 概述</h3>
 <p>Object 是 JavaScript 的一种 数据类型 。它用于存储各种键值集合和更复杂的实体。</p>
 <p>Objects 可以通过 <code>对象字面量</code>、<code>构造函数</code> 或者 <code>class</code> 的方式创建</p>
-<h3 id="一object--对象字面量">一、Object {} (对象字面量)</h3>
+<h3 id="一对象字面量-">一、对象字面量 （{&hellip;}）</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2015,9 +2015,9 @@
 <span class="nx">user</span><span class="p">.</span><span class="nx">sayHi</span><span class="p">();</span> <span class="c1">// Lucy
 </span></code></pre></td></tr></table>
 </div>
-</div><h3 id="二构造器构造函数-new">二、构造器（构造函数）+ new</h3>
+</div><h3 id="二构造器--new">二、构造器 + new</h3>
 <p>常规的 {&hellip;} （字面量） 语法允许创建一个对象。但是我们经常需要创建许多类似的对象，例如多个用户或菜单项等。</p>
-<p>这可以使用构造函数和new操作符来实现。</p>
+<p>这可以使用构造器（构造函数）和new操作符来实现。</p>
 <p>从技术上讲，任何函数（除了<code>箭头函数</code>，它没有自己的 <code>this</code>）都可以用作构造器。<br />
 即可以通过 new 来运行，它会执行上面的算法。<br />
 <code>首字母大写</code>是一个共同的约定，以明确表示一个函数将被使用 <code>new</code> 来运行。</p>
@@ -2163,8 +2163,8 @@
     <li>
       <ul>
         <li><a href="#object-概述">Object 概述</a></li>
-        <li><a href="#一object--对象字面量">一、Object {} (对象字面量)</a></li>
-        <li><a href="#二构造器构造函数-new">二、构造器（构造函数）+ new</a>
+        <li><a href="#一对象字面量-">一、对象字面量 （{&hellip;}）</a></li>
+        <li><a href="#二构造器--new">二、构造器 + new</a>
           <ul>
             <li><a href="#-约定">#. 约定</a></li>
             <li><a href="#-实列">#. 实列</a></li>

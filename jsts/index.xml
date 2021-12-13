@@ -33,12 +33,12 @@
       </item>
       
       <item>
-        <title>{...} vs 构造器 vs class</title>
+        <title>字面量 vs 构造器 vs class</title>
         <link>https://danacoding.github.io/jsts/function/new/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/jsts/function/new/</guid>
-        <description>Object 概述 Object 是 JavaScript 的一种 数据类型 。它用于存储各种键值集合和更复杂的实体。 Objects 可以通过 对象字面量、构造函数 或者 class 的方式创建 一、Object {} (对象字面</description>
+        <description>Object 概述 Object 是 JavaScript 的一种 数据类型 。它用于存储各种键值集合和更复杂的实体。 Objects 可以通过 对象字面量、构造函数 或者 class 的方式创建 一、对象字面量 （{&amp;hell</description>
       </item>
       
       <item>
