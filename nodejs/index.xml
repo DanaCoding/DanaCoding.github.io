@@ -51,6 +51,15 @@
       </item>
       
       <item>
+        <title>Prisma ORM</title>
+        <link>https://danacoding.github.io/nodejs/orm/prisma/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/nodejs/orm/prisma/</guid>
+        <description>Prisma Prisma 是一个开源的下一代 ORM。它由以下部分组成： Prisma 客户端：用于 Node.js 和 TypeScript 的自动生成和类型安全的查询构建器 Prisma Migrate : 迁移系统 Prisma Studio：用于查看和</description>
+      </item>
+      
+      <item>
         <title>Ubuntu</title>
         <link>https://danacoding.github.io/nodejs/ubuntu/ubuntu/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
