@@ -29,7 +29,7 @@
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/react/hooks/hooks-bp/</guid>
-        <description>封装一个 useAsync 处理异步调用，应该包含以下内容： 创建一个接受处理函数的自定义钩子，fn. 为自定义hooks的状态定义一个 reducer 函数和一个初始状态。 使用</description>
+        <description>异步 Hooks 处理异步调用，应该包含以下内容： 创建一个接受处理函数的自定义钩子，fn. 为自定义hooks的状态定义一个 reducer 函数和一个初始状态。 使用us</description>
       </item>
       
       <item>
