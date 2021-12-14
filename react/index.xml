@@ -20,7 +20,7 @@
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/react/react/react-bp/</guid>
-        <description>React 最佳实践</description>
+        <description>React 是一个声明式、高效且灵活的 JavaScript 库 一、特性 虚拟 DOM：保存在内存中并通过 ReactDOM 等库与“真实”DOM 同步的 UI 表示。使用这种方法，只有实际更改的组件才</description>
       </item>
       
       <item>
@@ -51,12 +51,12 @@
       </item>
       
       <item>
-        <title>Next 基础</title>
+        <title>Next</title>
         <link>https://danacoding.github.io/react/next/next-base/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/react/next/next-base/</guid>
-        <description>一、创建 Next.js 应用 yarn create next-app --typescript // 命名为 next-app-bronze yarn dev 二、路由（文件系统路由, pages中的文件） Step1. 创建新页面 pages/posts/first-post.tsx export default function FirstPost() { return &amp;lt;h1&amp;gt;First Post&amp;lt;/h1&amp;gt; } 通过 http://localhost:3000/posts/first-post 访问 Step2. 在页面之间导航 &amp;lt;Link</description>
+        <description>Next.js 是围绕pages的概念构建的。 页面与基于其文件名的路由相关联。 一、创建 Next.js 应用 1 2 3 4 5 6 7 8 yarn create next-app --typescript yarn dev //开发模式 yarn build //生产构建 yarn start /</description>
       </item>
       
       <item>

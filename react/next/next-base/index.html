@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Next 基础 – DanaCoding</title>
+    <title>Next – DanaCoding</title>
     
 
 
@@ -1072,14 +1072,14 @@
 <link rel="stylesheet" href="/css/main.min.css">
 
 
-    <meta name="description" content="" />
+    <meta name="description" content="React 开发框架" />
 <meta name="keywords" content="">
 <meta name="created" content="2020-01-28T00:34:39&#43;0900">
 <meta name="modified" content="2020-01-28T00:34:39&#43;0900">
 
 
 <meta property="og:site_name" content="DanaCoding">
-<meta property="og:title" content="Next 基础">
+<meta property="og:title" content="Next">
 <meta property="og:url" content="https://danacoding.github.io/react/next/next-base/">
 <meta property="og:type" content="article">
 
@@ -1110,11 +1110,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "Next 基础",
+    "headline": "Next",
     "datePublished": "2020-01-28T00:34:39+09:00",
     "dateModified": "2020-01-28T00:34:39+09:00",
     "url" : "https://danacoding.github.io/react/next/next-base/",
-    "description": "一、创建 Next.js 应用 yarn create next-app --typescript // 命名为 next-app-bronze yarn dev 二、路由（文件系统路由, pages中的文件） Step1. 创建新页面 pages/posts/first-post.tsx export default function …",
+    "description": "React 开发框架",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://danacoding.github.io/"
@@ -1163,7 +1163,7 @@
     <div class="menu">
   <h6 class="menu__label">
     
-      Next 基础
+      Next
     
   </h6>
   <ul>
@@ -1279,7 +1279,7 @@
   
   <li class="active">
     <a href="https://danacoding.github.io/react/next/next-base/"
-      class="menu__title active">Next 基础</a>
+      class="menu__title active">Next</a>
   </li>
   
 
@@ -1685,7 +1685,7 @@
   <div class="header__wrapper bgcolor__header">
     <div class="divider">
       <div class="lmr">
-        <h2 class="title">Next 基础</h2>
+        <h2 class="title">Next</h2>
       </div>
     </div>
   </div>
@@ -1719,7 +1719,7 @@
   
   <li  class="is-active" >
     
-      <span>Next 基础</span>
+      <span>Next</span>
     
   </li>
   
@@ -1761,7 +1761,7 @@
         <div class="menu">
   <h6 class="menu__label">
     
-      Next 基础
+      Next
     
   </h6>
   <ul>
@@ -1877,7 +1877,7 @@
   
   <li class="active">
     <a href="https://danacoding.github.io/react/next/next-base/"
-      class="menu__title active">Next 基础</a>
+      class="menu__title active">Next</a>
   </li>
   
 
@@ -1963,151 +1963,560 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <h2 id="一创建-nextjs-应用">一、创建 Next.js 应用</h2>
-<pre tabindex="0"><code class="language-base" data-lang="base">yarn create next-app --typescript
+    <p>Next.js 是围绕<code>pages</code>的概念构建的。</p>
+<p>页面与基于其<code>文件名</code>的路由相关联。</p>
+<h3 id="一创建-nextjs-应用">一、创建 Next.js 应用</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="nx">yarn</span> <span class="nx">create</span> <span class="nx">next</span><span class="o">-</span><span class="nx">app</span> <span class="o">--</span><span class="nx">typescript</span>
 
-// 命名为 next-app-bronze
+<span class="nx">yarn</span> <span class="nx">dev</span> <span class="c1">//开发模式
+</span><span class="c1"></span>
+<span class="nx">yarn</span> <span class="nx">build</span> <span class="c1">//生产构建
+</span><span class="c1"></span>
+<span class="nx">yarn</span> <span class="nx">start</span> <span class="c1">//启动生产服务器
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="二基本功能">二、基本功能</h3>
+<h3 id="三路由">三、路由</h3>
+<ul>
+<li>
+<p>Next.js 路由是文件路由。</p>
+</li>
+<li>
+<p>当一个文件被添加到<code>pages</code>目录中时，它会自动作为路由使用。</p>
+</li>
+<li>
+<p>文件必须以<code>export default</code>导出。</p>
+</li>
+</ul>
+<h4 id="-三种路由类型">#. 三种路由类型</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="c1">//索引路由 - 路由器会自动将命名index的文件路由到目录的根目录。
+</span><span class="c1"></span><span class="sb">`pages/index.js`</span> <span class="err">→</span> <span class="sb">`/`</span>
+<span class="sb">`pages/blog/index.js`</span> <span class="err">→</span> <span class="sb">`/blog`</span>
 
-yarn dev
-</code></pre><h2 id="二路由文件系统路由-pages中的文件">二、路由（文件系统路由, pages中的文件）</h2>
-<p>Step1. 创建新页面 pages/posts/first-post.tsx</p>
-<pre tabindex="0"><code class="language-base" data-lang="base">export default function FirstPost() {
-  return &lt;h1&gt;First Post&lt;/h1&gt;
-}
-</code></pre><blockquote>
-<p>通过 <code>http://localhost:3000/posts/first-post</code> 访问</p>
-</blockquote>
-<p>Step2. 在页面之间导航 <code>&lt;Link href=''&gt;&lt;a&gt;&lt;/a&gt;&lt;/Link&gt;</code></p>
-<blockquote>
-<p><code>pages/index.tsx</code></p>
-</blockquote>
-<pre tabindex="0"><code class="language-base" data-lang="base">import Link from 'next/link';
+<span class="c1">//嵌套路由 - 路由器支持嵌套文件。如果创建嵌套文件夹结构，文件仍将自动以相同方式路由。
+</span><span class="c1"></span><span class="sb">`pages/blog/first-post.js`</span> <span class="err">→</span> <span class="sb">`/blog/first-post`</span>
+<span class="sb">`pages/dashboard/settings/username.js`</span> <span class="err">→</span> <span class="sb">`/dashboard/settings/username`</span>
 
-&lt;Link href='/posts/first-post'&gt;
-    &lt;a&gt;first-post&lt;/a&gt;
- &lt;/Link&gt;
-</code></pre><blockquote>
-<p><code>pages/posts/first-post.tsx</code></p>
-</blockquote>
-<pre tabindex="0"><code class="language-base" data-lang="base">import Link from 'next/link';
+<span class="c1">//动态路由 [] - 要匹配动态段，可以使用括号语法。允许匹配命名参数。
+</span><span class="c1"></span><span class="sb">`pages/blog/[slug].js`</span> <span class="err">→</span> <span class="sb">`/blog/:slug (/blog/hello-world)`</span>
+<span class="sb">`pages/[username]/settings.js`</span> <span class="err">→</span> <span class="sb">`/:username/settings (/foo/settings)`</span>
+<span class="sb">`pages/post/[...all].js`</span> <span class="err">→</span> <span class="sb">`/post/* (/post/2020/id/title)`</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="-link-页面之间的链接">#. Link 页面之间的链接</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">import</span> <span class="nx">Link</span> <span class="nx">from</span> <span class="s1">&#39;next/link&#39;</span><span class="p">;</span>
+<span class="c1">//Link将路径 (href) 映射到已知页面
+</span><span class="c1"></span><span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&#34;/&#34;</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="nx">a</span><span class="o">&gt;</span><span class="nx">Home</span><span class="o">&lt;</span><span class="err">/a&gt;</span>
+<span class="o">&lt;</span><span class="err">/Link&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="-链接到动态路径">#. 链接到动态路径</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">import</span> <span class="nx">Link</span> <span class="nx">from</span> <span class="s1">&#39;next/link&#39;</span><span class="p">;</span>
 
-&lt;Link href='/'&gt;
-    &lt;a&gt;Back to Home&lt;/a&gt;
- &lt;/Link&gt;
-</code></pre><h2 id="三资产元数据和css">三、资产、元数据和CSS</h2>
-<p>1.图像组件</p>
-<pre tabindex="0"><code class="language-base" data-lang="base">import Image from 'next/image';
+<span class="kd">function</span> <span class="nx">Posts</span><span class="p">({</span> <span class="nx">posts</span> <span class="p">})</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+      <span class="p">{</span><span class="nx">posts</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">post</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">li</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">post</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="o">&gt;</span>
+          <span class="c1">//使用插值来创建路径，`encodeURIComponent`用于保持路径`utf-8`兼容
+</span><span class="c1"></span>          <span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">href</span><span class="o">=</span><span class="p">{</span><span class="sb">`/blog/</span><span class="si">${</span><span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">post</span><span class="p">.</span><span class="nx">slug</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span><span class="p">}</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">a</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">post</span><span class="p">.</span><span class="nx">title</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/a&gt;</span>
+          <span class="o">&lt;</span><span class="err">/Link&gt;</span>
+          <span class="c1">//或者使用URL对象，pathname是pages目录中页面的名称，query是具有动态段的对象
+</span><span class="c1"></span>          <span class="o">&lt;</span><span class="nx">Link</span>
+            <span class="nx">href</span><span class="o">=</span><span class="p">{{</span> <span class="nx">pathname</span><span class="o">:</span> <span class="s1">&#39;/blog/[slug]&#39;</span><span class="p">,</span> <span class="nx">query</span><span class="o">:</span> <span class="p">{</span> <span class="nx">slug</span><span class="o">:</span> <span class="nx">post</span><span class="p">.</span><span class="nx">slug</span> <span class="p">}}}</span>
+          <span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">a</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">post</span><span class="p">.</span><span class="nx">title</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/a&gt;</span>
+          <span class="o">&lt;</span><span class="err">/Link&gt;</span>
+        <span class="o">&lt;</span><span class="err">/li&gt;</span>
+      <span class="p">))}</span>
+    <span class="o">&lt;</span><span class="err">/ul&gt;</span>
+  <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="-获取路由参数">#. 获取路由参数</h4>
+<ul>
+<li>要访问 React 组件中的<code>router</code>对象，可以使用<code>useRouter</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">useRouter</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;next/router&#39;</span>
+<span class="kr">import</span> <span class="nx">Link</span> <span class="nx">from</span> <span class="s1">&#39;next/link&#39;</span>
+<span class="kr">import</span> <span class="nx">Header</span> <span class="nx">from</span> <span class="s1">&#39;../../../components/header&#39;</span>
 
-const YourComponent = () =&gt; (
-  &lt;Image
-    src=&quot;/images/profile.jpg&quot; //图片文件路径
-    height={144} //具有正确纵横比的所需尺寸
-    width={144} //具有正确纵横比的所需尺寸
-    alt=&quot;Your Name&quot;
-  /&gt;
-)
-</code></pre><p>2.元数据 Head</p>
-<pre tabindex="0"><code class="language-base" data-lang="base">import Head from 'next/head';
+<span class="kr">const</span> <span class="nx">Post</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">useRouter</span><span class="p">()</span>
+  <span class="kr">const</span> <span class="p">{</span> <span class="nx">id</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">router</span><span class="p">.</span><span class="nx">query</span>
 
-&lt;Head&gt;
-   &lt;title&gt;Create Next App&lt;/title&gt;
-   &lt;meta name=&quot;description&quot; content=&quot;Generated by create next app&quot; /&gt;
-   &lt;link rel=&quot;icon&quot; href=&quot;/favicon.ico&quot; /&gt;
-&lt;/Head&gt;
-</code></pre><p>3.CSS样式 (文件必须以.module.css结尾，这样才能保证className的唯一性)</p>
-<pre tabindex="0"><code class="language-base" data-lang="base">import styles from '../styles/Home.module.css';
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Header</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span><span class="nx">Post</span><span class="o">:</span> <span class="p">{</span><span class="nx">id</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/h1&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&#34;/post/[id]/[comment]&#34;</span> <span class="nx">as</span><span class="o">=</span><span class="p">{</span><span class="sb">`/post/</span><span class="si">${</span><span class="nx">id</span><span class="si">}</span><span class="sb">/first-comment`</span><span class="p">}</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">a</span><span class="o">&gt;</span><span class="nx">comment</span><span class="o">&lt;</span><span class="err">/a&gt;</span>
+          <span class="o">&lt;</span><span class="err">/Link&gt;</span>
+        <span class="o">&lt;</span><span class="err">/li&gt;</span>
+      <span class="o">&lt;</span><span class="err">/ul&gt;</span>
+    <span class="o">&lt;</span><span class="err">/&gt;</span>
+  <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="四动态路由">四、动态路由</h3>
+<ul>
+<li>
+<p>对于复杂的应用程序，使用<code>预定义路径</code>定义路由并不总是足够的。</p>
+</li>
+<li>
+<p>在 Next.js 中，可以将<code>[param]</code>添加到页面以创建动态路由（url slugs）</p>
+</li>
+</ul>
+<h4 id="-使用方法">#. 使用方法</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="c1">//pages/post/[pid].js
+</span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">useRouter</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;next/router&#39;</span>
 
-&lt;div className={styles.container}&gt;
-</code></pre><pre tabindex="0"><code class="language-base" data-lang="base">&lt;style jsx&gt;{`
-  …
-`}&lt;/style&gt;
-</code></pre><p>4.布局组件</p>
-<blockquote>
-<p><code>components/layout.component.module.css</code></p>
-</blockquote>
-<pre tabindex="0"><code class="language-base" data-lang="base">.container {
-  max-width: 36rem;
-  padding: 0 1rem;
-  margin: 3rem auto 6rem;
-}
-</code></pre><blockquote>
-<p><code>components/layout.component.tsx</code></p>
-</blockquote>
-<pre tabindex="0"><code class="language-base" data-lang="base">import { ReactNode } from &quot;react&quot;;
-import styles from './layout.component.module.css';
+<span class="kr">export</span> <span class="k">default</span> <span class="kr">const</span> <span class="nx">Post</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">useRouter</span><span class="p">()</span>
+  <span class="kr">const</span> <span class="p">{</span> <span class="nx">pid</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">router</span><span class="p">.</span><span class="nx">query</span> <span class="c1">//匹配的路径参数将作为查询参数发送到页面
+</span><span class="c1"></span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">Post</span><span class="o">:</span> <span class="p">{</span><span class="nx">pid</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/p&gt;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="c1">//路由`/post/abc`将具有以下`query`对象
+</span><span class="c1"></span><span class="p">{</span> <span class="s2">&#34;pid&#34;</span><span class="o">:</span> <span class="s2">&#34;abc&#34;</span> <span class="p">}</span>
 
-interface layoutProps {
-    children?: ReactNode;
-};
+<span class="c1">//同理，路由`/post/abc?foo=bar`将具有以下`query`对象
+</span><span class="c1"></span><span class="p">{</span> <span class="s2">&#34;foo&#34;</span><span class="o">:</span> <span class="s2">&#34;bar&#34;</span><span class="p">,</span> <span class="s2">&#34;pid&#34;</span><span class="o">:</span> <span class="s2">&#34;abc&#34;</span> <span class="p">}</span>
 
-export default function LayoutComponent({ children }: layoutProps) {
-    return (
-        &lt;div className={styles.container}&gt;{children}&lt;/div&gt;
-    );
-};
-</code></pre><blockquote>
-<p><code>components/first-post.tsx</code></p>
-</blockquote>
-<pre tabindex="0"><code class="language-base" data-lang="base">import Link from 'next/link';
-import Head from 'next/head';
-import LayoutComponent from '../../components/layout.component';
+<span class="c1">//但是，路由参数将覆盖具有相同名称的查询参数。例如，路由`/post/abc?pid=123`将具有以下`query`对象
+</span><span class="c1"></span><span class="p">{</span> <span class="s2">&#34;pid&#34;</span><span class="o">:</span> <span class="s2">&#34;abc&#34;</span> <span class="p">}</span>
 
-export default function FirstPost() {
-    return (
-        &lt;LayoutComponent&gt;
-            &lt;Head&gt;
-                &lt;title&gt;first-post&lt;/title&gt;
-            &lt;/Head&gt;
-            &lt;h1&gt;
-                &lt;Link href='/'&gt;
-                    &lt;a&gt;Back to Home&lt;/a&gt;
-                &lt;/Link&gt;
-            &lt;/h1&gt;
-        &lt;/LayoutComponent&gt;
-    )
-}
-</code></pre><p>5.全局样式 <code>pages/_app.tsx</code></p>
-<pre tabindex="0"><code class="language-base" data-lang="base">import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+<span class="c1">//多个动态线路段的工作方式相同。路由`pages/post/[pid]/[comment].js`将匹配路由`/post/abc/a-comment`，
+</span><span class="c1">//其`query`对象将是
+</span><span class="c1"></span><span class="p">{</span> <span class="s2">&#34;pid&#34;</span><span class="o">:</span> <span class="s2">&#34;abc&#34;</span><span class="p">,</span> <span class="s2">&#34;comment&#34;</span><span class="o">:</span> <span class="s2">&#34;a-comment&#34;</span> <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">import</span> <span class="nx">Link</span> <span class="nx">from</span> <span class="s1">&#39;next/link&#39;</span>
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return &lt;Component {...pageProps} /&gt;
-}
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Home</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&#34;/post/abc&#34;</span><span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="nx">a</span><span class="o">&gt;</span><span class="nx">去</span> <span class="sb">`pages/post/[pid].js`</span> <span class="nx">页面</span><span class="o">&lt;</span><span class="err">/a&gt;</span>
+        <span class="o">&lt;</span><span class="err">/Link&gt;</span>
+      <span class="o">&lt;</span><span class="err">/li&gt;</span>
+      <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&#34;/post/abc?foo=bar&#34;</span><span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="nx">a</span><span class="o">&gt;</span><span class="nx">去</span> <span class="sb">`pages/post/[pid].js`</span> <span class="nx">页面</span><span class="o">&lt;</span><span class="err">/a&gt;</span>
+        <span class="o">&lt;</span><span class="err">/Link&gt;</span>
+      <span class="o">&lt;</span><span class="err">/li&gt;</span>
+      <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">Link</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&#34;/post/abc/a-comment&#34;</span><span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="nx">a</span><span class="o">&gt;</span><span class="nx">去</span> <span class="sb">`pages/post/[pid]/[comment].js`</span> <span class="nx">页面</span><span class="o">&lt;</span><span class="err">/a&gt;</span>
+        <span class="o">&lt;</span><span class="err">/Link&gt;</span>
+      <span class="o">&lt;</span><span class="err">/li&gt;</span>
+    <span class="o">&lt;</span><span class="err">/ul&gt;</span>
+  <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="-捕获所有路径">#. 捕获所有路径</h4>
+<ul>
+<li>通过<code>[...params]</code>/ <code>[[...params]]</code>可以扩展捕获动态路由所有路径</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="sb">`pages/post/[...slug].js`</span> <span class="c1">//匹配`/post/a` `/post/a/b` `/post/a/b/c`等等
+</span><span class="c1"></span>
+<span class="sb">`pages/post/[[...slug]].js`</span> <span class="c1">//将匹配`/post` `/post/a` `/post/a/b`等等
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="-路由优先级">#. 路由优先级</h4>
+<ul>
+<li><code>预定义路由</code>优先于<code>动态路由</code>，<code>动态路由</code>优先于<code>捕获所有路由</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="sb">`pages/post/create.js`</span> <span class="c1">//匹配 `/post/create`
+</span><span class="c1"></span><span class="sb">`pages/post/[pid].js`</span> <span class="c1">//匹配`/post/1` `/post/abc`等，但不匹配`/post/create`
+</span><span class="c1"></span><span class="sb">`pages/post/[...slug].js`</span> <span class="c1">//匹配`/post/1/2` `/post/a/b/c`等，但不匹配`/post/create` `/post/abc`
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="五使用-userouter-导航">五、使用 useRouter 导航</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">useRouter</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;next/router&#39;</span>
 
-export default MyApp
-</code></pre><p>6.使用<code>classnames</code>库</p>
-<p>Step1. 安装 classnames 库</p>
-<pre tabindex="0"><code class="language-base" data-lang="base">yarn add classnames
-</code></pre><p>Step2. 编写CSS模块</p>
-<pre tabindex="0"><code class="language-base" data-lang="base">.success {
-  color: green;
-}
-.error {
-  color: red;
-}
-</code></pre><p>Step3. 使用 <code>classnames</code></p>
-<pre tabindex="0"><code class="language-base" data-lang="base">import { ReactNode } from 'react';
-import styles from './alert.module.css';
-import cn from 'classnames';
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">ReadMore</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">useRouter</span><span class="p">()</span>
 
-interface alertProps {
-  children?: ReactNode;
-  type?: 'success' | 'error'
-}
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="nx">router</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;/about&#39;</span><span class="p">)}</span><span class="o">&gt;</span>
+      <span class="nx">Click</span> <span class="nx">here</span> <span class="nx">to</span> <span class="nx">read</span> <span class="nx">more</span>
+    <span class="o">&lt;</span><span class="err">/button&gt;</span>
+  <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="六浅层路由避免数据重复获取">六、浅层路由（避免数据重复获取）</h3>
+<ul>
+<li>
+<p>使用 <code>useRouter</code></p>
+</li>
+<li>
+<p>浅路由允许你更改 URL 而不需要再次运行<code>数据获取方法</code></p>
+</li>
+<li>
+<p>这些方法包括<code>getServerSideProps</code> <code>getStaticProps</code> <code>getInitialProps</code></p>
+</li>
+</ul>
+<h4 id="-启用浅层路由">#. 启用浅层路由</h4>
+<ul>
+<li>将<code>shallow</code>选项设置为<code>true</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">useEffect</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">useRouter</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;next/router&#39;</span>
 
-export default function Alert({ children, type }: alertProps) {
-  return (
-    &lt;div
-      className={cn({
-        [styles.success]: type === 'success',
-        [styles.error]: type === 'error'
-      })}
-    &gt;
-      {children}
-    &lt;/div&gt;
-  )
-}
-</code></pre>
+<span class="c1">// 当前 URL 是 &#39;/&#39;
+</span><span class="c1"></span><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Page</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="nx">useRouter</span><span class="p">()</span>
+
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// 在第一次渲染后始终进行导航
+</span><span class="c1"></span>    <span class="nx">router</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;/?counter=10&#39;</span><span class="p">,</span> <span class="kc">undefined</span><span class="p">,</span> <span class="p">{</span> <span class="nx">shallow</span><span class="o">:</span> <span class="kc">true</span> <span class="p">})</span> <span class="c1">//将`shallow`选项设置为`true`
+</span><span class="c1"></span>  <span class="p">},</span> <span class="p">[])</span>
+
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// counter会改变，URL 将更新为`/?counter=10`. 并且页面不会被替换，只会更改路由的状态。
+</span><span class="c1"></span>  <span class="p">},</span> <span class="p">[</span><span class="nx">router</span><span class="p">.</span><span class="nx">query</span><span class="p">.</span><span class="nx">counter</span><span class="p">])</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="-注意事项">#. 注意事项</h4>
+<ul>
+<li>浅路由仅适用于相同页面的 URL 更改。</li>
+</ul>
+<p>例如，假设我们有另一个名为<code>pages/about.js</code>的页面，并且您运行以下命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="nx">router</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;/?counter=10&#39;</span><span class="p">,</span> <span class="s1">&#39;/about?counter=10&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">shallow</span><span class="o">:</span> <span class="kc">true</span> <span class="p">})</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>由于这是一个新页面，它会卸载当前页面，加载新页面并等待数据获取，即使我们要求进行浅路由。</p>
+<h3 id="七api-路由">七、API 路由</h3>
+<ul>
+<li>
+<p>API 路由提供了一种使用 Next.js构建<code>API</code>的解决方案。</p>
+</li>
+<li>
+<p>文件夹内的任何<code>pages/api</code>文件都被映射到<code>/api/*</code>并将被视为 <code>API</code> 端点而不是<code>page</code>。它们只是服务器端包，不会增加客户端包的大小。</p>
+</li>
+<li>
+<p>必须以<code>export default</code>导出，函数必须命名为<code>handler</code>。</p>
+</li>
+<li>
+<p><code>handler</code>接收两个参数 <code>req</code> 和 <code>res</code></p>
+</li>
+</ul>
+<h4 id="-常规用法">#. 常规用法</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">handler</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">method</span> <span class="o">===</span> <span class="s1">&#39;POST&#39;</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// 处理 POST 请求
+</span><span class="c1"></span>  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="c1">// 处理任何其他 HTTP 方法
+</span><span class="c1"></span>  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="-其他用法">#. 其他用法</h4>
+<ul>
+<li>
+<p>屏蔽外部服务的 URL（例如<code>/api/secret</code>代替<code>https://company.com/secret-url</code>）</p>
+</li>
+<li>
+<p>在服务器上使用环境变量来安全地访问外部服务。</p>
+</li>
+</ul>
+<h4 id="-注意事项-1">#. 注意事项</h4>
+<ul>
+<li>
+<p>API 路由不指定<code>CORS</code>标头，这意味着它在默认情况下是<code>同源</code>的。可以通过使用<code>CORS</code>中间件包装请求处理程序来自定义此类行为。</p>
+</li>
+<li>
+<p>API 路由不能用于 <code>next export</code></p>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="s2">&#34;scripts&#34;</span><span class="o">:</span> <span class="p">{</span>
+  <span class="s2">&#34;build&#34;</span><span class="o">:</span> <span class="s2">&#34;next build &amp;&amp; next export&#34;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="八动态-api-路由">八、动态 API 路由</h3>
+<ul>
+<li>API 路由支持动态路由，并遵循与<code>pages</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="c1">//pages/api/post/[pid].js
+</span><span class="c1"></span><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">handler</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="p">{</span> <span class="nx">pid</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">req</span><span class="p">.</span><span class="nx">query</span>
+  <span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="sb">`Post: </span><span class="si">${</span><span class="nx">pid</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>现在，请求<code>/api/post/abc</code>将响应文本：<code>Post: abc</code>。</p>
+
   </article>
 </div>
       
@@ -2145,9 +2554,42 @@ export default function Alert({ children, type }: alertProps) {
   <div class="toc__body">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#一创建-nextjs-应用">一、创建 Next.js 应用</a></li>
-    <li><a href="#二路由文件系统路由-pages中的文件">二、路由（文件系统路由, pages中的文件）</a></li>
-    <li><a href="#三资产元数据和css">三、资产、元数据和CSS</a></li>
+    <li>
+      <ul>
+        <li><a href="#一创建-nextjs-应用">一、创建 Next.js 应用</a></li>
+        <li><a href="#二基本功能">二、基本功能</a></li>
+        <li><a href="#三路由">三、路由</a>
+          <ul>
+            <li><a href="#-三种路由类型">#. 三种路由类型</a></li>
+            <li><a href="#-link-页面之间的链接">#. Link 页面之间的链接</a></li>
+            <li><a href="#-链接到动态路径">#. 链接到动态路径</a></li>
+            <li><a href="#-获取路由参数">#. 获取路由参数</a></li>
+          </ul>
+        </li>
+        <li><a href="#四动态路由">四、动态路由</a>
+          <ul>
+            <li><a href="#-使用方法">#. 使用方法</a></li>
+            <li><a href="#-捕获所有路径">#. 捕获所有路径</a></li>
+            <li><a href="#-路由优先级">#. 路由优先级</a></li>
+          </ul>
+        </li>
+        <li><a href="#五使用-userouter-导航">五、使用 useRouter 导航</a></li>
+        <li><a href="#六浅层路由避免数据重复获取">六、浅层路由（避免数据重复获取）</a>
+          <ul>
+            <li><a href="#-启用浅层路由">#. 启用浅层路由</a></li>
+            <li><a href="#-注意事项">#. 注意事项</a></li>
+          </ul>
+        </li>
+        <li><a href="#七api-路由">七、API 路由</a>
+          <ul>
+            <li><a href="#-常规用法">#. 常规用法</a></li>
+            <li><a href="#-其他用法">#. 其他用法</a></li>
+            <li><a href="#-注意事项-1">#. 注意事项</a></li>
+          </ul>
+        </li>
+        <li><a href="#八动态-api-路由">八、动态 API 路由</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
