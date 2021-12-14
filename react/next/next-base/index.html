@@ -1989,6 +1989,209 @@
 </span></code></pre></td></tr></table>
 </div>
 </div><h3 id="二基本功能">二、基本功能</h3>
+<h4 id="1-pages">1. pages</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="c1">// pages中的 `ts` `tsx` 即路由
+</span><span class="c1">// 必须以 default 导出
+</span><span class="c1">// pages/about.tsx
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">About</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">about</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">About</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="2-预渲染">2. 预渲染</h4>
+<p>默认情况下，Next.js预渲染每个页面。</p>
+<p>这意味着 Next.js 会提前为每个页面生成 HTML，而不是全部由客户端 JavaScript 完成。</p>
+<p>预渲染可以带来更好的性能和 SEO。</p>
+<h4 id="------静态生成">- - - 静态生成</h4>
+<ul>
+<li>没有数据的静态生成</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">const</span> <span class="nx">About</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">About</span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">About</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>页面内容取决于外部数据的静态生成 <code>getStaticProps</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">const</span> <span class="nx">Blog</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">posts</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">posts</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">post</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">post</span><span class="p">.</span><span class="nx">title</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/li&gt;}&lt;/ul&gt;</span>
+<span class="c1">//这个函数在构建时被调用
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">async</span> <span class="kd">function</span> <span class="nx">getStaticProps</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">//调用外部 API 端点以获取帖子
+</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://.../posts&#39;</span><span class="p">)</span>
+  <span class="kr">const</span> <span class="nx">posts</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">()</span>
+  <span class="c1">//通过返回 { props: { posts } }，Blog 组件将在构建时接收 `posts` 作为 props
+</span><span class="c1"></span>  <span class="k">return</span> <span class="p">{</span>
+    <span class="nx">props</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">posts</span><span class="p">,</span>
+    <span class="p">},</span>
+  <span class="p">}</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">Blog</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>页面路径取决于外部数据的静态生成 <code>getStaticPaths</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">const</span> <span class="nx">Post</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">post</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="p">{</span><span class="c1">//Render data...}
+</span><span class="c1"></span>
+<span class="c1">//这个函数在构建时被调用
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">async</span> <span class="kd">function</span> <span class="nx">getStaticPaths</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">//调用外部 API 端点以获取帖子
+</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://.../posts&#39;</span><span class="p">)</span>
+  <span class="kr">const</span> <span class="nx">posts</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">()</span>
+  <span class="c1">//根据帖子获取我们想要预渲染的路径
+</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">paths</span> <span class="o">=</span> <span class="nx">posts</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">post</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span>
+    <span class="nx">params</span><span class="o">:</span> <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="nx">post</span><span class="p">.</span><span class="nx">id</span> <span class="p">},</span>
+  <span class="p">}))</span>
+ <span class="c1">// 我们将在构建时仅预渲染这些路径`paths`。{ fallback: false } 表示其他路由应该是 404。
+</span><span class="c1"></span>  <span class="k">return</span> <span class="p">{</span> <span class="nx">paths</span><span class="p">,</span> <span class="nx">fallback</span><span class="o">:</span> <span class="kc">false</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// 这也在构建时被调用
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">async</span> <span class="kd">function</span> <span class="nx">getStaticProps</span><span class="p">({</span> <span class="nx">params</span> <span class="p">})</span> <span class="p">{</span>
+  <span class="c1">// params 包含帖子`id`。
+</span><span class="c1"></span>  <span class="c1">// 如果路由类似于 /posts/1，则 params.id 为 1
+</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="sb">`https://.../posts/</span><span class="si">${</span><span class="nx">params</span><span class="p">.</span><span class="nx">id</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+  <span class="kr">const</span> <span class="nx">post</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">()</span>
+  <span class="c1">// 通过 props 将 post 数据传递给页面
+</span><span class="c1"></span>  <span class="k">return</span> <span class="p">{</span> <span class="nx">props</span><span class="o">:</span> <span class="p">{</span> <span class="nx">post</span> <span class="p">}</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">Post</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="------服务器端渲染-ssr">- - - 服务器端渲染 SSR</h4>
+<ul>
+<li>对页面进行服务器端渲染 <code>getServerSideProps</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">const</span> <span class="nx">Page</span> <span class="o">=</span> <span class="p">({</span> <span class="nx">data</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="c1">// Render data... }
+</span><span class="c1"></span>
+<span class="c1">// 这在每个请求上都会被调用
+</span><span class="c1"></span><span class="kr">export</span> <span class="kr">async</span> <span class="kd">function</span> <span class="nx">getServerSideProps</span><span class="p">()</span> <span class="p">{</span>
+  <span class="c1">// 从外部 API 获取数据
+</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="sb">`https://.../data`</span><span class="p">)</span>
+  <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">()</span>
+  <span class="c1">// 通过 props 向页面传递数据
+</span><span class="c1"></span>  <span class="k">return</span> <span class="p">{</span> <span class="nx">props</span><span class="o">:</span> <span class="p">{</span> <span class="nx">data</span> <span class="p">}</span> <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">Page</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="------静态生成-vs-ssr">- - - 静态生成 vs SSR</h4>
+<ul>
+<li>
+<p>静态生成（推荐）- HTML在<code>构建时</code>生成，并将在每个请求中重用。</p>
+</li>
+<li>
+<p>服务器端渲染 - HTML准对<code>每个请求</code>生成，因为SSR比静态生成慢，所以无特别必要不要使用。</p>
+</li>
+</ul>
+<h4 id="3-数据获取">3. 数据获取</h4>
+<p>用于获取数据并进行预渲染的三个独特的 Next.js 函数：</p>
+<ul>
+<li><code>getStaticProps</code>（静态生成）：在构建时获取数据。</li>
+<li><code>getStaticPaths</code>（静态生成）：根据数据指定动态路由预渲染页面。</li>
+<li><code>getServerSideProps</code>（服务器端渲染）：获取每个请求的数据。</li>
+</ul>
+<h4 id="------getstaticprops-静态生成">- - - <code>getStaticProps</code> (静态生成)</h4>
+<p>getStaticProps(context)，<code>context</code> 包含以下对象:</p>
+<ul>
+<li><code>params</code> 包含动态路由的路由参数。例，页面名称是<code>[id].js</code>，则<code>params</code>看起来像<code>{ id: ... }</code>。</li>
+<li><code>preview</code> 是<code>true</code>则页面处于预览模式，否则为<code>undefined</code>。</li>
+<li><code>previewData</code> 包含 <code>setPreviewData</code> 设置的预览数据。</li>
+<li><code>locale</code> 包含活动区域设置 (如果启用了国际化路由)</li>
+<li><code>locales</code> 包含所有支持的语言环境 (如果启用了国际化路由)</li>
+<li><code>defaultLocale</code> 包含配置的默认语言环境 (如果启用了国际化路由)</li>
+</ul>
 <h3 id="三路由">三、路由</h3>
 <ul>
 <li>
@@ -2001,7 +2204,7 @@
 <p>文件必须以<code>export default</code>导出。</p>
 </li>
 </ul>
-<h4 id="-三种路由类型">#. 三种路由类型</h4>
+<h4 id="1-三种路由类型">1. 三种路由类型</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2034,7 +2237,7 @@
 <span class="sb">`pages/post/[...all].js`</span> <span class="err">→</span> <span class="sb">`/post/* (/post/2020/id/title)`</span>
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="-link-页面之间的链接">#. Link 页面之间的链接</h4>
+</div><h4 id="2-link-页面之间的链接">2. Link 页面之间的链接</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -2053,7 +2256,7 @@
 <span class="o">&lt;</span><span class="err">/Link&gt;</span>
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="-链接到动态路径">#. 链接到动态路径</h4>
+</div><h4 id="3-链接到动态路径">3. 链接到动态路径</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2106,7 +2309,7 @@
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="-获取路由参数">#. 获取路由参数</h4>
+</div><h4 id="4-获取路由参数">4. 获取路由参数</h4>
 <ul>
 <li>要访问 React 组件中的<code>router</code>对象，可以使用<code>useRouter</code></li>
 </ul>
@@ -2162,7 +2365,7 @@
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="四动态路由">四、动态路由</h3>
+</div><h4 id="5-动态路由">5. 动态路由</h4>
 <ul>
 <li>
 <p>对于复杂的应用程序，使用<code>预定义路径</code>定义路由并不总是足够的。</p>
@@ -2171,7 +2374,7 @@
 <p>在 Next.js 中，可以将<code>[param]</code>添加到页面以创建动态路由（url slugs）</p>
 </li>
 </ul>
-<h4 id="-使用方法">#. 使用方法</h4>
+<h4 id="------使用方法">- - - 使用方法</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2284,7 +2487,7 @@
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="-捕获所有路径">#. 捕获所有路径</h4>
+</div><h4 id="------捕获所有路径">- - - 捕获所有路径</h4>
 <ul>
 <li>通过<code>[...params]</code>/ <code>[[...params]]</code>可以扩展捕获动态路由所有路径</li>
 </ul>
@@ -2302,7 +2505,7 @@
 <span class="sb">`pages/post/[[...slug]].js`</span> <span class="c1">//将匹配`/post` `/post/a` `/post/a/b`等等
 </span></code></pre></td></tr></table>
 </div>
-</div><h4 id="-路由优先级">#. 路由优先级</h4>
+</div><h4 id="------路由优先级">- - - 路由优先级</h4>
 <ul>
 <li><code>预定义路由</code>优先于<code>动态路由</code>，<code>动态路由</code>优先于<code>捕获所有路由</code></li>
 </ul>
@@ -2320,7 +2523,7 @@
 </span><span class="c1"></span><span class="sb">`pages/post/[...slug].js`</span> <span class="c1">//匹配`/post/1/2` `/post/a/b/c`等，但不匹配`/post/create` `/post/abc`
 </span></code></pre></td></tr></table>
 </div>
-</div><h3 id="五使用-userouter-导航">五、使用 useRouter 导航</h3>
+</div><h4 id="6-使用-userouter-导航">6. 使用 useRouter 导航</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2351,7 +2554,7 @@
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="六浅层路由避免数据重复获取">六、浅层路由（避免数据重复获取）</h3>
+</div><h4 id="7-浅层路由避免数据重复获取">7. 浅层路由（避免数据重复获取）</h4>
 <ul>
 <li>
 <p>使用 <code>useRouter</code></p>
@@ -2363,7 +2566,7 @@
 <p>这些方法包括<code>getServerSideProps</code> <code>getStaticProps</code> <code>getInitialProps</code></p>
 </li>
 </ul>
-<h4 id="-启用浅层路由">#. 启用浅层路由</h4>
+<h4 id="------启用浅层路由">- - - 启用浅层路由</h4>
 <ul>
 <li>将<code>shallow</code>选项设置为<code>true</code></li>
 </ul>
@@ -2407,7 +2610,7 @@
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="-注意事项">#. 注意事项</h4>
+</div><h4 id="------注意事项">- - - 注意事项</h4>
 <ul>
 <li>浅路由仅适用于相同页面的 URL 更改。</li>
 </ul>
@@ -2423,7 +2626,7 @@
 </code></pre></td></tr></table>
 </div>
 </div><p>由于这是一个新页面，它会卸载当前页面，加载新页面并等待数据获取，即使我们要求进行浅路由。</p>
-<h3 id="七api-路由">七、API 路由</h3>
+<h4 id="8-api-路由">8. API 路由</h4>
 <ul>
 <li>
 <p>API 路由提供了一种使用 Next.js构建<code>API</code>的解决方案。</p>
@@ -2438,7 +2641,7 @@
 <p><code>handler</code>接收两个参数 <code>req</code> 和 <code>res</code></p>
 </li>
 </ul>
-<h4 id="-常规用法">#. 常规用法</h4>
+<h4 id="------常规用法">- - - 常规用法</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -2461,7 +2664,7 @@
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="-其他用法">#. 其他用法</h4>
+</div><h4 id="------其他用法">- - - 其他用法</h4>
 <ul>
 <li>
 <p>屏蔽外部服务的 URL（例如<code>/api/secret</code>代替<code>https://company.com/secret-url</code>）</p>
@@ -2470,7 +2673,7 @@
 <p>在服务器上使用环境变量来安全地访问外部服务。</p>
 </li>
 </ul>
-<h4 id="-注意事项-1">#. 注意事项</h4>
+<h4 id="------注意事项-1">- - - 注意事项</h4>
 <ul>
 <li>
 <p>API 路由不指定<code>CORS</code>标头，这意味着它在默认情况下是<code>同源</code>的。可以通过使用<code>CORS</code>中间件包装请求处理程序来自定义此类行为。</p>
@@ -2493,7 +2696,7 @@
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="八动态-api-路由">八、动态 API 路由</h3>
+</div><h4 id="9-动态-api-路由">9. 动态 API 路由</h4>
 <ul>
 <li>API 路由支持动态路由，并遵循与<code>pages</code></li>
 </ul>
@@ -2557,37 +2760,38 @@
     <li>
       <ul>
         <li><a href="#一创建-nextjs-应用">一、创建 Next.js 应用</a></li>
-        <li><a href="#二基本功能">二、基本功能</a></li>
+        <li><a href="#二基本功能">二、基本功能</a>
+          <ul>
+            <li><a href="#1-pages">1. pages</a></li>
+            <li><a href="#2-预渲染">2. 预渲染</a></li>
+            <li><a href="#------静态生成">- - - 静态生成</a></li>
+            <li><a href="#------服务器端渲染-ssr">- - - 服务器端渲染 SSR</a></li>
+            <li><a href="#------静态生成-vs-ssr">- - - 静态生成 vs SSR</a></li>
+            <li><a href="#3-数据获取">3. 数据获取</a></li>
+            <li><a href="#------getstaticprops-静态生成">- - - <code>getStaticProps</code> (静态生成)</a></li>
+          </ul>
+        </li>
         <li><a href="#三路由">三、路由</a>
           <ul>
-            <li><a href="#-三种路由类型">#. 三种路由类型</a></li>
-            <li><a href="#-link-页面之间的链接">#. Link 页面之间的链接</a></li>
-            <li><a href="#-链接到动态路径">#. 链接到动态路径</a></li>
-            <li><a href="#-获取路由参数">#. 获取路由参数</a></li>
+            <li><a href="#1-三种路由类型">1. 三种路由类型</a></li>
+            <li><a href="#2-link-页面之间的链接">2. Link 页面之间的链接</a></li>
+            <li><a href="#3-链接到动态路径">3. 链接到动态路径</a></li>
+            <li><a href="#4-获取路由参数">4. 获取路由参数</a></li>
+            <li><a href="#5-动态路由">5. 动态路由</a></li>
+            <li><a href="#------使用方法">- - - 使用方法</a></li>
+            <li><a href="#------捕获所有路径">- - - 捕获所有路径</a></li>
+            <li><a href="#------路由优先级">- - - 路由优先级</a></li>
+            <li><a href="#6-使用-userouter-导航">6. 使用 useRouter 导航</a></li>
+            <li><a href="#7-浅层路由避免数据重复获取">7. 浅层路由（避免数据重复获取）</a></li>
+            <li><a href="#------启用浅层路由">- - - 启用浅层路由</a></li>
+            <li><a href="#------注意事项">- - - 注意事项</a></li>
+            <li><a href="#8-api-路由">8. API 路由</a></li>
+            <li><a href="#------常规用法">- - - 常规用法</a></li>
+            <li><a href="#------其他用法">- - - 其他用法</a></li>
+            <li><a href="#------注意事项-1">- - - 注意事项</a></li>
+            <li><a href="#9-动态-api-路由">9. 动态 API 路由</a></li>
           </ul>
         </li>
-        <li><a href="#四动态路由">四、动态路由</a>
-          <ul>
-            <li><a href="#-使用方法">#. 使用方法</a></li>
-            <li><a href="#-捕获所有路径">#. 捕获所有路径</a></li>
-            <li><a href="#-路由优先级">#. 路由优先级</a></li>
-          </ul>
-        </li>
-        <li><a href="#五使用-userouter-导航">五、使用 useRouter 导航</a></li>
-        <li><a href="#六浅层路由避免数据重复获取">六、浅层路由（避免数据重复获取）</a>
-          <ul>
-            <li><a href="#-启用浅层路由">#. 启用浅层路由</a></li>
-            <li><a href="#-注意事项">#. 注意事项</a></li>
-          </ul>
-        </li>
-        <li><a href="#七api-路由">七、API 路由</a>
-          <ul>
-            <li><a href="#-常规用法">#. 常规用法</a></li>
-            <li><a href="#-其他用法">#. 其他用法</a></li>
-            <li><a href="#-注意事项-1">#. 注意事项</a></li>
-          </ul>
-        </li>
-        <li><a href="#八动态-api-路由">八、动态 API 路由</a></li>
       </ul>
     </li>
   </ul>
