@@ -290,7 +290,7 @@
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/jsts/function/for/</guid>
-        <description>这里用 For 循环举例 松散式 这是我自己给起的名字，当然同行可能并不喜欢这个称呼 1 2 3 4 5 6 7 8 9 10 11 12 13 const files = [&amp;#34;foo.txt &amp;#34;, &amp;#34;.bar&amp;#34;, &amp;#34; &amp;#34;, &amp;#34;baz.foo&amp;#34;]; let filePaths = []; for (let file of files) { const fileName</description>
+        <description>这里用 For 循环举例 松散式 (命令式) 这是我自己给起的名字，当然同行可能并不喜欢这个称呼 1 2 3 4 5 6 7 8 9 10 11 12 13 const files = [&amp;#34;foo.txt &amp;#34;, &amp;#34;.bar&amp;#34;, &amp;#34; &amp;#34;, &amp;#34;baz.foo&amp;#34;]; let filePaths = []; for (let file</description>
       </item>
       
       <item>
