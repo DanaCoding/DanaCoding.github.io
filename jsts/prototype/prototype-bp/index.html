@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>松散式 vs 函数式 vs 链式 – DanaCoding</title>
+    <title>原型链和继承 – DanaCoding</title>
     
 
 
@@ -30,7 +30,7 @@
     
     var baseurl = JSON.parse("\"https://danacoding.github.io/\"");
     
-    var permalink = JSON.parse("\"https://danacoding.github.io/jsts/function/for/\"");
+    var permalink = JSON.parse("\"https://danacoding.github.io/jsts/prototype/prototype-bp/\"");
 
     
     var toggleSidebarElem = document.getElementById("toggle-sidebar");
@@ -1072,21 +1072,21 @@
 <link rel="stylesheet" href="/css/main.min.css">
 
 
-    <meta name="description" content="常见的编程模式" />
+    <meta name="description" content="JavaScript 的继承和原型链概念" />
 <meta name="keywords" content="">
 <meta name="created" content="2020-01-28T00:34:39&#43;0900">
 <meta name="modified" content="2020-01-28T00:34:39&#43;0900">
 
 
 <meta property="og:site_name" content="DanaCoding">
-<meta property="og:title" content="松散式 vs 函数式 vs 链式">
-<meta property="og:url" content="https://danacoding.github.io/jsts/function/for/">
+<meta property="og:title" content="原型链和继承">
+<meta property="og:url" content="https://danacoding.github.io/jsts/prototype/prototype-bp/">
 <meta property="og:type" content="article">
 
 <meta name="generator" content="Hugo 0.90.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
-<link rel="canonical" href="https://danacoding.github.io/jsts/function/for/">
+<link rel="canonical" href="https://danacoding.github.io/jsts/prototype/prototype-bp/">
 <link rel="manifest" href="/manifest.json">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
@@ -1110,11 +1110,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "松散式 vs 函数式 vs 链式",
+    "headline": "原型链和继承",
     "datePublished": "2020-01-28T00:34:39+09:00",
     "dateModified": "2020-01-28T00:34:39+09:00",
-    "url" : "https://danacoding.github.io/jsts/function/for/",
-    "description": "常见的编程模式",
+    "url" : "https://danacoding.github.io/jsts/prototype/prototype-bp/",
+    "description": "JavaScript 的继承和原型链概念",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://danacoding.github.io/"
@@ -1163,7 +1163,7 @@
     <div class="menu">
   <h6 class="menu__label">
     
-      松散式 vs 函数式 vs 链式
+      原型链和继承
     
   </h6>
   <ul>
@@ -1231,9 +1231,9 @@
   
   
   
-  <li class="">
+  <li class="active">
     <a href="https://danacoding.github.io/jsts/prototype/prototype-bp/"
-      class="menu__title ">原型链和继承</a>
+      class="menu__title active">原型链和继承</a>
   </li>
   
 
@@ -1300,9 +1300,9 @@
   
   
   
-  <li class="active">
+  <li class="">
     <a href="https://danacoding.github.io/jsts/function/for/"
-      class="menu__title active">松散式 vs 函数式 vs 链式</a>
+      class="menu__title ">松散式 vs 函数式 vs 链式</a>
   </li>
   
 
@@ -1731,7 +1731,7 @@
   <div class="header__wrapper bgcolor__header">
     <div class="divider">
       <div class="lmr">
-        <h2 class="title">松散式 vs 函数式 vs 链式</h2>
+        <h2 class="title">原型链和继承</h2>
       </div>
     </div>
   </div>
@@ -1765,7 +1765,7 @@
   
   <li  class="is-active" >
     
-      <span>松散式 vs 函数式 vs 链式</span>
+      <span>原型链和继承</span>
     
   </li>
   
@@ -1807,7 +1807,7 @@
         <div class="menu">
   <h6 class="menu__label">
     
-      松散式 vs 函数式 vs 链式
+      原型链和继承
     
   </h6>
   <ul>
@@ -1875,9 +1875,9 @@
   
   
   
-  <li class="">
+  <li class="active">
     <a href="https://danacoding.github.io/jsts/prototype/prototype-bp/"
-      class="menu__title ">原型链和继承</a>
+      class="menu__title active">原型链和继承</a>
   </li>
   
 
@@ -1944,9 +1944,9 @@
   
   
   
-  <li class="active">
+  <li class="">
     <a href="https://danacoding.github.io/jsts/function/for/"
-      class="menu__title active">松散式 vs 函数式 vs 链式</a>
+      class="menu__title ">松散式 vs 函数式 vs 链式</a>
   </li>
   
 
@@ -2055,9 +2055,112 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <p>这里用 For 循环举例</p>
-<h3 id="松散式-命令式">松散式 (命令式)</h3>
-<p>这是我自己给起的名字，当然同行可能并不喜欢这个称呼</p>
+    <h3 id="一关键字">一、关键字</h3>
+<ul>
+<li>对象 object：是数据的集合</li>
+<li>原型继承</li>
+<li>构造器</li>
+<li>原型链</li>
+<li>子类继承</li>
+</ul>
+<p>JavaScript 中的（几乎）一切都是<code>对象</code>，除了原始值以外（number,string,boolean,undefined,null)</p>
+<h3 id="二经典继承-vs-原型继承">二、经典继承 vs 原型继承</h3>
+<p>编程中的继承意味着一个对象基于另一个对象，并且可以访问其他对象的属性和方法。</p>
+<p>JavaScript 使用<code>原型继承</code>，它不像 C 或者 Java 那样的<code>经典继承</code>，这是一个重要的区别。</p>
+<table>
+<thead>
+<tr>
+<th>经典继承</th>
+<th>原型继承</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>class</td>
+<td>prototype</td>
+</tr>
+<tr>
+<td>对象实例从 class 继承</td>
+<td>对象实例从其他对象继承</td>
+</tr>
+<tr>
+<td>子 class 可以从父 class 继承</td>
+<td>不从 class 继承（因为 JS 没有 class 的概念，即使是 ES6 的 class，它的底层也是基于 prototype，所以它只是一个类似经典 class 的语法糖）</td>
+</tr>
+<tr>
+<td>class 是不可变的，它不能再运行时更改</td>
+<td>原型prototype可以在运行时更改</td>
+</tr>
+<tr>
+<td>类支持或不支持多重继承（取决于语言）</td>
+<td>对象可以从多个原型继承</td>
+</tr>
+</tbody>
+</table>
+<h3 id="原型继承">原型继承</h3>
+<ul>
+<li>
+<p>原型继承的定义特征是对象实例可以通过原型链访问继承的属性和方法。</p>
+</li>
+<li>
+<p>这是通过 JavaScript 中的每个对象<code>自动赋予</code>一个原型属性<code>prototype</code>来实现的。</p>
+</li>
+<li>
+<p>当创建继承自父对象的子对象时，子对象可以访问父对象的原型属性<code>prototype</code>。</p>
+</li>
+<li>
+<p><code>proptotype</code> 属性本身是一个对象，并且因为子对象可以访问其父对象的原型属性，因此子对象可以访问<code>存储在此处(prototype)</code>的任何属性和方法。</p>
+</li>
+</ul>
+<p>案例，假设有一个 <code>vehicle（车辆）</code> 对象，在许多其他语言中，<code>Vehicle</code>会被认为是一个<code>class</code>，因为它是创建<code>vehicle（车辆）</code>类型实例的蓝图。</p>
+<p>然而 JavaScript 并没有 <code>class</code> 的概念，取而代之的是一个构造函数（对象），用作创建其他对象的蓝图。</p>
+<h4 id="------step1-构建一个类">- - - step1. 构建一个“类”</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="c1">// 使用构造器（构造函数）构建一个`Vehicle（车辆）`类
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">Vehicle</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">color</span><span class="p">,</span> <span class="nx">weight</span><span class="p">,</span> <span class="nx">year</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">weight</span> <span class="o">=</span> <span class="nx">weight</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">year</span> <span class="o">=</span> <span class="nx">year</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">honk</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Honk!&#34;</span><span class="p">);</span> <span class="c1">//鸣喇叭
+</span><span class="c1"></span>  <span class="p">};</span>
+<span class="p">};</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="------step2-实列化一个对象">- - - step2. 实列化一个对象</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kd">let</span> <span class="nx">myVehicle</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vehicle</span><span class="p">(</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;500&#39;</span><span class="p">,</span> <span class="mi">2019</span><span class="p">);</span>	
+<span class="nx">myVehicle</span><span class="p">.</span><span class="nx">color</span><span class="p">();</span> <span class="c1">// &#39;blue&#39;
+</span><span class="c1"></span><span class="nx">myVehicle</span><span class="p">.</span><span class="nx">honk</span><span class="p">();</span> <span class="c1">// &#39;Honk!&#39;
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="------step3-原型-prototype-登场---优化">- - - step3. 原型 prototype 登场 - 优化</h4>
+<p>在上例中，因为已经在构造函数体中定义了 honk 方法，</p>
+<p>所以每个新的车辆实例都会有它自己单独的 honk 副本存储在内存中。</p>
+<p>由于 honk 始终是相同的功能，因此每个实例存储自己的唯一副本是没有意义的。</p>
+<p><strong>这就是原型的力量发挥作用的地方。（对象可以访问其父对象的原型属性，因此将 honk 方法存储在 Vehicle 的原型属性中，则所有实例都可以访问它，而无需存储自己的副本。）</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2073,57 +2176,57 @@
 </span><span class="lnt">11
 </span><span class="lnt">12
 </span><span class="lnt">13
+</span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="kr">const</span> <span class="nx">files</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;foo.txt &#34;</span><span class="p">,</span> <span class="s2">&#34;.bar&#34;</span><span class="p">,</span> <span class="s2">&#34;   &#34;</span><span class="p">,</span> <span class="s2">&#34;baz.foo&#34;</span><span class="p">];</span>
-<span class="kd">let</span> <span class="nx">filePaths</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="kd">let</span> <span class="nx">Vehicle</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">color</span><span class="p">,</span> <span class="nx">weight</span><span class="p">,</span> <span class="nx">year</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">weight</span> <span class="o">=</span> <span class="nx">weight</span><span class="p">;</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">year</span> <span class="o">=</span> <span class="nx">year</span><span class="p">;</span>
+<span class="p">};</span>
 
-<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">file</span> <span class="k">of</span> <span class="nx">files</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">fileName</span> <span class="o">=</span> <span class="nx">file</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">fileName</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">filePath</span> <span class="o">=</span> <span class="sb">`~/cool_app/</span><span class="si">${</span><span class="nx">fileName</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
-    <span class="nx">filePaths</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">filePath</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<span class="nx">Vehicle</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">honk</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Honk!&#34;</span><span class="p">);</span>
+<span class="p">};</span>
 
-<span class="c1">// filePaths = [ &#39;~/cool_app/foo.txt&#39;, &#39;~/cool_app/.bar&#39;, &#39;~/cool_app/baz.foo&#39;]
+<span class="kd">let</span> <span class="nx">myVehicle</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vehicle</span><span class="p">(</span><span class="s2">&#34;blue&#34;</span><span class="p">,</span> <span class="s2">&#34;500&#34;</span><span class="p">,</span> <span class="mi">2019</span><span class="p">);</span>
+
+<span class="nx">myVehicle</span><span class="p">.</span><span class="nx">honk</span><span class="p">();</span> <span class="c1">// &#39;Honk!&#39;
 </span></code></pre></td></tr></table>
 </div>
-</div><h3 id="函数式">函数式</h3>
-<p>封装性更好</p>
+</div><h3 id="三原型链-__proto__-链接">三、原型链 <code>__proto__</code> （链接）</h3>
+<img width='90%' src="https://blogger.googleusercontent.com/img/a/AVvXsEhqsTQtX3QQOGWmK4U3xBC3rszMlVKStvPvkG0i84x0Tt8yBvGHsnPLC6bxwUwwHejWV2OYoaFqGkeQwGGunRiCv_4SC05JhSUrSiRPG7o35ymFp7P9TFKD1HLeMq1FhK9t7obOmlJa7z80QGplKxGmQxtlvQtFGyJUX4jQxWYtdEhaL2c11HdvbnBmlw=w606-h249" />
+<p>本质上，当调用 honk 方法时，JavaScript 将查看调用对象的属性，在本例中为 myVehicle，用于名为 honk 的方法（或属性）。 如果在对象上找不到此属性，我们将向上移动一级原型链。</p>
+<p>为了建立对象与其原型之间的链接，使用了 myVehicle 的 <strong>proto</strong> 属性。 这个 <strong>proto</strong> 属性本质上是指向它的构造函数原型的链接。</p>
+<p>一般而言，实例的 <code>__proto__</code> 属性是指向它的原型（其构造函数的原型属性）的<code>链接</code>。</p>
+<p>在控制台中演示：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="kr">const</span> <span class="nx">files</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;foo.txt &#34;</span><span class="p">,</span> <span class="s2">&#34;.bar&#34;</span><span class="p">,</span> <span class="s2">&#34;   &#34;</span><span class="p">,</span> <span class="s2">&#34;baz.foo&#34;</span><span class="p">];</span>
-<span class="kr">const</span> <span class="nx">filePaths</span> <span class="o">=</span> <span class="nx">files</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">file</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">fileName</span> <span class="o">=</span> <span class="nx">file</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">fileName</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">filePath</span> <span class="o">=</span> <span class="sb">`~/cool_app/</span><span class="si">${</span><span class="nx">fileName</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
-    <span class="nx">acc</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">filePath</span><span class="p">);</span>
-  <span class="p">}</span>
-  <span class="k">return</span> <span class="nx">acc</span><span class="p">;</span>
-<span class="p">},</span> <span class="p">[]);</span>
-
-<span class="c1">// filePaths = [ &#39;~/cool_app/foo.txt&#39;, &#39;~/cool_app/.bar&#39;, &#39;~/cool_app/baz.foo&#39;]
+<span class="nx">myVehicle</span><span class="p">.</span><span class="nx">__proto__</span> <span class="o">===</span> <span class="nx">Vehicle</span><span class="p">.</span><span class="nx">prototype</span> <span class="c1">// true
 </span></code></pre></td></tr></table>
 </div>
-</div><h3 id="链式">链式</h3>
-<p>与函数式相比，更直观，也是建议使用的方式</p>
+</div><p>因为在原型上显式地存储了 honk 方法，所以，Vehicle 的所有实例都可以访问 honk 方法，而无需存储自己的副本。</p>
+<h3 id="四子类继承用原型链模拟">四、子类继承（用原型链模拟）</h3>
+<ul>
+<li>
+<p>fn.call()：call方法的作用是调用fn构造函数</p>
+</li>
+<li>
+<p>Object.create()：允许创建一个新对象，同时指定该对象的原型</p>
+</li>
+</ul>
+<p>假设我们有一个不同的构造函数，它类似于 <code>Vehicle（车辆）</code> 但更具体，例如 <code>Motorcycle（摩托车）</code> 构造函数。</p>
+<p><code>Motorcycle（摩托车）</code> 具有与 <code>Vehicle（车辆）</code> 相同的所有属性和功能，但它还具有 <code>engineSize（引擎尺寸）</code> 属性和加油方法。</p>
+<p>因为摩托车与车辆共享相同的属性，所以可以使用继承来简化代码。 通过让 <code>Motorcycle</code> 从 <code>Vehicle</code> 继承，可以避免两次指定共享的属性和方法。</p>
+<ul>
+<li>注意：类和子类是经典继承的一个特征，而不是原型继承，这意味着<code>Motorcycle</code>实际上不是一个子类。 在 JavaScript 中，使用原型链来模拟类和子类。</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -2134,19 +2237,48 @@
 </span><span class="lnt">6
 </span><span class="lnt">7
 </span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="kr">const</span> <span class="nx">files</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;foo.txt &#34;</span><span class="p">,</span> <span class="s2">&#34;.bar&#34;</span><span class="p">,</span> <span class="s2">&#34;   &#34;</span><span class="p">,</span> <span class="s2">&#34;baz.foo&#34;</span><span class="p">];</span>
-<span class="kr">const</span> <span class="nx">filePaths</span> <span class="o">=</span> <span class="nx">files</span>
-  <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">file</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">file</span><span class="p">.</span><span class="nx">trim</span><span class="p">())</span>
-  <span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nb">Boolean</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">fileName</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="sb">`~/cool_app/</span><span class="si">${</span><span class="nx">fileName</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">Motorcycle</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">color</span><span class="p">,</span> <span class="nx">weight</span><span class="p">,</span> <span class="nx">year</span><span class="p">,</span> <span class="nx">engineSize</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">Vehicle</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="k">this</span><span class="p">,</span> <span class="nx">color</span><span class="p">,</span> <span class="nx">weight</span><span class="p">,</span> <span class="nx">year</span><span class="p">);</span> <span class="c1">//call方法的作用是调用Vehicle构造函数
+</span><span class="c1"></span>  <span class="k">this</span><span class="p">.</span><span class="nx">engineSize</span> <span class="o">=</span> <span class="nx">engineSize</span><span class="p">;</span>
+<span class="p">};</span>
 
-<span class="c1">// filePaths = [ &#39;~/cool_app/foo.txt&#39;, &#39;~/cool_app/.bar&#39;, &#39;~/cool_app/baz.foo&#39;]
+<span class="nx">Motorcycle</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="nx">Vehicle</span><span class="p">.</span><span class="nx">prototype</span><span class="p">)</span> <span class="c1">//Object.create方法允许创建一个新对象，同时指定该对象的原型
+</span><span class="c1"></span>
+<span class="kd">let</span> <span class="nx">myMotorcycle</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Motorcycle</span><span class="p">(</span><span class="s2">&#34;green&#34;</span><span class="p">,</span> <span class="mi">150</span><span class="p">,</span> <span class="mi">2015</span><span class="p">,</span> <span class="mi">500</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>通过这一步，已经连接了原型链。</p>
+<p>Motorcycle.prototype 的 <strong>proto</strong> 属性将设置为 Vehicle.prototype，摩托车实例现在可以访问摩托车原型以及车辆原型上存储的所有属性和方法。</p>
+<p>为了演示这一点，在 Motorcycles 原型中添加加油方法:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="nx">Motorcycle</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">refuel</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;Your fuel tank is now full!&#34;</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">myMotorcycle</span><span class="p">.</span><span class="nx">honk</span><span class="p">();</span> <span class="c1">// &#39;Honk!&#39;
+</span><span class="c1"></span><span class="nx">myMotorcycle</span><span class="p">.</span><span class="nx">refuel</span><span class="p">();</span> <span class="c1">// &#39;Your fuel tank is now full!&#39;
 </span></code></pre></td></tr></table>
 </div>
-</div>
+</div><img width="90%" src="https://blogger.googleusercontent.com/img/a/AVvXsEhao9-AwAL5s52RgAP_PtFTcl2ppsr5OTA9d7AV4OqiGQ-rUWSU0AyXFRp5UtqrUfxUDa5PHf1vDNGnBT-QbUoUSNozqe9K26KyhlZRKKiy_3D3nBKjp8PjFiq5Pfc4CKnLRxWHbtNoP2AQRH3TaCgJMgpJp8NMbPni50a1bVLbXBPCvSU3Mr7cuj22QA=w647-h236">
+<h3 id="五结语">五、结语</h3>
+<p>JavaScript 实现面向对象编程的方式与许多其他使用基于class类的语言不同。</p>
+<p>通过掌握原型继承、函数构造函数和原型链，才可以充分利用语言特性并了解 JavaScript 在底层是如何工作的。</p>
+
   </article>
 </div>
       
@@ -2154,17 +2286,17 @@
 <nav class="pagination-single">
   
     
-      <a href="https://danacoding.github.io/jsts/function/new/" title="字面量 vs 构造器 vs class" class="pagination-single__left">
+      <a href="https://danacoding.github.io/jsts/cr/cr/" title="Collect &amp; Ramda" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__right-title">字面量 vs 构造器 vs class</div>
+        <div class="pagination-single__right-title">Collect &amp; Ramda</div>
       </a>
     
     <div class="grow"></div>
     
-      <a href="https://danacoding.github.io/jsts/function/arrow/" title="箭头函数 vs 常规函数" class="pagination-single__right">
-        <div class="pagination-single__left-title">箭头函数 vs 常规函数</div>
+      <a href="https://danacoding.github.io/jsts/function/single/" title="在 JavaScript 中实现单例" class="pagination-single__right">
+        <div class="pagination-single__left-title">在 JavaScript 中实现单例</div>
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
         </div>
@@ -2186,9 +2318,18 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#松散式-命令式">松散式 (命令式)</a></li>
-        <li><a href="#函数式">函数式</a></li>
-        <li><a href="#链式">链式</a></li>
+        <li><a href="#一关键字">一、关键字</a></li>
+        <li><a href="#二经典继承-vs-原型继承">二、经典继承 vs 原型继承</a></li>
+        <li><a href="#原型继承">原型继承</a>
+          <ul>
+            <li><a href="#------step1-构建一个类">- - - step1. 构建一个“类”</a></li>
+            <li><a href="#------step2-实列化一个对象">- - - step2. 实列化一个对象</a></li>
+            <li><a href="#------step3-原型-prototype-登场---优化">- - - step3. 原型 prototype 登场 - 优化</a></li>
+          </ul>
+        </li>
+        <li><a href="#三原型链-__proto__-链接">三、原型链 <code>__proto__</code> （链接）</a></li>
+        <li><a href="#四子类继承用原型链模拟">四、子类继承（用原型链模拟）</a></li>
+        <li><a href="#五结语">五、结语</a></li>
       </ul>
     </li>
   </ul>

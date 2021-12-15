@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>松散式 vs 函数式 vs 链式 – DanaCoding</title>
+    <title>Array – DanaCoding</title>
     
 
 
@@ -30,7 +30,7 @@
     
     var baseurl = JSON.parse("\"https://danacoding.github.io/\"");
     
-    var permalink = JSON.parse("\"https://danacoding.github.io/jsts/function/for/\"");
+    var permalink = JSON.parse("\"https://danacoding.github.io/jsts/array/array-bp/\"");
 
     
     var toggleSidebarElem = document.getElementById("toggle-sidebar");
@@ -1072,21 +1072,21 @@
 <link rel="stylesheet" href="/css/main.min.css">
 
 
-    <meta name="description" content="常见的编程模式" />
+    <meta name="description" content="有趣的数组方法实现" />
 <meta name="keywords" content="">
 <meta name="created" content="2020-01-28T00:34:39&#43;0900">
 <meta name="modified" content="2020-01-28T00:34:39&#43;0900">
 
 
 <meta property="og:site_name" content="DanaCoding">
-<meta property="og:title" content="松散式 vs 函数式 vs 链式">
-<meta property="og:url" content="https://danacoding.github.io/jsts/function/for/">
+<meta property="og:title" content="Array">
+<meta property="og:url" content="https://danacoding.github.io/jsts/array/array-bp/">
 <meta property="og:type" content="article">
 
 <meta name="generator" content="Hugo 0.90.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
-<link rel="canonical" href="https://danacoding.github.io/jsts/function/for/">
+<link rel="canonical" href="https://danacoding.github.io/jsts/array/array-bp/">
 <link rel="manifest" href="/manifest.json">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
@@ -1110,11 +1110,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "松散式 vs 函数式 vs 链式",
+    "headline": "Array",
     "datePublished": "2020-01-28T00:34:39+09:00",
     "dateModified": "2020-01-28T00:34:39+09:00",
-    "url" : "https://danacoding.github.io/jsts/function/for/",
-    "description": "常见的编程模式",
+    "url" : "https://danacoding.github.io/jsts/array/array-bp/",
+    "description": "有趣的数组方法实现",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://danacoding.github.io/"
@@ -1163,7 +1163,7 @@
     <div class="menu">
   <h6 class="menu__label">
     
-      松散式 vs 函数式 vs 链式
+      Array
     
   </h6>
   <ul>
@@ -1185,9 +1185,9 @@
   
   
   
-  <li class="">
+  <li class="active">
     <a href="https://danacoding.github.io/jsts/array/array-bp/"
-      class="menu__title ">Array</a>
+      class="menu__title active">Array</a>
   </li>
   
 
@@ -1300,9 +1300,9 @@
   
   
   
-  <li class="active">
+  <li class="">
     <a href="https://danacoding.github.io/jsts/function/for/"
-      class="menu__title active">松散式 vs 函数式 vs 链式</a>
+      class="menu__title ">松散式 vs 函数式 vs 链式</a>
   </li>
   
 
@@ -1731,7 +1731,7 @@
   <div class="header__wrapper bgcolor__header">
     <div class="divider">
       <div class="lmr">
-        <h2 class="title">松散式 vs 函数式 vs 链式</h2>
+        <h2 class="title">Array</h2>
       </div>
     </div>
   </div>
@@ -1765,7 +1765,7 @@
   
   <li  class="is-active" >
     
-      <span>松散式 vs 函数式 vs 链式</span>
+      <span>Array</span>
     
   </li>
   
@@ -1807,7 +1807,7 @@
         <div class="menu">
   <h6 class="menu__label">
     
-      松散式 vs 函数式 vs 链式
+      Array
     
   </h6>
   <ul>
@@ -1829,9 +1829,9 @@
   
   
   
-  <li class="">
+  <li class="active">
     <a href="https://danacoding.github.io/jsts/array/array-bp/"
-      class="menu__title ">Array</a>
+      class="menu__title active">Array</a>
   </li>
   
 
@@ -1944,9 +1944,9 @@
   
   
   
-  <li class="active">
+  <li class="">
     <a href="https://danacoding.github.io/jsts/function/for/"
-      class="menu__title active">松散式 vs 函数式 vs 链式</a>
+      class="menu__title ">松散式 vs 函数式 vs 链式</a>
   </li>
   
 
@@ -2055,9 +2055,179 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <p>这里用 For 循环举例</p>
-<h3 id="松散式-命令式">松散式 (命令式)</h3>
-<p>这是我自己给起的名字，当然同行可能并不喜欢这个称呼</p>
+    <img width="90%" src="https://blogger.googleusercontent.com/img/a/AVvXsEjIDxNtOo4a3nKZeD0vu3Q-i2eAmf9AI2wGdASZTnwIzFxrSo3Wh-j0qCedd-FcqCn5FbbmGRYfk9Z0km6fbDLHRgXH0IYqN9nTjYU-9Pxc_9FDKQAgzegzB6XSszO_zZ5O3QNuW7EoYk4lnwDYBmYGL1SyxiLzWPhjE1D97I-KUErg2vIl6A_xym0qAA=w611-h275"/>
+<h3 id="一四个必备的js数组方法">一、四个必备的js数组方法</h3>
+<h4 id="1-arrayprototypemap-数组元素更新">1. Array.prototype.map() 数组元素更新</h4>
+<ul>
+<li>创建一个新数组。结果是一个与原数组<code>长度相同</code>的数组，并根据提供的函数转换元素。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+<span class="kr">const</span> <span class="kr">double</span> <span class="o">=</span> <span class="nx">x</span> <span class="p">=&gt;</span> <span class="nx">x</span> <span class="o">*</span> <span class="mi">2</span><span class="p">;</span>
+<span class="nx">arr</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kr">double</span><span class="p">);</span> <span class="c1">// [2, 4, 6]
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="2-arrayprototypefilter-数组元素过滤">2. Array.prototype.filter() 数组元素过滤</h4>
+<ul>
+<li>创建一个新数组。根据提供的函数返回原数组的子集，结果是一个与原数组<code>长度相同</code>或<code>小于</code>的数组。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+<span class="kr">const</span> <span class="nx">isOdd</span> <span class="o">=</span> <span class="nx">x</span> <span class="p">=&gt;</span> <span class="nx">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">===</span> <span class="mi">1</span><span class="p">;</span>
+<span class="nx">arr</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">isOdd</span><span class="p">);</span> <span class="c1">// [1, 3]
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="3-arrayprototypereduce-数组转换">3. Array.prototype.reduce() 数组转换</h4>
+<ul>
+<li>根据<code>reducer</code>函数和<code>初始值</code>创建任何类型的输出值。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+
+<span class="kr">const</span> <span class="nx">sum</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span>
+<span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">sum</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">// 6
+</span><span class="c1"></span>
+<span class="kr">const</span> <span class="nx">increment</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">[...</span><span class="nx">x</span><span class="p">,</span> <span class="nx">x</span><span class="p">[</span><span class="nx">x</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="nx">y</span><span class="p">];</span>
+<span class="nx">arr</span><span class="p">.</span><span class="nx">reduce</span><span class="p">(</span><span class="nx">increment</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]);</span> <span class="c1">// [0, 1, 3, 6]
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="4-arrayprototypefind-匹配第一个元素">4. Array.prototype.find() 匹配第一个元素</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+<span class="kr">const</span> <span class="nx">isOdd</span> <span class="o">=</span> <span class="nx">x</span> <span class="p">=&gt;</span> <span class="nx">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">===</span> <span class="mi">1</span><span class="p">;</span>
+<span class="nx">arr</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">isOdd</span><span class="p">);</span> <span class="c1">// 1
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="二在数组开头添加新元素">二、在数组开头添加新元素</h3>
+<h4 id="1-arrayprototypeconcat">1. Array.prototype.concat</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span> 
+<span class="kr">const</span> <span class="nx">newFirstElement</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span> 
+<span class="kr">const</span> <span class="nx">newArray</span> <span class="o">=</span> <span class="p">[</span><span class="nx">newFirstElement</span><span class="p">].</span><span class="nx">concat</span><span class="p">(</span><span class="nx">array</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">newArray</span><span class="p">);</span> <span class="c1">// [4, 1, 2, 3]
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="2-arrayprototypeunshift">2. Array.prototype.unshift</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+<span class="nx">array</span><span class="p">.</span><span class="nx">unshift</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">array</span><span class="p">);</span> <span class="c1">// [4, 1, 2, 3]
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="3-spread-展开运算符">3. Spread 展开运算符</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+<span class="kr">const</span> <span class="nx">newArray</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="p">...</span><span class="nx">array</span><span class="p">];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">newArray</span><span class="p">);</span> <span class="c1">// [4, 1, 2, 3]
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="4-arrayprototypesplice">4. Array.prototype.splice</h4>
+<ul>
+<li>splice(索引, 从第一个参数中指定的索引开始删除的元素数, 想要插入的元素)</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">const</span> <span class="nx">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+<span class="nx">array</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">array</span><span class="p">);</span> <span class="c1">// // [4, 1, 2, 3]
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="三移除数组重复项">三、移除数组重复项</h3>
+<h4 id="1-set">1. Set</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+<span class="p">[...</span><span class="k">new</span> <span class="nx">Set</span><span class="p">(</span><span class="nx">arr</span><span class="p">)];</span> <span class="c1">// [1, 2, 3]
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="2-arrayprototypefilter">2. Array.prototype.filter</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+<span class="nx">arr</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">item</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">item</span><span class="p">)</span> <span class="o">===</span> <span class="nx">index</span><span class="p">);</span> <span class="c1">// [1,2,3]
+</span></code></pre></td></tr></table>
+</div>
+</div><h4 id="3-arrayprototypemap">3. Array.prototype.map</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2073,25 +2243,26 @@
 </span><span class="lnt">11
 </span><span class="lnt">12
 </span><span class="lnt">13
+</span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="kr">const</span> <span class="nx">files</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;foo.txt &#34;</span><span class="p">,</span> <span class="s2">&#34;.bar&#34;</span><span class="p">,</span> <span class="s2">&#34;   &#34;</span><span class="p">,</span> <span class="s2">&#34;baz.foo&#34;</span><span class="p">];</span>
-<span class="kd">let</span> <span class="nx">filePaths</span> <span class="o">=</span> <span class="p">[];</span>
+<span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
 
-<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">file</span> <span class="k">of</span> <span class="nx">files</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">fileName</span> <span class="o">=</span> <span class="nx">file</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">fileName</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">filePath</span> <span class="o">=</span> <span class="sb">`~/cool_app/</span><span class="si">${</span><span class="nx">fileName</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
-    <span class="nx">filePaths</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">filePath</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">toUniqueArray</span><span class="p">(</span><span class="nx">array</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">newArr</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="nx">array</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">x</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">newArr</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">x</span><span class="p">))</span> <span class="p">{</span>
+      <span class="nx">newArr</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span>
+    <span class="p">};</span>
+  <span class="p">});</span>
+  <span class="k">return</span> <span class="nx">newArr</span><span class="p">;</span>
+<span class="p">};</span>
 
-<span class="c1">// filePaths = [ &#39;~/cool_app/foo.txt&#39;, &#39;~/cool_app/.bar&#39;, &#39;~/cool_app/baz.foo&#39;]
+<span class="nx">toUniqueArray</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// [1, 2, 3]
 </span></code></pre></td></tr></table>
 </div>
-</div><h3 id="函数式">函数式</h3>
-<p>封装性更好</p>
+</div><h4 id="4-arrayprototypeforeach">4. Array.prototype.forEach</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2106,44 +2277,79 @@
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="kr">const</span> <span class="nx">files</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;foo.txt &#34;</span><span class="p">,</span> <span class="s2">&#34;.bar&#34;</span><span class="p">,</span> <span class="s2">&#34;   &#34;</span><span class="p">,</span> <span class="s2">&#34;baz.foo&#34;</span><span class="p">];</span>
-<span class="kr">const</span> <span class="nx">filePaths</span> <span class="o">=</span> <span class="nx">files</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">acc</span><span class="p">,</span> <span class="nx">file</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">fileName</span> <span class="o">=</span> <span class="nx">file</span><span class="p">.</span><span class="nx">trim</span><span class="p">();</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">fileName</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">filePath</span> <span class="o">=</span> <span class="sb">`~/cool_app/</span><span class="si">${</span><span class="nx">fileName</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
-    <span class="nx">acc</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">filePath</span><span class="p">);</span>
-  <span class="p">}</span>
-  <span class="k">return</span> <span class="nx">acc</span><span class="p">;</span>
-<span class="p">},</span> <span class="p">[]);</span>
+<span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
 
-<span class="c1">// filePaths = [ &#39;~/cool_app/foo.txt&#39;, &#39;~/cool_app/.bar&#39;, &#39;~/cool_app/baz.foo&#39;]
+<span class="kd">function</span> <span class="nx">toUniqueArray</span><span class="p">(</span><span class="nx">array</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">newArr</span> <span class="o">=</span> <span class="p">{};</span>
+  <span class="nx">array</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">newArr</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="p">{</span>
+      <span class="nx">newArr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+  <span class="k">return</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">newArr</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">toUniqueArray</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// [&#34;1&#34;, &#34;2&#34;, &#34;3&#34;]
 </span></code></pre></td></tr></table>
 </div>
-</div><h3 id="链式">链式</h3>
-<p>与函数式相比，更直观，也是建议使用的方式</p>
+</div><h4 id="5-for">5. for</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">];</span>
+
+<span class="kd">function</span> <span class="nx">toUniqueArray</span><span class="p">(</span><span class="nx">array</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">let</span> <span class="nx">newArr</span> <span class="o">=</span> <span class="p">[];</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">array</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">newArr</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">newArr</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">array</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">newArr</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nx">toUniqueArray</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// [1, 2, 3]
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="四数组中最小值和最大值">四、数组中最小值和最大值</h3>
+<ul>
+<li>Math.min()</li>
+<li>Math.max()</li>
+<li>(&hellip;) Spread 展开运算符</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="kr">const</span> <span class="nx">files</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;foo.txt &#34;</span><span class="p">,</span> <span class="s2">&#34;.bar&#34;</span><span class="p">,</span> <span class="s2">&#34;   &#34;</span><span class="p">,</span> <span class="s2">&#34;baz.foo&#34;</span><span class="p">];</span>
-<span class="kr">const</span> <span class="nx">filePaths</span> <span class="o">=</span> <span class="nx">files</span>
-  <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">file</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">file</span><span class="p">.</span><span class="nx">trim</span><span class="p">())</span>
-  <span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nb">Boolean</span><span class="p">)</span>
-  <span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">fileName</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="sb">`~/cool_app/</span><span class="si">${</span><span class="nx">fileName</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-
-<span class="c1">// filePaths = [ &#39;~/cool_app/foo.txt&#39;, &#39;~/cool_app/.bar&#39;, &#39;~/cool_app/baz.foo&#39;]
+<span class="kr">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">];</span>
+<span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(...</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// 1
+</span><span class="c1"></span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(...</span><span class="nx">arr</span><span class="p">);</span> <span class="c1">// 8
 </span></code></pre></td></tr></table>
 </div>
 </div>
@@ -2154,17 +2360,10 @@
 <nav class="pagination-single">
   
     
-      <a href="https://danacoding.github.io/jsts/function/new/" title="字面量 vs 构造器 vs class" class="pagination-single__left">
-        <div class="pagination-single__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
-        </div>
-        <div class="pagination-single__right-title">字面量 vs 构造器 vs class</div>
-      </a>
-    
     <div class="grow"></div>
     
-      <a href="https://danacoding.github.io/jsts/function/arrow/" title="箭头函数 vs 常规函数" class="pagination-single__right">
-        <div class="pagination-single__left-title">箭头函数 vs 常规函数</div>
+      <a href="https://danacoding.github.io/jsts/cr/cr/" title="Collect &amp; Ramda" class="pagination-single__right">
+        <div class="pagination-single__left-title">Collect &amp; Ramda</div>
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
         </div>
@@ -2186,9 +2385,32 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#松散式-命令式">松散式 (命令式)</a></li>
-        <li><a href="#函数式">函数式</a></li>
-        <li><a href="#链式">链式</a></li>
+        <li><a href="#一四个必备的js数组方法">一、四个必备的js数组方法</a>
+          <ul>
+            <li><a href="#1-arrayprototypemap-数组元素更新">1. Array.prototype.map() 数组元素更新</a></li>
+            <li><a href="#2-arrayprototypefilter-数组元素过滤">2. Array.prototype.filter() 数组元素过滤</a></li>
+            <li><a href="#3-arrayprototypereduce-数组转换">3. Array.prototype.reduce() 数组转换</a></li>
+            <li><a href="#4-arrayprototypefind-匹配第一个元素">4. Array.prototype.find() 匹配第一个元素</a></li>
+          </ul>
+        </li>
+        <li><a href="#二在数组开头添加新元素">二、在数组开头添加新元素</a>
+          <ul>
+            <li><a href="#1-arrayprototypeconcat">1. Array.prototype.concat</a></li>
+            <li><a href="#2-arrayprototypeunshift">2. Array.prototype.unshift</a></li>
+            <li><a href="#3-spread-展开运算符">3. Spread 展开运算符</a></li>
+            <li><a href="#4-arrayprototypesplice">4. Array.prototype.splice</a></li>
+          </ul>
+        </li>
+        <li><a href="#三移除数组重复项">三、移除数组重复项</a>
+          <ul>
+            <li><a href="#1-set">1. Set</a></li>
+            <li><a href="#2-arrayprototypefilter">2. Array.prototype.filter</a></li>
+            <li><a href="#3-arrayprototypemap">3. Array.prototype.map</a></li>
+            <li><a href="#4-arrayprototypeforeach">4. Array.prototype.forEach</a></li>
+            <li><a href="#5-for">5. for</a></li>
+          </ul>
+        </li>
+        <li><a href="#四数组中最小值和最大值">四、数组中最小值和最大值</a></li>
       </ul>
     </li>
   </ul>

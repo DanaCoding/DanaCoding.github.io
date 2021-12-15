@@ -15,12 +15,30 @@
     
       
       <item>
+        <title>Array</title>
+        <link>https://danacoding.github.io/jsts/array/array-bp/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/jsts/array/array-bp/</guid>
+        <description>一、四个必备的js数组方法 1. Array.prototype.map() 数组元素更新 创建一个新数组。结果是一个与原数组长度相同的数组，并根据提供的函数转换元素。 1 2 3 4 const arr = [1, 2, 3]; const</description>
+      </item>
+      
+      <item>
         <title>Collect &amp; Ramda</title>
         <link>https://danacoding.github.io/jsts/cr/cr/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/jsts/cr/cr/</guid>
         <description>collect.js &amp;amp; ramda（ 处理数组和对象的好帮手 ） Step1. 安装 yarn add collect.js yarn add ramda Step2. 导入 import collect from &#39;collect.js&#39; import * as R from &#39;ramda&#39; Step3. （项目实例，用来渲染多屏，每屏里面有 8 张卡片） 使用 collect.js 示</description>
+      </item>
+      
+      <item>
+        <title>原型链和继承</title>
+        <link>https://danacoding.github.io/jsts/prototype/prototype-bp/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/jsts/prototype/prototype-bp/</guid>
+        <description>一、关键字 对象 object：是数据的集合 原型继承 构造器 原型链 子类继承 JavaScript 中的（几乎）一切都是对象，除了原始值以外（number,string,</description>
       </item>
       
       <item>

@@ -96,6 +96,15 @@
       </item>
       
       <item>
+        <title>Array</title>
+        <link>https://danacoding.github.io/jsts/array/array-bp/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/jsts/array/array-bp/</guid>
+        <description>一、四个必备的js数组方法 1. Array.prototype.map() 数组元素更新 创建一个新数组。结果是一个与原数组长度相同的数组，并根据提供的函数转换元素。 1 2 3 4 const arr = [1, 2, 3]; const</description>
+      </item>
+      
+      <item>
         <title>Collect &amp; Ramda</title>
         <link>https://danacoding.github.io/jsts/cr/cr/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -210,6 +219,15 @@
         
         <guid>https://danacoding.github.io/react-native/ui/ui-kitten/kitten-base/</guid>
         <description>一、安装 //确保已安装 React Native CLI npm un -g react-native-cli &amp;amp;&amp;amp; npm i -g @react-native-community/cli //用 Kitten 模板创建新项目 npx react-native init MyApp --template @ui-kitten/template-js //启动应用 yarn android 二、配置路由（配置应用程序在屏幕之间导航，基</description>
+      </item>
+      
+      <item>
+        <title>原型链和继承</title>
+        <link>https://danacoding.github.io/jsts/prototype/prototype-bp/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/jsts/prototype/prototype-bp/</guid>
+        <description>一、关键字 对象 object：是数据的集合 原型继承 构造器 原型链 子类继承 JavaScript 中的（几乎）一切都是对象，除了原始值以外（number,string,</description>
       </item>
       
       <item>
