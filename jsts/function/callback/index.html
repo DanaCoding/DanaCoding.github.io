@@ -1132,10 +1132,10 @@
 </head>
 
 
-<body id="root" class="theme__dark">
+<body id="root" class="theme__light">
     <script>
         var rootElem = document.getElementById('root');
-        var themeOptions = JSON.parse("[\"dark\",\"light\"]");
+        var themeOptions = JSON.parse("[\"light\",\"dark\"]");
         var localTheme = localStorage.getItem('theme');
 
         if (localTheme) {
@@ -2219,6 +2219,8 @@
 
 
       
+  
+
     </article>
     
     <section id="list-side" class="r" data-dir="ltr">
@@ -2501,7 +2503,7 @@
   var listMain = document.getElementById('list-main');
   var singleMenu = document.getElementById('single-menu');
   var switchElem = document.querySelector('.switch');
-  var wideViewAsDefault = JSON.parse("null");
+  var wideViewAsDefault = JSON.parse("false");
   
   enquire.register("screen and (max-width:1280px)", {
     match: function () {
