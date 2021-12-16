@@ -249,6 +249,15 @@
       </item>
       
       <item>
+        <title>解构赋值</title>
+        <link>https://danacoding.github.io/jsts/array/jiegou/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/jsts/array/jiegou/</guid>
+        <description>1. 忽略值 1 2 3 const [apple, , banana] = [&amp;#39;apple&amp;#39;, &amp;#39;pear&amp;#39;, &amp;#39;banana&amp;#39;]; console.log(apple, banana); // apple banana 2. 分配剩余值 1 2 3 4 5 6 const [one, two, ...remainingNum] = [1, 2, 3, 4, 5]; console.log(remainingNum); // [3, 4, 5] const { apple, pear, ...remainFruits } = { apple:&amp;#39;apple&amp;#39;, pear:&amp;#39;pear&amp;#39;, banana:&amp;#39;banana&amp;#39;, cherry:&amp;#39;cherry&amp;#39; }; console.log(remainFruits); // { banana:&amp;#39;banana&amp;#39;, cherry:&amp;#39;cherry&amp;#39; } 3. 组合的</description>
+      </item>
+      
+      <item>
         <title>Expo 最佳实践</title>
         <link>https://danacoding.github.io/react-native/expo/expo-bp/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
