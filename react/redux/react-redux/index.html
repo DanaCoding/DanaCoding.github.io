@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Storybook 基础 – DanaCoding</title>
+    <title>React &amp; Redux – DanaCoding</title>
     
 
 
@@ -30,7 +30,7 @@
     
     var baseurl = JSON.parse("\"https://danacoding.github.io/\"");
     
-    var permalink = JSON.parse("\"https://danacoding.github.io/react/storybook/sb-base/\"");
+    var permalink = JSON.parse("\"https://danacoding.github.io/react/redux/react-redux/\"");
 
     
     var toggleSidebarElem = document.getElementById("toggle-sidebar");
@@ -1072,21 +1072,21 @@
 <link rel="stylesheet" href="/css/main.min.css">
 
 
-    <meta name="description" content="" />
+    <meta name="description" content=" Redux 和 React 的配合" />
 <meta name="keywords" content="">
 <meta name="created" content="2020-01-28T00:34:39&#43;0900">
 <meta name="modified" content="2020-01-28T00:34:39&#43;0900">
 
 
 <meta property="og:site_name" content="DanaCoding">
-<meta property="og:title" content="Storybook 基础">
-<meta property="og:url" content="https://danacoding.github.io/react/storybook/sb-base/">
+<meta property="og:title" content="React &amp; Redux">
+<meta property="og:url" content="https://danacoding.github.io/react/redux/react-redux/">
 <meta property="og:type" content="article">
 
 <meta name="generator" content="Hugo 0.90.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
-<link rel="canonical" href="https://danacoding.github.io/react/storybook/sb-base/">
+<link rel="canonical" href="https://danacoding.github.io/react/redux/react-redux/">
 <link rel="manifest" href="/manifest.json">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
@@ -1110,11 +1110,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "Storybook 基础",
+    "headline": "React \u0026 Redux",
     "datePublished": "2020-01-28T00:34:39+09:00",
     "dateModified": "2020-01-28T00:34:39+09:00",
-    "url" : "https://danacoding.github.io/react/storybook/sb-base/",
-    "description": "一、安装配置 在next.js项目中执行 npx sb init yarn storybook .storybook/preview.js 为 Storybook 配置 Next.js Images + import * as NextImage from \u0026quot;next/image\u0026quot;; + const …",
+    "url" : "https://danacoding.github.io/react/redux/react-redux/",
+    "description": " Redux 和 React 的配合",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://danacoding.github.io/"
@@ -1163,7 +1163,7 @@
     <div class="menu">
   <h6 class="menu__label">
     
-      Storybook 基础
+      React &amp; Redux
     
   </h6>
   <ul>
@@ -1208,9 +1208,9 @@
   
   
   
-  <li class="">
+  <li class="active">
     <a href="https://danacoding.github.io/react/redux/react-redux/"
-      class="menu__title ">React &amp; Redux</a>
+      class="menu__title active">React &amp; Redux</a>
   </li>
   
 
@@ -1415,9 +1415,9 @@
   
   
   
-  <li class="active">
+  <li class="">
     <a href="https://danacoding.github.io/react/storybook/sb-base/"
-      class="menu__title active">Storybook 基础</a>
+      class="menu__title ">Storybook 基础</a>
   </li>
   
 
@@ -1754,7 +1754,7 @@
   <div class="header__wrapper bgcolor__header">
     <div class="divider">
       <div class="lmr">
-        <h2 class="title">Storybook 基础</h2>
+        <h2 class="title">React &amp; Redux</h2>
       </div>
     </div>
   </div>
@@ -1788,7 +1788,7 @@
   
   <li  class="is-active" >
     
-      <span>Storybook 基础</span>
+      <span>React &amp; Redux</span>
     
   </li>
   
@@ -1830,7 +1830,7 @@
         <div class="menu">
   <h6 class="menu__label">
     
-      Storybook 基础
+      React &amp; Redux
     
   </h6>
   <ul>
@@ -1875,9 +1875,9 @@
   
   
   
-  <li class="">
+  <li class="active">
     <a href="https://danacoding.github.io/react/redux/react-redux/"
-      class="menu__title ">React &amp; Redux</a>
+      class="menu__title active">React &amp; Redux</a>
   </li>
   
 
@@ -2082,9 +2082,9 @@
   
   
   
-  <li class="active">
+  <li class="">
     <a href="https://danacoding.github.io/react/storybook/sb-base/"
-      class="menu__title active">Storybook 基础</a>
+      class="menu__title ">Storybook 基础</a>
   </li>
   
 
@@ -2101,94 +2101,465 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <h3 id="一安装配置">一、安装配置</h3>
-<blockquote>
-<p>在next.js项目中执行</p>
-</blockquote>
-<pre tabindex="0"><code class="language-base" data-lang="base">npx sb init
-
-yarn storybook
-</code></pre><blockquote>
-<p><code>.storybook/preview.js</code> 为 Storybook 配置 Next.js Images</p>
-</blockquote>
-<pre tabindex="0"><code class="language-base" data-lang="base">+ import * as NextImage from &quot;next/image&quot;;
-
-+ const OriginalNextImage = NextImage.default;
-
-+ Object.defineProperty(NextImage, &quot;default&quot;, {
-  configurable: true,
-  value: (props) =&gt; (
-    &lt;OriginalNextImage
-      {...props}
-      unoptimized
-    /&gt;
-  ),
-});
-</code></pre><blockquote>
-<p><code>package.json</code> 为 Storybook 提供 Next.js 公共目录</p>
-</blockquote>
-<pre tabindex="0"><code class="language-base" data-lang="base">{
-  ...
-  
-  &quot;scripts&quot;: {
-    - &quot;storybook&quot;: &quot;start-storybook -p 6006&quot;,
-    - &quot;build-storybook&quot;: &quot;build-storybook&quot;
-    + &quot;storybook&quot;: &quot;start-storybook -p 6006 -s ./public&quot;,
-    + &quot;build-storybook&quot;: &quot;build-storybook -s public&quot;
-  },
-  
- ...
-
-}
-</code></pre><blockquote>
-<p>配置全局样式，这里使用 antd</p>
-</blockquote>
-<pre tabindex="0"><code class="language-base" data-lang="base">yarn add antd
-
-// `.storybook/preview.js`  为 Storybook 配置全局样式
-import 'antd/dist/antd.css';
-
-export const parameters = {
-  ...
-  ...
-  layout: 'fullscreen'
+    <p>这两种技术的关键原则是什么?</p>
+<p>React 是提供数据的视图库，能以高效、可预测的方式渲染视图。</p>
+<p>Redux 是状态管理框架，可用于简化 APP 应用状态的管理。</p>
+<p>在 React Redux app 应用中，通常可创建单一的 Redux store 来管理整个应用的状态。</p>
+<p>React 组件仅订阅 store 中与其角色相关的数据， 可直接从 React 组件中分发 actions 以触发 store 对象的更新。</p>
+<p>React 组件可以在本地管理自己的状态，但是对于复杂的应用来说，它的状态最好是用 Redux 保存在单一位置，有特定本地状态的独立组件例外。</p>
+<p>当单个组件可能仅具有特定于其的本地状态时，算是例外。</p>
+<p>最后一点是，Redux 没有内置的 React 支持，需要安装 react-redux包， 通过这个方式把 Redux 的 state 和 dispatch 作为 props 传给组件。</p>
+<h3 id="一react-和-redux">一、React 和 Redux</h3>
+<pre tabindex="0"><code class="language-base" data-lang="base">class DisplayMessages extends React.Component {
+  // 添加下面这行代码
+  constructor(props) {
+    super(props);
+    this.state = {
+      input: '',
+      messages: []
+    }
+  }
+  // 添加上面这行代码
+  render() {
+    return &lt;div /&gt;
+  }
 };
-</code></pre><h3 id="二编写故事流程-组件---故事">二、编写故事流程 （组件 -&gt; 故事）</h3>
-<p><p class="md__image">
-  <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/oiob4yc7rqra3pf8it5d.png" alt="Image description"  />
-</p></p>
-<blockquote>
-<p>故事细节</p>
-</blockquote>
-<p><p class="md__image">
-  <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w4pepu9is24ip85gzqjp.png" alt="Image description"  />
-</p></p>
-<h3 id="三args-获取-状态数据-和-事件">三、args 获取 状态数据 和 事件</h3>
-<p><p class="md__image">
-  <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uly1yyn4mcy27qry0xx9.png" alt="Image description"  />
-</p><br />
-<p class="md__image">
-  <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2bgmdll6wjsxvya4h3qh.png" alt="Image description"  />
-</p><br />
-<p class="md__image">
-  <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/s5d4c8bzfl03z8xz8cqk.png" alt="Image description"  />
-</p></p>
-<blockquote>
-<p>使用其他故事的 args</p>
-</blockquote>
-<p><p class="md__image">
-  <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/lyz64uj2sf6lku9g5eg9.png" alt="Image description"  />
-</p></p>
-<blockquote>
-<p>传递给Storybook的事件的写法 (必须带有 &hellip;props, 否则事件无法触发)</p>
-</blockquote>
-<p><p class="md__image">
-  <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/l00s2ub8clzl701sz6uj.png" alt="Image description"  />
-</p></p>
-<h3 id="四parameters-静态参数--loaders-加载器">四、parameters 静态参数 &amp; loaders 加载器</h3>
-<p>parameters 通常用于控制 Storybook 功能和插件的行为。（一般情况下不需要使用，但不可不知）</p>
-<p>loaders 用于加载故事的数据，加载器可用于加载任何资产、延迟加载组件或从远程 API 获取数据。（一般不需要使用，但不可不知）</p>
+</code></pre><h3 id="二首先在本地管理状态">二、首先在本地管理状态</h3>
+<pre tabindex="0"><code class="language-base" data-lang="base">class DisplayMessages extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      input: '',
+      messages: []
+    }
+  }
+  // 在这里添加 handleChange() 和 submitMessage() 方法
+  handleChange(event) {
+    this.setState({
+      input: event.target.value,
+      messages: this.state.messages
+    })
+  }
 
+  submitMessage() {
+    this.setState({
+      input: '',
+      messages: [...this.state.messages, this.state.input]
+    })
+  }
+
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h2&gt;Type in a new Message:&lt;/h2&gt;
+        &lt;input onChange={this.handleChange.bind(this)} value={this.state.input} /&gt;
+        &lt;button onClick={this.submitMessage.bind(this)}&gt;Submit&lt;/button&gt;
+        &lt;ul&gt;
+          {this.state.messages.map((x, i) =&gt; {
+            return &lt;li key={i}&gt;{x}&lt;/li&gt;
+          })}
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    );
+  }
+};
+</code></pre><h3 id="三提取状态逻辑给-redux">三、提取状态逻辑给 Redux</h3>
+<p>完成 React 组件后，需要把在本地 state 执行的逻辑移到 Redux 中， 这是为小规模 React 应用添加 Redux 的第一步。</p>
+<p>该应用的唯一功能是把用户的新消息添加到无序列表中。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">// 定义 ADD、addMessage()、messageReducer() 并在这里存储：
+const ADD = &quot;ADD&quot;;
+const addMessage = message =&gt; {
+  return {
+    type: ADD,
+    message
+  };
+};
+
+// 使用 ES6 默认参数给 'previous State' 参数一个初始值。
+const messageReducer = (previousState = [], action) =&gt; {
+  // 使用switch语句来布局reducer逻辑以响应不同的动作类型
+  switch (action.type) {
+    case ADD:
+      // 使用 ES6 扩展运算符返回一个新数组，其中将新消息添加到 previousState
+      return [...previousState, action.message];
+      break;
+    default:
+      // 如果 Redux 存储的更新不是针对此特定状态，则要退回到默认情况。
+      return previousState;
+  }
+};
+
+const store = Redux.createStore(messageReducer);
+</code></pre><h3 id="四使用-provider-链接-redux-和-react">四、使用 Provider 链接 Redux 和 React</h3>
+<p>在上一步中，创建了 Redux store 和 action，分别用于处理消息数组和添加新消息。</p>
+<p>下一步要为 React 提供访问 Redux store 及发起更新所需的 actions。 <code>react-redux</code> 包可帮助我们完成这些任务。</p>
+<p>react-redux 提供的 API 有两个关键的功能：<code>Provider</code> 和 <code>connect</code>。</p>
+<p>Provider 是 wrapper 组件， 它允许访问整个组件树中的 Redux store 及 dispatch（分发）方法。</p>
+<p>Provider 需要两个 props：Redux store 和 App 应用的子组件。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">// Redux:
+const ADD = 'ADD';
+
+const addMessage = (message) =&gt; {
+  return {
+    type: ADD,
+    message
+  }
+};
+
+const messageReducer = (state = [], action) =&gt; {
+  switch (action.type) {
+    case ADD:
+      return [
+        ...state,
+        action.message
+      ];
+    default:
+      return state;
+  }
+};
+
+
+
+const store = Redux.createStore(messageReducer);
+
+// React:
+
+class DisplayMessages extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      input: '',
+      messages: []
+    }
+    this.handleChange = this.handleChange.bind(this);
+    this.submitMessage = this.submitMessage.bind(this);
+  }
+  handleChange(event) {
+    this.setState({
+      input: event.target.value
+    });
+  }
+  submitMessage() {
+    this.setState((state) =&gt; {
+      const currentMessage = state.input;
+      return {
+        input: '',
+        messages: state.messages.concat(currentMessage)
+      };
+    });
+  }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h2&gt;Type in a new Message:&lt;/h2&gt;
+        &lt;input
+          value={this.state.input}
+          onChange={this.handleChange} /&gt;&lt;br /&gt;
+        &lt;button onClick={this.submitMessage}&gt;Submit&lt;/button&gt;
+        &lt;ul&gt;
+          {this.state.messages.map((message, idx) =&gt; {
+            return (
+              &lt;li key={idx}&gt;{message}&lt;/li&gt;
+            )
+          })
+          }
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    );
+  }
+};
+
+const Provider = ReactRedux.Provider;
+
+class AppWrapper extends React.Component {
+  // 在这一行下面渲染 Provider
+  render() {
+    return (
+      &lt;Provider store={store}&gt;
+        &lt;DisplayMessages /&gt;
+      &lt;/Provider&gt;
+    );
+  }
+};
+</code></pre><h3 id="五映射-state-到-props">五、映射 State 到 Props</h3>
+<p>Provider 可向 React 组件提供 state 和 dispatch ，但必须确切地指定所需要的 state 和 actions， 以确保每个组件只能访问所需的 state。</p>
+<p>完成这个任务，需要创建两个函数：mapStateToProps()、mapDispatchToProps()。</p>
+<p>在这两个函数中，声明 state 中函数所要访问的部分及需要 dispatch 的创建 action 的函数。</p>
+<p>注意： 在幕后，React Redux 用 store.subscribe() 方法来实现 mapStateToProps()。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const state = [];
+
+const mapStateToProps = (state)=&gt;{
+  return {
+    messages: state
+  }
+}
+</code></pre><h3 id="六映射-dispatch-到-props">六、映射 Dispatch 到 Props</h3>
+<p>mapDispatchToProps() 函数可为 React 组件提供特定的创建 action 的函数，以便组件可 dispatch actions，从而更改 Redux store 中的数据。</p>
+<p>该函数的结构跟上一步中的mapStateToProps()函数相似， 它返回一个对象，把 dispatch actions 映射到属性名上，该属性名成为props。</p>
+<p>然而，每个属性都返回一个用 action creator 及与 action 相关的所有数据调用 dispatch 的函数，而不是返回 state 的一部分。</p>
+<p>可以访问 dispatch，因为在定义函数时，我们以参数形式把它传入 mapDispatchToProps() 了，这跟 state 传入 mapStateToProps() 是一样的。</p>
+<p>在幕后，React Redux 用 Redux 的 store.dispatch() 来管理这些含 mapDispatchToProps() 的dispatches， 这跟它使用 store.subscribe() 来订阅映射到 state 的组件的方式类似。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const addMessage = (message) =&gt; {
+  return {
+    type: 'ADD',
+    message: message
+  }
+};
+
+const mapDispatchToProps = (dispatch) =&gt; {
+  return {
+    submitNewMessage: (message) =&gt; {
+      dispatch(addMessage(message))
+    }
+  }
+}
+</code></pre><h3 id="七连接-redux-和-react">七、连接 Redux 和 React</h3>
+<p>已经写了mapStateToProps()、mapDispatchToProps() 两个函数，现在可以用它们来把 state 和 dispatch 映射到 React 组件的 props 了。</p>
+<p>React Redux 的 connect 方法可以完成这个任务。</p>
+<p>此方法有 mapStateToProps()、mapDispatchToProps() 两个可选参数， 它们是可选的，原因是你的组件可能仅需要访问 state 但不需要分发任何 actions，反之亦然。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const addMessage = (message) =&gt; {
+  return {
+    type: 'ADD',
+    message: message
+  }
+};
+
+const mapStateToProps = (state) =&gt; {
+  return {
+    messages: state
+  }
+};
+
+const mapDispatchToProps = (dispatch) =&gt; {
+  return {
+    submitNewMessage: (message) =&gt; {
+      dispatch(addMessage(message));
+    }
+  }
+};
+
+class Presentational extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return &lt;h3&gt;This is a Presentational Component&lt;/h3&gt;
+  }
+};
+
+const connect = ReactRedux.connect;
+// 添加这行下面的代码
+const ConnectedComponent = connect(mapStateToProps, mapDispatchToProps)(Presentational)
+</code></pre><h3 id="八将-redux-链接到-messages-app">八、将 Redux 链接到 Messages App</h3>
+<p>在上一步，连接到 Redux 的组件命名为 Presentational，这个命名不是任意的， 这样的术语通常是指未直接连接到 Redux 的 React 组件， 它们只负责执行接收 props 的函数来实现 UI 的呈现。</p>
+<p>相比之下，容器组件用来连接到 Redux 上。 这些组件通常负责把 actions 分派给 store，且经常给子组件传入 store state 属性。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">// Redux:
+const ADD = 'ADD';
+
+const addMessage = (message) =&gt; {
+  return {
+    type: ADD,
+    message: message
+  }
+};
+
+const messageReducer = (state = [], action) =&gt; {
+  switch (action.type) {
+    case ADD:
+      return [
+        ...state,
+        action.message
+      ];
+    default:
+      return state;
+  }
+};
+
+const store = Redux.createStore(messageReducer);
+
+// React:
+class Presentational extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      input: '',
+      messages: []
+    }
+    this.handleChange = this.handleChange.bind(this);
+    this.submitMessage = this.submitMessage.bind(this);
+  }
+  handleChange(event) {
+    this.setState({
+      input: event.target.value
+    });
+  }
+  submitMessage() {
+    this.setState((state) =&gt; {
+      const currentMessage = state.input;
+      return {
+        input: '',
+        messages: state.messages.concat(currentMessage)
+      };
+    });
+  }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h2&gt;Type in a new Message:&lt;/h2&gt;
+        &lt;input
+          value={this.state.input}
+          onChange={this.handleChange} /&gt;&lt;br /&gt;
+        &lt;button onClick={this.submitMessage}&gt;Submit&lt;/button&gt;
+        &lt;ul&gt;
+          {this.state.messages.map((message, idx) =&gt; {
+            return (
+              &lt;li key={idx}&gt;{message}&lt;/li&gt;
+            )
+          })
+          }
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    );
+  }
+};
+
+// React-Redux:
+const mapStateToProps = (state) =&gt; {
+  return { messages: state }
+};
+
+const mapDispatchToProps = (dispatch) =&gt; {
+  return {
+    submitNewMessage: (newMessage) =&gt; {
+      dispatch(addMessage(newMessage))
+    }
+  }
+};
+
+const Provider = ReactRedux.Provider;
+const connect = ReactRedux.connect;
+
+// 在这里定义 Container 组件：
+const Container = connect(mapStateToProps, mapDispatchToProps)(Presentational)
+
+class AppWrapper extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    // 完成 return 语句
+    return (
+      &lt;Provider store={store}&gt;
+        &lt;Container /&gt;
+      &lt;/Provider&gt;
+    );
+  }
+};
+</code></pre><h3 id="九将局部状态提取到-redux-中">九、将局部状态提取到 Redux 中</h3>
+<p>现在有了连接好的 Redux，还要从Presentational组件中提取状态管理到 Redux， 目前，已连接 Redux，但正在 Presentational 组件中本地处理状态。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">// Redux:
+const ADD = 'ADD';
+
+const addMessage = (message) =&gt; {
+  return {
+    type: ADD,
+    message: message
+  }
+};
+
+const messageReducer = (state = [], action) =&gt; {
+  switch (action.type) {
+    case ADD:
+      return [
+        ...state,
+        action.message
+      ];
+    default:
+      return state;
+  }
+};
+
+const store = Redux.createStore(messageReducer);
+
+// React:
+const Provider = ReactRedux.Provider;
+const connect = ReactRedux.connect;
+
+// 修改这行下面的代码
+class Presentational extends React.Component {
+  constructor(props) {
+    super(props);
+
+    // Remove property 'messages' from Presentational's local state
+    this.state = {
+      input: ''
+    }
+    this.handleChange = this.handleChange.bind(this);
+    this.submitMessage = this.submitMessage.bind(this);
+  }
+  handleChange(event) {
+    this.setState({
+      input: event.target.value
+    });
+  }
+  submitMessage() {
+
+    // Call 'submitNewMessage', which has been mapped to Presentational's props, with a new message;
+    // meanwhile, remove the 'messages' property from the object returned by this.setState().
+    this.props.submitNewMessage(this.state.input);
+    this.setState({
+      input: ''
+    });
+  }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h2&gt;Type in a new Message:&lt;/h2&gt;
+        &lt;input
+          value={this.state.input}
+          onChange={this.handleChange} /&gt;&lt;br /&gt;
+        &lt;button onClick={this.submitMessage}&gt;Submit&lt;/button&gt;
+        &lt;ul&gt;
+          {/* The messages state is mapped to Presentational's props; therefore, when rendering,
+               you should access the messages state through props, instead of Presentational's
+               local state. */}
+          {this.props.messages.map((message, idx) =&gt; {
+            return (
+              &lt;li key={idx}&gt;{message}&lt;/li&gt;
+            )
+          })
+          }
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    );
+  }
+};
+// 修改这行上面的代码
+
+const mapStateToProps = (state) =&gt; {
+  return { messages: state }
+};
+
+const mapDispatchToProps = (dispatch) =&gt; {
+  return {
+    submitNewMessage: (message) =&gt; {
+      dispatch(addMessage(message))
+    }
+  }
+};
+
+const Container = connect(mapStateToProps, mapDispatchToProps)(Presentational);
+
+class AppWrapper extends React.Component {
+  render() {
+    return (
+      &lt;Provider store={store}&gt;
+        &lt;Container /&gt;
+      &lt;/Provider&gt;
+    );
+  }
+};
+</code></pre>
   </article>
 </div>
       
@@ -2196,14 +2567,21 @@ export const parameters = {
 <nav class="pagination-single">
   
     
-      <a href="https://danacoding.github.io/react/remix/remix-adv/" title="Remix 进阶（待完善）" class="pagination-single__left">
+      <a href="https://danacoding.github.io/react/react/react-base/" title="React" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__right-title">Remix 进阶（待完善）</div>
+        <div class="pagination-single__right-title">React</div>
       </a>
     
     <div class="grow"></div>
+    
+      <a href="https://danacoding.github.io/react/react/react-bp/" title="React 最佳实践" class="pagination-single__right">
+        <div class="pagination-single__left-title">React 最佳实践</div>
+        <div class="pagination-single__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
+        </div>
+      </a>
     
   
 </nav>
@@ -2223,10 +2601,15 @@ export const parameters = {
   <ul>
     <li>
       <ul>
-        <li><a href="#一安装配置">一、安装配置</a></li>
-        <li><a href="#二编写故事流程-组件---故事">二、编写故事流程 （组件 -&gt; 故事）</a></li>
-        <li><a href="#三args-获取-状态数据-和-事件">三、args 获取 状态数据 和 事件</a></li>
-        <li><a href="#四parameters-静态参数--loaders-加载器">四、parameters 静态参数 &amp; loaders 加载器</a></li>
+        <li><a href="#一react-和-redux">一、React 和 Redux</a></li>
+        <li><a href="#二首先在本地管理状态">二、首先在本地管理状态</a></li>
+        <li><a href="#三提取状态逻辑给-redux">三、提取状态逻辑给 Redux</a></li>
+        <li><a href="#四使用-provider-链接-redux-和-react">四、使用 Provider 链接 Redux 和 React</a></li>
+        <li><a href="#五映射-state-到-props">五、映射 State 到 Props</a></li>
+        <li><a href="#六映射-dispatch-到-props">六、映射 Dispatch 到 Props</a></li>
+        <li><a href="#七连接-redux-和-react">七、连接 Redux 和 React</a></li>
+        <li><a href="#八将-redux-链接到-messages-app">八、将 Redux 链接到 Messages App</a></li>
+        <li><a href="#九将局部状态提取到-redux-中">九、将局部状态提取到 Redux 中</a></li>
       </ul>
     </li>
   </ul>

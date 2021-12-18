@@ -15,12 +15,39 @@
     
       
       <item>
+        <title>React</title>
+        <link>https://danacoding.github.io/react/react/react-base/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react/react/react-base/</guid>
+        <description>简介：React 是由 Facebook 创建和维护的开源视图库。 它是渲染现代 Web 应用程序用户界面（UI）的好工具。 一、JSX（JS 语法扩展） React 使用名为 JSX 的 JavaScript 语法</description>
+      </item>
+      
+      <item>
+        <title>React &amp; Redux</title>
+        <link>https://danacoding.github.io/react/redux/react-redux/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react/redux/react-redux/</guid>
+        <description>这两种技术的关键原则是什么? React 是提供数据的视图库，能以高效、可预测的方式渲染视图。 Redux 是状态管理框架，可用于简化 APP 应用状态的管理。 在 React Redux app 应用</description>
+      </item>
+      
+      <item>
         <title>React 最佳实践</title>
         <link>https://danacoding.github.io/react/react/react-bp/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/react/react/react-bp/</guid>
         <description>React 是一个声明式、高效且灵活的 JavaScript 库 一、特性 虚拟 DOM：保存在内存中并通过 ReactDOM 等库与“真实”DOM 同步的 UI 表示。使用这种方法，只有实际更改的组件才</description>
+      </item>
+      
+      <item>
+        <title>Redux</title>
+        <link>https://danacoding.github.io/react/redux/redux-base/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react/redux/redux-base/</guid>
+        <description>Redux 是一个状态管理框架，可以与包括 React 在内的许多不同的 Web 技术一起使用。 在 Redux 中，有一个状态对象负责应用程序的整个状态， 这意味着如果你有一个包含十个</description>
       </item>
       
       <item>

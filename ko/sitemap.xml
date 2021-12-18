@@ -223,6 +223,16 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react/react/react-base/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react/redux/react-redux/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react/react/react-bp/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -239,6 +249,11 @@
   
   <url>
     <loc>https://danacoding.github.io/react-native/react-native/rn-base/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react/redux/redux-base/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   

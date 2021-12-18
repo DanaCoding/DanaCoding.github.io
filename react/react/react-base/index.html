@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Storybook 基础 – DanaCoding</title>
+    <title>React – DanaCoding</title>
     
 
 
@@ -30,7 +30,7 @@
     
     var baseurl = JSON.parse("\"https://danacoding.github.io/\"");
     
-    var permalink = JSON.parse("\"https://danacoding.github.io/react/storybook/sb-base/\"");
+    var permalink = JSON.parse("\"https://danacoding.github.io/react/react/react-base/\"");
 
     
     var toggleSidebarElem = document.getElementById("toggle-sidebar");
@@ -1079,14 +1079,14 @@
 
 
 <meta property="og:site_name" content="DanaCoding">
-<meta property="og:title" content="Storybook 基础">
-<meta property="og:url" content="https://danacoding.github.io/react/storybook/sb-base/">
+<meta property="og:title" content="React">
+<meta property="og:url" content="https://danacoding.github.io/react/react/react-base/">
 <meta property="og:type" content="article">
 
 <meta name="generator" content="Hugo 0.90.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
-<link rel="canonical" href="https://danacoding.github.io/react/storybook/sb-base/">
+<link rel="canonical" href="https://danacoding.github.io/react/react/react-base/">
 <link rel="manifest" href="/manifest.json">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
@@ -1110,11 +1110,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "Storybook 基础",
+    "headline": "React",
     "datePublished": "2020-01-28T00:34:39+09:00",
     "dateModified": "2020-01-28T00:34:39+09:00",
-    "url" : "https://danacoding.github.io/react/storybook/sb-base/",
-    "description": "一、安装配置 在next.js项目中执行 npx sb init yarn storybook .storybook/preview.js 为 Storybook 配置 Next.js Images + import * as NextImage from \u0026quot;next/image\u0026quot;; + const …",
+    "url" : "https://danacoding.github.io/react/react/react-base/",
+    "description": "简介：React 是由 Facebook 创建和维护的开源视图库。 它是渲染现代 Web 应用程序用户界面（UI）的好工具。 一、JSX（JS 语法扩展） React 使用名为 JSX 的 JavaScript 语法",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://danacoding.github.io/"
@@ -1163,7 +1163,7 @@
     <div class="menu">
   <h6 class="menu__label">
     
-      Storybook 基础
+      React
     
   </h6>
   <ul>
@@ -1185,9 +1185,9 @@
   
   
   
-  <li class="">
+  <li class="active">
     <a href="https://danacoding.github.io/react/react/react-base/"
-      class="menu__title ">React</a>
+      class="menu__title active">React</a>
   </li>
   
 
@@ -1415,9 +1415,9 @@
   
   
   
-  <li class="active">
+  <li class="">
     <a href="https://danacoding.github.io/react/storybook/sb-base/"
-      class="menu__title active">Storybook 基础</a>
+      class="menu__title ">Storybook 基础</a>
   </li>
   
 
@@ -1754,7 +1754,7 @@
   <div class="header__wrapper bgcolor__header">
     <div class="divider">
       <div class="lmr">
-        <h2 class="title">Storybook 基础</h2>
+        <h2 class="title">React</h2>
       </div>
     </div>
   </div>
@@ -1788,7 +1788,7 @@
   
   <li  class="is-active" >
     
-      <span>Storybook 基础</span>
+      <span>React</span>
     
   </li>
   
@@ -1830,7 +1830,7 @@
         <div class="menu">
   <h6 class="menu__label">
     
-      Storybook 基础
+      React
     
   </h6>
   <ul>
@@ -1852,9 +1852,9 @@
   
   
   
-  <li class="">
+  <li class="active">
     <a href="https://danacoding.github.io/react/react/react-base/"
-      class="menu__title ">React</a>
+      class="menu__title active">React</a>
   </li>
   
 
@@ -2082,9 +2082,9 @@
   
   
   
-  <li class="active">
+  <li class="">
     <a href="https://danacoding.github.io/react/storybook/sb-base/"
-      class="menu__title active">Storybook 基础</a>
+      class="menu__title ">Storybook 基础</a>
   </li>
   
 
@@ -2101,94 +2101,802 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <h3 id="一安装配置">一、安装配置</h3>
-<blockquote>
-<p>在next.js项目中执行</p>
-</blockquote>
-<pre tabindex="0"><code class="language-base" data-lang="base">npx sb init
+    <p>简介：React 是由 Facebook 创建和维护的开源视图库。 它是渲染现代 Web 应用程序用户界面（UI）的好工具。</p>
+<h3 id="一jsxjs-语法扩展">一、JSX（JS 语法扩展）</h3>
+<p>React 使用名为 JSX 的 JavaScript 语法扩展，可以直接在 JavaScript 中编写 HTML。</p>
+<p>这有几个好处。 可以在 HTML 中使用 JavaScript 的完整程序功能，并有助于保持代码的可读性。</p>
+<p>在大多数情况下，JSX 类似于 HTML，但是涉及一些关键差异。</p>
+<p>例如，因为 JSX 是 JavaScript 的语法扩展，所以实际上可以直接在 JSX 中编写 JavaScript。</p>
+<p>要做到这一点，只需在花括号中包含希望被视为 JavaScript 的代码：{ &lsquo;this is treated as JavaScript code&rsquo; }（这被视为 JavaScript 代码）。</p>
+<p>但是，由于浏览器不能解析 JSX，因此必须将 JSX 代码编译为 JavaScript。 在这个过程中，转换器 Babel 是一个很受欢迎的工具。</p>
+<p>值得注意的是，底层调用 ReactDOM.render(JSX, document.getElementById(&lsquo;root&rsquo;))。 这个函数调用将 JSX 置于 React 自己的轻量级 DOM 中。 然后，React 使用自己的 DOM 快照来实现增量更新。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const JSX = &lt;h1&gt;Hello JSX!&lt;/h1&gt;;
 
-yarn storybook
-</code></pre><blockquote>
-<p><code>.storybook/preview.js</code> 为 Storybook 配置 Next.js Images</p>
-</blockquote>
-<pre tabindex="0"><code class="language-base" data-lang="base">+ import * as NextImage from &quot;next/image&quot;;
+const JSX = &lt;div&gt;
+  &lt;h1&gt;Heading.&lt;/h1&gt;
+  &lt;p&gt;Paragraph&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Coffee&lt;/li&gt;
+    &lt;li&gt;Tea&lt;/li&gt;
+    &lt;li&gt;Milk&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;;
 
-+ const OriginalNextImage = NextImage.default;
+{/*&lt;h1&gt;Hanoi University of Science&lt;/h1&gt;*/}
+</code></pre><h5 id="react-渲染-api">React 渲染 API</h5>
+<pre tabindex="0"><code class="language-base" data-lang="base">ReactDOM.render(ReactNode,document.getElementById('root'))
+    --&gt; Babel转换器
+        --&gt; JavaScript
+            --&gt; Browser
+</code></pre><h5 id="html-属性和事件使用驼峰式写法">HTML 属性和事件使用驼峰式写法</h5>
+<pre tabindex="0"><code class="language-base" data-lang="base">const JSX = (
+  &lt;div className='myDiv'&gt;
+    &lt;h1&gt;Add a class to this div&lt;/h1&gt;
+  &lt;/div&gt;
+);
+</code></pre><h5 id="返回单个元素即只有一个父元素包裹所有子元素">返回单个元素（即只有一个父元素包裹所有子元素）</h5>
+<h5 id="在-jsx-中编写-js-代码使用花括号---或--注释-">在 JSX 中编写 JS 代码使用花括号：<code>{ ... }</code> 或 <code>{*/ 注释 /*}</code></h5>
+<pre tabindex="0"><code class="language-base" data-lang="base">const JSX = (
+  &lt;div&gt;
+    {/* remove comment and change code below this line // Remember that comments in JSX have parentheses.
+    &lt;h2&gt;Welcome to React!&lt;/h2&gt; &lt;br &gt; // ?
+    &lt;p&gt;Be sure to close all tags!&lt;/p&gt;
+    &lt;hr &gt;  // ?
+    remove comment and change code above this line */}{&quot; &quot;}
+    // Remember that comments in JSX have parentheses.
+  &lt;/div&gt;
+);
+</code></pre><h5 id="jsx-的所有标签都可以自闭合div">JSX 的所有标签都可以自闭合：<code>&lt;div/&gt;</code></h5>
+<pre tabindex="0"><code class="language-base" data-lang="base">const JSX = (
+  &lt;div&gt;
 
-+ Object.defineProperty(NextImage, &quot;default&quot;, {
-  configurable: true,
-  value: (props) =&gt; (
-    &lt;OriginalNextImage
-      {...props}
-      unoptimized
-    /&gt;
-  ),
-});
-</code></pre><blockquote>
-<p><code>package.json</code> 为 Storybook 提供 Next.js 公共目录</p>
-</blockquote>
-<pre tabindex="0"><code class="language-base" data-lang="base">{
-  ...
-  
-  &quot;scripts&quot;: {
-    - &quot;storybook&quot;: &quot;start-storybook -p 6006&quot;,
-    - &quot;build-storybook&quot;: &quot;build-storybook&quot;
-    + &quot;storybook&quot;: &quot;start-storybook -p 6006 -s ./public&quot;,
-    + &quot;build-storybook&quot;: &quot;build-storybook -s public&quot;
-  },
-  
- ...
-
+  &lt;/div&gt;
+);
+//or
+const JSX = (
+  &lt;div/&gt;
+);
+</code></pre><h3 id="二component-组件大写字母开头定义">二、Component 组件(大写字母开头定义)</h3>
+<p>组件是 React 的核心。 React 中的所有内容都是一个组件。</p>
+<p>有两种方法可以创建 React 组件。</p>
+<p>第一种方法是使用 JavaScript 函数。 以这种方式定义组件会创建无状态功能组件（Hooks 组件可以有状态）。</p>
+<p>要用函数创建组件，只需编写一个返回 JSX 或 null 的 JavaScript 函数。 需要注意的一点是，React 要求你的函数名以大写字母开头。</p>
+<h4 id="1-无状态组件">1. 无状态组件</h4>
+<pre tabindex="0"><code class="language-base" data-lang="base">function MyComponent(){
+    return(
+        &lt;div&gt;Completed challenge!&lt;/div&gt; //记得返回JSX
+    );
 }
-</code></pre><blockquote>
-<p>配置全局样式，这里使用 antd</p>
-</blockquote>
-<pre tabindex="0"><code class="language-base" data-lang="base">yarn add antd
+</code></pre><h4 id="2-class-组件-es6-语法糖">2. class 组件 （ES6 语法糖）</h4>
+<pre tabindex="0"><code class="language-base" data-lang="base">class Kitten extends React.Component {
+  constructor(props) {
+    super(props); //super(props)作用是调用父类的构造函数React.Component
+  }
 
-// `.storybook/preview.js`  为 Storybook 配置全局样式
-import 'antd/dist/antd.css';
+  render() {//render(): 渲染JSX的方法
+    return (
+      &lt;h1&gt;Hi&lt;/h1&gt;
+    );
+  }
+}
+</code></pre><h4 id="3-组合嵌套组件">3. 组合/嵌套组件</h4>
+<pre tabindex="0"><code class="language-base" data-lang="base">//将子组件放入父组件中
 
-export const parameters = {
-  ...
-  ...
-  layout: 'fullscreen'
+class Fruits extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h2&gt;Fruits:&lt;/h2&gt;
+        &lt;NonCitrus /&gt;
+        &lt;Citrus /&gt;
+      &lt;/div&gt;
+    );
+  }
 };
-</code></pre><h3 id="二编写故事流程-组件---故事">二、编写故事流程 （组件 -&gt; 故事）</h3>
-<p><p class="md__image">
-  <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/oiob4yc7rqra3pf8it5d.png" alt="Image description"  />
-</p></p>
-<blockquote>
-<p>故事细节</p>
-</blockquote>
-<p><p class="md__image">
-  <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w4pepu9is24ip85gzqjp.png" alt="Image description"  />
-</p></p>
-<h3 id="三args-获取-状态数据-和-事件">三、args 获取 状态数据 和 事件</h3>
-<p><p class="md__image">
-  <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uly1yyn4mcy27qry0xx9.png" alt="Image description"  />
-</p><br />
-<p class="md__image">
-  <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2bgmdll6wjsxvya4h3qh.png" alt="Image description"  />
-</p><br />
-<p class="md__image">
-  <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/s5d4c8bzfl03z8xz8cqk.png" alt="Image description"  />
-</p></p>
-<blockquote>
-<p>使用其他故事的 args</p>
-</blockquote>
-<p><p class="md__image">
-  <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/lyz64uj2sf6lku9g5eg9.png" alt="Image description"  />
-</p></p>
-<blockquote>
-<p>传递给Storybook的事件的写法 (必须带有 &hellip;props, 否则事件无法触发)</p>
-</blockquote>
-<p><p class="md__image">
-  <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/l00s2ub8clzl701sz6uj.png" alt="Image description"  />
-</p></p>
-<h3 id="四parameters-静态参数--loaders-加载器">四、parameters 静态参数 &amp; loaders 加载器</h3>
-<p>parameters 通常用于控制 Storybook 功能和插件的行为。（一般情况下不需要使用，但不可不知）</p>
-<p>loaders 用于加载故事的数据，加载器可用于加载任何资产、延迟加载组件或从远程 API 获取数据。（一般不需要使用，但不可不知）</p>
 
+class TypesOfFood extends React.Component {
+  constructor(props) {
+     super(props);
+  }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h1&gt;Types of Food:&lt;/h1&gt;
+        &lt;Fruits /&gt;
+        &lt;Vegetables /&gt;
+      &lt;/div&gt;
+    );
+  }
+};
+</code></pre><h3 id="三props">三、props</h3>
+<h4 id="1-传递方式----单向数据流">1. 传递方式 &ndash; 单向数据流</h4>
+<p>在 React 中，可以将属性传递给子组件。单向数据流</p>
+<p><em>function 组件</em></p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const CurrentDate = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;p&gt;The current date is: {props.date}&lt;/p&gt;
+    &lt;/div&gt;
+  );
+};
+
+class Calendar extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h3&gt;What date is it?&lt;/h3&gt;
+        &lt;CurrentDate date={Date()} /&gt;
+      &lt;/div&gt;
+    );
+  }
+};
+</code></pre><p><em>class 组件</em></p>
+<pre tabindex="0"><code class="language-base" data-lang="base">class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+  }
+  render() {
+    return (
+        &lt;div&gt;
+            &lt;Welcome name=&quot;Jessica&quot;/&gt;
+        &lt;/div&gt;
+    );
+  }
+};
+
+class Welcome extends React.Component {
+  constructor(props) {
+    super(props);
+
+  }
+  render() {
+    return (
+        &lt;div&gt;
+          &lt;p&gt;Hello, &lt;strong&gt;{this.props.name}&lt;/strong&gt;!&lt;/p&gt;
+        &lt;/div&gt;
+    );
+  }
+};
+</code></pre><h4 id="2-默认-props">2. 默认 props</h4>
+<p>React 还有一个设置默认 props 的选项。</p>
+<p>可以将默认 props 作为组件本身的属性分配给组件，React 会在必要时分配默认 prop。</p>
+<p>如果没有显式的提供任何值，这允许指定 prop 值应该是什么。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const ShoppingCart = (props) =&gt; {
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Shopping Cart Component&lt;/h1&gt;
+    &lt;/div&gt;
+  )
+};
+
+ShoppingCart.defaultProps = {
+  items: 0
+};
+</code></pre><h4 id="3-proptypes--proptypes">3. propTypes &amp; PropTypes</h4>
+<p>React 提供了有用的类型检查特性，以验证组件是否接收了正确类型的 props。</p>
+<p>例如，应用程序调用 API 来检索数据是否是数组，然后将数据作为 prop 传递给组件。</p>
+<p>可以在组件上设置 propTypes，以要求数据的类型为 array。 当数据是任何其它类型时，都会抛出警告。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const Items = (props) =&gt; {
+  return &lt;h1&gt;Current Quantity of Items in Cart: {props.quantity}&lt;/h1&gt;
+};
+
+Items.propTypes = {
+  quantity: PropTypes.number.isRequired //其中number为类型；isRequired为必须
+};
+
+Items.defaultProps = {
+  quantity: 0
+};
+
+class ShoppingCart extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return &lt;Items /&gt;
+  }
+};
+</code></pre><h3 id="四state">四、state</h3>
+<p>React 中最重要的主题之一是 state。</p>
+<p>state 包含应用程序需要了解的任何数据，这些数据可能会随时间而变化。</p>
+<p>应用程序能够响应 state 的变更，并在必要时显示更新后的 UI。</p>
+<p>React 为现代 Web 应用程序的状态管理提供了一个很好的解决方案。</p>
+<p>可以在类组件的 constructor 上声明 state 属性来在 React 组件中创建 state， 它在创建时使用 state 初始化组件。</p>
+<p>state 属性必须设置为 JavaScript object（对象）</p>
+<h4 id="1-初始化状态thisstate">1. 初始化状态<code>this.state={}</code></h4>
+<pre tabindex="0"><code class="language-base" data-lang="base">class StatefulComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: &quot;Name&quot;
+    }
+  }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h1&gt;{this.state.name}&lt;/h1&gt;
+      &lt;/div&gt;
+    );
+  }
+};
+</code></pre><h4 id="2-设置状态thissetstate">2. 设置状态<code>this.setState()</code></h4>
+<p>React 要求永远不要直接修改 state，而是在 state 发生改变时始终使用 this.setState()。</p>
+<p>此外，应该注意，React 可以批量处理多个 state 更新以提高性能。</p>
+<p>这意味着通过 setState 方法进行的 state 更新可以是异步的。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: 'Initial State'
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    this.setState({
+      name: 'React Rocks!'
+    });
+  }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;button onClick={this.handleClick}&gt;Click Me&lt;/button&gt;
+        &lt;h1&gt;{this.state.name}&lt;/h1&gt;
+      &lt;/div&gt;
+    );
+  }
+};
+</code></pre><h4 id="3-使用-state-切换元素">3. 使用 state 切换元素</h4>
+<p>有时可能在更新状态的时候想知道上一个状态是什么。</p>
+<p>但是状态更新是异步的，这意味着 React 可能会把多个 setState() 集中在一起批量更新。</p>
+<p>所以计算下一个值时 this.state 或者 this.props 不能作为当前值。</p>
+<p>正确的做法是，给 setState 传入一个函数，这个函数可以访问 state 和 props。 给 setState 传入函数可以保证 state 和 props 是正确的值。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      visibility: false
+    };
+    this.toggleVisibility = this.toggleVisibility.bind(this);
+  }
+  toggleVisibility() {
+    this.setState(state =&gt; {
+      if (state.visibility === true) {
+        return { visibility: false };
+      } else {
+        return { visibility: true };
+      }
+    });
+  }
+  render() {
+    if (this.state.visibility) {
+      return (
+        &lt;div&gt;
+          &lt;button onClick={this.toggleVisibility}&gt;Click Me&lt;/button&gt;
+          &lt;h1&gt;Now you see me!&lt;/h1&gt;
+        &lt;/div&gt;
+      );
+    } else {
+      return (
+        &lt;div&gt;
+          &lt;button onClick={this.toggleVisibility}&gt;Click Me&lt;/button&gt;
+        &lt;/div&gt;
+      );
+    }
+  }
+}
+</code></pre><h3 id="五将-this-绑定到-class-方法上">五、将 this 绑定到 class 方法上</h3>
+<p>为组件类定义方法。 类方法通常需要使用 this 关键字，以便它可以访问方法中类的属性（例如 state 和 props）。 有几种方法可以让类方法访问 this。</p>
+<p>一种常见的方法是在构造函数中显式地绑定 this，这样当组件初始化时，this 就会绑定到类方法。</p>
+<p>在构造函数中的 handleClick 方法使用了 this.handleClick = this.handleClick.bind(this)。 然后，当在类方法中调用像 this.setState() 这样的函数时，this 指的是这个类，而不是 undefined。</p>
+<p>注意： this 关键字是 JavaScript 中最令人困惑的方面之一，但它在 React 中扮演着重要的角色。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: &quot;Hello&quot;
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    this.setState({
+      text: &quot;You clicked!&quot;
+    });
+  }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;button onClick={this.handleClick}&gt;Click Me&lt;/button&gt;
+        &lt;h1&gt;{this.state.text}&lt;/h1&gt;
+      &lt;/div&gt;
+    );
+  }
+};
+</code></pre><h3 id="六将-state-作为-props-传递给子组件重要">六、将 state 作为 props 传递给子组件（重要）</h3>
+<p>有状态组件中包含对应用程序很重要的 state，然后用它渲染子组件。 如果想让这些组件能够访问该 state 的某些部分，就把这些部分作为 props 传入。</p>
+<p>这个模式说明了 React 中的一些重要范例。</p>
+<p>第一个是单向数据流， state 沿着应用程序组件树的一个方向流动，从有状态父组件到子组件， 子组件只接收它们需要的 state 数据。</p>
+<p>第二，复杂的有状态应用程序可以分解成几个，或者可能是一个单一的有状态组件。 其余组件只是从父组件简单的接收 state 作为 props，并从该 state 渲染 UI。<br />
+它开始创建一种分离，在这种分离中，state 管理在代码的一部分中处理，而 UI 渲染在另一部分中处理。 将 state 逻辑与 UI 逻辑分离是 React 的关键原则之一。<br />
+当它被正确使用时，它使得复杂的、有状态的应用程序的设计变得更容易管理。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">class MyApp extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      inputValue: ''
+    }
+  this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange(event) {
+    this.setState({
+      inputValue: event.target.value
+    });
+  }
+  render() {
+    return (
+       &lt;div&gt;
+         &lt;GetInput
+           input={this.state.inputValue}
+           handleChange={this.handleChange}/&gt;
+         &lt;RenderInput
+           input={this.state.inputValue}/&gt;
+       &lt;/div&gt;
+    );
+  }
+};
+
+class GetInput extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h3&gt;Get Input:&lt;/h3&gt;
+        &lt;input
+          value={this.props.input}
+          onChange={this.props.handleChange}/&gt;
+      &lt;/div&gt;
+    );
+  }
+};
+
+class RenderInput extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h3&gt;Input Render:&lt;/h3&gt;
+        &lt;p&gt;{this.props.input}&lt;/p&gt;
+      &lt;/div&gt;
+    );
+  }
+};
+</code></pre><h3 id="七生命周期方法钩子">七、生命周期方法/钩子</h3>
+<p>React 组件有几种特殊方法，可以在组件生命周期的特定点执行操作。 这些称为生命周期方法或生命周期钩子，允许在特定时间点捕获组件。</p>
+<p>这可以在渲染之前、更新之前、接收 props 之前、卸载之前等等。</p>
+<p>以下是一些主要生命周期方法的列表：<br />
+componentWillMount() 渲染之前<br />
+componentDidMount() 接收 props 之前<br />
+shouldComponentUpdate() 更新之前<br />
+componentDidUpdate() 更新之后<br />
+componentWillUnmount() 卸载之前</p>
+<h4 id="1-componentwillmount">1. componentWillMount</h4>
+<p>当组件被挂载到 DOM 时，componentWillMount() 方法在 render() 方法之前被调用。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  componentWillMount() {
+    console.log('Component being mounted');
+  }
+  render() {
+    return &lt;div /&gt;
+  }
+};
+</code></pre><h4 id="2-componentdidmount">2. componentDidMount</h4>
+<p>React 的最佳实践是在生命周期方法 componentDidMount() 中对服务器进行 API 调用或任何其它调用。</p>
+<p>将组件装载到 DOM 后会调用此方法。 此处对 setState() 的任何调用都将触发组件的重新渲染。</p>
+<p>在此方法中调用 API 并用 API​​ 返回的数据设置 state 时，一旦收到数据，它将自动触发更新。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeUsers: null
+    };
+  }
+  componentDidMount() {
+    setTimeout(() =&gt; {
+      this.setState({
+        activeUsers: 1273
+      });
+    }, 2500);
+  }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h1&gt;Active Users: {this.state.activeUsers}&lt;/h1&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+</code></pre><h4 id="3-添加事件侦听器">3. 添加事件侦听器</h4>
+<p>componentDidMount() 方法是添加特定功能所需的任何事件监听器的最佳位置。</p>
+<p>React 提供了一个合成事件系统，它封装了浏览器中的事件系统。 这意味着，不管用户用的是什么浏览器，合成事件系统的行为都完全相同 &ndash; 即使不同浏览器之间的本地事件的行为可能不同。</p>
+<p>之前已经接触了一些合成事件处理程序，如 onClick()。 React 的合成事件系统非常适合用于在 DOM 元素上管理的大多数交互。 但是，如果要将事件处理程序附加到 document 或 window 对象，则必须直接执行此操作。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      message: ''
+    };
+    this.handleEnter = this.handleEnter.bind(this);
+    this.handleKeyPress = this.handleKeyPress.bind(this);
+  }
+  componentDidMount() {
+    document.addEventListener(&quot;keydown&quot;, this.handleKeyPress);
+  }
+  componentWillUnmount() {
+    document.removeEventListener(&quot;keydown&quot;, this.handleKeyPress);
+  }
+  handleEnter() {
+    this.setState((state) =&gt; ({
+      message: state.message + 'You pressed the enter key! '
+    }));
+  }
+  handleKeyPress(event) {
+    if (event.keyCode === 13) {
+      this.handleEnter();
+    }
+  }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;h1&gt;{this.state.message}&lt;/h1&gt;
+      &lt;/div&gt;
+    );
+  }
+};
+</code></pre><h4 id="4-使用-shouldcomponentupdate-优化重新渲染">4. 使用 shouldComponentUpdate 优化重新渲染</h4>
+<p>当子组件接收到新的 state 或 props 时，可以调用该方法，并特别声明组件是否应该更新。</p>
+<p>它将 nextProps 和 nextState 作为参数。</p>
+<p>这种方法是优化性能的有效方法。 例如，默认行为是，当组件接收到新的 props 时，即使 props 没有改变，它也会重新渲染。</p>
+<p>可以通过使用 shouldComponentUpdate() 比较 props 来防止这种情况发生。</p>
+<p>该方法必须返回一个 boolean（布尔值），该值告诉 React 是否更新组件。 可以比较当前的 props（this.props）和下一个 props（nextProps），以确定你是否需要更新，并相应地返回 true 或 false。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">class OnlyEvens extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+    console.log('Should I update?');
+    if (nextProps.value % 2 == 0) {
+      return true;
+    }
+    return false;
+  }
+  componentDidUpdate() {
+    console.log('Component re-rendered.');
+  }
+  render() {
+    return &lt;h1&gt;{this.props.value}&lt;/h1&gt;;
+  }
+}
+
+class Controller extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: 0
+    };
+    this.addValue = this.addValue.bind(this);
+  }
+  addValue() {
+    this.setState(state =&gt; ({
+      value: state.value + 1
+    }));
+  }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;button onClick={this.addValue}&gt;Add&lt;/button&gt;
+        &lt;OnlyEvens value={this.state.value} /&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+</code></pre><h3 id="八css-样式驼峰写法">八、CSS 样式（驼峰写法）</h3>
+<h4 id="1-内联样式">1. 内联样式</h4>
+<pre tabindex="0"><code class="language-base" data-lang="base">class Colorful extends React.Component {
+  render() {
+    return (
+      &lt;div style={{ color: 'red', fontSize: '72'}}&gt;
+        Big Red
+      &lt;/div&gt;
+    );
+  }
+};
+</code></pre><h4 id="2-常量引用">2. 常量引用</h4>
+<pre tabindex="0"><code class="language-base" data-lang="base">const styles = {
+  color: 'purple',
+  fontSize: 40,
+  border: &quot;2px solid purple&quot;,
+};
+
+class Colorful extends React.Component {
+  render() {
+    return (
+      &lt;div style={styles}&gt;Style Me!&lt;/div&gt;
+    );
+  }
+};
+</code></pre><h3 id="九按条件渲染组件">九、按条件渲染组件</h3>
+<h4 id="1-ifelse">1. if&hellip;else..</h4>
+<pre tabindex="0"><code class="language-base" data-lang="base">class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      display: true
+    }
+    this.toggleDisplay = this.toggleDisplay.bind(this);
+  }
+  toggleDisplay() {
+    this.setState((state) =&gt; ({
+      display: !state.display
+    }));
+  }
+  render() {
+    if (this.state.display) {
+      return (
+        &lt;div&gt;
+          &lt;button onClick={this.toggleDisplay}&gt;Toggle Display&lt;/button&gt;
+          &lt;h1&gt;Displayed!&lt;/h1&gt;
+        &lt;/div&gt;
+      );
+    } else {
+      return (
+        &lt;div&gt;
+          &lt;button onClick={this.toggleDisplay}&gt;Toggle Display&lt;/button&gt;
+        &lt;/div&gt;
+      );
+    }
+  }
+};
+</code></pre><h4 id="2-">2. &amp;&amp;</h4>
+<pre tabindex="0"><code class="language-base" data-lang="base">class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      display: true
+    }
+    this.toggleDisplay = this.toggleDisplay.bind(this);
+  }
+  toggleDisplay() {
+    this.setState(state =&gt; ({
+      display: !state.display
+    }));
+  }
+  render() {
+    return (
+      &lt;div&gt;
+        &lt;button onClick={this.toggleDisplay}&gt;Toggle Display&lt;/button&gt;
+        {this.state.display &amp;&amp; &lt;h1&gt;Displayed!&lt;/h1&gt;}
+      &lt;/div&gt;
+    );
+  }
+};
+</code></pre><h4 id="3-三元表达式">3. 三元表达式</h4>
+<pre tabindex="0"><code class="language-base" data-lang="base">const inputStyle = {
+  width: 235,
+  margin: 5
+}
+
+class CheckUserAge extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      userAge: '',
+      input: ''
+    }
+    this.submit = this.submit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange(e) {
+    this.setState({
+      input: e.target.value,
+      userAge: ''
+    });
+  }
+  submit() {
+    this.setState(state =&gt; ({
+      userAge: state.input
+    }));
+  }
+  render() {
+    const buttonOne = &lt;button onClick={this.submit}&gt;Submit&lt;/button&gt;;
+    const buttonTwo = &lt;button&gt;You May Enter&lt;/button&gt;;
+    const buttonThree = &lt;button&gt;You Shall Not Pass&lt;/button&gt;;
+    return (
+      &lt;div&gt;
+        &lt;h3&gt;Enter Your Age to Continue&lt;/h3&gt;
+        &lt;input
+          style={inputStyle}
+          type=&quot;number&quot;
+          value={this.state.input}
+          onChange={this.handleChange} /&gt;&lt;br /&gt;
+          {
+          this.state.userAge === ''
+            ? buttonOne
+            : this.state.userAge &gt;= 18
+              ? buttonTwo
+              : buttonThree
+          }
+      &lt;/div&gt;
+    );
+  }
+};
+</code></pre><h4 id="4-根据props有条件地渲染">4. 根据props有条件地渲染</h4>
+<pre tabindex="0"><code class="language-base" data-lang="base">class Results extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      &lt;h1&gt;
+      {this.props.fiftyFifty ? &quot;You Win!&quot; : &quot;You Lose!&quot;}
+      &lt;/h1&gt;
+    )
+  };
+};
+
+class GameOfChance extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      counter: 1
+    }
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    this.setState({
+      counter: this.state.counter + 1
+    });
+  }
+  render() {
+    const expression = Math.random() &gt;= 0.5 ? true : false
+    return (
+      &lt;div&gt;
+        &lt;button onClick={this.handleClick}&gt;Play Again&lt;/button&gt;
+        &lt;Results fiftyFifty={expression} /&gt;
+        &lt;p&gt;{'Turn: ' + this.state.counter}&lt;/p&gt;
+      &lt;/div&gt;
+    );
+  }
+};
+</code></pre><h4 id="5-根据state有条件地渲染">5. 根据state有条件地渲染</h4>
+<pre tabindex="0"><code class="language-base" data-lang="base">class GateKeeper extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      input: ''
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange(event) {
+    this.setState({ input: event.target.value })
+  }
+  render() {
+    let inputStyle = {
+      border: '1px solid black'
+    };
+    if (this.state.input.length &gt; 15) {
+      inputStyle.border = '3px solid red';
+    }
+    return (
+      &lt;div&gt;
+        &lt;h3&gt;Don't Type Too Much:&lt;/h3&gt;
+        &lt;input
+          type=&quot;text&quot;
+          style={inputStyle}
+          value={this.state.input}
+          onChange={this.handleChange} /&gt;
+      &lt;/div&gt;
+    );
+  }
+};
+</code></pre><h3 id="十arraymap渲染数组">十、Array.map()渲染数组</h3>
+<pre tabindex="0"><code class="language-base" data-lang="base">const frontEndFrameworks = [
+  'React',
+  'Angular',
+  'Ember',
+  'Knockout',
+  'Backbone',
+  'Vue'
+];
+
+function Frameworks() {
+  const renderFrameworks = frontEndFrameworks.map((item, index) =&gt;
+    &lt;li key={index}&gt;{item}&lt;/li&gt;
+  );
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Popular Front End JavaScript Frameworks&lt;/h1&gt;
+      &lt;ul&gt;
+        {renderFrameworks}
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  );
+};
+</code></pre><h3 id="十一arrayfilter-动态过滤数组">十一、Array.Filter() 动态过滤数组</h3>
+<pre tabindex="0"><code class="language-base" data-lang="base">class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      users: [
+        {
+          username: 'Jeff',
+          online: true
+        },
+        {
+          username: 'Alan',
+          online: false
+        },
+        {
+          username: 'Mary',
+          online: true
+        },
+        {
+          username: 'Jim',
+          online: false
+        },
+        {
+          username: 'Sara',
+          online: true
+        },
+        {
+          username: 'Laura',
+          online: true
+        }
+      ]
+    }
+  }
+  render() {
+    const usersOnline = this.state.users.filter(user =&gt; user.online === true);
+    const renderOnline = usersOnline.map(user =&gt; &lt;li key={user.username}&gt;{user.username}&lt;/li&gt;);
+    return (
+       &lt;div&gt;
+         &lt;h1&gt;Current Online Users:&lt;/h1&gt;
+         &lt;ul&gt;
+           {renderOnline}
+         &lt;/ul&gt;
+       &lt;/div&gt;
+    );
+  }
+};
+</code></pre><h3 id="十二用-rendertostring-在服务器上渲染-react">十二、用 renderToString 在服务器上渲染 React</h3>
+<p>有两个关键原因可以解释为什么服务器上的渲染可能会在真实世界的应用程序中使用。</p>
+<p>首先，如果不这样做，当 React 应用程序最初加载到浏览器时，它将包含一个代码量很少的 HTML 文件和一大堆 JavaScript。 <br />
+这对于搜索引擎来说可能不太理想，因为它们试图为网页内容生成索引，以便人们可以找到这个应用。 <br />
+如果在服务器上渲染初始 HTML 标记并将其发送到客户端，则初始页面加载的内容包含搜索引擎可以抓取的所有页面标记。</p>
+<p>其次，这创造了更快的初始页面加载体验，因为渲染的 HTML 代码量要比整个应用程序的 JavaScript 代码小。 React 仍然能够识别你的应用并在初始加载后进行管理。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">class App extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return &lt;div/&gt;
+  }
+};
+
+ReactDOMServer.renderToString(&lt;App /&gt;);
+</code></pre>
   </article>
 </div>
       
@@ -2196,14 +2904,14 @@ export const parameters = {
 <nav class="pagination-single">
   
     
-      <a href="https://danacoding.github.io/react/remix/remix-adv/" title="Remix 进阶（待完善）" class="pagination-single__left">
-        <div class="pagination-single__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
-        </div>
-        <div class="pagination-single__right-title">Remix 进阶（待完善）</div>
-      </a>
-    
     <div class="grow"></div>
+    
+      <a href="https://danacoding.github.io/react/redux/react-redux/" title="React &amp; Redux" class="pagination-single__right">
+        <div class="pagination-single__left-title">React &amp; Redux</div>
+        <div class="pagination-single__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
+        </div>
+      </a>
     
   
 </nav>
@@ -2223,10 +2931,60 @@ export const parameters = {
   <ul>
     <li>
       <ul>
-        <li><a href="#一安装配置">一、安装配置</a></li>
-        <li><a href="#二编写故事流程-组件---故事">二、编写故事流程 （组件 -&gt; 故事）</a></li>
-        <li><a href="#三args-获取-状态数据-和-事件">三、args 获取 状态数据 和 事件</a></li>
-        <li><a href="#四parameters-静态参数--loaders-加载器">四、parameters 静态参数 &amp; loaders 加载器</a></li>
+        <li><a href="#一jsxjs-语法扩展">一、JSX（JS 语法扩展）</a>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+        <li><a href="#二component-组件大写字母开头定义">二、Component 组件(大写字母开头定义)</a>
+          <ul>
+            <li><a href="#1-无状态组件">1. 无状态组件</a></li>
+            <li><a href="#2-class-组件-es6-语法糖">2. class 组件 （ES6 语法糖）</a></li>
+            <li><a href="#3-组合嵌套组件">3. 组合/嵌套组件</a></li>
+          </ul>
+        </li>
+        <li><a href="#三props">三、props</a>
+          <ul>
+            <li><a href="#1-传递方式----单向数据流">1. 传递方式 &ndash; 单向数据流</a></li>
+            <li><a href="#2-默认-props">2. 默认 props</a></li>
+            <li><a href="#3-proptypes--proptypes">3. propTypes &amp; PropTypes</a></li>
+          </ul>
+        </li>
+        <li><a href="#四state">四、state</a>
+          <ul>
+            <li><a href="#1-初始化状态thisstate">1. 初始化状态<code>this.state={}</code></a></li>
+            <li><a href="#2-设置状态thissetstate">2. 设置状态<code>this.setState()</code></a></li>
+            <li><a href="#3-使用-state-切换元素">3. 使用 state 切换元素</a></li>
+          </ul>
+        </li>
+        <li><a href="#五将-this-绑定到-class-方法上">五、将 this 绑定到 class 方法上</a></li>
+        <li><a href="#六将-state-作为-props-传递给子组件重要">六、将 state 作为 props 传递给子组件（重要）</a></li>
+        <li><a href="#七生命周期方法钩子">七、生命周期方法/钩子</a>
+          <ul>
+            <li><a href="#1-componentwillmount">1. componentWillMount</a></li>
+            <li><a href="#2-componentdidmount">2. componentDidMount</a></li>
+            <li><a href="#3-添加事件侦听器">3. 添加事件侦听器</a></li>
+            <li><a href="#4-使用-shouldcomponentupdate-优化重新渲染">4. 使用 shouldComponentUpdate 优化重新渲染</a></li>
+          </ul>
+        </li>
+        <li><a href="#八css-样式驼峰写法">八、CSS 样式（驼峰写法）</a>
+          <ul>
+            <li><a href="#1-内联样式">1. 内联样式</a></li>
+            <li><a href="#2-常量引用">2. 常量引用</a></li>
+          </ul>
+        </li>
+        <li><a href="#九按条件渲染组件">九、按条件渲染组件</a>
+          <ul>
+            <li><a href="#1-ifelse">1. if&hellip;else..</a></li>
+            <li><a href="#2-">2. &amp;&amp;</a></li>
+            <li><a href="#3-三元表达式">3. 三元表达式</a></li>
+            <li><a href="#4-根据props有条件地渲染">4. 根据props有条件地渲染</a></li>
+            <li><a href="#5-根据state有条件地渲染">5. 根据state有条件地渲染</a></li>
+          </ul>
+        </li>
+        <li><a href="#十arraymap渲染数组">十、Array.map()渲染数组</a></li>
+        <li><a href="#十一arrayfilter-动态过滤数组">十一、Array.Filter() 动态过滤数组</a></li>
+        <li><a href="#十二用-rendertostring-在服务器上渲染-react">十二、用 renderToString 在服务器上渲染 React</a></li>
       </ul>
     </li>
   </ul>

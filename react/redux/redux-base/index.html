@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Storybook 基础 – DanaCoding</title>
+    <title>Redux – DanaCoding</title>
     
 
 
@@ -30,7 +30,7 @@
     
     var baseurl = JSON.parse("\"https://danacoding.github.io/\"");
     
-    var permalink = JSON.parse("\"https://danacoding.github.io/react/storybook/sb-base/\"");
+    var permalink = JSON.parse("\"https://danacoding.github.io/react/redux/redux-base/\"");
 
     
     var toggleSidebarElem = document.getElementById("toggle-sidebar");
@@ -1072,21 +1072,21 @@
 <link rel="stylesheet" href="/css/main.min.css">
 
 
-    <meta name="description" content="" />
+    <meta name="description" content="Redux 是一个状态管理框架，可以与包括 React 在内的许多不同的 Web 技术一起使用" />
 <meta name="keywords" content="">
 <meta name="created" content="2020-01-28T00:34:39&#43;0900">
 <meta name="modified" content="2020-01-28T00:34:39&#43;0900">
 
 
 <meta property="og:site_name" content="DanaCoding">
-<meta property="og:title" content="Storybook 基础">
-<meta property="og:url" content="https://danacoding.github.io/react/storybook/sb-base/">
+<meta property="og:title" content="Redux">
+<meta property="og:url" content="https://danacoding.github.io/react/redux/redux-base/">
 <meta property="og:type" content="article">
 
 <meta name="generator" content="Hugo 0.90.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
-<link rel="canonical" href="https://danacoding.github.io/react/storybook/sb-base/">
+<link rel="canonical" href="https://danacoding.github.io/react/redux/redux-base/">
 <link rel="manifest" href="/manifest.json">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
@@ -1110,11 +1110,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "Storybook 基础",
+    "headline": "Redux",
     "datePublished": "2020-01-28T00:34:39+09:00",
     "dateModified": "2020-01-28T00:34:39+09:00",
-    "url" : "https://danacoding.github.io/react/storybook/sb-base/",
-    "description": "一、安装配置 在next.js项目中执行 npx sb init yarn storybook .storybook/preview.js 为 Storybook 配置 Next.js Images + import * as NextImage from \u0026quot;next/image\u0026quot;; + const …",
+    "url" : "https://danacoding.github.io/react/redux/redux-base/",
+    "description": "Redux 是一个状态管理框架，可以与包括 React 在内的许多不同的 Web 技术一起使用",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://danacoding.github.io/"
@@ -1163,7 +1163,7 @@
     <div class="menu">
   <h6 class="menu__label">
     
-      Storybook 基础
+      Redux
     
   </h6>
   <ul>
@@ -1254,9 +1254,9 @@
   
   
   
-  <li class="">
+  <li class="active">
     <a href="https://danacoding.github.io/react/redux/redux-base/"
-      class="menu__title ">Redux</a>
+      class="menu__title active">Redux</a>
   </li>
   
 
@@ -1415,9 +1415,9 @@
   
   
   
-  <li class="active">
+  <li class="">
     <a href="https://danacoding.github.io/react/storybook/sb-base/"
-      class="menu__title active">Storybook 基础</a>
+      class="menu__title ">Storybook 基础</a>
   </li>
   
 
@@ -1754,7 +1754,7 @@
   <div class="header__wrapper bgcolor__header">
     <div class="divider">
       <div class="lmr">
-        <h2 class="title">Storybook 基础</h2>
+        <h2 class="title">Redux</h2>
       </div>
     </div>
   </div>
@@ -1788,7 +1788,7 @@
   
   <li  class="is-active" >
     
-      <span>Storybook 基础</span>
+      <span>Redux</span>
     
   </li>
   
@@ -1830,7 +1830,7 @@
         <div class="menu">
   <h6 class="menu__label">
     
-      Storybook 基础
+      Redux
     
   </h6>
   <ul>
@@ -1921,9 +1921,9 @@
   
   
   
-  <li class="">
+  <li class="active">
     <a href="https://danacoding.github.io/react/redux/redux-base/"
-      class="menu__title ">Redux</a>
+      class="menu__title active">Redux</a>
   </li>
   
 
@@ -2082,9 +2082,9 @@
   
   
   
-  <li class="active">
+  <li class="">
     <a href="https://danacoding.github.io/react/storybook/sb-base/"
-      class="menu__title active">Storybook 基础</a>
+      class="menu__title ">Storybook 基础</a>
   </li>
   
 
@@ -2101,94 +2101,456 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <h3 id="一安装配置">一、安装配置</h3>
-<blockquote>
-<p>在next.js项目中执行</p>
-</blockquote>
-<pre tabindex="0"><code class="language-base" data-lang="base">npx sb init
-
-yarn storybook
-</code></pre><blockquote>
-<p><code>.storybook/preview.js</code> 为 Storybook 配置 Next.js Images</p>
-</blockquote>
-<pre tabindex="0"><code class="language-base" data-lang="base">+ import * as NextImage from &quot;next/image&quot;;
-
-+ const OriginalNextImage = NextImage.default;
-
-+ Object.defineProperty(NextImage, &quot;default&quot;, {
-  configurable: true,
-  value: (props) =&gt; (
-    &lt;OriginalNextImage
-      {...props}
-      unoptimized
-    /&gt;
-  ),
-});
-</code></pre><blockquote>
-<p><code>package.json</code> 为 Storybook 提供 Next.js 公共目录</p>
-</blockquote>
-<pre tabindex="0"><code class="language-base" data-lang="base">{
-  ...
-  
-  &quot;scripts&quot;: {
-    - &quot;storybook&quot;: &quot;start-storybook -p 6006&quot;,
-    - &quot;build-storybook&quot;: &quot;build-storybook&quot;
-    + &quot;storybook&quot;: &quot;start-storybook -p 6006 -s ./public&quot;,
-    + &quot;build-storybook&quot;: &quot;build-storybook -s public&quot;
-  },
-  
- ...
-
+    <p>Redux 是一个状态管理框架，可以与包括 React 在内的许多不同的 Web 技术一起使用。</p>
+<p>在 Redux 中，有一个状态对象负责应用程序的整个状态，</p>
+<p>这意味着如果你有一个包含十个组件且每个组件都有自己的本地状态的 React 项目，那么这个项目的整个状态将通过 Redux store 被定义为单个状态对象，</p>
+<p><code>这是 Redux 的第一个重要原则：Redux store 是应用程序状态的唯一真实来源</code>。</p>
+<p>这也意味着，如果应用程序想要更新状态，只能通过 Redux store 执行， <code>单向数据流</code>可以更轻松地对应用程序中的状态进行监测管理。</p>
+<h3 id="一创建一个-redux-store">一、创建一个 Redux Store</h3>
+<pre tabindex="0"><code class="language-base" data-lang="base">const reducer = (state = 5) =&gt; {
+  return state;
 }
-</code></pre><blockquote>
-<p>配置全局样式，这里使用 antd</p>
-</blockquote>
-<pre tabindex="0"><code class="language-base" data-lang="base">yarn add antd
+// 可从 Redux 对象获得 Redux 方法
+// 例如：Redux.createStore()
+const store = Redux.createStore(reducer)
+</code></pre><h3 id="二从-redux-store-获取状态">二、从 Redux Store 获取状态</h3>
+<pre tabindex="0"><code class="language-base" data-lang="base">const reducer = (state = 5) =&gt; {
+  return state;
+}
+const store = Redux.createStore(reducer)
+const currentState = store.getState()
+</code></pre><h3 id="三action">三、action</h3>
+<p>由于 Redux 是一个状态管理框架，因此更新状态是其核心任务之一。</p>
+<p>在 Redux 中，所有状态更新都由 dispatch action 触发，</p>
+<p>action 只是一个 JavaScript 对象，其中包含有关已发生的 action 事件的信息。</p>
+<p>Redux store 接收这些 action 对象，然后更新相应的状态。</p>
+<p>有时，Redux action 也会携带一些数据。 例如，在用户登录后携带用户名， 虽然数据是可选的，但 action 必须带有 type 属性，该属性表示此 action 的类型。</p>
+<p>可以将 Redux action 视为信使，将有关应用程序中发生的事件信息提供给 Redux store， 然后 store 根据发生的 action 进行状态的更新。</p>
+<h4 id="1-定义一个-redux-action">1. 定义一个 Redux Action</h4>
+<pre tabindex="0"><code class="language-base" data-lang="base">const action = {
+  type: 'LOGIN'
+}
+</code></pre><h4 id="2-定义一个-action-creator">2. 定义一个 Action Creator</h4>
+<p>创建 action 后要将 action 发送到 Redux store，以便它可以更新其状态。</p>
+<p>在 Redux 中，可以定义动作创建器来完成此任务， action creator 只是一个返回动作的 JavaScript 函数。</p>
+<p>换句话说，action creator 创建表示动作事件的对象。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const action = {
+  type: 'LOGIN'
+}
+const actionCreator = () =&gt; action
+</code></pre><h4 id="3-分发-action-event">3. 分发 Action Event</h4>
+<p><code>dispatch</code> 方法用于将 action 分派给 Redux store，</p>
+<p>调用 store.dispatch() 将从 action creator 返回的值发送回 store。</p>
+<p>动作创建者返回一个具有 type 属性的对象，该属性指定已发生的动作。 然后该方法会将一个 action 对象发送到 Redux store。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const store = Redux.createStore(
+  (state = { login: false }) =&gt; state
+);
 
-// `.storybook/preview.js`  为 Storybook 配置全局样式
-import 'antd/dist/antd.css';
-
-export const parameters = {
-  ...
-  ...
-  layout: 'fullscreen'
+const loginAction = () =&gt; {
+  return {
+    type: 'LOGIN'
+  }
 };
-</code></pre><h3 id="二编写故事流程-组件---故事">二、编写故事流程 （组件 -&gt; 故事）</h3>
-<p><p class="md__image">
-  <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/oiob4yc7rqra3pf8it5d.png" alt="Image description"  />
-</p></p>
-<blockquote>
-<p>故事细节</p>
-</blockquote>
-<p><p class="md__image">
-  <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w4pepu9is24ip85gzqjp.png" alt="Image description"  />
-</p></p>
-<h3 id="三args-获取-状态数据-和-事件">三、args 获取 状态数据 和 事件</h3>
-<p><p class="md__image">
-  <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/uly1yyn4mcy27qry0xx9.png" alt="Image description"  />
-</p><br />
-<p class="md__image">
-  <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2bgmdll6wjsxvya4h3qh.png" alt="Image description"  />
-</p><br />
-<p class="md__image">
-  <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/s5d4c8bzfl03z8xz8cqk.png" alt="Image description"  />
-</p></p>
-<blockquote>
-<p>使用其他故事的 args</p>
-</blockquote>
-<p><p class="md__image">
-  <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/lyz64uj2sf6lku9g5eg9.png" alt="Image description"  />
-</p></p>
-<blockquote>
-<p>传递给Storybook的事件的写法 (必须带有 &hellip;props, 否则事件无法触发)</p>
-</blockquote>
-<p><p class="md__image">
-  <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/l00s2ub8clzl701sz6uj.png" alt="Image description"  />
-</p></p>
-<h3 id="四parameters-静态参数--loaders-加载器">四、parameters 静态参数 &amp; loaders 加载器</h3>
-<p>parameters 通常用于控制 Storybook 功能和插件的行为。（一般情况下不需要使用，但不可不知）</p>
-<p>loaders 用于加载故事的数据，加载器可用于加载任何资产、延迟加载组件或从远程 API 获取数据。（一般不需要使用，但不可不知）</p>
 
+store.dispatch(loginAction())
+</code></pre><h4 id="4-在-store-里处理-action">4. 在 Store 里处理 Action</h4>
+<p>在一个 action 被创建并 dispatch 之后，Redux store 需要知道如何响应该操作。 这就是 <code>reducer</code> 函数存在的意义。</p>
+<p>Redux 中的 Reducers 负责响应 action 然后进行状态的修改。</p>
+<p>reducer 将 state 和 action 作为参数，并且它总是返回一个新的 state。 这是 reducer 的唯一的作用。</p>
+<p>它不应有任何其他的作用：比如它不应调用 API 接口，也不应存在任何潜在的副作用。</p>
+<p>reducer 只是一个接受状态和动作，然后返回新状态的纯函数。</p>
+<p><code>Redux 的另一个关键原则是 state 是只读的。</code> 换句话说，reducer 函数必须始终返回一个新的 state，并且永远不会直接修改状态。</p>
+<p>Redux 不强制改变状态，但是需要在 reducer 函数的代码中强制执行它。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const defaultState = {
+  login: false
+};
+
+const reducer = (state = defaultState, action) =&gt; {
+  if (action.type == 'LOGIN') {
+    return { login: true }
+  } else {
+    return state
+  }
+};
+
+const store = Redux.createStore(reducer);
+
+const loginAction = () =&gt; {
+  return {
+    type: 'LOGIN'
+  }
+};
+</code></pre><h4 id="5-使用-switch-语句处理多个-actions">5. 使用 Switch 语句处理多个 Actions</h4>
+<p>可以定义 Redux store 处理多种 action 类型。</p>
+<p>假设在 Redux store 中管理用户身份验证。 希望用状态表示用户登录和注销。 使用 state 的 authenticated 属性表示它。</p>
+<p>还需要使用 action creators 创建与用户登录和用户注销相对应的 action，以及 action 对象本身。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const defaultState = {
+  authenticated: false
+};
+
+const authReducer = (state = defaultState, action) =&gt; {
+  switch (action.type) {
+    case 'LOGIN':
+      return { authenticated: true }
+    case 'LOGOUT':
+      return { authenticated: false };
+    default:
+      return state
+  }
+};
+
+const store = Redux.createStore(authReducer);
+
+const loginUser = () =&gt; {
+  return {
+    type: 'LOGIN'
+  }
+};
+
+const logoutUser = () =&gt; {
+  return {
+    type: 'LOGOUT'
+  }
+};
+</code></pre><h4 id="6-使用-const-声明-action-types">6. 使用 const 声明 Action Types</h4>
+<p>在使用 Redux 时的一个常见做法是将操作类型指定为只读，然后在任何使用它们的地方引用这些常量。</p>
+<p>可以通过将 action types 使用 const 声明重构你正在使用的代码。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const LOGIN = 'LOGIN';
+const LOGOUT = 'LOGOUT';
+
+const loginUser = () =&gt; {
+  return {
+    type: LOGIN
+  }
+};
+
+const logoutUser = () =&gt; {
+  return {
+    type: LOGOUT
+  }
+};
+
+const defaultState = {
+  authenticated: false
+};
+
+const authReducer = (state = defaultState, action) =&gt; {
+
+  switch (action.type) {
+    case LOGIN:
+      return {
+        authenticated: true
+      }
+    case LOGOUT:
+      return {
+        authenticated: false
+      }
+
+    default:
+      return state;
+
+  }
+
+};
+
+const store = Redux.createStore(authReducer);
+</code></pre><h3 id="四注册-store-监听器">四、注册 Store 监听器</h3>
+<p>在 Redux store 对象上访问数据的另一种方法是 store.subscribe()。</p>
+<p>这允许将监听器函数订阅到 store，只要 action 被 dispatch 就会调用它们。</p>
+<p>这个方法的一个简单用途是为 store 订阅一个函数，它只是在每次收到一个 action 并且更新 store 时记录一条消息。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const ADD = 'ADD';
+
+const reducer = (state = 0, action) =&gt; {
+  switch (action.type) {
+    case ADD:
+      return state + 1;
+    default:
+      return state;
+  }
+};
+
+const store = Redux.createStore(reducer);
+
+// 全局 count 变量：
+let count = 0;
+
+// 修改这行下面的代码
+function sayHi() {
+  count += 1
+}
+store.subscribe(sayHi)
+// 修改这行上面的代码
+
+store.dispatch({ type: ADD });
+console.log(count);
+store.dispatch({ type: ADD });
+console.log(count);
+store.dispatch({ type: ADD });
+console.log(count);
+</code></pre><h3 id="五组合多个-reducers">五、组合多个 Reducers</h3>
+<p>当应用程序的状态开始变得越来越复杂时，可能会将 state 分成多个块。</p>
+<p>相反，请记住 Redux 的第一个原则：所有应用程序状态都保存在 store 中的一个简单的 state 对象中。</p>
+<p>因此，Redux 提供 reducer 组合作为复杂状态模型的解决方案。</p>
+<p>定义多个 reducer 来处理应用程序状态的不同部分，然后将这些 reducer 组合成一个 root reducer。</p>
+<p>然后将 root reducer 传递给 Redux createStore()方法。</p>
+<p>为了将多个 reducer 组合在一起，Redux 提供了combineReducers()方法。</p>
+<p>该方法接受一个对象作为参数，在该参数中定义一个属性，该属性将键与特定 reducer 函数关联。</p>
+<p>Redux 将使用给定的键值作为关联状态的名称。</p>
+<p>通常情况下，当它们在某种程度上是独一无二的，为每个应用程序的 state 创建一个 reducer 是一个很好的做法。</p>
+<p>例如，在一个带有用户身份验证的记笔记应用程序中，一个 reducer 可以处理身份验证而另一个处理用户提交的文本和注释。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const INCREMENT = 'INCREMENT';
+const DECREMENT = 'DECREMENT';
+
+const counterReducer = (state = 0, action) =&gt; {
+  switch (action.type) {
+    case INCREMENT:
+      return state + 1;
+    case DECREMENT:
+      return state - 1;
+    default:
+      return state;
+  }
+};
+
+const LOGIN = 'LOGIN';
+const LOGOUT = 'LOGOUT';
+
+const authReducer = (state = { authenticated: false }, action) =&gt; {
+  switch (action.type) {
+    case LOGIN:
+      return {
+        authenticated: true
+      }
+    case LOGOUT:
+      return {
+        authenticated: false
+      }
+    default:
+      return state;
+  }
+};
+
+const rootReducer = Redux.combineReducers({
+  auth: authReducer,
+  count: counterReducer
+})
+
+const store = Redux.createStore(rootReducer);
+</code></pre><h3 id="六发送-action-data-给-store">六、发送 Action Data 给 Store</h3>
+<p>action 还可以包含除 type之外的任何信息。 还可以和 action 一起发送特定数据。</p>
+<p>事实上，这是非常常见的，因为 action 通常源于一些用户交互，并且往往会携带一些数据， Redux store 经常需要知道这些数据。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const ADD_NOTE = &quot;ADD_NOTE&quot;;
+
+const notesReducer = (state = &quot;Initial State&quot;, action) =&gt; {
+  switch (action.type) {
+    case ADD_NOTE:
+      return action.text;
+    default:
+      return state;
+  }
+};
+
+const addNoteText = note =&gt; {
+
+  return {
+    type: ADD_NOTE,
+    text: note
+  };
+
+};
+
+const store = Redux.createStore(notesReducer);
+
+console.log(store.getState());
+store.dispatch(addNoteText(&quot;Hello!&quot;));
+console.log(store.getState());
+</code></pre><h3 id="七使用中间件处理异步操作">七、使用中间件处理异步操作</h3>
+<p>在某些时候，需要在 Redux 应用程序中使用异步请求，那么如何处理这些类型的请求？</p>
+<p>Redux 中间件专为此目的而设计，称为 Redux Thunk 中间件。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const REQUESTING_DATA = 'REQUESTING_DATA'
+const RECEIVED_DATA = 'RECEIVED_DATA'
+
+const requestingData = () =&gt; { return { type: REQUESTING_DATA } }
+const receivedData = (data) =&gt; { return { type: RECEIVED_DATA, users: data.users } }
+
+const handleAsync = () =&gt; {
+  return function (dispatch) {
+    // 在这里发送 request action
+    dispatch(requestingData());
+    setTimeout(function () {
+      let data = {
+        users: ['Jeff', 'William', 'Alice']
+      }
+      // 在这里发送接收到的 data action
+      dispatch(receivedData(data));
+    }, 2500);
+  }
+};
+
+const defaultState = {
+  fetching: false,
+  users: []
+};
+
+const asyncDataReducer = (state = defaultState, action) =&gt; {
+  switch (action.type) {
+    case REQUESTING_DATA:
+      return {
+        fetching: true,
+        users: []
+      }
+    case RECEIVED_DATA:
+      return {
+        fetching: false,
+        users: action.users
+      }
+    default:
+      return state;
+  }
+};
+
+const store = Redux.createStore(
+  asyncDataReducer,
+  Redux.applyMiddleware(ReduxThunk.default)
+);
+</code></pre><h3 id="八案例">八、案例</h3>
+<h4 id="1-用-redux-写一个计数器">1. 用 Redux 写一个计数器</h4>
+<pre tabindex="0"><code class="language-base" data-lang="base">// 为 increment action types 定义一个常量
+const INCREMENT = &quot;INCREMENT&quot;;
+// 为 decrement action types 定义一个常量
+const DECREMENT = &quot;DECREMENT&quot;;
+// 定义 counter reducer，根据接收到的动作递增或递减 state
+const counterReducer = (state = 0, action) =&gt; {
+  switch (action.type) {
+    case INCREMENT:
+      return state + 1;
+
+    case DECREMENT:
+      return state - 1;
+
+    default:
+      return state;
+  }
+};
+// 为自增运算定义一个动作创建器
+const incAction = () =&gt; {
+  return {
+    type: INCREMENT
+  };
+};
+// 为自减运算定义一个动作创建器
+const decAction = () =&gt; {
+  return {
+    type: DECREMENT
+  };
+};
+// 在这里定义 Redux store，传入 reducers
+const store = Redux.createStore(counterReducer);
+</code></pre><h4 id="2-永不改变状态">2. 永不改变状态</h4>
+<p>不可变状态意味着永远不直接修改状态，而是返回一个新的状态副本。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const ADD_TO_DO = 'ADD_TO_DO';
+
+// 一个展示需要完成的任务的字符串列表：
+const todos = [
+  'Go to the store',
+  'Clean the house',
+  'Cook dinner',
+  'Learn to code',
+];
+
+const immutableReducer = (state = todos, action) =&gt; {
+  switch (action.type) {
+    case ADD_TO_DO:
+      // 这里不能修改 state
+      return state.concat(action.todo);
+    default:
+      return state;
+  }
+};
+
+const addToDo = (todo) =&gt; {
+  return {
+    type: ADD_TO_DO,
+    todo
+  }
+}
+
+const store = Redux.createStore(immutableReducer);
+</code></pre><h4 id="3-在数组中使用扩展运算符">3. 在数组中使用扩展运算符</h4>
+<p>ES6 中有助于在 Redux 中强制执行状态不变性的一个解决方案是扩展运算符：&hellip;。 扩展运算符具有很多的应用，其中一种非常适合通过一个已有的数组生成一个新数组。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const immutableReducer = (state = ['Do not mutate state!'], action) =&gt; {
+  switch (action.type) {
+    case 'ADD_TO_DO':
+      // 这里不能修改 state
+      let arr = [...state, action.todo];
+      return arr;
+    default:
+      return state;
+  }
+};
+
+const addToDo = (todo) =&gt; {
+  return {
+    type: 'ADD_TO_DO',
+    todo
+  }
+}
+
+const store = Redux.createStore(immutableReducer);
+</code></pre><h4 id="4-从数组中删除项目">4. 从数组中删除项目</h4>
+<p>扩展运算符也可以在这里使用。 其他有用的JavaScript方法包括 slice() 和 concat()。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const immutableReducer = (state = [0, 1, 2, 3, 4, 5], action) =&gt; {
+  switch (action.type) {
+    case 'REMOVE_ITEM':
+      // 这里不能修改 state
+      return [
+        ...state.slice(0, action.index),
+        ...state.slice(action.index + 1, state.length)
+      ];
+    // or return state.slice(0, action.index).concat(state.slice(action.index + 1, state.length));
+    default:
+      return state;
+  }
+};
+
+const removeItem = (index) =&gt; {
+  return {
+    type: 'REMOVE_ITEM',
+    index
+  }
+}
+
+const store = Redux.createStore(immutableReducer);
+</code></pre><h4 id="5-使用-objectassign-拷贝对象">5. 使用 Object.assign 拷贝对象</h4>
+<p>当状态是 object 时，有一些方法可以实现状态不变性。</p>
+<p>处理对象的一个常用的方法是 Object.assign()。</p>
+<p>Object.assign() 获取目标对象和源对象，并将源对象中的属性映射到目标对象。 任何匹配的属性都会被源对象中的属性覆盖。</p>
+<p>通常用于通过传递一个空对象作为第一个参数，然后是要用复制的对象来制作对象的浅表副本。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const defaultState = {
+  user: 'CamperBot',
+  status: 'offline',
+  friends: '732,982',
+  community: 'freeCodeCamp'
+};
+
+const immutableReducer = (state = defaultState, action) =&gt; {
+  switch (action.type) {
+    case 'ONLINE':
+      // 这里不能修改 state
+      return Object.assign({}, state, { status: &quot;online&quot; });
+    default:
+      return state;
+  }
+};
+
+const wakeUp = () =&gt; {
+  return {
+    type: 'ONLINE'
+  }
+};
+
+const store = Redux.createStore(immutableReducer);
+</code></pre>
   </article>
 </div>
       
@@ -2196,14 +2558,21 @@ export const parameters = {
 <nav class="pagination-single">
   
     
-      <a href="https://danacoding.github.io/react/remix/remix-adv/" title="Remix 进阶（待完善）" class="pagination-single__left">
+      <a href="https://danacoding.github.io/react/react/react-bp/" title="React 最佳实践" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__right-title">Remix 进阶（待完善）</div>
+        <div class="pagination-single__right-title">React 最佳实践</div>
       </a>
     
     <div class="grow"></div>
+    
+      <a href="https://danacoding.github.io/react/hooks/hooks-bp/" title="Hooks 最佳实践" class="pagination-single__right">
+        <div class="pagination-single__left-title">Hooks 最佳实践</div>
+        <div class="pagination-single__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
+        </div>
+      </a>
     
   
 </nav>
@@ -2223,10 +2592,31 @@ export const parameters = {
   <ul>
     <li>
       <ul>
-        <li><a href="#一安装配置">一、安装配置</a></li>
-        <li><a href="#二编写故事流程-组件---故事">二、编写故事流程 （组件 -&gt; 故事）</a></li>
-        <li><a href="#三args-获取-状态数据-和-事件">三、args 获取 状态数据 和 事件</a></li>
-        <li><a href="#四parameters-静态参数--loaders-加载器">四、parameters 静态参数 &amp; loaders 加载器</a></li>
+        <li><a href="#一创建一个-redux-store">一、创建一个 Redux Store</a></li>
+        <li><a href="#二从-redux-store-获取状态">二、从 Redux Store 获取状态</a></li>
+        <li><a href="#三action">三、action</a>
+          <ul>
+            <li><a href="#1-定义一个-redux-action">1. 定义一个 Redux Action</a></li>
+            <li><a href="#2-定义一个-action-creator">2. 定义一个 Action Creator</a></li>
+            <li><a href="#3-分发-action-event">3. 分发 Action Event</a></li>
+            <li><a href="#4-在-store-里处理-action">4. 在 Store 里处理 Action</a></li>
+            <li><a href="#5-使用-switch-语句处理多个-actions">5. 使用 Switch 语句处理多个 Actions</a></li>
+            <li><a href="#6-使用-const-声明-action-types">6. 使用 const 声明 Action Types</a></li>
+          </ul>
+        </li>
+        <li><a href="#四注册-store-监听器">四、注册 Store 监听器</a></li>
+        <li><a href="#五组合多个-reducers">五、组合多个 Reducers</a></li>
+        <li><a href="#六发送-action-data-给-store">六、发送 Action Data 给 Store</a></li>
+        <li><a href="#七使用中间件处理异步操作">七、使用中间件处理异步操作</a></li>
+        <li><a href="#八案例">八、案例</a>
+          <ul>
+            <li><a href="#1-用-redux-写一个计数器">1. 用 Redux 写一个计数器</a></li>
+            <li><a href="#2-永不改变状态">2. 永不改变状态</a></li>
+            <li><a href="#3-在数组中使用扩展运算符">3. 在数组中使用扩展运算符</a></li>
+            <li><a href="#4-从数组中删除项目">4. 从数组中删除项目</a></li>
+            <li><a href="#5-使用-objectassign-拷贝对象">5. 使用 Object.assign 拷贝对象</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
