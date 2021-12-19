@@ -2170,16 +2170,16 @@ function Controls() {
   )
 }
 
-</code></pre><h2 id="二获取所有state">二、获取所有state</h2>
-<p>记住，它会导致组件在每次状态更改时更新！</p>
+</code></pre><h2 id="二强制渲染组件">二、强制渲染组件</h2>
+<p>记住，它会导致组件在每次状态更改时渲染！</p>
 <pre tabindex="0"><code class="language-base" data-lang="base">const state = useStore()
-</code></pre><h2 id="三选择多个切片state">三、选择多个切片state</h2>
+</code></pre><h2 id="三state-更新渲染组件">三、state 更新渲染组件</h2>
 <p>切片状态（slice state）,因为store是一个原子状态，可以将它切分为多个格子状态，便于代码管理。</p>
-<h3 id="1-单个state选择">1. 单个state选择</h3>
+<h3 id="1-单个-state-更新渲染">1. 单个 state 更新渲染</h3>
 <p>默认情况下，它以严格相等（<code>旧 === 新</code>）检测更改，这对于原子状态选择非常有效。</p>
 <pre tabindex="0"><code class="language-base" data-lang="base">const nuts = useStore(state =&gt; state.nuts)
 const honey = useStore(state =&gt; state.honey)
-</code></pre><h3 id="2-多个state选择浅差异">2. 多个state选择（浅差异）</h3>
+</code></pre><h3 id="2-多个-state-更新浅差异渲染">2. 多个 state 更新（浅差异）渲染</h3>
 <p>如果想构造一个内部有多个 state-picks(状态选择) 的单个对象，类似于 redux 的 mapStateToProps，可以告诉 zustand 你希望通过传递<code>shallow</code>相等函数来对对象进行浅差异。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2209,24 +2209,24 @@ const honey = useStore(state =&gt; state.honey)
 </span><span class="c1"></span><span class="kr">const</span> <span class="nx">treats</span> <span class="o">=</span> <span class="nx">useStore</span><span class="p">(</span><span class="nx">state</span> <span class="p">=&gt;</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">state</span><span class="p">.</span><span class="nx">treats</span><span class="p">),</span> <span class="nx">shallow</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="3-自定义函数选择">3. 自定义函数选择</h3>
+</div><h3 id="3-自定义函数控制渲染">3. 自定义函数控制渲染</h3>
 <p>为了更好地控制重新渲染，可以提供任何自定义的相等函数。</p>
 <pre tabindex="0"><code class="language-base" data-lang="base">const treats = useStore(
   state =&gt; state.treats,
   (oldTreats, newTreats) =&gt; compare(oldTreats, newTreats)
 )
-</code></pre><h2 id="四记忆选择器">四、记忆选择器</h2>
-<h3 id="1-usecallback">1. useCallback()</h3>
-<p>通常建议使用 useCallback 记忆选择器。 这将防止每次渲染时进行不必要的计算。 它还允许 React 在并发模式下优化性能。</p>
+</code></pre><h2 id="四记忆处理器避免重复计算">四、记忆处理器（避免重复计算）</h2>
+<h3 id="1-usecallback-处理器">1. useCallback() 处理器</h3>
+<p>通常建议使用 useCallback 记忆处理器。 这将防止每次渲染时进行不必要的计算。 它还允许 React 在并发模式下优化性能。</p>
 <pre tabindex="0"><code class="language-base" data-lang="base">const fruit = useStore(useCallback(state =&gt; state.fruits[id], [id]))
-</code></pre><h3 id="2-不依赖于作用域的选择器">2. 不依赖于作用域的选择器</h3>
-<p>如果一个选择器不依赖于作用域，可以在渲染函数之外定义它以获得一个固定的“引用”而无需 useCallback。</p>
+</code></pre><h3 id="2-不依赖于作用域的处理器">2. 不依赖于作用域的处理器</h3>
+<p>如果一个处理器不依赖于作用域，可以在渲染函数之外定义它以获得一个固定的“引用”而无需 useCallback。</p>
 <pre tabindex="0"><code class="language-base" data-lang="base">const selector = state =&gt; state.berries
 
 function Component() {
   const berries = useStore(selector)
 }
-</code></pre><h2 id="五覆盖state">五、覆盖state</h2>
+</code></pre><h2 id="五覆盖state抹去之前的state">五、覆盖state（抹去之前的state）</h2>
 <p><code>set</code> 函数有第二个参数，默认为 false。 它将取代<code>state</code>模型，而不是合并。 注意它会抹去你依赖的部分，比如<code>actions</code>。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2252,7 +2252,7 @@ function Component() {
 <span class="p">}))</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="六异步操作">六、异步操作</h2>
+</div><h2 id="六异步操作fetch请求">六、异步操作（fetch请求）</h2>
 <p>调用 <code>set</code> ， zustand 不关心操作是否异步。</p>
 <pre tabindex="0"><code class="language-base" data-lang="base">const useStore = create(set =&gt; ({
   girls: {},
@@ -2261,7 +2261,7 @@ function Component() {
     set({ girls: await response.json() })
   }
 }))
-</code></pre><h2 id="七从操作中读取状态">七、从操作中读取状态</h2>
+</code></pre><h2 id="七从-action-中读取-state">七、从 action 中读取 state</h2>
 <p>通过<code>get</code>访问状态。</p>
 <pre tabindex="0"><code class="language-base" data-lang="base">const useStore = create((set, get) =&gt; ({
   name: &quot;Lucy&quot;,
@@ -2270,8 +2270,8 @@ function Component() {
     // ...
   }
 })
-</code></pre><h2 id="八在-react-组件之外读写状态">八、在 React 组件之外读写状态</h2>
-<h3 id="1-自定义hooks">1. 自定义hooks</h3>
+</code></pre><h2 id="八在-react-组件之外读写-state">八、在 React 组件之外读写 state</h2>
+<h3 id="1-自定义-hooks-读写-state">1. 自定义 hooks 读写 state</h3>
 <p>有时需要以<code>非React</code>方式访问状态，或对<code>store</code>进行操作。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2317,8 +2317,8 @@ function Component() {
   <span class="kr">const</span> <span class="nx">paw</span> <span class="o">=</span> <span class="nx">useStore</span><span class="p">(</span><span class="nx">state</span> <span class="p">=&gt;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">paw</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="2-使用订阅选择器中间件">2. 使用订阅选择器（中间件）</h3>
-<p>如果您需要使用选择器订阅，<code>subscribeWithSelector</code> 中间件会有所帮助。</p>
+</div><h3 id="2-使用订阅处理器中间件">2. 使用订阅处理器（中间件）</h3>
+<p>如果您需要使用处理器订阅，<code>subscribeWithSelector</code> 中间件会有所帮助。</p>
 <p>有了这个中间件，subscribe 接受一个额外的签名：</p>
 <pre tabindex="0"><code class="language-base" data-lang="base">subscribe(selector, callback, options?: { equalityFn, fireImmediately }): Unsubscribe
 </code></pre><div class="highlight"><div class="chroma">
@@ -2351,7 +2351,7 @@ function Component() {
 </span><span class="c1"></span><span class="kr">const</span> <span class="nx">unsub5</span> <span class="o">=</span> <span class="nx">useStore</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">state</span> <span class="p">=&gt;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">paw</span><span class="p">,</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">,</span> <span class="p">{</span> <span class="nx">fireImmediately</span><span class="o">:</span> <span class="kc">true</span> <span class="p">})</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="3-订阅选择器中间件使用ts">3. 订阅选择器（中间件）使用TS</h3>
+</div><h3 id="3-订阅处理器中间件使用ts">3. 订阅处理器（中间件）使用TS</h3>
 <pre tabindex="0"><code class="language-base" data-lang="base">import create, { GetState, SetState } from 'zustand'
 import { StoreApiWithSubscribeWithSelector, subscribeWithSelector } from 'zustand/middleware'
 
@@ -2485,7 +2485,7 @@ clearForest();
 <span class="kr">export</span> <span class="k">default</span> <span class="nx">useStore</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="3-管理中间件使用ts">3. 管理中间件使用TS</h3>
+</div><h3 id="3-在管理中间件中使用ts">3. 在管理中间件中使用TS</h3>
 <pre tabindex="0"><code>yarn add --dev @types/ramda
 </code></pre><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -3607,28 +3607,28 @@ export default function Mountain() {
         <li><a href="#step2-绑定组件">Step2. 绑定组件</a></li>
       </ul>
     </li>
-    <li><a href="#二获取所有state">二、获取所有state</a></li>
-    <li><a href="#三选择多个切片state">三、选择多个切片state</a>
+    <li><a href="#二强制渲染组件">二、强制渲染组件</a></li>
+    <li><a href="#三state-更新渲染组件">三、state 更新渲染组件</a>
       <ul>
-        <li><a href="#1-单个state选择">1. 单个state选择</a></li>
-        <li><a href="#2-多个state选择浅差异">2. 多个state选择（浅差异）</a></li>
-        <li><a href="#3-自定义函数选择">3. 自定义函数选择</a></li>
+        <li><a href="#1-单个-state-更新渲染">1. 单个 state 更新渲染</a></li>
+        <li><a href="#2-多个-state-更新浅差异渲染">2. 多个 state 更新（浅差异）渲染</a></li>
+        <li><a href="#3-自定义函数控制渲染">3. 自定义函数控制渲染</a></li>
       </ul>
     </li>
-    <li><a href="#四记忆选择器">四、记忆选择器</a>
+    <li><a href="#四记忆处理器避免重复计算">四、记忆处理器（避免重复计算）</a>
       <ul>
-        <li><a href="#1-usecallback">1. useCallback()</a></li>
-        <li><a href="#2-不依赖于作用域的选择器">2. 不依赖于作用域的选择器</a></li>
+        <li><a href="#1-usecallback-处理器">1. useCallback() 处理器</a></li>
+        <li><a href="#2-不依赖于作用域的处理器">2. 不依赖于作用域的处理器</a></li>
       </ul>
     </li>
-    <li><a href="#五覆盖state">五、覆盖state</a></li>
-    <li><a href="#六异步操作">六、异步操作</a></li>
-    <li><a href="#七从操作中读取状态">七、从操作中读取状态</a></li>
-    <li><a href="#八在-react-组件之外读写状态">八、在 React 组件之外读写状态</a>
+    <li><a href="#五覆盖state抹去之前的state">五、覆盖state（抹去之前的state）</a></li>
+    <li><a href="#六异步操作fetch请求">六、异步操作（fetch请求）</a></li>
+    <li><a href="#七从-action-中读取-state">七、从 action 中读取 state</a></li>
+    <li><a href="#八在-react-组件之外读写-state">八、在 React 组件之外读写 state</a>
       <ul>
-        <li><a href="#1-自定义hooks">1. 自定义hooks</a></li>
-        <li><a href="#2-使用订阅选择器中间件">2. 使用订阅选择器（中间件）</a></li>
-        <li><a href="#3-订阅选择器中间件使用ts">3. 订阅选择器（中间件）使用TS</a></li>
+        <li><a href="#1-自定义-hooks-读写-state">1. 自定义 hooks 读写 state</a></li>
+        <li><a href="#2-使用订阅处理器中间件">2. 使用订阅处理器（中间件）</a></li>
+        <li><a href="#3-订阅处理器中间件使用ts">3. 订阅处理器（中间件）使用TS</a></li>
       </ul>
     </li>
     <li><a href="#九瞬时更新ref用于频繁发生的状态变化">九、瞬时更新ref（用于频繁发生的状态变化）</a></li>
@@ -3637,7 +3637,7 @@ export default function Mountain() {
       <ul>
         <li><a href="#1-按自己喜欢的方式管理store">1. 按自己喜欢的方式管理store</a></li>
         <li><a href="#2-管理中间件">2. 管理中间件</a></li>
-        <li><a href="#3-管理中间件使用ts">3. 管理中间件使用TS</a></li>
+        <li><a href="#3-在管理中间件中使用ts">3. 在管理中间件中使用TS</a></li>
       </ul>
     </li>
     <li><a href="#十二状态持久化中间件-persist">十二、状态持久化中间件 persist</a>
