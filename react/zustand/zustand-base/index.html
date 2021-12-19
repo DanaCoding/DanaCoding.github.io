@@ -2174,7 +2174,7 @@ function Controls() {
 <p>记住，它会导致组件在每次状态更改时更新！</p>
 <pre tabindex="0"><code class="language-base" data-lang="base">const state = useStore()
 </code></pre><h2 id="三选择多个切片state">三、选择多个切片state</h2>
-<p>切片状态（slice state）,因为store是一个原子（单个）状态，可以将它切分为多个格子状态，便于代码管理。</p>
+<p>切片状态（slice state）,因为store是一个原子状态，可以将它切分为多个格子状态，便于代码管理。</p>
 <h3 id="1-单个state选择">1. 单个state选择</h3>
 <p>默认情况下，它以严格相等（<code>旧 === 新</code>）检测更改，这对于原子状态选择非常有效。</p>
 <pre tabindex="0"><code class="language-base" data-lang="base">const nuts = useStore(state =&gt; state.nuts)
