@@ -78,12 +78,12 @@
       </item>
       
       <item>
-        <title>Next</title>
+        <title>Next.js 速览</title>
         <link>https://danacoding.github.io/react/next/next-base/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/react/next/next-base/</guid>
-        <description>Next.js 是围绕pages的概念构建的。 页面与基于其文件名的路由相关联。 一、创建 Next.js 应用 1 2 3 4 5 6 7 8 yarn create next-app --typescript yarn dev //开发模式 yarn build //生产构建 yarn start /</description>
+        <description>Next.js：React 框架 Next.js 提供生产所需的所有功能的最佳开发人员体验：混合静态和服务器渲染、TypeScript 支持、智能捆绑、路由预取</description>
       </item>
       
       <item>
