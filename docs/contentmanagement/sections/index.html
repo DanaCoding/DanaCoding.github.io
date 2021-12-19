@@ -1137,10 +1137,10 @@
 </head>
 
 
-<body id="root" class="theme__light">
+<body id="root" class="theme__dark">
     <script>
         var rootElem = document.getElementById('root');
-        var themeOptions = JSON.parse("[\"light\",\"dark\"]");
+        var themeOptions = JSON.parse("[\"dark\",\"light\"]");
         var localTheme = localStorage.getItem('theme');
 
         if (localTheme) {
@@ -1540,6 +1540,14 @@
   
   
   <li class="navbar__menu--mobile-item ">
+    <a href="/dataview" class="">数据可视化</a>
+  </li>
+
+  
+  
+  
+  
+  <li class="navbar__menu--mobile-item ">
     <a href="/others" class="">Others</a>
   </li>
 
@@ -1579,6 +1587,14 @@
   
   <li class="navbar__menu--item ">
     <a href="/nodejs" data-bgimg="false">Nodejs</a>
+  </li>
+
+  
+  
+  
+  
+  <li class="navbar__menu--item ">
+    <a href="/dataview" data-bgimg="false">数据可视化</a>
   </li>
 
   

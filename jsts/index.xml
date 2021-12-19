@@ -60,21 +60,21 @@
       </item>
       
       <item>
+        <title>命令式 vs 函数式 vs 链式</title>
+        <link>https://danacoding.github.io/jsts/function/for/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/jsts/function/for/</guid>
+        <description>这里用 For 循环举例 命令式 1 2 3 4 5 6 7 8 9 10 11 12 13 const files = [&amp;#34;foo.txt &amp;#34;, &amp;#34;.bar&amp;#34;, &amp;#34; &amp;#34;, &amp;#34;baz.foo&amp;#34;]; let filePaths = []; for (let file of files) { const fileName = file.trim(); if (fileName) { const filePath = `~/cool_app/${fileName}`; filePaths.push(filePath); } } // filePaths = [ &amp;#39;~/cool_app/foo.txt&amp;#39;, &amp;#39;~/cool_app/.bar&amp;#39;, &amp;#39;~/cool_app/baz.foo&amp;#39;] 函数式 封装性</description>
+      </item>
+      
+      <item>
         <title>字面量 vs 构造器 vs class</title>
         <link>https://danacoding.github.io/jsts/function/new/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/jsts/function/new/</guid>
         <description>Object 概述 Object 是 JavaScript 的一种 数据类型 。它用于存储各种键值集合和更复杂的实体。 Objects 可以通过 对象字面量、构造函数 或者 class 的方式创建 一、对象字面量 （{&amp;hell</description>
-      </item>
-      
-      <item>
-        <title>松散式 vs 函数式 vs 链式</title>
-        <link>https://danacoding.github.io/jsts/function/for/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/jsts/function/for/</guid>
-        <description>这里用 For 循环举例 松散式 (命令式) 这是我自己给起的名字，当然同行可能并不喜欢这个称呼 1 2 3 4 5 6 7 8 9 10 11 12 13 const files = [&amp;#34;foo.txt &amp;#34;, &amp;#34;.bar&amp;#34;, &amp;#34; &amp;#34;, &amp;#34;baz.foo&amp;#34;]; let filePaths = []; for (let file</description>
       </item>
       
       <item>

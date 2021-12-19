@@ -1130,10 +1130,10 @@
 </head>
 
 
-<body id="root" class="theme__light">
+<body id="root" class="theme__dark">
     <script>
         var rootElem = document.getElementById('root');
-        var themeOptions = JSON.parse("[\"light\",\"dark\"]");
+        var themeOptions = JSON.parse("[\"dark\",\"light\"]");
         var localTheme = localStorage.getItem('theme');
 
         if (localTheme) {
@@ -1184,8 +1184,8 @@
   
   
   <li class="">
-    <a href="https://danacoding.github.io/react/react/react-base/"
-      class="menu__title ">React</a>
+    <a href="https://danacoding.github.io/react/redux/react-redux/"
+      class="menu__title ">React &amp; Redux</a>
   </li>
   
 
@@ -1207,8 +1207,8 @@
   
   
   <li class="">
-    <a href="https://danacoding.github.io/react/redux/react-redux/"
-      class="menu__title ">React &amp; Redux</a>
+    <a href="https://danacoding.github.io/react/react/react-base/"
+      class="menu__title ">React 基础</a>
   </li>
   
 
@@ -1392,7 +1392,7 @@
   
   <li class="">
     <a href="https://danacoding.github.io/react/remix/remix-adv/"
-      class="menu__title ">Remix 进阶（待完善）</a>
+      class="menu__title ">Remix 进阶</a>
   </li>
   
 
@@ -1555,6 +1555,14 @@
   
   
   <li class="navbar__menu--mobile-item ">
+    <a href="/dataview" class="">数据可视化</a>
+  </li>
+
+  
+  
+  
+  
+  <li class="navbar__menu--mobile-item ">
     <a href="/others" class="">Others</a>
   </li>
 
@@ -1594,6 +1602,14 @@
   
   <li class="navbar__menu--item ">
     <a href="/nodejs" data-bgimg="false">Nodejs</a>
+  </li>
+
+  
+  
+  
+  
+  <li class="navbar__menu--item ">
+    <a href="/dataview" data-bgimg="false">数据可视化</a>
   </li>
 
   
@@ -1842,8 +1858,8 @@
   
   
   <li class="">
-    <a href="https://danacoding.github.io/react/react/react-base/"
-      class="menu__title ">React</a>
+    <a href="https://danacoding.github.io/react/redux/react-redux/"
+      class="menu__title ">React &amp; Redux</a>
   </li>
   
 
@@ -1865,8 +1881,8 @@
   
   
   <li class="">
-    <a href="https://danacoding.github.io/react/redux/react-redux/"
-      class="menu__title ">React &amp; Redux</a>
+    <a href="https://danacoding.github.io/react/react/react-base/"
+      class="menu__title ">React 基础</a>
   </li>
   
 
@@ -2050,7 +2066,7 @@
   
   <li class="">
     <a href="https://danacoding.github.io/react/remix/remix-adv/"
-      class="menu__title ">Remix 进阶（待完善）</a>
+      class="menu__title ">Remix 进阶</a>
   </li>
   
 
@@ -2120,20 +2136,20 @@
 <div class="list-section">
   
     <div class="list-section__item">
-      <a href="https://danacoding.github.io/react/react/react-base/" class="list-section__item--link">
-        React
-      </a>
-      <div class="list-section__item--desc">
-        
-      </div>
-    </div>
-  
-    <div class="list-section__item">
       <a href="https://danacoding.github.io/react/redux/react-redux/" class="list-section__item--link">
         React &amp; Redux
       </a>
       <div class="list-section__item--desc">
-         Redux 和 React 的配合
+         Redux 和 React 的配合，由于Redux的编写方式太过于沉重，而且现在有了Hooks，完全可以抛弃沉重的Redux，可以使用Hooks的useReducer编写复杂的逻辑。
+      </div>
+    </div>
+  
+    <div class="list-section__item">
+      <a href="https://danacoding.github.io/react/react/react-base/" class="list-section__item--link">
+        React 基础
+      </a>
+      <div class="list-section__item--desc">
+        React 的基础内容，不再会在项目中使用class组件
       </div>
     </div>
   
@@ -2142,7 +2158,7 @@
         React 最佳实践
       </a>
       <div class="list-section__item--desc">
-        
+        会时常更新，因为React的发展很快且社区很庞大
       </div>
     </div>
   
@@ -2151,7 +2167,7 @@
         Redux
       </a>
       <div class="list-section__item--desc">
-        Redux 是一个状态管理框架，可以与包括 React 在内的许多不同的 Web 技术一起使用
+        Redux 是一个状态管理框架，可以与包括 React 在内的许多不同的 Web 技术一起使用。我个人感觉思路是好的，但是使用的方式非常的落后且沉重。
       </div>
     </div>
   
@@ -2160,7 +2176,7 @@
         Hooks 最佳实践
       </a>
       <div class="list-section__item--desc">
-        
+        Hook 是 React 16.8 的新增特性。它可以在不编写 class 的情况下使用 state 以及其他的 React 特性
       </div>
     </div>
   
@@ -2169,7 +2185,7 @@
         zustand 精炼文档
       </a>
       <div class="list-section__item--desc">
-        
+        使用简化的通量原理的小型、快速且可扩展的React状态管理解决方案。有一个基于钩子的舒适 api。这是我感觉最好的React的状态管理库，很可爱。
       </div>
     </div>
   
@@ -2178,7 +2194,7 @@
         Recoil 最佳实践
       </a>
       <div class="list-section__item--desc">
-        
+        React 官方实验室的状态管理解决方案，但是我感觉并不如社区中的Zustand好用
       </div>
     </div>
   
@@ -2187,7 +2203,7 @@
         Next
       </a>
       <div class="list-section__item--desc">
-        React 开发框架
+        React 开发框架，相比于umi更能融入最新的技术
       </div>
     </div>
   
@@ -2202,10 +2218,10 @@
   
     <div class="list-section__item">
       <a href="https://danacoding.github.io/react/remix/remix-adv/" class="list-section__item--link">
-        Remix 进阶（待完善）
+        Remix 进阶
       </a>
       <div class="list-section__item--desc">
-        
+        我并不看好Remix这种类型的不伦不类的框架，所以不会再更新
       </div>
     </div>
   
@@ -2214,7 +2230,7 @@
         Storybook 基础
       </a>
       <div class="list-section__item--desc">
-        
+        CDD组件驱动开发的理想方案，确实用起来能够将项目逻辑滤清且印象深刻。
       </div>
     </div>
   

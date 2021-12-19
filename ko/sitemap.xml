@@ -153,6 +153,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/dataview/d3-base/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/nodejs/docker/docker/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -223,12 +228,12 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/react/react/react-base/</loc>
+    <loc>https://danacoding.github.io/react/redux/react-redux/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/react/redux/react-redux/</loc>
+    <loc>https://danacoding.github.io/react/react/react-base/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -288,6 +293,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/dataview/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/jsts/array/jiegou/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -343,12 +353,12 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/jsts/function/new/</loc>
+    <loc>https://danacoding.github.io/jsts/function/for/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/jsts/function/for/</loc>
+    <loc>https://danacoding.github.io/jsts/function/new/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   

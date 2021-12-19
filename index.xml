@@ -123,6 +123,15 @@
       </item>
       
       <item>
+        <title>D3.js</title>
+        <link>https://danacoding.github.io/dataview/d3-base/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/dataview/d3-base/</guid>
+        <description></description>
+      </item>
+      
+      <item>
         <title>Docker</title>
         <link>https://danacoding.github.io/nodejs/docker/docker/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -186,21 +195,21 @@
       </item>
       
       <item>
-        <title>React</title>
-        <link>https://danacoding.github.io/react/react/react-base/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/react/react/react-base/</guid>
-        <description>简介：React 是由 Facebook 创建和维护的开源视图库。 它是渲染现代 Web 应用程序用户界面（UI）的好工具。 一、JSX（JS 语法扩展） React 使用名为 JSX 的 JavaScript 语法</description>
-      </item>
-      
-      <item>
         <title>React &amp; Redux</title>
         <link>https://danacoding.github.io/react/redux/react-redux/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/react/redux/react-redux/</guid>
         <description>这两种技术的关键原则是什么? React 是提供数据的视图库，能以高效、可预测的方式渲染视图。 Redux 是状态管理框架，可用于简化 APP 应用状态的管理。 在 React Redux app 应用</description>
+      </item>
+      
+      <item>
+        <title>React 基础</title>
+        <link>https://danacoding.github.io/react/react/react-base/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react/react/react-base/</guid>
+        <description>简介：React 是由 Facebook 创建和维护的开源视图库。 它是渲染现代 Web 应用程序用户界面（UI）的好工具。 一、JSX（JS 语法扩展） React 使用名为 JSX 的 JavaScript 语法</description>
       </item>
       
       <item>
@@ -299,7 +308,7 @@
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/react/hooks/hooks-bp/</guid>
-        <description>异步 Hooks 处理异步调用，应该包含以下内容： 创建一个接受处理函数的自定义钩子，fn. 为自定义hooks的状态定义一个 reducer 函数和一个初始状态。 使用us</description>
+        <description>Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。 Hook 是一些可以让你在函数组件里“钩入” React state 及生命周期等特性的函数。 Hook 使</description>
       </item>
       
       <item>
@@ -339,21 +348,21 @@
       </item>
       
       <item>
+        <title>命令式 vs 函数式 vs 链式</title>
+        <link>https://danacoding.github.io/jsts/function/for/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/jsts/function/for/</guid>
+        <description>这里用 For 循环举例 命令式 1 2 3 4 5 6 7 8 9 10 11 12 13 const files = [&amp;#34;foo.txt &amp;#34;, &amp;#34;.bar&amp;#34;, &amp;#34; &amp;#34;, &amp;#34;baz.foo&amp;#34;]; let filePaths = []; for (let file of files) { const fileName = file.trim(); if (fileName) { const filePath = `~/cool_app/${fileName}`; filePaths.push(filePath); } } // filePaths = [ &amp;#39;~/cool_app/foo.txt&amp;#39;, &amp;#39;~/cool_app/.bar&amp;#39;, &amp;#39;~/cool_app/baz.foo&amp;#39;] 函数式 封装性</description>
+      </item>
+      
+      <item>
         <title>字面量 vs 构造器 vs class</title>
         <link>https://danacoding.github.io/jsts/function/new/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/jsts/function/new/</guid>
         <description>Object 概述 Object 是 JavaScript 的一种 数据类型 。它用于存储各种键值集合和更复杂的实体。 Objects 可以通过 对象字面量、构造函数 或者 class 的方式创建 一、对象字面量 （{&amp;hell</description>
-      </item>
-      
-      <item>
-        <title>松散式 vs 函数式 vs 链式</title>
-        <link>https://danacoding.github.io/jsts/function/for/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/jsts/function/for/</guid>
-        <description>这里用 For 循环举例 松散式 (命令式) 这是我自己给起的名字，当然同行可能并不喜欢这个称呼 1 2 3 4 5 6 7 8 9 10 11 12 13 const files = [&amp;#34;foo.txt &amp;#34;, &amp;#34;.bar&amp;#34;, &amp;#34; &amp;#34;, &amp;#34;baz.foo&amp;#34;]; let filePaths = []; for (let file</description>
       </item>
       
       <item>
@@ -492,7 +501,7 @@
       </item>
       
       <item>
-        <title>Remix 进阶（待完善）</title>
+        <title>Remix 进阶</title>
         <link>https://danacoding.github.io/react/remix/remix-adv/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         

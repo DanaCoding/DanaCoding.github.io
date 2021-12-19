@@ -1072,7 +1072,7 @@
 <link rel="stylesheet" href="/css/main.min.css">
 
 
-    <meta name="description" content="" />
+    <meta name="description" content="Hook 是 React 16.8 的新增特性。它可以在不编写 class 的情况下使用 state 以及其他的 React 特性" />
 <meta name="keywords" content="">
 <meta name="created" content="2020-01-28T00:34:39&#43;0900">
 <meta name="modified" content="2020-01-28T00:34:39&#43;0900">
@@ -1114,7 +1114,7 @@
     "datePublished": "2020-01-28T00:34:39+09:00",
     "dateModified": "2020-01-28T00:34:39+09:00",
     "url" : "https://danacoding.github.io/react/hooks/hooks-bp/",
-    "description": "异步 Hooks 处理异步调用，应该包含以下内容： 创建一个接受处理函数的自定义钩子，fn. 为自定义hooks的状态定义一个 reducer 函数和一个初始状态。 使用us",
+    "description": "Hook 是 React 16.8 的新增特性。它可以在不编写 class 的情况下使用 state 以及其他的 React 特性",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://danacoding.github.io/"
@@ -1132,10 +1132,10 @@
 </head>
 
 
-<body id="root" class="theme__light">
+<body id="root" class="theme__dark">
     <script>
         var rootElem = document.getElementById('root');
-        var themeOptions = JSON.parse("[\"light\",\"dark\"]");
+        var themeOptions = JSON.parse("[\"dark\",\"light\"]");
         var localTheme = localStorage.getItem('theme');
 
         if (localTheme) {
@@ -1186,8 +1186,8 @@
   
   
   <li class="">
-    <a href="https://danacoding.github.io/react/react/react-base/"
-      class="menu__title ">React</a>
+    <a href="https://danacoding.github.io/react/redux/react-redux/"
+      class="menu__title ">React &amp; Redux</a>
   </li>
   
 
@@ -1209,8 +1209,8 @@
   
   
   <li class="">
-    <a href="https://danacoding.github.io/react/redux/react-redux/"
-      class="menu__title ">React &amp; Redux</a>
+    <a href="https://danacoding.github.io/react/react/react-base/"
+      class="menu__title ">React 基础</a>
   </li>
   
 
@@ -1394,7 +1394,7 @@
   
   <li class="">
     <a href="https://danacoding.github.io/react/remix/remix-adv/"
-      class="menu__title ">Remix 进阶（待完善）</a>
+      class="menu__title ">Remix 进阶</a>
   </li>
   
 
@@ -1557,6 +1557,14 @@
   
   
   <li class="navbar__menu--mobile-item ">
+    <a href="/dataview" class="">数据可视化</a>
+  </li>
+
+  
+  
+  
+  
+  <li class="navbar__menu--mobile-item ">
     <a href="/others" class="">Others</a>
   </li>
 
@@ -1596,6 +1604,14 @@
   
   <li class="navbar__menu--item ">
     <a href="/nodejs" data-bgimg="false">Nodejs</a>
+  </li>
+
+  
+  
+  
+  
+  <li class="navbar__menu--item ">
+    <a href="/dataview" data-bgimg="false">数据可视化</a>
   </li>
 
   
@@ -1853,8 +1869,8 @@
   
   
   <li class="">
-    <a href="https://danacoding.github.io/react/react/react-base/"
-      class="menu__title ">React</a>
+    <a href="https://danacoding.github.io/react/redux/react-redux/"
+      class="menu__title ">React &amp; Redux</a>
   </li>
   
 
@@ -1876,8 +1892,8 @@
   
   
   <li class="">
-    <a href="https://danacoding.github.io/react/redux/react-redux/"
-      class="menu__title ">React &amp; Redux</a>
+    <a href="https://danacoding.github.io/react/react/react-base/"
+      class="menu__title ">React 基础</a>
   </li>
   
 
@@ -2061,7 +2077,7 @@
   
   <li class="">
     <a href="https://danacoding.github.io/react/remix/remix-adv/"
-      class="menu__title ">Remix 进阶（待完善）</a>
+      class="menu__title ">Remix 进阶</a>
   </li>
   
 
@@ -2101,7 +2117,252 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <h3 id="异步-hooks">异步 Hooks</h3>
+    <p>Hook 是 React 16.8 的新增特性。它可以让你在不编写 class 的情况下使用 state 以及其他的 React 特性。</p>
+<p>Hook 是一些可以让你在函数组件里“钩入” React state 及生命周期等特性的函数。</p>
+<p>Hook 使你在无需修改组件结构的情况下复用状态逻辑。 这使得在组件间或社区内共享 Hook 变得更便捷。</p>
+<p>Hook 将组件中相互关联的部分拆分成更小的函数（比如设置订阅或请求数据），而并非强制按照生命周期划分。你还可以使用 reducer 来管理组件的内部状态，使其更加可预测。</p>
+<p><strong>什么时候我会用 Hook？</strong> 如果你在编写函数组件并意识到需要向其添加一些 state，以前的做法是必须将其转化为 class。现在你可以在现有的函数组件中使用 Hook。</p>
+<h2 id="一hooks-底层原理">一、Hooks 底层原理</h2>
+<p>React 是如何把对 Hook 的调用和组件联系起来的？</p>
+<p>React 保持对当前渲染中的组件的追踪。多亏了 <code>Hook 规范</code>，我们得知 Hook 只会在 React 组件中被调用（或自定义 Hook —— 同样只会在 React 组件中被调用）。</p>
+<p>每个组件内部都有一个<code>「记忆单元格」</code>列表。它们只不过是我们用来存储一些数据的 JavaScript 对象。</p>
+<p>当你用 useState() 调用一个 Hook 的时候，它会读取当前的单元格（或在首次渲染时将其初始化），然后把指针移动到下一个。</p>
+<p>这就是多个 useState() 调用会得到各自独立的本地 state 的原因。</p>
+<h2 id="二hooks-规范">二、Hooks 规范</h2>
+<h3 id="1-只在最顶层使用-hook">1. 只在最顶层使用 Hook</h3>
+<h5 id="不要在循环条件或嵌套函数中调用-hook-确保总是在你的-react-函数的最顶层以及任何-return-之前调用他们遵守这条规则你就能确保-hook-在每一次渲染中都按照同样的顺序被调用">不要在循环，条件或嵌套函数中调用 Hook ,确保总是在你的 React 函数的最顶层以及任何 return 之前调用他们。遵守这条规则，你就能确保 Hook 在每一次渲染中都按照同样的顺序被调用。</h5>
+<p>示例：</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">function Form() {
+  // 1. 使用`name state`变量
+  const [name, setName] = useState('Mary');
+
+  // 2. 使用 `effect` 来持久化表单
+  useEffect(function persistForm() {
+    localStorage.setItem('formData', name);
+  });
+
+  // 3. 使用 `surname` 状态变量
+  const [surname, setSurname] = useState('Poppins');
+
+  // 4. 使用 `effect` 来更新标题
+  useEffect(function updateTitle() {
+    document.title = name + ' ' + surname;
+  });
+
+  // ...
+}
+</code></pre><p>那么 React 怎么知道哪个 state 对应哪个 useState？答案是 React 靠的是 Hook 调用的顺序。因为示例中，Hook 的调用顺序在每次渲染中都是相同的，所以它能够正常工作：</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">// ------------
+// 首次渲染
+// ------------
+useState('Mary')           // 1. 使用 'Mary' 初始化变量名为 name 的 state
+useEffect(persistForm)     // 2. 添加 effect 以保存 form 操作
+useState('Poppins')        // 3. 使用 'Poppins' 初始化变量名为 surname 的 state
+useEffect(updateTitle)     // 4. 添加 effect 以更新标题
+
+// -------------
+// 二次渲染
+// -------------
+useState('Mary')           // 1. 读取变量名为 name 的 state（参数被忽略）
+useEffect(persistForm)     // 2. 替换保存 form 的 effect
+useState('Poppins')        // 3. 读取变量名为 surname 的 state（参数被忽略）
+useEffect(updateTitle)     // 4. 替换更新标题的 effect
+
+// ...
+</code></pre><p>只要 Hook 的调用顺序在多次渲染之间保持一致，React 就能正确地将内部 state 和对应的 Hook 进行关联。</p>
+<h5 id="如果将一个-hook-调用放到一个条件语句中会发生什么呢">如果将一个 Hook 调用放到一个条件语句中会发生什么呢？</h5>
+<p>(例如 persistForm effect)</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">// 🔴 在条件语句中使用 Hook 违反第一条规则
+  if (name !== '') {
+    useEffect(function persistForm() {
+      localStorage.setItem('formData', name);
+    });
+  }
+</code></pre><p>在第一次渲染中 name !== '' 这个条件值为 true，所以我们会执行这个 Hook。但是下一次渲染时我们可能清空了表单，表达式值变为 false。此时的渲染会跳过该 Hook，Hook 的调用顺序发生了改变：</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">useState('Mary')           // 1. 读取变量名为 name 的 state（参数被忽略）
+// useEffect(persistForm)  // 🔴 此 Hook 被忽略！
+useState('Poppins')        // 🔴 2 （之前为 3）。读取变量名为 surname 的 state 失败
+useEffect(updateTitle)     // 🔴 3 （之前为 4）。替换更新标题的 effect 失败
+</code></pre><p>React 不知道第二个 useState 的 Hook 应该返回什么。React 会以为在该组件中第二个 Hook 的调用像上次的渲染一样，对应的是 persistForm 的 effect，但并非如此。从这里开始，后面的 Hook 调用都被提前执行，导致 bug 的产生。</p>
+<h5 id="这就是为什么-hook-需要在我们组件的最顶层调用如果我们想要有条件地执行一个-effect可以将判断放到-hook-的内部">这就是为什么 Hook 需要在我们组件的最顶层调用。如果我们想要有条件地执行一个 effect，可以将判断放到 Hook 的内部：</h5>
+<pre tabindex="0"><code class="language-base" data-lang="base">useEffect(function persistForm() {
+    // 👍 将条件判断放置在 effect 中
+    if (name !== '') {
+      localStorage.setItem('formData', name);
+    }
+  });
+</code></pre><h3 id="2-只在-react-函数中调用-hook">2. 只在 React 函数中调用 Hook</h3>
+<p>不要在普通的 JavaScript 函数中调用 Hook。你可以：</p>
+<p>✅ 在 React 的函数组件中调用 Hook<br />
+✅ 在自定义 Hook 中调用其他 Hook (我们将会在下一页 中学习这个。)</p>
+<p>遵循此规则，确保组件的状态逻辑在代码中清晰可见。</p>
+<h2 id="三自定义-hook">三、自定义 Hook</h2>
+<p>自定义 Hook 是一种自然遵循 Hook 设计的约定，而并不是 React 的特性。</p>
+<p>自定义 Hook 是一种重用状态逻辑的机制(例如设置为订阅并存储当前值)，所以每次使用自定义 Hook 时，其中的所有 state 和副作用都是完全隔离的。</p>
+<p>通过自定义 Hook，可以将组件逻辑提取到可重用的函数中。</p>
+<p>这是一个聊天程序中的组件FriendListItem ，该组件用于显示好友的在线状态：</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">import React, { useState, useEffect } from 'react';
+
+function FriendListItem(props) {
+----------------------------------------------------
+  const [isOnline, setIsOnline] = useState(null);
+  useEffect(() =&gt; {
+    function handleStatusChange(status) {
+      setIsOnline(status.isOnline);
+    }
+    ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);
+    return () =&gt; {
+      ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);
+    };
+  });
+----------------------------------------------------
+  return (
+    &lt;li style={{ color: isOnline ? 'green' : 'black' }}&gt;
+      {props.friend.name}
+    &lt;/li&gt;
+  );
+}
+</code></pre><h3 id="1-提取自定义-hook">1. 提取自定义 Hook</h3>
+<p>当想在两个函数之间共享逻辑时，把它提取到第三个函数中。而组件和 Hook 都是函数，所以也同样适用这种方式。</p>
+<p>自定义 Hook 是一个函数，其名称以 <code>use</code> 开头，函数内部可以调用其他的 Hook。</p>
+<p>例如，下面的 useFriendStatus 是一个自定义的 Hook:</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">import { useState, useEffect } from 'react';
+
+function useFriendStatus(friendID) {
+  const [isOnline, setIsOnline] = useState(null);
+
+  useEffect(() =&gt; {
+    function handleStatusChange(status) {
+      setIsOnline(status.isOnline);
+    }
+
+    ChatAPI.subscribeToFriendStatus(friendID, handleStatusChange);
+    return () =&gt; {
+      ChatAPI.unsubscribeFromFriendStatus(friendID, handleStatusChange);
+    };
+  });
+
+  return isOnline;
+}
+</code></pre><p>此处并未包含任何新的内容——逻辑是从上述组件拷贝来的（<code>记得去掉props</code>）。与组件中一致，请确保只在自定义 Hook 的顶层无条件地调用其他 Hook。</p>
+<h3 id="2-使用自定义-hook">2. 使用自定义 Hook</h3>
+<p>把这个逻辑提取到 FriendListItem 的自定义 Hook 中，然后就可以使用它了：</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">function FriendListItem(props) {
+------------------------------------------
+  const isOnline = useFriendStatus(props.friend.id);
+------------------------------------------
+  return (
+    &lt;li style={{ color: isOnline ? 'green' : 'black' }}&gt;
+      {props.friend.name}
+    &lt;/li&gt;
+  );
+}
+</code></pre><h3 id="3-在多个-hook-之间传递信息">3. 在多个 Hook 之间传递信息</h3>
+<p>由于 Hook 本身就是函数，因此可以在它们之间传递信息。</p>
+<p>这是一个聊天消息接收者的选择器，它会显示当前选定的好友是否在线:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">const</span> <span class="nx">friendList</span> <span class="o">=</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Phoebe&#39;</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Rachel&#39;</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nx">id</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Ross&#39;</span> <span class="p">},</span>
+<span class="p">];</span>
+
+<span class="kd">function</span> <span class="nx">ChatRecipientPicker</span><span class="p">()</span> <span class="p">{</span>
+<span class="o">---------------------------------------------------------</span>
+<span class="c1">//当前选择的好友 ID 保存在 recipientID 状态变量中，并在用户从 &lt;select&gt; 中选择其他好友时更新这个 state。
+</span><span class="c1"></span>  <span class="kr">const</span> <span class="p">[</span><span class="nx">recipientID</span><span class="p">,</span> <span class="nx">setRecipientID</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span> 
+<span class="c1">//由于 useState 为我们提供了 recipientID 状态变量的最新值，
+</span><span class="c1">//因此我们可以将它作为参数传递给自定义的 useFriendStatus Hook：
+</span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">isRecipientOnline</span> <span class="o">=</span> <span class="nx">useFriendStatus</span><span class="p">(</span><span class="nx">recipientID</span><span class="p">);</span>
+<span class="o">---------------------------------------------------------</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;&gt;</span>
+<span class="o">---------------------------------------------------------</span>
+<span class="c1">//当我们选择不同的好友并更新 recipientID 状态变量时，
+</span><span class="c1">//useFriendStatus Hook 将会取消订阅之前选中的好友，并订阅新选中的好友状态。
+</span><span class="c1"></span>      <span class="o">&lt;</span><span class="nx">Circle</span> <span class="nx">color</span><span class="o">=</span><span class="p">{</span><span class="nx">isRecipientOnline</span> <span class="o">?</span> <span class="s1">&#39;green&#39;</span> <span class="o">:</span> <span class="s1">&#39;red&#39;</span><span class="p">}</span> <span class="o">/&gt;</span>
+<span class="o">---------------------------------------------------------</span>
+      <span class="o">&lt;</span><span class="nx">select</span>
+        <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="nx">recipientID</span><span class="p">}</span>
+        <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="nx">e</span> <span class="p">=&gt;</span> <span class="nx">setRecipientID</span><span class="p">(</span><span class="nb">Number</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span><span class="p">))}</span>
+      <span class="o">&gt;</span>
+        <span class="p">{</span><span class="nx">friendList</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">friend</span> <span class="p">=&gt;</span> <span class="p">(</span>
+          <span class="o">&lt;</span><span class="nx">option</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">friend</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span> <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="nx">friend</span><span class="p">.</span><span class="nx">id</span><span class="p">}</span><span class="o">&gt;</span>
+            <span class="p">{</span><span class="nx">friend</span><span class="p">.</span><span class="nx">name</span><span class="p">}</span>
+          <span class="o">&lt;</span><span class="err">/option&gt;</span>
+        <span class="p">))}</span>
+      <span class="o">&lt;</span><span class="err">/select&gt;</span>
+    <span class="o">&lt;</span><span class="err">/&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="4-自定义hooks中使用usereducer">4. 自定义Hooks中使用useReducer</h3>
+<p>自定义 Hook 解决了以前在 React 组件中无法灵活共享逻辑的问题。更重要的是，创建自定义 Hook 就像使用 React 内置的功能一样简单。</p>
+<p>尽量避免过早地增加抽象逻辑。既然函数组件能够做的更多，那么代码库中函数组件的代码行数可能会剧增。<br />
+这属于正常现象 —— 不必立即将它们拆分为 Hook。但我们仍鼓励你能通过自定义 Hook 寻找可能，以达到简化代码逻辑，解决组件杂乱无章的目的。</p>
+<p>例如，有个复杂的组件，其中包含了大量以特殊的方式来管理的内部状态。useState 并不会使得集中更新逻辑变得容易，因此你可能更愿意使用 redux 中的 reducer 来编写。</p>
+<p>那么，为什么我们不编写一个 useReducer 的 Hook，使用 reducer 的方式来管理组件的内部 state 呢？其简化版本可能如下所示：</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">function useReducer(reducer, initialState) {
+  const [state, setState] = useState(initialState);
+
+  function dispatch(action) {
+    const nextState = reducer(state, action);
+    setState(nextState);
+  }
+
+  return [state, dispatch];
+}
+</code></pre><p>在组件中使用它，让 reducer 驱动它管理 state：</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">function Todos() {
+  const [todos, dispatch] = useReducer(todosReducer, []);
+
+  function handleAddClick(text) {
+    dispatch({ type: 'add', text });
+  }
+
+  // ...
+}
+</code></pre><h3 id="5-异步-fetch-hooks">5. 异步 fetch Hooks</h3>
 <p>处理异步调用，应该包含以下内容：</p>
 <ul>
 <li>创建一个接受处理函数的自定义钩子，<code>fn</code>.</li>
@@ -2110,7 +2371,7 @@
 <li>定义一个异步 <code>run</code> 函数，该函数将运行提供的<code>回调 fn</code>，同时根据需要使用 <code>dispatch</code> 更新 <code>state</code>。</li>
 <li>返回一个包含<code>state</code>( <code>value</code>,<code>error</code>和<code>loading</code>) 和<code>run</code>函数的对象。</li>
 </ul>
-<h4 id="-封装-useasync">#. 封装 useAsync</h4>
+<h4 id="1-封装-useasync">1). 封装 useAsync</h4>
 <ul>
 <li><code>./customHooks/useAsync.ts</code></li>
 </ul>
@@ -2180,7 +2441,7 @@
 </span><span class="c1"></span><span class="p">};</span>
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="-在组件中使用">#. 在组件中使用</h4>
+</div><h4 id="2-在组件中使用">2). 在组件中使用</h4>
 <ul>
 <li><code>component</code></li>
 </ul>
@@ -2254,7 +2515,23 @@
 <span class="c1">// ReactDOM.render(&lt;RandomImage /&gt;, document.getElementById(&#39;root&#39;));
 </span></code></pre></td></tr></table>
 </div>
-</div>
+</div><h2 id="四eslint-插件">四、ESLint 插件</h2>
+<p>React发布了一个名为 <code>eslint-plugin-react-hooks</code> 的 ESLint 插件来强制执行Hooks规则。</p>
+<p>如果项目中没有自动安装，可自行安装配置：</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">yarn add --dev eslint-plugin-react-hooks
+</code></pre><pre tabindex="0"><code class="language-base" data-lang="base">// 你的 ESLint 配置
+{
+  &quot;plugins&quot;: [
+    // ...
+    &quot;react-hooks&quot;
+  ],
+  &quot;rules&quot;: {
+    // ...
+    &quot;react-hooks/rules-of-hooks&quot;: &quot;error&quot;, // 检查 Hook 的规则
+    &quot;react-hooks/exhaustive-deps&quot;: &quot;warn&quot; // 检查 effect 的依赖
+  }
+}
+</code></pre>
   </article>
 </div>
       
@@ -2294,16 +2571,32 @@
   <div class="toc__body">
     <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#一hooks-底层原理">一、Hooks 底层原理</a></li>
+    <li><a href="#二hooks-规范">二、Hooks 规范</a>
       <ul>
-        <li><a href="#异步-hooks">异步 Hooks</a>
+        <li><a href="#1-只在最顶层使用-hook">1. 只在最顶层使用 Hook</a>
           <ul>
-            <li><a href="#-封装-useasync">#. 封装 useAsync</a></li>
-            <li><a href="#-在组件中使用">#. 在组件中使用</a></li>
+            <li></li>
+          </ul>
+        </li>
+        <li><a href="#2-只在-react-函数中调用-hook">2. 只在 React 函数中调用 Hook</a></li>
+      </ul>
+    </li>
+    <li><a href="#三自定义-hook">三、自定义 Hook</a>
+      <ul>
+        <li><a href="#1-提取自定义-hook">1. 提取自定义 Hook</a></li>
+        <li><a href="#2-使用自定义-hook">2. 使用自定义 Hook</a></li>
+        <li><a href="#3-在多个-hook-之间传递信息">3. 在多个 Hook 之间传递信息</a></li>
+        <li><a href="#4-自定义hooks中使用usereducer">4. 自定义Hooks中使用useReducer</a></li>
+        <li><a href="#5-异步-fetch-hooks">5. 异步 fetch Hooks</a>
+          <ul>
+            <li><a href="#1-封装-useasync">1). 封装 useAsync</a></li>
+            <li><a href="#2-在组件中使用">2). 在组件中使用</a></li>
           </ul>
         </li>
       </ul>
     </li>
+    <li><a href="#四eslint-插件">四、ESLint 插件</a></li>
   </ul>
 </nav>
   </div>
