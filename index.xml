@@ -411,12 +411,12 @@
       </item>
       
       <item>
-        <title>zustand 精炼文档</title>
+        <title>zustand</title>
         <link>https://danacoding.github.io/react/zustand/zustand-base/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/react/zustand/zustand-base/</guid>
-        <description>zustand 基于 hooks 的 api，小型、快速且可扩展的状态管理解决方案。 一、安装 yarn add zustand 二、最简使用方法 Step1. 创建一个 Store import create from &#39;zustand&#39; const useCount = create(set =&amp;gt; ({ count: 0, plus: () =&amp;gt; set(state =&amp;gt; ({ count: state.count +</description>
+        <description>zustand 基于 hooks 的 api，小型、快速且可扩展的状态管理解决方案。 一、安装 yarn add zustand 二、最简使用方法 Step1. 创建一个 Store store 是一个钩子！ 可以在里面放任何东西：原始数</description>
       </item>
       
       <item>

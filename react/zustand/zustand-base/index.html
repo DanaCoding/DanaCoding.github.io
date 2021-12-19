@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>zustand 精炼文档 – DanaCoding</title>
+    <title>zustand – DanaCoding</title>
     
 
 
@@ -1079,7 +1079,7 @@
 
 
 <meta property="og:site_name" content="DanaCoding">
-<meta property="og:title" content="zustand 精炼文档">
+<meta property="og:title" content="zustand">
 <meta property="og:url" content="https://danacoding.github.io/react/zustand/zustand-base/">
 <meta property="og:type" content="article">
 
@@ -1110,7 +1110,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "zustand 精炼文档",
+    "headline": "zustand",
     "datePublished": "2020-01-28T00:34:39+09:00",
     "dateModified": "2020-01-28T00:34:39+09:00",
     "url" : "https://danacoding.github.io/react/zustand/zustand-base/",
@@ -1163,7 +1163,7 @@
     <div class="menu">
   <h6 class="menu__label">
     
-      zustand 精炼文档
+      zustand
     
   </h6>
   <ul>
@@ -1302,7 +1302,7 @@
   
   <li class="active">
     <a href="https://danacoding.github.io/react/zustand/zustand-base/"
-      class="menu__title active">zustand 精炼文档</a>
+      class="menu__title active">zustand</a>
   </li>
   
 
@@ -1786,7 +1786,7 @@
   <div class="header__wrapper bgcolor__header">
     <div class="divider">
       <div class="lmr">
-        <h2 class="title">zustand 精炼文档</h2>
+        <h2 class="title">zustand</h2>
       </div>
     </div>
   </div>
@@ -1820,7 +1820,7 @@
   
   <li  class="is-active" >
     
-      <span>zustand 精炼文档</span>
+      <span>zustand</span>
     
   </li>
   
@@ -1862,7 +1862,7 @@
         <div class="menu">
   <h6 class="menu__label">
     
-      zustand 精炼文档
+      zustand
     
   </h6>
   <ul>
@@ -2001,7 +2001,7 @@
   
   <li class="active">
     <a href="https://danacoding.github.io/react/zustand/zustand-base/"
-      class="menu__title active">zustand 精炼文档</a>
+      class="menu__title active">zustand</a>
   </li>
   
 
@@ -2137,12 +2137,11 @@
   <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/g464hzcxlgz4abbaeotc.png" alt="Image description"  />
 </p></p>
 <p><a href="https://github.com/pmndrs/zustand" target="_blank">zustand</a> 基于 hooks 的 api，小型、快速且可扩展的状态管理解决方案。</p>
-<h3 id="一安装">一、安装</h3>
+<h2 id="一安装">一、安装</h2>
 <pre tabindex="0"><code class="language-base" data-lang="base">yarn add zustand
-</code></pre><h3 id="二最简使用方法">二、最简使用方法</h3>
-<blockquote>
-<p>Step1. 创建一个 Store</p>
-</blockquote>
+</code></pre><h2 id="二最简使用方法">二、最简使用方法</h2>
+<h3 id="step1-创建一个-store">Step1. 创建一个 Store</h3>
+<p><code>store</code> 是一个钩子！ 可以在里面放任何东西：<code>原始数据（string，number，bigint，boolean，null）</code>、<code>对象</code>、<code>方法</code>。 <code>set</code> 方法合并状态。</p>
 <pre tabindex="0"><code class="language-base" data-lang="base">import create from 'zustand'
 
 const useCount = create(set =&gt; ({
@@ -2151,9 +2150,7 @@ const useCount = create(set =&gt; ({
   minus: () =&gt; set(state =&gt; ({ count: state.count - 1 })),
   reset: () =&gt; set({ count: 0 })
 }))
-</code></pre><blockquote>
-<p>Step2. 绑定组件</p>
-</blockquote>
+</code></pre><h3 id="step2-绑定组件">Step2. 绑定组件</h3>
 <pre tabindex="0"><code class="language-base" data-lang="base">function Counter() {
   const count = useCount(state =&gt; state.count)
   return &lt;h1&gt;{count}&lt;/h1&gt;
@@ -2173,7 +2170,90 @@ function Controls() {
   )
 }
 
-</code></pre><h3 id="三异步操作">三、异步操作</h3>
+</code></pre><h2 id="二获取所有state">二、获取所有state</h2>
+<p>记住，它会导致组件在每次状态更改时更新！</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const state = useStore()
+</code></pre><h2 id="三选择多个切片state">三、选择多个切片state</h2>
+<p>切片状态（slice state）,因为store是一个原子（单个）状态，可以将它切分为多个格子状态，便于代码管理。</p>
+<h3 id="1-单个state选择">1. 单个state选择</h3>
+<p>默认情况下，它以严格相等（<code>旧 === 新</code>）检测更改，这对于原子状态选择非常有效。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const nuts = useStore(state =&gt; state.nuts)
+const honey = useStore(state =&gt; state.honey)
+</code></pre><h3 id="2-多个state选择浅差异">2. 多个state选择（浅差异）</h3>
+<p>如果想构造一个内部有多个 state-picks(状态选择) 的单个对象，类似于 redux 的 mapStateToProps，可以告诉 zustand 你希望通过传递<code>shallow</code>相等函数来对对象进行浅差异。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">import</span> <span class="nx">shallow</span> <span class="nx">from</span> <span class="s1">&#39;zustand/shallow&#39;</span>
+
+<span class="c1">// 对象选择，当 `state.nuts` 或 `state.honey` 改变时重新渲染组件
+</span><span class="c1"></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">nuts</span><span class="p">,</span> <span class="nx">honey</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useStore</span><span class="p">(</span><span class="nx">state</span> <span class="p">=&gt;</span> <span class="p">({</span> <span class="nx">nuts</span><span class="o">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">nuts</span><span class="p">,</span> <span class="nx">honey</span><span class="o">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">honey</span> <span class="p">}),</span> <span class="nx">shallow</span><span class="p">)</span>
+
+<span class="c1">// 数组选择，当 `state.nuts` 或 `state.honey` 改变时重新渲染组件
+</span><span class="c1"></span><span class="kr">const</span> <span class="p">[</span><span class="nx">nuts</span><span class="p">,</span> <span class="nx">honey</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useStore</span><span class="p">(</span><span class="nx">state</span> <span class="p">=&gt;</span> <span class="p">[</span><span class="nx">state</span><span class="p">.</span><span class="nx">nuts</span><span class="p">,</span> <span class="nx">state</span><span class="p">.</span><span class="nx">honey</span><span class="p">],</span> <span class="nx">shallow</span><span class="p">)</span>
+
+<span class="c1">// 映射选择，当 `state.treats` 按 `count` 或 `keys` 顺序改变时重新渲染组件
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">treats</span> <span class="o">=</span> <span class="nx">useStore</span><span class="p">(</span><span class="nx">state</span> <span class="p">=&gt;</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">keys</span><span class="p">(</span><span class="nx">state</span><span class="p">.</span><span class="nx">treats</span><span class="p">),</span> <span class="nx">shallow</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="3-自定义函数选择">3. 自定义函数选择</h3>
+<p>为了更好地控制重新渲染，可以提供任何自定义的相等函数。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const treats = useStore(
+  state =&gt; state.treats,
+  (oldTreats, newTreats) =&gt; compare(oldTreats, newTreats)
+)
+</code></pre><h2 id="四记忆选择器">四、记忆选择器</h2>
+<h3 id="1-usecallback">1. useCallback()</h3>
+<p>通常建议使用 useCallback 记忆选择器。 这将防止每次渲染时进行不必要的计算。 它还允许 React 在并发模式下优化性能。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const fruit = useStore(useCallback(state =&gt; state.fruits[id], [id]))
+</code></pre><h3 id="2-不依赖于作用域的选择器">2. 不依赖于作用域的选择器</h3>
+<p>如果一个选择器不依赖于作用域，可以在渲染函数之外定义它以获得一个固定的“引用”而无需 useCallback。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const selector = state =&gt; state.berries
+
+function Component() {
+  const berries = useStore(selector)
+}
+</code></pre><h2 id="五覆盖state">五、覆盖state</h2>
+<p><code>set</code> 函数有第二个参数，默认为 false。 它将取代<code>state</code>模型，而不是合并。 注意它会抹去你依赖的部分，比如<code>actions</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">import</span> <span class="nx">omit</span> <span class="nx">from</span> <span class="s2">&#34;lodash-es/omit&#34;</span>
+
+<span class="kr">const</span> <span class="nx">useStore</span> <span class="o">=</span> <span class="nx">create</span><span class="p">(</span><span class="nx">set</span> <span class="p">=&gt;</span> <span class="p">({</span>
+  <span class="nx">salmon</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nx">tuna</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="nx">deleteEverything</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">set</span><span class="p">({</span> <span class="p">},</span> <span class="kc">true</span><span class="p">),</span> <span class="c1">// 清除整个存储，包括操作
+</span><span class="c1"></span>  <span class="nx">deleteTuna</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">set</span><span class="p">(</span><span class="nx">state</span> <span class="p">=&gt;</span> <span class="nx">omit</span><span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;tuna&#39;</span><span class="p">]),</span> <span class="kc">true</span><span class="p">)</span>
+<span class="p">}))</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="六异步操作">六、异步操作</h2>
+<p>调用 <code>set</code> ， zustand 不关心操作是否异步。</p>
 <pre tabindex="0"><code class="language-base" data-lang="base">const useStore = create(set =&gt; ({
   girls: {},
   fetch: async pond =&gt; {
@@ -2181,7 +2261,8 @@ function Controls() {
     set({ girls: await response.json() })
   }
 }))
-</code></pre><h3 id="四从操作中读取状态">四、从操作中读取状态</h3>
+</code></pre><h2 id="七从操作中读取状态">七、从操作中读取状态</h2>
+<p>通过<code>get</code>访问状态。</p>
 <pre tabindex="0"><code class="language-base" data-lang="base">const useStore = create((set, get) =&gt; ({
   name: &quot;Lucy&quot;,
   action: () =&gt; {
@@ -2189,22 +2270,106 @@ function Controls() {
     // ...
   }
 })
-</code></pre><h3 id="五在-react-组件之外读写状态">五、在 React 组件之外读写状态</h3>
-<pre tabindex="0"><code class="language-base" data-lang="base">const useStore = create(() =&gt; ({ visible: true }))
+</code></pre><h2 id="八在-react-组件之外读写状态">八、在 React 组件之外读写状态</h2>
+<h3 id="1-自定义hooks">1. 自定义hooks</h3>
+<p>有时需要以<code>非React</code>方式访问状态，或对<code>store</code>进行操作。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">const</span> <span class="nx">useStore</span> <span class="o">=</span> <span class="nx">create</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">({</span> <span class="nx">paw</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">snout</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">fur</span><span class="o">:</span> <span class="kc">true</span> <span class="p">}))</span>
 
-// 在React组件之外获取State的方法
-const visible= useStore.getState().visible //true
+<span class="c1">// 在React组件之外获取state
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">paw</span> <span class="o">=</span> <span class="nx">useStore</span><span class="p">.</span><span class="nx">getState</span><span class="p">().</span><span class="nx">paw</span> <span class="c1">//true
+</span><span class="c1"></span>
+<span class="c1">// 侦听所有更改，在每次更改时同步触发
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">unsub</span> <span class="o">=</span> <span class="nx">useStore</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
+<span class="c1">// 更新状态，将触发侦听器
+</span><span class="c1"></span><span class="nx">useStore</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> <span class="nx">paw</span><span class="o">:</span> <span class="kc">false</span> <span class="p">})</span>
+<span class="c1">// 取消订阅侦听
+</span><span class="c1"></span><span class="nx">unsub</span><span class="p">()</span>
 
-// 侦听所有更改，在每次更改时同步触发
-const unsub = useStore.subscribe(console.log)
-// 更新状态，将触发侦听器
-useStore.setState({ visible: false })
-// 取消订阅侦听
-unsub()
+<span class="c1">// 销毁商店（删除所有侦听器）
+</span><span class="c1"></span><span class="nx">useStore</span><span class="p">.</span><span class="nx">destroy</span><span class="p">()</span>
 
-// 销毁商店（删除所有侦听器）
-useStore.destroy()
-</code></pre><h3 id="六瞬时更新用于频繁发生的状态变化">六、瞬时更新（用于频繁发生的状态变化）</h3>
+<span class="c1">// 当然可以像hook一样使用
+</span><span class="c1"></span><span class="kd">function</span> <span class="nx">Component</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">paw</span> <span class="o">=</span> <span class="nx">useStore</span><span class="p">(</span><span class="nx">state</span> <span class="p">=&gt;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">paw</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="2-使用订阅选择器中间件">2. 使用订阅选择器（中间件）</h3>
+<p>如果您需要使用选择器订阅，<code>subscribeWithSelector</code> 中间件会有所帮助。</p>
+<p>有了这个中间件，subscribe 接受一个额外的签名：</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">subscribe(selector, callback, options?: { equalityFn, fireImmediately }): Unsubscribe
+</code></pre><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">subscribeWithSelector</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;zustand/middleware&#39;</span>
+<span class="kr">const</span> <span class="nx">useStore</span> <span class="o">=</span> <span class="nx">create</span><span class="p">(</span><span class="nx">subscribeWithSelector</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">({</span> <span class="nx">paw</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">snout</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">fur</span><span class="o">:</span> <span class="kc">true</span> <span class="p">})))</span>
+
+<span class="c1">// 订阅状态值变化
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">unsub2</span> <span class="o">=</span> <span class="nx">useStore</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">state</span> <span class="p">=&gt;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">paw</span><span class="p">,</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">)</span>
+<span class="c1">// 订阅上一个状态值
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">unsub3</span> <span class="o">=</span> <span class="nx">useStore</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">state</span> <span class="p">=&gt;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">paw</span><span class="p">,</span> <span class="p">(</span><span class="nx">paw</span><span class="p">,</span> <span class="nx">previousPaw</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">paw</span><span class="p">,</span> <span class="nx">previousPaw</span><span class="p">))</span>
+<span class="c1">// 订阅一个可选的浅差异方法
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">unsub4</span> <span class="o">=</span> <span class="nx">useStore</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">state</span> <span class="p">=&gt;</span> <span class="p">[</span><span class="nx">state</span><span class="p">.</span><span class="nx">paw</span><span class="p">,</span> <span class="nx">state</span><span class="p">.</span><span class="nx">fur</span><span class="p">],</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">,</span> <span class="p">{</span> <span class="nx">equalityFn</span><span class="o">:</span> <span class="nx">shallow</span> <span class="p">})</span>
+<span class="c1">// 解除订阅
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">unsub5</span> <span class="o">=</span> <span class="nx">useStore</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">state</span> <span class="p">=&gt;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">paw</span><span class="p">,</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">,</span> <span class="p">{</span> <span class="nx">fireImmediately</span><span class="o">:</span> <span class="kc">true</span> <span class="p">})</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="3-订阅选择器中间件使用ts">3. 订阅选择器（中间件）使用TS</h3>
+<pre tabindex="0"><code class="language-base" data-lang="base">import create, { GetState, SetState } from 'zustand'
+import { StoreApiWithSubscribeWithSelector, subscribeWithSelector } from 'zustand/middleware'
+
+type BearState = {
+  paw: boolean
+  snout: boolean
+  fur: boolean
+}
+const useStore = create&lt;
+  BearState,
+  SetState&lt;BearState&gt;,
+  GetState&lt;BearState&gt;,
+  StoreApiWithSubscribeWithSelector&lt;BearState&gt;
+&gt;(subscribeWithSelector(() =&gt; ({ paw: true, snout: true, fur: true })))
+</code></pre><h2 id="九瞬时更新ref用于频繁发生的状态变化">九、瞬时更新ref（用于频繁发生的状态变化）</h2>
+<p>订阅功能允许组件绑定到state，而无需在更改时强制重新渲染。 <br />
+最好将它与 <code>useEffect</code> 结合使用，以便在卸载时自动取消订阅。 <br />
+当直接改变视图时，这会对性能产生巨大影响。</p>
 <pre tabindex="0"><code class="language-base" data-lang="base">const useStore = create(set =&gt; ({ girlNum: 0, ... }))
 
 function Component() {
@@ -2214,7 +2379,8 @@ function Component() {
   useEffect(() =&gt; useStore.subscribe(
     state =&gt; (girlNumRef.current = state.girlNum)
   ), [])
-</code></pre><h3 id="七更新嵌套的状态使用-immer">七、更新嵌套的状态，使用 Immer</h3>
+</code></pre><h2 id="十更新嵌套的状态使用-immer">十、更新嵌套的状态，使用 Immer</h2>
+<p>嵌套结构令人厌烦。 可以使用 Immer 处理深层嵌套的state</p>
 <pre tabindex="0"><code class="language-base" data-lang="base">import produce from 'immer'
 
 const useStore = create(set =&gt; ({
@@ -2226,7 +2392,202 @@ const useStore = create(set =&gt; ({
 
 const clearForest = useStore(state =&gt; state.clearForest)
 clearForest();
-</code></pre><h3 id="八状态持久化中间件-persist">八、状态持久化中间件 persist</h3>
+</code></pre><h2 id="十一中间件">十一、中间件</h2>
+<h3 id="1-按自己喜欢的方式管理store">1. 按自己喜欢的方式管理store</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="c1">// 记录每次改变的state
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">log</span> <span class="o">=</span> <span class="nx">config</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="nx">set</span><span class="p">,</span> <span class="nx">get</span><span class="p">,</span> <span class="nx">api</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">config</span><span class="p">(</span><span class="nx">args</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;  applying&#34;</span><span class="p">,</span> <span class="nx">args</span><span class="p">)</span>
+  <span class="nx">set</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;  new state&#34;</span><span class="p">,</span> <span class="nx">get</span><span class="p">())</span>
+<span class="p">},</span> <span class="nx">get</span><span class="p">,</span> <span class="nx">api</span><span class="p">)</span>
+
+<span class="c1">// 将 set 方法变成一个 immer proxy
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">immer</span> <span class="o">=</span> <span class="nx">config</span> <span class="p">=&gt;</span> <span class="p">(</span><span class="nx">set</span><span class="p">,</span> <span class="nx">get</span><span class="p">,</span> <span class="nx">api</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">config</span><span class="p">((</span><span class="nx">partial</span><span class="p">,</span> <span class="nx">replace</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">nextState</span> <span class="o">=</span> <span class="k">typeof</span> <span class="nx">partial</span> <span class="o">===</span> <span class="s1">&#39;function&#39;</span>
+      <span class="o">?</span> <span class="nx">produce</span><span class="p">(</span><span class="nx">partial</span><span class="p">)</span>
+      <span class="o">:</span> <span class="nx">partial</span>
+  <span class="k">return</span> <span class="nx">set</span><span class="p">(</span><span class="nx">nextState</span><span class="p">,</span> <span class="nx">replace</span><span class="p">)</span>
+<span class="p">},</span> <span class="nx">get</span><span class="p">,</span> <span class="nx">api</span><span class="p">)</span>
+
+<span class="kr">const</span> <span class="nx">useStore</span> <span class="o">=</span> <span class="nx">create</span><span class="p">(</span>
+  <span class="nx">log</span><span class="p">(</span>
+    <span class="nx">immer</span><span class="p">((</span><span class="nx">set</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span>
+      <span class="nx">bees</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nx">setBees</span><span class="o">:</span> <span class="p">(</span><span class="nx">input</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">set</span><span class="p">((</span><span class="nx">state</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="k">void</span> <span class="p">(</span><span class="nx">state</span><span class="p">.</span><span class="nx">bees</span> <span class="o">=</span> <span class="nx">input</span><span class="p">)),</span>
+    <span class="p">})),</span>
+  <span class="p">),</span>
+<span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="2-管理中间件">2. 管理中间件</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">import</span> <span class="nx">create</span> <span class="nx">from</span> <span class="s2">&#34;zustand&#34;</span>
+<span class="kr">import</span> <span class="nx">produce</span> <span class="nx">from</span> <span class="s2">&#34;immer&#34;</span>
+<span class="kr">import</span> <span class="nx">pipe</span> <span class="nx">from</span> <span class="s2">&#34;ramda/es/pipe&#34;</span>
+
+<span class="cm">/* 上一个例子中的日志和immer函数 */</span>
+<span class="cm">/* 通过pipe集合任意数量的中间件 */</span>
+<span class="kr">const</span> <span class="nx">createStore</span> <span class="o">=</span> <span class="nx">pipe</span><span class="p">(</span><span class="nx">log</span><span class="p">,</span> <span class="nx">immer</span><span class="p">,</span> <span class="nx">create</span><span class="p">)</span>
+
+<span class="kr">const</span> <span class="nx">useStore</span> <span class="o">=</span> <span class="nx">createStore</span><span class="p">(</span><span class="nx">set</span> <span class="p">=&gt;</span> <span class="p">({</span>
+  <span class="nx">bears</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nx">increasePopulation</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">set</span><span class="p">(</span><span class="nx">state</span> <span class="p">=&gt;</span> <span class="p">({</span> <span class="nx">bears</span><span class="o">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">bears</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">}))</span>
+<span class="p">}))</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">useStore</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="3-管理中间件使用ts">3. 管理中间件使用TS</h3>
+<pre tabindex="0"><code>yarn add --dev @types/ramda
+</code></pre><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts">
+<span class="kr">import</span> <span class="nx">create</span> <span class="kr">from</span> <span class="s2">&#34;zustand&#34;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">devtools</span><span class="p">,</span> <span class="nx">redux</span> <span class="p">}</span> <span class="kr">from</span> <span class="s2">&#34;zustand/middleware&#34;</span>
+<span class="kr">import</span> <span class="nx">pipe</span> <span class="kr">from</span> <span class="s2">&#34;ramda/es/pipe&#34;</span>
+
+<span class="kr">const</span> <span class="nx">log</span>: <span class="kt">typeof</span> <span class="nx">devtools</span> <span class="o">=</span> <span class="nx">config</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="kr">set</span><span class="p">,</span> <span class="kr">get</span><span class="p">,</span> <span class="nx">api</span><span class="p">)</span> <span class="o">=&gt;</span>
+  <span class="nx">config</span><span class="p">(</span>
+    <span class="nx">args</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;  applying&#34;</span><span class="p">,</span> <span class="nx">args</span><span class="p">)</span>
+      <span class="kr">set</span><span class="p">(</span><span class="nx">args</span><span class="p">)</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;  new state&#34;</span><span class="p">,</span> <span class="kr">get</span><span class="p">())</span>
+    <span class="p">},</span>
+    <span class="kr">get</span><span class="p">,</span>
+    <span class="nx">api</span>
+  <span class="p">)</span>
+
+<span class="kr">export</span> <span class="kr">type</span> <span class="nx">State</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">grumpiness</span>: <span class="kt">number</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">initialState</span>: <span class="kt">State</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">grumpiness</span>: <span class="kt">0</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">createStore</span> <span class="o">=</span> <span class="nx">pipe</span><span class="p">(</span><span class="nx">redux</span><span class="p">,</span> <span class="nx">devtools</span><span class="p">,</span> <span class="nx">log</span><span class="p">,</span> <span class="nx">create</span><span class="p">)</span>
+
+<span class="kr">enum</span> <span class="nx">types</span> <span class="p">{</span>
+  <span class="nx">increase</span> <span class="o">=</span> <span class="s2">&#34;INCREASE&#34;</span><span class="p">,</span>
+  <span class="nx">decrease</span> <span class="o">=</span> <span class="s2">&#34;DECREASE&#34;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">reducer</span> <span class="o">=</span> <span class="p">(</span>
+  <span class="nx">state</span>: <span class="kt">State</span><span class="p">,</span>
+  <span class="p">{</span> <span class="kr">type</span><span class="p">,</span> <span class="nx">by</span> <span class="o">=</span> <span class="mi">1</span> <span class="p">}</span><span class="o">:</span> <span class="p">{</span> <span class="kr">type</span><span class="o">:</span> <span class="nx">types</span><span class="p">;</span> <span class="nx">by</span>: <span class="kt">number</span> <span class="p">}</span>
+<span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="k">switch</span> <span class="p">(</span><span class="kr">type</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="nx">types.increase</span>:
+      <span class="kt">return</span> <span class="p">{</span> <span class="nx">grumpiness</span>: <span class="kt">state.grumpiness</span> <span class="o">+</span> <span class="nx">by</span> <span class="p">}</span>
+    <span class="k">case</span> <span class="nx">types.decrease</span>:
+      <span class="kt">return</span> <span class="p">{</span> <span class="nx">grumpiness</span>: <span class="kt">state.grumpiness</span> <span class="o">-</span> <span class="nx">by</span> <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="nx">useStore</span> <span class="o">=</span> <span class="nx">createStore</span><span class="p">(</span><span class="nx">reducer</span><span class="p">,</span> <span class="nx">initialState</span><span class="p">)</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">useStore</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="十二状态持久化中间件-persist">十二、状态持久化中间件 persist</h2>
+<p>可以存储任何类型的store数据。（localStorage，AsyncStorage，IndexedDB，等&hellip;）</p>
+<h3 id="1-快速示例">1. 快速示例</h3>
 <pre tabindex="0"><code class="language-base" data-lang="base">import create from &quot;zustand&quot;
 import { persist } from &quot;zustand/middleware&quot;
 
@@ -2240,23 +2601,886 @@ export const useStore = create(persist(
     getStorage: () =&gt; sessionStorage, // （可选）默认情况下，使用“localStorage”
   }
 ))
-</code></pre><h3 id="九使用-redux-开发工具">九、使用 Redux 开发工具</h3>
-<pre tabindex="0"><code class="language-base" data-lang="base">import { devtools } from 'zustand/middleware'
+</code></pre><h3 id="2-选项">2. 选项</h3>
+<ol>
+<li>
+<p><code>name</code> 这是唯一需要的选项。给定的<code>名称</code>将是用于存储<code>state</code>的键，因此它必须是<code>唯一</code>的。</p>
+</li>
+<li>
+<p><code>getStorage</code> 默认： <code>() =&gt; localStorage</code></p>
+</li>
+</ol>
+<p>给定的存储必须与以下接口匹配：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ts" data-lang="ts">
+<span class="kr">interface</span> <span class="nx">Storage</span> <span class="p">{</span>
+  <span class="nx">getItem</span><span class="o">:</span> <span class="p">(</span><span class="nx">name</span>: <span class="kt">string</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="kt">string</span> <span class="o">|</span> <span class="kc">null</span> <span class="o">|</span> <span class="nx">Promise</span><span class="p">&lt;</span><span class="nt">string</span> <span class="err">|</span> <span class="na">null</span><span class="p">&gt;</span>
+  <span class="nx">setItem</span><span class="o">:</span> <span class="p">(</span><span class="nx">name</span>: <span class="kt">string</span><span class="p">,</span> <span class="nx">value</span>: <span class="kt">string</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">void</span> <span class="o">|</span> <span class="nx">Promise</span><span class="p">&lt;</span><span class="nt">void</span><span class="p">&gt;</span>
+  <span class="nx">removeItem</span><span class="o">:</span> <span class="p">(</span><span class="nx">name</span>: <span class="kt">string</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="k">void</span> <span class="o">|</span> <span class="nx">Promise</span><span class="p">&lt;</span><span class="nt">void</span><span class="p">&gt;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><ol start="3">
+<li><code>serialize</code>（序列化）</li>
+</ol>
+<ul>
+<li>Schema: <code>(state: Object) =&gt; string | Promise&lt;string&gt;</code></li>
+<li>Default: <code>(state) =&gt; JSON.stringify(state)</code></li>
+</ul>
+<p>由于将对象存储在 storage 中的唯一方法是通过字符串，可以使用此选项提供自定义函数将 state 序列化为字符串。</p>
+<p>例如，如果您想将 state 存储在 base64 中：</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">export const useStore = create(persist(
+  (set, get) =&gt; ({
+    // ...
+  }),
+  {
+    // ...
+    serialize: (state) =&gt; btoa(JSON.stringify(state)),
+  }
+))
+</code></pre><p>请注意，还需要一个自定义<code>deserialize</code>函数才能使其正常工作。见下文</p>
+<ol start="4">
+<li><code>deserialize</code> （反序列化）</li>
+</ol>
+<ul>
+<li>Schema: <code>(str: string) =&gt; Object | Promise&lt;Object&gt;</code></li>
+<li>Default: <code>(str) =&gt; JSON.parse(str)</code></li>
+</ul>
+<p>如果使用自定义序列化函数，则很可能还需要使用自定义反序列化函数。它们是一对搭档。</p>
+<p>要继续上面的示例，可以使用以下命令反序列化 base64 值：</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">export const useStore = create(persist(
+  (set, get) =&gt; ({
+    // ...
+  }),
+  {
+    // ...
+    deserialize: (str) =&gt; JSON.parse(atob(str)),
+  }
+))
+</code></pre><ol start="5">
+<li><code>partialize</code> (初始化部分state)</li>
+</ol>
+<ul>
+<li>Schema: <code>(state: Object) =&gt; Object</code></li>
+<li>Default: <code>(state) =&gt; state</code></li>
+</ul>
+<p>它够省略一些要存储在 storage 中的 state 字段。</p>
+<p>可以使用以下方法省略多个字段：</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">export const useStore = create(persist(
+  (set, get) =&gt; ({
+    foo: 0,
+    bar: 1,
+  }),
+  {
+    // ...
+    partialize: (state) =&gt;
+      Object.fromEntries(
+        Object.entries(state).filter(([key]) =&gt; ![&quot;foo&quot;].includes(key))
+      ),
+  }
+))
+</code></pre><p>或者只允许存储特定state字段：</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">export const useStore = create(persist(
+  (set, get) =&gt; ({
+    foo: 0,
+    bar: 1,
+  }),
+  {
+    // ...
+    partialize: (state) =&gt; ({ foo: state.foo })
+  }
+))
+</code></pre><ol start="6">
+<li><code>onRehydrateStorage</code> （水和存储）</li>
+</ol>
+<ul>
+<li>Schema: <code>(state: Object) =&gt; ((state?: Object, error?: Error) =&gt; void) | void</code></li>
+</ul>
+<p>此选项能够在<code>水合存储</code>时调用的侦听器函数。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">useStore</span> <span class="o">=</span> <span class="nx">create</span><span class="p">(</span><span class="nx">persist</span><span class="p">(</span>
+  <span class="p">(</span><span class="nx">set</span><span class="p">,</span> <span class="nx">get</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span>
+    <span class="c1">// ...
+</span><span class="c1"></span>  <span class="p">}),</span>
+  <span class="p">{</span>
+    <span class="c1">// ...
+</span><span class="c1"></span>    <span class="nx">onRehydrateStorage</span><span class="o">:</span> <span class="p">(</span><span class="nx">state</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;hydration starts&#34;</span><span class="p">);</span> <span class="c1">//水合开始
+</span><span class="c1"></span>			
+      <span class="c1">// 可选
+</span><span class="c1"></span>      <span class="k">return</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="nx">error</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;an error happened during hydration&#34;</span><span class="p">,</span> <span class="nx">error</span><span class="p">)</span> <span class="c1">//水合过程中发生错误
+</span><span class="c1"></span>        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;hydration finished&#34;</span><span class="p">)</span> <span class="c1">//水合完成
+</span><span class="c1"></span>        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">))</span>
+</code></pre></td></tr></table>
+</div>
+</div><ol start="7">
+<li><code>version</code> 指定存储版本</li>
+</ol>
+<ul>
+<li>Schema: <code>number</code></li>
+<li>Default: <code>0</code></li>
+</ul>
+<p>如果在 storage 中引入重大更改（例如重命名字段），可以指定新版本号。<br />
+默认情况下，如果 storage 中的版本与代码中的版本不匹配，则不会使用 storage 的值。</p>
+<p>有关处理重大更改的更多详细信息，请参阅下面的选项<code>migrate</code></p>
+<ol start="8">
+<li><code>migrate</code> 版本迁移</li>
+</ol>
+<ul>
+<li>Schema: <code>(persistedState: Object, version: number) =&gt; Object | Promise&lt;Object&gt;</code></li>
+<li>Default: <code>(persistedState) =&gt; persistedState</code></li>
+</ul>
+<p>可以使用此选项来处理版本迁移。migrate 函数将持久化state和版本号作为参数。<br />
+它必须返回符合最新版本（代码中的版本）的state。</p>
+<p>例如，如果要重命名字段，可以使用以下命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">useStore</span> <span class="o">=</span> <span class="nx">create</span><span class="p">(</span><span class="nx">persist</span><span class="p">(</span>
+  <span class="p">(</span><span class="nx">set</span><span class="p">,</span> <span class="nx">get</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span>
+    <span class="nx">newField</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// 假设该字段在版本 0 中以其他方式命名
+</span><span class="c1"></span>  <span class="p">}),</span>
+  <span class="p">{</span>
+    <span class="c1">// ...
+</span><span class="c1"></span>    <span class="nx">version</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="c1">// 如果 storage 中的版本与此迁移不匹配，则会触发：
+</span><span class="c1"></span>    <span class="nx">migrate</span><span class="o">:</span> <span class="p">(</span><span class="nx">persistedState</span><span class="p">,</span> <span class="nx">version</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">version</span> <span class="o">===</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 如果存储的值在版本为 0 ，则将该字段重命名为新名称
+</span><span class="c1"></span>        <span class="nx">persistedState</span><span class="p">.</span><span class="nx">newField</span> <span class="o">=</span> <span class="nx">persistedState</span><span class="p">.</span><span class="nx">oldField</span><span class="p">;</span>
+        <span class="k">delete</span> <span class="nx">persistedState</span><span class="p">.</span><span class="nx">oldField</span><span class="p">;</span>
+      <span class="p">}</span>
+      
+      <span class="k">return</span> <span class="nx">persistedState</span><span class="p">;</span>
+    <span class="p">},</span>
+  <span class="p">}</span>
+<span class="p">))</span>
+</code></pre></td></tr></table>
+</div>
+</div><ol start="9">
+<li><code>merge</code> 合并存储值和state</li>
+</ol>
+<ul>
+<li>
+<p>Schema: <code>(persistedState: Object, currentState: Object) =&gt; Object</code></p>
+</li>
+<li>
+<p>Default: <code>(persistedState, currentState) =&gt; ({ ...currentState, ...persistedState })</code></p>
+</li>
+</ul>
+<p>在某些情况下，希望使用自定义合并函数将持久值与当前状态合并。</p>
+<p>默认情况下，中间件进行<code>浅合并</code>。如果部分持久化了嵌套对象，那么浅层合并可能还不够。</p>
+<p>例如，如果存储包含以下内容：</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">{
+  foo: {
+    bar: 0,
+  }
+}
+</code></pre><p>但是你的 Zustand store 包含:</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">{
+  foo: {
+    bar: 0,
+    baz: 1,
+  }
+}
+</code></pre><p>浅合并将从对象 foo 中擦除 baz 字段。解决此问题的一种方法是提供<code>自定义深度</code>合并功能：</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">export const useStore = create(persist(
+  (set, get) =&gt; ({
+    foo: {
+      bar: 0,
+      baz: 1,
+    },
+  }),
+  {
+    // ...
+    merge: (persistedState, currentState) =&gt; deepMerge(currentState, persistedState),
+  }
+))
+</code></pre><h3 id="3-api">3. API</h3>
+<p>persist api 使 React 组件的内部或外部与持久中间件进行大量交互。</p>
+<ol>
+<li><code>setOptions</code> 更改中间件选项</li>
+</ol>
+<ul>
+<li>Schema: <code>(newOptions: PersistOptions) =&gt; void</code></li>
+</ul>
+<p>此方法能够更改中间件选项。请注意，新选项将与当前选项合并。</p>
+<p>例如，这可用于更改 storage 名称：</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">useStore.persist.setOptions({
+  name: &quot;new-name&quot;
+});
+</code></pre><p>甚至更改 storage 引擎：</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">useStore.persist.setOptions({
+  getStorage: () =&gt; sessionStorage,
+});
+</code></pre><ol start="2">
+<li><code>clearStorage</code></li>
+</ol>
+<ul>
+<li>Schema: <code>() =&gt; void</code></li>
+</ul>
+<p>这可用于完全清除 storage 中的持久值。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">useStore.persist.clearStorage();
+</code></pre><ol start="3">
+<li><code>rehydrate</code> 触发水合</li>
+</ol>
+<ul>
+<li>Schema: <code>() =&gt; Promise&lt;void&gt;</code></li>
+</ul>
+<p>在某些情况下，可能希望手动触发水合。可以通过调用该<code>rehydrate</code>方法来完成。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">await useStore.persist.rehydrate();
+</code></pre><ol start="4">
+<li><code>hasHydrated</code> 获取水合状态</li>
+</ol>
+<ul>
+<li>Schema: <code>() =&gt; boolean</code></li>
+</ul>
+<p>这是一个React的 getter，用于了解存储是否已被水合（请注意，在调用<code>useStore.persist.rehydrate()</code>时会更新）。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">useStore.persist.hasHydrated();
+</code></pre><ol start="5">
+<li><code>onHydrate</code> 水合过程开始</li>
+</ol>
+<ul>
+<li>Schema: <code>(listener: (state) =&gt; void) =&gt; () =&gt; void</code></li>
+</ul>
+<p>水合过程开始时将调用给定的侦听器。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">const</span> <span class="nx">unsub</span> <span class="o">=</span> <span class="nx">useStore</span><span class="p">.</span><span class="nx">persist</span><span class="p">.</span><span class="nx">onHydrate</span><span class="p">((</span><span class="nx">state</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;hydration starts&#34;</span><span class="p">);</span>
+<span class="p">});</span>
 
-// 使用普通操作存储，它将记录操作为“setState”
-// devtools 将只记录来自每个单独存储的操作，这与典型的 redux 存储不同
-const useStore = create(devtools(store))
-</code></pre><h3 id="十typescript-类型定义">十、TypeScript 类型定义</h3>
-<pre tabindex="0"><code class="language-base" data-lang="base">interface BearState {
-  count: number;
-  plus: (by: number) =&gt; void
+<span class="c1">// 稍后...
+</span><span class="c1"></span><span class="nx">unsub</span><span class="p">();</span>
+</code></pre></td></tr></table>
+</div>
+</div><ol start="6">
+<li><code>onFinishHydration</code> 水合过程结束</li>
+</ol>
+<ul>
+<li>Schema: <code>(listener: (state) =&gt; void) =&gt; () =&gt; void</code></li>
+</ul>
+<p>当水化过程结束时，将调用给定的侦听器。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">const</span> <span class="nx">unsub</span> <span class="o">=</span> <span class="nx">useStore</span><span class="p">.</span><span class="nx">persist</span><span class="p">.</span><span class="nx">onFinishHydration</span><span class="p">((</span><span class="nx">state</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;hydration finished&#34;</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="c1">// 稍后...
+</span><span class="c1"></span><span class="nx">unsub</span><span class="p">();</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="4-水合和异步存储">4. 水合和异步存储</h3>
+<p>要解释异步存储的“成本”是什么，需要了解什么是<code>水合作用（hydration</code>）。</p>
+<h4 id="1-什么是水合hydration">1). 什么是水合hydration？</h4>
+<p><strong>简而言之，水合是从 storage 中检索持久状态并将其与当前状态合并的过程。</strong></p>
+<p>persist 中间件执行两种 <code>水合hydration</code>：同步和异步。<br />
+如果给定的存储是同步的（例如localStorage），水合将同步完成，如果给定的存储是异步的（例如AsyncStorage），水合将异步完成&hellip;&hellip;🥁。</p>
+<p>但问题是什么？ <br />
+在同步水合中，Zustand 在创建 store 时进行水合。在异步水合中，Zustand store 将在稍后的微任务中水合。</p>
+<p>为什么这有关系？ <br />
+<code>异步水合可能会导致一些意外行为</code>（成本所在）。例如，<br />
+如果在 React 应用程序中使用 Zustand，store 将不会在初始渲染时水合。<br />
+如果应用程序依赖于页面加载时的持久值，你可能希望等到 store 已被水合后再显示内容<br />
+（例如，应用程序可能认为用户未登录，因为这是默认值，而实际上 store 还没有被水合）。</p>
+<h4 id="2-如何检查-store-是否已水合">2). 如何检查 store 是否已水合</h4>
+<p>有几种不同的方法可以做到这一点。</p>
+<p><strong>fn1. 可以使用<code>onRehydrateStorage</code>选项来更新 store 中的字段：</strong></p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const useStore = create(
+  persist(
+    (set, get) =&gt; ({
+      // ...
+      _hasHydrated: false
+    }),
+    {
+      // ...
+      onRehydrateStorage: () =&gt; () =&gt; {
+        useStore.setState({ _hasHydrated: true })
+      }
+    }
+  )
+);
+
+export default function App() {
+  const hasHydrated = useStore(state =&gt; state._hasHydrated);
+
+  if (!hasHydrated) {
+    return &lt;p&gt;Loading...&lt;/p&gt;
+  }
+
+  return (
+    // ...
+  );
+}
+</code></pre><p><strong>fn2. 还可以创建自定义<code>useHydration</code>hook：</strong></p>
+<pre tabindex="0"><code class="language-base" data-lang="base">const useStore = create(persist(...))
+
+const useHydration = () =&gt; {
+  const [hydrated, setHydrated] = useState(useStore.persist.hasHydrated)
+  
+  useEffect(() =&gt; {
+    const unsubHydrate = useStore.persist.onHydrate(() =&gt; setHydrated(false)) // Note: this is just in case you want to take into account manual rehydrations. You can remove this if you don't need it/don't want it.
+    const unsubFinishHydration = useStore.persist.onFinishHydration(() =&gt; setHydrated(true))
+    
+    setHydrated(useStore.persist.hasHydrated())
+    
+    return () =&gt; {
+      unsubHydrate()
+      unsubFinishHydration()
+    }
+  }, [])
+  
+  return hydrated
+}
+</code></pre><h3 id="5-如何使用自定义存储引擎">5. 如何使用自定义存储引擎？</h3>
+<p>如果要使用的存储与预期的 API 不匹配，可以创建自己的存储：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">import</span> <span class="nx">create</span> <span class="nx">from</span> <span class="s2">&#34;zustand&#34;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">persist</span><span class="p">,</span> <span class="nx">StateStorage</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;zustand/middleware&#34;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">get</span><span class="p">,</span> <span class="nx">set</span><span class="p">,</span> <span class="nx">del</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;idb-keyval&#39;</span> <span class="c1">// 可以使用任何东西：IndexedDB、Ionic Storage 等
+</span><span class="c1"></span>
+<span class="c1">// 自定义 storage 对象
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">storage</span><span class="o">:</span> <span class="nx">StateStorage</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">getItem</span><span class="o">:</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">name</span><span class="o">:</span> <span class="nx">string</span><span class="p">)</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">string</span> <span class="o">|</span> <span class="kc">null</span><span class="o">&gt;</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="s2">&#34;has been retrieved&#34;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="p">(</span><span class="kr">await</span> <span class="nx">get</span><span class="p">(</span><span class="nx">name</span><span class="p">))</span> <span class="o">||</span> <span class="kc">null</span>
+  <span class="p">},</span>
+  <span class="nx">setItem</span><span class="o">:</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">name</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="nx">string</span><span class="p">)</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="s2">&#34;with value&#34;</span><span class="p">,</span> <span class="nx">value</span><span class="p">,</span> <span class="s2">&#34;has been saved&#34;</span><span class="p">);</span>
+    <span class="kr">await</span> <span class="nx">set</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span>
+  <span class="p">},</span>
+  <span class="nx">removeItem</span><span class="o">:</span> <span class="kr">async</span> <span class="p">(</span><span class="nx">name</span><span class="o">:</span> <span class="nx">string</span><span class="p">)</span><span class="o">:</span> <span class="nb">Promise</span><span class="o">&lt;</span><span class="k">void</span><span class="o">&gt;</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="s2">&#34;has been deleted&#34;</span><span class="p">);</span>
+    <span class="kr">await</span> <span class="nx">del</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="kr">const</span> <span class="nx">useStore</span> <span class="o">=</span> <span class="nx">create</span><span class="p">(</span><span class="nx">persist</span><span class="p">(</span>
+  <span class="p">(</span><span class="nx">set</span><span class="p">,</span> <span class="nx">get</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span>
+    <span class="nx">fishes</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nx">addAFish</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">set</span><span class="p">({</span> <span class="nx">fishes</span><span class="o">:</span> <span class="nx">get</span><span class="p">().</span><span class="nx">fishes</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">})</span>
+  <span class="p">}),</span>
+  <span class="p">{</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s2">&#34;food-storage&#34;</span><span class="p">,</span> <span class="c1">//唯一名称
+</span><span class="c1"></span>    <span class="nx">getStorage</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">storage</span><span class="p">,</span>
+  <span class="p">}</span>
+<span class="p">))</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="十三像-redux-一样编写代码">十三、像 Redux 一样编写代码</h2>
+<pre tabindex="0"><code class="language-base" data-lang="base">const types = { increase: &quot;INCREASE&quot;, decrease: &quot;DECREASE&quot; }
+
+const reducer = (state, { type, by = 1 }) =&gt; {
+  switch (type) {
+    case types.increase: return { grumpiness: state.grumpiness + by }
+    case types.decrease: return { grumpiness: state.grumpiness - by }
+  }
 }
 
-const useStore = create&lt;BearState&gt;(set =&gt; ({
-  count: 0,
-  plus: (by) =&gt; set(state =&gt; ({ count: state.count + by })),
+const useStore = create(set =&gt; ({
+  grumpiness: 0,
+  dispatch: args =&gt; set(state =&gt; reducer(state, args)),
 }))
-</code></pre><h3 id="十一最佳实践">十一、最佳实践</h3>
+
+const dispatch = useStore(state =&gt; state.dispatch)
+dispatch({ type: types.increase, by: 2 })
+</code></pre><p>或者，只需使用<code>redux-middleware</code>。</p>
+<p>它连接你的<code>main-reducer</code>，设置初始 state，并向 state 本身和 vanilla api 添加一个<code>dispatch</code>函数。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useEffect</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span>
+<span class="kr">import</span> <span class="nx">ReactDOM</span> <span class="nx">from</span> <span class="s1">&#39;react-dom&#39;</span>
+<span class="kr">import</span> <span class="nx">create</span> <span class="nx">from</span> <span class="s1">&#39;zustand&#39;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">devtools</span><span class="p">,</span> <span class="nx">redux</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;zustand/middleware&#39;</span>
+<span class="kr">import</span> <span class="s1">&#39;./styles.css&#39;</span>
+
+<span class="kr">const</span> <span class="nx">initialState</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">count</span><span class="o">:</span> <span class="mi">0</span> <span class="p">}</span>
+<span class="kr">const</span> <span class="nx">types</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">increase</span><span class="o">:</span> <span class="s1">&#39;INCREASE&#39;</span><span class="p">,</span> <span class="nx">decrease</span><span class="o">:</span> <span class="s1">&#39;DECREASE&#39;</span> <span class="p">}</span>
+<span class="kr">const</span> <span class="nx">reducer</span> <span class="o">=</span> <span class="p">(</span><span class="nx">state</span><span class="p">,</span> <span class="p">{</span> <span class="nx">type</span><span class="p">,</span> <span class="nx">by</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">switch</span> <span class="p">(</span><span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="nx">types</span><span class="p">.</span><span class="nx">increase</span><span class="o">:</span>
+      <span class="k">return</span> <span class="p">{</span> <span class="nx">count</span><span class="o">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">count</span> <span class="o">+</span> <span class="nx">by</span> <span class="p">}</span>
+    <span class="k">case</span> <span class="nx">types</span><span class="p">.</span><span class="nx">decrease</span><span class="o">:</span>
+      <span class="k">return</span> <span class="p">{</span> <span class="nx">count</span><span class="o">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">count</span> <span class="o">-</span> <span class="nx">by</span> <span class="p">}</span>
+    <span class="k">default</span><span class="o">:</span>
+      <span class="k">return</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kr">const</span> <span class="p">[</span><span class="nx">useStore</span><span class="p">,</span> <span class="nx">api</span><span class="p">]</span> <span class="o">=</span> <span class="nx">create</span><span class="p">(</span>
+  <span class="c1">// 将 store 连接到 devtools
+</span><span class="c1"></span>  <span class="c1">// 如果没有 reducers 和 action-types，你会看到“setState”被注销
+</span><span class="c1"></span>  <span class="nx">devtools</span><span class="p">(</span>
+    <span class="c1">// 将我们的 store 转换为 redux action dispatcher ...
+</span><span class="c1"></span>    <span class="c1">// 向 store 添加一个 dispatch 方法
+</span><span class="c1"></span>    <span class="nx">redux</span><span class="p">(</span><span class="nx">reducer</span><span class="p">,</span> <span class="nx">initialState</span><span class="p">)</span>
+  <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="kd">function</span> <span class="nx">Counter</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">count</span> <span class="o">=</span> <span class="nx">useStore</span><span class="p">(</span><span class="nx">state</span> <span class="p">=&gt;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">count</span><span class="p">)</span>
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="c1">// Increase
+</span><span class="c1"></span>    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">api</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="nx">types</span><span class="p">.</span><span class="nx">increase</span><span class="p">,</span> <span class="nx">by</span><span class="o">:</span> <span class="mi">3</span> <span class="p">}),</span> <span class="mi">1000</span><span class="p">)</span>
+    <span class="c1">// Decrease
+</span><span class="c1"></span>    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">api</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="nx">types</span><span class="p">.</span><span class="nx">decrease</span><span class="p">,</span> <span class="nx">by</span><span class="o">:</span> <span class="mi">1</span> <span class="p">}),</span> <span class="mi">2000</span><span class="p">)</span>
+    <span class="c1">// Decrease
+</span><span class="c1"></span>    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">api</span><span class="p">.</span><span class="nx">dispatch</span><span class="p">({</span> <span class="nx">type</span><span class="o">:</span> <span class="nx">types</span><span class="p">.</span><span class="nx">decrease</span><span class="p">,</span> <span class="nx">by</span><span class="o">:</span> <span class="mi">1</span> <span class="p">}),</span> <span class="mi">3000</span><span class="p">)</span>
+  <span class="p">},</span> <span class="p">[])</span>
+  <span class="k">return</span> <span class="o">&lt;</span><span class="nx">span</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&#34;header&#34;</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">count</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/span&gt;</span>
+<span class="p">}</span>
+
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">Counter</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;root&#39;</span><span class="p">))</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="十四在-react-事件处理程序之外调用-actions">十四、在 React 事件处理程序之外调用 actions</h2>
+<p>如果在 React 事件处理程序之外调用<code>setState</code>，它会同步处理。<br />
+在事件处理程序之外更新状态将强制 react 同步更新组件，因此增加了遇到僵尸子效应的风险。<br />
+为了解决这个问题，需要将 actions 包裹在<code>unstable_batchedUpdates</code>中。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">import { unstable_batchedUpdates } from 'react-dom' // or 'react-native'
+
+const useStore = create((set) =&gt; ({
+  fishes: 0,
+  increaseFishes: () =&gt; set((prev) =&gt; ({ fishes: prev.fishes + 1 }))
+}))
+
+const nonReactCallback = () =&gt; {
+  unstable_batchedUpdates(() =&gt; {
+    useStore.getState().increaseFishes()
+  })
+}
+</code></pre><h2 id="十五使用-redux-开发工具">十五、使用 Redux 开发工具</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">devtools</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;zustand/middleware&#39;</span>
+
+<span class="c1">// 使用普通操作存储，它将记录操作为“setState”
+</span><span class="c1">// devtools 将只记录来自每个单独存储的操作，这与典型的 redux 存储不同
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">useStore</span> <span class="o">=</span> <span class="nx">create</span><span class="p">(</span><span class="nx">devtools</span><span class="p">(</span><span class="nx">store</span><span class="p">))</span>
+
+<span class="c1">// 使用 redux 存储，它将记录完整操作类型
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">useStore</span> <span class="o">=</span> <span class="nx">create</span><span class="p">(</span><span class="nx">devtools</span><span class="p">(</span><span class="nx">redux</span><span class="p">(</span><span class="nx">reducer</span><span class="p">,</span> <span class="nx">initialState</span><span class="p">)))</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>Name store: <code>devtools(store, {name: &quot;MyStore&quot;})</code>，这将在 devtools 中创建一个名为“MyStore”的单独实例。<br />
+序列化选项：<code>devtools(store, { serialize: { options: true } })</code>。</p>
+<h2 id="十六react-context">十六、React context</h2>
+<p>store <code>create</code> 不需要上下文提供程序（context providers）。<br />
+在某些情况下，你可能希望使用上下文进行依赖注入，或者如果你想使用组件中的 props 初始化 store。<br />
+因为 store 是一个钩子，把它作为一个普通的上下文值传递可能会违反钩子的规则。<br />
+为了避免误用，提供了一个特殊<code>createContext</code>。</p>
+<h3 id="1-创建-createcontext">1. 创建 createContext</h3>
+<pre tabindex="0"><code class="language-base" data-lang="base">import create from 'zustand'
+import createContext from 'zustand/context'
+
+const { Provider, useStore } = createContext()
+
+const createStore = () =&gt; create(...)
+
+const App = () =&gt; (
+  &lt;Provider createStore={createStore}&gt;
+    ...
+  &lt;/Provider&gt;
+)
+
+const Component = () =&gt; {
+  const state = useStore()
+  const slice = useStore(selector)
+  ...
+}
+</code></pre><h3 id="2-在组件中使用">2. 在组件中使用</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">import</span> <span class="nx">create</span> <span class="nx">from</span> <span class="s2">&#34;zustand&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">createContext</span> <span class="nx">from</span> <span class="s2">&#34;zustand/context&#34;</span><span class="p">;</span>
+
+<span class="c1">// 最佳实践：可以将下面的 createContext() 和 createStore 移动到单独的文件 (store.js) 并导入提供程序Provider，在此处/任何需要的地方使用 store。
+</span><span class="c1"></span>
+<span class="kr">const</span> <span class="p">{</span> <span class="nx">Provider</span><span class="p">,</span> <span class="nx">useStore</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">createContext</span><span class="p">();</span>
+
+<span class="kr">const</span> <span class="nx">createStore</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span>
+  <span class="nx">create</span><span class="p">((</span><span class="nx">set</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span>
+    <span class="nx">bears</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nx">increasePopulation</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">set</span><span class="p">((</span><span class="nx">state</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span> <span class="nx">bears</span><span class="o">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">bears</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">})),</span>
+    <span class="nx">removeAllBears</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">set</span><span class="p">({</span> <span class="nx">bears</span><span class="o">:</span> <span class="mi">0</span> <span class="p">})</span>
+  <span class="p">}));</span>
+
+<span class="kr">const</span> <span class="nx">Button</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+      <span class="p">{</span><span class="cm">/** store() - 每次使用 Button 组件都创建一个 store，而不是为所有组件使用一个 store **/</span><span class="p">}</span>
+    <span class="o">&lt;</span><span class="nx">Provider</span> <span class="nx">createStore</span><span class="o">=</span><span class="p">{</span><span class="nx">createStore</span><span class="p">}</span><span class="o">&gt;</span> 
+      <span class="o">&lt;</span><span class="nx">ButtonChild</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="err">/Provider&gt;</span>
+  <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="kr">const</span> <span class="nx">ButtonChild</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">state</span> <span class="o">=</span> <span class="nx">useStore</span><span class="p">();</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+      <span class="p">{</span><span class="nx">state</span><span class="p">.</span><span class="nx">bears</span><span class="p">}</span>
+      <span class="o">&lt;</span><span class="nx">button</span>
+        <span class="nx">onClick</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+          <span class="nx">state</span><span class="p">.</span><span class="nx">increasePopulation</span><span class="p">();</span>
+        <span class="p">}}</span>
+      <span class="o">&gt;</span>
+        <span class="o">+</span>
+      <span class="o">&lt;</span><span class="err">/button&gt;</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="p">);</span>
+<span class="p">};</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;App&#34;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Button</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Button</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="3-createcontext-使用-props-初始化在-ts-中">3. createContext 使用 props 初始化（在 TS 中）</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">import</span> <span class="nx">create</span> <span class="nx">from</span> <span class="s2">&#34;zustand&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">createContext</span> <span class="nx">from</span> <span class="s2">&#34;zustand/context&#34;</span><span class="p">;</span>
+
+<span class="nx">type</span> <span class="nx">BearState</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">bears</span><span class="o">:</span> <span class="nx">number</span>
+  <span class="nx">increase</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="k">void</span>
+<span class="p">}</span>
+
+<span class="c1">// 将类型传递给 `createContext` 而不是 `create`
+</span><span class="c1"></span><span class="kr">const</span> <span class="p">{</span> <span class="nx">Provider</span><span class="p">,</span> <span class="nx">useStore</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">createContext</span><span class="o">&lt;</span><span class="nx">BearState</span><span class="o">&gt;</span><span class="p">();</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">App</span><span class="p">({</span> <span class="nx">initialBears</span> <span class="p">}</span><span class="o">:</span> <span class="p">{</span> <span class="nx">initialBears</span><span class="o">:</span> <span class="nx">number</span> <span class="p">})</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">Provider</span>
+      <span class="nx">createStore</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span>
+        <span class="nx">create</span><span class="p">((</span><span class="nx">set</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span>
+          <span class="nx">bears</span><span class="o">:</span> <span class="nx">initialBears</span><span class="p">,</span>
+          <span class="nx">increase</span><span class="o">:</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">set</span><span class="p">((</span><span class="nx">state</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">({</span> <span class="nx">bears</span><span class="o">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">bears</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">})),</span>
+        <span class="p">}))</span>
+      <span class="p">}</span>
+    <span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Button</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="err">/Provider&gt;</span>
+<span class="p">)</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="十七typescript-类型定义">十七、TypeScript 类型定义</h2>
+<h3 id="1-类型定义">1. 类型定义</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="c1">// 可以使用 `type`
+</span><span class="c1"></span><span class="nx">type</span> <span class="nx">BearState</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">bears</span><span class="o">:</span> <span class="nx">number</span>
+  <span class="nx">increase</span><span class="o">:</span> <span class="p">(</span><span class="nx">by</span><span class="o">:</span> <span class="nx">number</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="k">void</span>
+<span class="p">}</span>
+
+<span class="c1">// 或者 `interface`
+</span><span class="c1"></span><span class="kr">interface</span> <span class="nx">BearState</span> <span class="p">{</span>
+  <span class="nx">bears</span><span class="o">:</span> <span class="nx">number</span>
+  <span class="nx">increase</span><span class="o">:</span> <span class="p">(</span><span class="nx">by</span><span class="o">:</span> <span class="nx">number</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="k">void</span>
+<span class="p">}</span>
+
+<span class="c1">// 它对两者都有效
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">useStore</span> <span class="o">=</span> <span class="nx">create</span><span class="o">&lt;</span><span class="nx">BearState</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">set</span> <span class="p">=&gt;</span> <span class="p">({</span>
+  <span class="nx">bears</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nx">increase</span><span class="o">:</span> <span class="p">(</span><span class="nx">by</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">set</span><span class="p">(</span><span class="nx">state</span> <span class="p">=&gt;</span> <span class="p">({</span> <span class="nx">bears</span><span class="o">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">bears</span> <span class="o">+</span> <span class="nx">by</span> <span class="p">})),</span>
+<span class="p">}))</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="2-使用combine-并让-tsc-推断类型">2. 使用<code>combine</code> 并让 tsc 推断类型</h3>
+<p>这将两个状态浅合并。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">import { combine } from 'zustand/middleware'
+
+const useStore = create(
+  combine(
+    { bears: 0 },
+    (set) =&gt; ({ increase: (by: number) =&gt; set((state) =&gt; ({ bears: state.bears + by })) })
+  ),
+)
+</code></pre><h2 id="十八最佳实践将store拆分为单独的slice">十八、最佳实践（将store拆分为单独的slice）</h2>
 <blockquote>
 <p>目录结构</p>
 </blockquote>
@@ -2376,21 +3600,77 @@ export default function Mountain() {
   <div class="toc__body">
     <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#一安装">一、安装</a></li>
+    <li><a href="#二最简使用方法">二、最简使用方法</a>
       <ul>
-        <li><a href="#一安装">一、安装</a></li>
-        <li><a href="#二最简使用方法">二、最简使用方法</a></li>
-        <li><a href="#三异步操作">三、异步操作</a></li>
-        <li><a href="#四从操作中读取状态">四、从操作中读取状态</a></li>
-        <li><a href="#五在-react-组件之外读写状态">五、在 React 组件之外读写状态</a></li>
-        <li><a href="#六瞬时更新用于频繁发生的状态变化">六、瞬时更新（用于频繁发生的状态变化）</a></li>
-        <li><a href="#七更新嵌套的状态使用-immer">七、更新嵌套的状态，使用 Immer</a></li>
-        <li><a href="#八状态持久化中间件-persist">八、状态持久化中间件 persist</a></li>
-        <li><a href="#九使用-redux-开发工具">九、使用 Redux 开发工具</a></li>
-        <li><a href="#十typescript-类型定义">十、TypeScript 类型定义</a></li>
-        <li><a href="#十一最佳实践">十一、最佳实践</a></li>
+        <li><a href="#step1-创建一个-store">Step1. 创建一个 Store</a></li>
+        <li><a href="#step2-绑定组件">Step2. 绑定组件</a></li>
       </ul>
     </li>
+    <li><a href="#二获取所有state">二、获取所有state</a></li>
+    <li><a href="#三选择多个切片state">三、选择多个切片state</a>
+      <ul>
+        <li><a href="#1-单个state选择">1. 单个state选择</a></li>
+        <li><a href="#2-多个state选择浅差异">2. 多个state选择（浅差异）</a></li>
+        <li><a href="#3-自定义函数选择">3. 自定义函数选择</a></li>
+      </ul>
+    </li>
+    <li><a href="#四记忆选择器">四、记忆选择器</a>
+      <ul>
+        <li><a href="#1-usecallback">1. useCallback()</a></li>
+        <li><a href="#2-不依赖于作用域的选择器">2. 不依赖于作用域的选择器</a></li>
+      </ul>
+    </li>
+    <li><a href="#五覆盖state">五、覆盖state</a></li>
+    <li><a href="#六异步操作">六、异步操作</a></li>
+    <li><a href="#七从操作中读取状态">七、从操作中读取状态</a></li>
+    <li><a href="#八在-react-组件之外读写状态">八、在 React 组件之外读写状态</a>
+      <ul>
+        <li><a href="#1-自定义hooks">1. 自定义hooks</a></li>
+        <li><a href="#2-使用订阅选择器中间件">2. 使用订阅选择器（中间件）</a></li>
+        <li><a href="#3-订阅选择器中间件使用ts">3. 订阅选择器（中间件）使用TS</a></li>
+      </ul>
+    </li>
+    <li><a href="#九瞬时更新ref用于频繁发生的状态变化">九、瞬时更新ref（用于频繁发生的状态变化）</a></li>
+    <li><a href="#十更新嵌套的状态使用-immer">十、更新嵌套的状态，使用 Immer</a></li>
+    <li><a href="#十一中间件">十一、中间件</a>
+      <ul>
+        <li><a href="#1-按自己喜欢的方式管理store">1. 按自己喜欢的方式管理store</a></li>
+        <li><a href="#2-管理中间件">2. 管理中间件</a></li>
+        <li><a href="#3-管理中间件使用ts">3. 管理中间件使用TS</a></li>
+      </ul>
+    </li>
+    <li><a href="#十二状态持久化中间件-persist">十二、状态持久化中间件 persist</a>
+      <ul>
+        <li><a href="#1-快速示例">1. 快速示例</a></li>
+        <li><a href="#2-选项">2. 选项</a></li>
+        <li><a href="#3-api">3. API</a></li>
+        <li><a href="#4-水合和异步存储">4. 水合和异步存储</a>
+          <ul>
+            <li><a href="#1-什么是水合hydration">1). 什么是水合hydration？</a></li>
+            <li><a href="#2-如何检查-store-是否已水合">2). 如何检查 store 是否已水合</a></li>
+          </ul>
+        </li>
+        <li><a href="#5-如何使用自定义存储引擎">5. 如何使用自定义存储引擎？</a></li>
+      </ul>
+    </li>
+    <li><a href="#十三像-redux-一样编写代码">十三、像 Redux 一样编写代码</a></li>
+    <li><a href="#十四在-react-事件处理程序之外调用-actions">十四、在 React 事件处理程序之外调用 actions</a></li>
+    <li><a href="#十五使用-redux-开发工具">十五、使用 Redux 开发工具</a></li>
+    <li><a href="#十六react-context">十六、React context</a>
+      <ul>
+        <li><a href="#1-创建-createcontext">1. 创建 createContext</a></li>
+        <li><a href="#2-在组件中使用">2. 在组件中使用</a></li>
+        <li><a href="#3-createcontext-使用-props-初始化在-ts-中">3. createContext 使用 props 初始化（在 TS 中）</a></li>
+      </ul>
+    </li>
+    <li><a href="#十七typescript-类型定义">十七、TypeScript 类型定义</a>
+      <ul>
+        <li><a href="#1-类型定义">1. 类型定义</a></li>
+        <li><a href="#2-使用combine-并让-tsc-推断类型">2. 使用<code>combine</code> 并让 tsc 推断类型</a></li>
+      </ul>
+    </li>
+    <li><a href="#十八最佳实践将store拆分为单独的slice">十八、最佳实践（将store拆分为单独的slice）</a></li>
   </ul>
 </nav>
   </div>
