@@ -16,10 +16,10 @@
       
       <item>
         <title>设计模式介绍</title>
-        <link>https://danacoding.github.io/patterns/design-patterns/design-patterns-base/</link>
+        <link>https://danacoding.github.io/patterns/design-patterns/design-patterns/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/patterns/design-patterns/design-patterns-base/</guid>
+        <guid>https://danacoding.github.io/patterns/design-patterns/design-patterns/</guid>
         <description>设计模式是软件开发的基本部分， 因为它们为软件设计中经常出现的问题提供了典型的解决方案。 设计模式不是提供特定的软件部分，而是可以用来以优化的方</description>
       </item>
       
@@ -30,6 +30,33 @@
         
         <guid>https://danacoding.github.io/patterns/design-patterns/single-patterns/</guid>
         <description>单例（统一用名词 Singleton 代替）是可以实例化一次的类，并且可以全局访问。单个实例可以在整个应用程序中共享，非常适合管理应用程序中的全局状态。 ES6 中的单</description>
+      </item>
+      
+      <item>
+        <title>代理模式</title>
+        <link>https://danacoding.github.io/patterns/design-patterns/proxy-patterns/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/patterns/design-patterns/proxy-patterns/</guid>
+        <description>使用 Proxy 对象，可以更好地控制与某些对象的交互。 每当与对象交互时，代理对象都可以确定行为，例如当我们获取一个值或设置一个值时。 一般来说，代理是指</description>
+      </item>
+      
+      <item>
+        <title>提供者模式</title>
+        <link>https://danacoding.github.io/patterns/design-patterns/provider-pattern/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/patterns/design-patterns/provider-pattern/</guid>
+        <description>在某些情况下，我们希望为应用程序中的许多（如果不是全部）组件提供可用数据。 单向数据流 props 存在的问题 虽然我们可以使用 props 将数据传递给组件，但如果应</description>
+      </item>
+      
+      <item>
+        <title>原型模式</title>
+        <link>https://danacoding.github.io/patterns/design-patterns/prototype-pattern/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/patterns/design-patterns/prototype-pattern/</guid>
+        <description>原型模式是一种在许多相同类型的对象之间共享属性的有用方法。 原型prototype是 JavaScript 原生的对象，对象可以通过原型链__proto__访问。 在</description>
       </item>
       
     

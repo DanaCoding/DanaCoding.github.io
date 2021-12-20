@@ -1072,7 +1072,7 @@
 <link rel="stylesheet" href="/css/main.min.css">
 
 
-    <meta name="description" content="单例是可以实例化一次的类，并且可以全局访问" />
+    <meta name="description" content="在应用程序中共享一个全局实例" />
 <meta name="keywords" content="">
 <meta name="created" content="2020-01-28T00:34:39&#43;0900">
 <meta name="modified" content="2020-01-28T00:34:39&#43;0900">
@@ -1114,7 +1114,7 @@
     "datePublished": "2020-01-28T00:34:39+09:00",
     "dateModified": "2020-01-28T00:34:39+09:00",
     "url" : "https://danacoding.github.io/patterns/design-patterns/single-patterns/",
-    "description": "单例是可以实例化一次的类，并且可以全局访问",
+    "description": "在应用程序中共享一个全局实例",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://danacoding.github.io/"
@@ -1199,7 +1199,7 @@
         
         
         <li>
-          <a href="https://danacoding.github.io/patterns/design-patterns/design-patterns-base/" class="menu__title " data-depth="0">设计模式介绍</a>
+          <a href="https://danacoding.github.io/patterns/design-patterns/design-patterns/" class="menu__title " data-depth="0">设计模式介绍</a>
         </li>
       
     
@@ -1208,6 +1208,30 @@
         
         <li>
           <a href="https://danacoding.github.io/patterns/design-patterns/single-patterns/" class="menu__title active" data-depth="0">单例模式</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://danacoding.github.io/patterns/design-patterns/proxy-patterns/" class="menu__title " data-depth="0">代理模式</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://danacoding.github.io/patterns/design-patterns/provider-pattern/" class="menu__title " data-depth="0">提供者模式</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://danacoding.github.io/patterns/design-patterns/prototype-pattern/" class="menu__title " data-depth="0">原型模式</a>
         </li>
       
     
@@ -1784,7 +1808,7 @@
         
         
         <li>
-          <a href="https://danacoding.github.io/patterns/design-patterns/design-patterns-base/" class="menu__title " data-depth="0">设计模式介绍</a>
+          <a href="https://danacoding.github.io/patterns/design-patterns/design-patterns/" class="menu__title " data-depth="0">设计模式介绍</a>
         </li>
       
     
@@ -1793,6 +1817,30 @@
         
         <li>
           <a href="https://danacoding.github.io/patterns/design-patterns/single-patterns/" class="menu__title active" data-depth="0">单例模式</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://danacoding.github.io/patterns/design-patterns/proxy-patterns/" class="menu__title " data-depth="0">代理模式</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://danacoding.github.io/patterns/design-patterns/provider-pattern/" class="menu__title " data-depth="0">提供者模式</a>
+        </li>
+      
+    
+      
+        
+        
+        <li>
+          <a href="https://danacoding.github.io/patterns/design-patterns/prototype-pattern/" class="menu__title " data-depth="0">原型模式</a>
         </li>
       
     
@@ -1881,6 +1929,7 @@
 
   <article class="single__contents" data-dir="ltr">
     <p>单例（统一用名词 <code>Singleton</code> 代替）是可以实例化一次的类，并且可以全局访问。单个实例可以在整个应用程序中共享，非常适合管理应用程序中的全局状态。</p>
+<hr/>
 <h2 id="es6-中的单例">ES6 中的单例</h2>
 <p>构建一个<code>Counter计数器</code>具有以下内容的类：</p>
 <ul>
@@ -1995,6 +2044,7 @@
 </div><p>通过两次调用新方法，发现 counter1 和 counter2 被设置为不相等的实例。<br />
 counter1 和 counter2 上的 getInstance 方法返回的值有效地返回了对不同实例的引用。</p>
 <img src="https://lh3.googleusercontent.com/-iCnNl-Ep2eo/YcBJmxX0XII/AAAAAAAACGU/aB5hlC7QWc8nbQcwFU93cwVrCuLVng06wCNcBGAsYHQ/w661-h372/jspat-52_zkwyk1.gif">
+<hr/>
 <h2 id="如何确保只能创建类的一个实例">如何确保只能创建类的一个实例？</h2>
 <ol>
 <li>
@@ -2082,6 +2132,7 @@ counter1 和 counter2 上的 getInstance 方法返回的值有效地返回了对
 </div>
 </div><p>上面这种情况，如果实例已经存在，则不应该继续：抛出一个错误让用户知道。<br />
 Perfect! 我们无法再创建多个实例。</p>
+<hr/>
 <h2 id="如何冻结单例">如何冻结单例？</h2>
 <p>让我们从 counter.js 文件中导出 Counter 实例。 但在此之前，我们也应该冻结实例。</p>
 <p><code>Object.freeze()</code> 方法可以冻结一个对象。一个被冻结的对象再也不能被修改。此外，冻结一个对象后该对象的原型也不能被修改。freeze() 返回和传入的参数相同的对象。</p>
@@ -2151,7 +2202,8 @@ Perfect! 我们无法再创建多个实例。</p>
 <span class="kr">export</span> <span class="k">default</span> <span class="nx">singletonCounter</span><span class="p">;</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="单例的实例演示">单例的实例演示</h2>
+</div><hr/>
+<h2 id="单例的实例演示">单例的实例演示</h2>
 <p>Counter计数器应用程序。有以下文件：</p>
 <ul>
 <li>counter.js：包含 Counter 类，并导出一个 Counter 实例作为其默认导出</li>
@@ -2164,9 +2216,10 @@ Perfect! 我们无法再创建多个实例。</p>
 <img src="https://blogger.googleusercontent.com/img/a/AVvXsEigN66cowL1rKDQBX1TVoq8j6wwHwPyuHFgRD7jUxtfUy_-iq07k_bU1iojr-2r8gVr2KiyBfRS8HPaaZeEP_LJ8d4AeABgLf101e7r9gr52bIJcLqp_GtoDgonbWfM8K4nvUvM8rZBecucuagxoocO1XpuhCyj4l7On3FpNhBoY174P5d1BuhPbS6dbw=w596-h469"/>
 <p>当我们在 redButton.js 或 blueButton.js 中调用 increment 方法时，两个文件中 Counter 实例的 counter 属性的值都会更新。 <br />
 我们点击红色按钮还是蓝色按钮并不重要：所有实例共享相同的值。 这就是为什么即使我们在不同的文件中调用该方法，计数器也会不断增加 1 的原因。</p>
+<hr/>
 <h2 id="使用常规对象字面量实现">使用常规对象字面量实现</h2>
 <p>在许多编程语言中，例如 Java 或 C++，无法像在 JavaScript 中那样直接创建对象。 <br />
-在那些面向对象的编程语言中，我们需要创建一个类，它创建一个对象。创建的对象具有类的实例的值，就像 JavaScript 示例中实例的值一样。</p>
+在那些面向对象的编程语言中，我们需要创建一个类，通过它创建一个对象。创建的对象具有类的实例的值，就像 JavaScript 示例中实例的值一样。</p>
 <p>但是，上面示例中显示的类实现实际上是矫枉过正。由于我们可以直接在 JavaScript 中创建对象，因此我们可以简单地使用常规对象来实现完全相同的结果。</p>
 <ul>
 <li>count property</li>
@@ -2210,6 +2263,7 @@ Perfect! 我们无法再创建多个实例。</p>
 </div>
 </div><p>由于对象是通过引用（reference）传递的，因此 redButton.js 和 blueButton.js 都导入了对同一个 singletonCounter 对象的引用。 <br />
 修改其中一个文件中的 count 值将修改 singletonCounter 上的值，这在两个文件中都可见。</p>
+<hr/>
 <h2 id="单例的优缺点">单例的优缺点</h2>
 <p>将实例化限制为仅一个实例可能会节省大量内存空间。不必每次都为一个新实例设置内存，我们只需为整个应用程序引用的那个实例设置内存。</p>
 <p>然而，单例实际上被认为是一种反模式，并且可以（或应该）在 JavaScript 中避免。</p>
@@ -2351,11 +2405,20 @@ Perfect! 我们无法再创建多个实例。</p>
 <p>在 ES2015 中，创建全局变量是相当罕见的。新的 let 和 const 关键字通过将使用这两个关键字声明的变量保持在块范围内来防止开发人员意外污染全局范围。 JavaScript 中的新模块系统通过能够从模块导出值并将这些值导入其他文件，从而在不污染全局范围的情况下更容易地创建全局可访问值。</p>
 <p>但是，单例的常见用例是在整个应用程序中拥有某种全局状态。让代码库的多个部分依赖同一个可变对象可能会导致意外行为。</p>
 <p>通常，代码库的某些部分修改这些全局状态中的值，而其他部分则使用该数据。这里的执行顺序很重要：我们不想在没有数据要消费的时候（还）不小心先消费数据！随着应用程序的增长，了解使用全局状态时的数据流会变得非常棘手，并且数十个组件相互依赖。</p>
+<hr/>
 <h2 id="react-中的状态管理">React 中的状态管理</h2>
 <p>在 React 中，我们经常通过 Redux 或 React Context 等状态管理工具来依赖全局状态，而不是使用 Singleton。 <br />
 尽管它们的全局状态行为可能看起来类似于 Singleton 的行为，但这些工具提供只读状态而不是 Singleton 的可变状态。 <br />
 使用 Redux 时，只有纯函数化简器（reducers）才能在组件通过调度程序（dispatcher）发送操作后更新状态。</p>
 <p>尽管使用这些工具并没有神奇地消除拥有全局状态的缺点，但我们至少可以确保全局状态按照我们想要的方式进行变异，因为组件不能直接更新状态。</p>
+<hr/>
+<h2 id="知识点">知识点</h2>
+<ul>
+<li>class</li>
+<li>对象字面量</li>
+<li>throw 语句</li>
+<li>Object.freeze()</li>
+</ul>
 
   </article>
 </div>
@@ -2364,7 +2427,7 @@ Perfect! 我们无法再创建多个实例。</p>
 <nav class="pagination-single">
   
     
-      <a href="https://danacoding.github.io/patterns/design-patterns/design-patterns-base/" title="设计模式介绍" class="pagination-single__left">
+      <a href="https://danacoding.github.io/patterns/design-patterns/design-patterns/" title="设计模式介绍" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
@@ -2372,6 +2435,13 @@ Perfect! 我们无法再创建多个实例。</p>
       </a>
     
     <div class="grow"></div>
+    
+      <a href="https://danacoding.github.io/patterns/design-patterns/proxy-patterns/" title="代理模式" class="pagination-single__right">
+        <div class="pagination-single__left-title">代理模式</div>
+        <div class="pagination-single__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
+        </div>
+      </a>
     
   
 </nav>
@@ -2406,6 +2476,7 @@ Perfect! 我们无法再创建多个实例。</p>
       </ul>
     </li>
     <li><a href="#react-中的状态管理">React 中的状态管理</a></li>
+    <li><a href="#知识点">知识点</a></li>
   </ul>
 </nav>
   </div>

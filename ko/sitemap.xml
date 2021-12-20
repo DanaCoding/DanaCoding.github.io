@@ -328,7 +328,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/patterns/design-patterns/design-patterns-base/</loc>
+    <loc>https://danacoding.github.io/patterns/design-patterns/design-patterns/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -443,6 +443,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/patterns/design-patterns/proxy-patterns/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/jsts/function/try-catch/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -468,6 +473,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/patterns/design-patterns/provider-pattern/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react/next/next-base/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -484,6 +494,11 @@
   
   <url>
     <loc>https://danacoding.github.io/others/windows/win-office/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/patterns/design-patterns/prototype-pattern/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
