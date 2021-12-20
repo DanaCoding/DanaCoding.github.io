@@ -14,6 +14,15 @@
     
     
       
+      <item>
+        <title>Rust</title>
+        <link>https://danacoding.github.io/rust/rust-base/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/rust/rust-base/</guid>
+        <description>高级人体工程学和低级控制在编程语言设计中往往是不一致的；Rust 挑战了这种冲突。 一、安装 下载安装器，然后运行该程序并遵循屏幕上的指示。 二、获</description>
+      </item>
+      
     
   </channel>
 </rss>

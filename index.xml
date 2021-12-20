@@ -240,6 +240,15 @@
       </item>
       
       <item>
+        <title>Rust</title>
+        <link>https://danacoding.github.io/rust/rust-base/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/rust/rust-base/</guid>
+        <description>高级人体工程学和低级控制在编程语言设计中往往是不一致的；Rust 挑战了这种冲突。 一、安装 下载安装器，然后运行该程序并遵循屏幕上的指示。 二、获</description>
+      </item>
+      
+      <item>
         <title>Ubuntu</title>
         <link>https://danacoding.github.io/nodejs/ubuntu/ubuntu/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -285,12 +294,30 @@
       </item>
       
       <item>
+        <title>渲染模式介绍</title>
+        <link>https://danacoding.github.io/patterns/render-patterns/render-patterns-base/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/patterns/render-patterns/render-patterns-base/</guid>
+        <description></description>
+      </item>
+      
+      <item>
         <title>解构赋值</title>
         <link>https://danacoding.github.io/jsts/array/jiegou/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/jsts/array/jiegou/</guid>
         <description>1. 忽略值 1 2 3 const [apple, , banana] = [&amp;#39;apple&amp;#39;, &amp;#39;pear&amp;#39;, &amp;#39;banana&amp;#39;]; console.log(apple, banana); // apple banana 2. 分配剩余值 1 2 3 4 5 6 const [one, two, ...remainingNum] = [1, 2, 3, 4, 5]; console.log(remainingNum); // [3, 4, 5] const { apple, pear, ...remainFruits } = { apple:&amp;#39;apple&amp;#39;, pear:&amp;#39;pear&amp;#39;, banana:&amp;#39;banana&amp;#39;, cherry:&amp;#39;cherry&amp;#39; }; console.log(remainFruits); // { banana:&amp;#39;banana&amp;#39;, cherry:&amp;#39;cherry&amp;#39; } 3. 组合的</description>
+      </item>
+      
+      <item>
+        <title>设计模式介绍</title>
+        <link>https://danacoding.github.io/patterns/design-patterns/design-patterns-base/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/patterns/design-patterns/design-patterns-base/</guid>
+        <description>设计模式是软件开发的基本部分， 因为它们为软件设计中经常出现的问题提供了典型的解决方案。 设计模式不是提供特定的软件部分，而是可以用来以优化的方</description>
       </item>
       
       <item>
@@ -345,6 +372,15 @@
         
         <guid>https://danacoding.github.io/others/webpack/webpack-adv/</guid>
         <description>静态网站，多个html页面（非SPA），WebPack配置 (基础篇) Step1. 初始化项目 mkdir multiple-htmlpages &amp;amp;&amp;amp; cd multiple-htmlpages yarn init yarn add -D webpack webpack-cli webpack-dev-server html-webpack-plugin mkdir src &amp;amp;&amp;amp; cd src echo &amp;gt;index.html echo &amp;gt;index.js //index</description>
+      </item>
+      
+      <item>
+        <title>单例模式</title>
+        <link>https://danacoding.github.io/patterns/design-patterns/single-patterns/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/patterns/design-patterns/single-patterns/</guid>
+        <description>单例（统一用名词 Singleton 代替）是可以实例化一次的类，并且可以全局访问。单个实例可以在整个应用程序中共享，非常适合管理应用程序中的全局状态。 ES6 中的单</description>
       </item>
       
       <item>

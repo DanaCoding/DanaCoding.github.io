@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Design Patterns 设计模式 on DanaCoding</title>
+    <link>https://danacoding.github.io/patterns/design-patterns/</link>
+    <description>Recent content in Design Patterns 设计模式 on DanaCoding</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <copyright>&amp;copy;{year}, DanaCoding</copyright>
+    <lastBuildDate>Tue, 28 Jan 2020 00:34:39 +0900</lastBuildDate>
+    
+        <atom:link href="https://danacoding.github.io/patterns/design-patterns/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>设计模式介绍</title>
+        <link>https://danacoding.github.io/patterns/design-patterns/design-patterns-base/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/patterns/design-patterns/design-patterns-base/</guid>
+        <description>设计模式是软件开发的基本部分， 因为它们为软件设计中经常出现的问题提供了典型的解决方案。 设计模式不是提供特定的软件部分，而是可以用来以优化的方</description>
+      </item>
+      
+      <item>
+        <title>单例模式</title>
+        <link>https://danacoding.github.io/patterns/design-patterns/single-patterns/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/patterns/design-patterns/single-patterns/</guid>
+        <description>单例（统一用名词 Singleton 代替）是可以实例化一次的类，并且可以全局访问。单个实例可以在整个应用程序中共享，非常适合管理应用程序中的全局状态。 ES6 中的单</description>
+      </item>
+      
+    
+  </channel>
+</rss>

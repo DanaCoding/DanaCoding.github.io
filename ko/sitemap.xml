@@ -158,6 +158,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/patterns/design-patterns/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/nodejs/docker/docker/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -218,6 +223,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/patterns/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/nodejs/orm/prisma/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -268,6 +278,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/rust/rust-base/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/nodejs/ubuntu/ubuntu/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -303,7 +318,17 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/patterns/render-patterns/render-patterns-base/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/jsts/array/jiegou/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/patterns/design-patterns/design-patterns-base/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -343,6 +368,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/patterns/render-patterns/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react-native/ui/ui-kitten/kitten-bp/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -354,6 +384,11 @@
   
   <url>
     <loc>https://danacoding.github.io/others/webpack/webpack-adv/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/patterns/design-patterns/single-patterns/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -379,6 +414,11 @@
   
   <url>
     <loc>https://danacoding.github.io/others/git/git-bp/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/patterns/performance-patterns/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
