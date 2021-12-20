@@ -1931,6 +1931,7 @@
     <p>原型模式是一种在许多相同类型的对象之间共享属性的有用方法。 <code>原型prototype</code>是 JavaScript 原生的对象，对象可以通过<code>原型链__proto__</code>访问。</p>
 <p>在应用程序中，我们经常需要创建许多相同类型的对象。 一个有用的方法是创建一个 ES6 类的多个实例。</p>
 <p>假设我们想创造很多狗！ 在我们的例子中，狗不能做很多事：它们只有一个名字，而且它们可以吠叫！</p>
+<hr/>
 <h2 id="类-class">类 class</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1974,7 +1975,8 @@
 </span><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">dog3</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span> <span class="c1">//Spot
 </span></code></pre></td></tr></table>
 </div>
-</div><h2 id="原型-prototype">原型 <code>prototype</code></h2>
+</div><hr/>
+<h2 id="原型-prototype">原型 <code>prototype</code></h2>
 <p>请注意，构造函数如何包含 name 属性，而类本身包含 bark 属性。 <br />
 使用 ES6 类时，在类本身上定义的所有属性（在本例中为 bark）都会自动添加到<code>原型prototype</code>中。</p>
 <p>可以通过访问构造函数上的 prototype 属性直接查看原型，或者通过任何实例上的 <code>__proto__</code> 属性。</p>
@@ -2045,7 +2047,8 @@
 <span class="nx">dog1</span><span class="p">.</span><span class="nx">play</span><span class="p">();</span> <span class="c1">//Playing now! 
 </span></code></pre></td></tr></table>
 </div>
-</div><h2 id="原型链-__proto__">原型链 <code>__proto__</code></h2>
+</div><hr/>
+<h2 id="原型链-__proto__">原型链 <code>__proto__</code></h2>
 <p>原型链表示可能不止一个步骤。 的确！ 到目前为止，我们只看到了如何访问在 <code>__proto__</code> 引用的第一个对象上直接可用的属性。 然而，原型本身也有一个<code> __proto__</code> 对象！</p>
 <p>让我们创造另一种类型的狗，超级狗！ 这只狗应该继承普通狗的一切，但它也应该会飞。 我们可以通过扩展 Dog 类并添加 fly 方法来创建超级狗。</p>
 <pre tabindex="0"><code class="language-base" data-lang="base">class SuperDog extends Dog {
@@ -2161,6 +2164,7 @@ const pet1 = Object.create(dog);
 <h2 id="优点">优点</h2>
 <p>原型模式允许我们轻松地让对象访问和继承其他对象的属性。</p>
 <p>由于原型链允许我们访问未直接定义在对象本身上的属性，我们可以避免方法和属性的重复，从而减少使用的内存量。</p>
+<hr/>
 <h2 id="知识点">知识点</h2>
 <ul>
 <li><code>prototype</code> 对象/类本身的属性</li>
