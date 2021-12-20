@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>代理模式 – DanaCoding</title>
+    <title>容器/展示模式 – DanaCoding</title>
     
 
 
@@ -30,7 +30,7 @@
     
     var baseurl = JSON.parse("\"https://danacoding.github.io/\"");
     
-    var permalink = JSON.parse("\"https://danacoding.github.io/patterns/design-patterns/proxy-patterns/\"");
+    var permalink = JSON.parse("\"https://danacoding.github.io/patterns/design-patterns/presentational-container-pattern/\"");
 
     
     var toggleSidebarElem = document.getElementById("toggle-sidebar");
@@ -1072,21 +1072,21 @@
 <link rel="stylesheet" href="/css/main.min.css">
 
 
-    <meta name="description" content="拦截和控制与目标对象的交互" />
+    <meta name="description" content="通过将视图与应用程序逻辑分离来强制分离关注点" />
 <meta name="keywords" content="">
 <meta name="created" content="2020-01-28T00:34:39&#43;0900">
 <meta name="modified" content="2020-01-28T00:34:39&#43;0900">
 
 
 <meta property="og:site_name" content="DanaCoding">
-<meta property="og:title" content="代理模式">
-<meta property="og:url" content="https://danacoding.github.io/patterns/design-patterns/proxy-patterns/">
+<meta property="og:title" content="容器/展示模式">
+<meta property="og:url" content="https://danacoding.github.io/patterns/design-patterns/presentational-container-pattern/">
 <meta property="og:type" content="article">
 
 <meta name="generator" content="Hugo 0.90.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
-<link rel="canonical" href="https://danacoding.github.io/patterns/design-patterns/proxy-patterns/">
+<link rel="canonical" href="https://danacoding.github.io/patterns/design-patterns/presentational-container-pattern/">
 <link rel="manifest" href="/manifest.json">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
@@ -1110,11 +1110,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "代理模式",
+    "headline": "容器/展示模式",
     "datePublished": "2020-01-28T00:34:39+09:00",
     "dateModified": "2020-01-28T00:34:39+09:00",
-    "url" : "https://danacoding.github.io/patterns/design-patterns/proxy-patterns/",
-    "description": "拦截和控制与目标对象的交互",
+    "url" : "https://danacoding.github.io/patterns/design-patterns/presentational-container-pattern/",
+    "description": "通过将视图与应用程序逻辑分离来强制分离关注点",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://danacoding.github.io/"
@@ -1163,7 +1163,7 @@
     <div class="menu">
   <h6 class="menu__label">
     
-      代理模式
+      容器/展示模式
     
   </h6>
   <ul>
@@ -1193,7 +1193,7 @@
       
     </span>
   </li>
-  <ul class="menu__list active" data-data=/design-patterns/ data-link=https://danacoding.github.io/patterns/design-patterns/proxy-patterns/>
+  <ul class="menu__list active" data-data=/design-patterns/ data-link=https://danacoding.github.io/patterns/design-patterns/presentational-container-pattern/>
     
       
         
@@ -1215,7 +1215,7 @@
         
         
         <li>
-          <a href="https://danacoding.github.io/patterns/design-patterns/proxy-patterns/" class="menu__title active" data-depth="0">代理模式</a>
+          <a href="https://danacoding.github.io/patterns/design-patterns/proxy-patterns/" class="menu__title " data-depth="0">代理模式</a>
         </li>
       
     
@@ -1239,7 +1239,7 @@
         
         
         <li>
-          <a href="https://danacoding.github.io/patterns/design-patterns/presentational-container-pattern/" class="menu__title " data-depth="0">容器/展示模式</a>
+          <a href="https://danacoding.github.io/patterns/design-patterns/presentational-container-pattern/" class="menu__title active" data-depth="0">容器/展示模式</a>
         </li>
       
     
@@ -1287,7 +1287,7 @@
       
     </span>
   </li>
-  <ul class="menu__list " data-data=/render-patterns/ data-link=https://danacoding.github.io/patterns/design-patterns/proxy-patterns/>
+  <ul class="menu__list " data-data=/render-patterns/ data-link=https://danacoding.github.io/patterns/design-patterns/presentational-container-pattern/>
     
       
         
@@ -1325,7 +1325,7 @@
       
     </span>
   </li>
-  <ul class="menu__list " data-data=/performance-patterns/ data-link=https://danacoding.github.io/patterns/design-patterns/proxy-patterns/>
+  <ul class="menu__list " data-data=/performance-patterns/ data-link=https://danacoding.github.io/patterns/design-patterns/presentational-container-pattern/>
     
   </ul>
   
@@ -1711,7 +1711,7 @@
   <div class="header__wrapper bgcolor__header">
     <div class="divider">
       <div class="lmr">
-        <h2 class="title">代理模式</h2>
+        <h2 class="title">容器/展示模式</h2>
       </div>
     </div>
   </div>
@@ -1754,7 +1754,7 @@
   
   <li  class="is-active" >
     
-      <span>代理模式</span>
+      <span>容器/展示模式</span>
     
   </li>
   
@@ -1796,7 +1796,7 @@
         <div class="menu">
   <h6 class="menu__label">
     
-      代理模式
+      容器/展示模式
     
   </h6>
   <ul>
@@ -1826,7 +1826,7 @@
       
     </span>
   </li>
-  <ul class="menu__list active" data-data=/design-patterns/ data-link=https://danacoding.github.io/patterns/design-patterns/proxy-patterns/>
+  <ul class="menu__list active" data-data=/design-patterns/ data-link=https://danacoding.github.io/patterns/design-patterns/presentational-container-pattern/>
     
       
         
@@ -1848,7 +1848,7 @@
         
         
         <li>
-          <a href="https://danacoding.github.io/patterns/design-patterns/proxy-patterns/" class="menu__title active" data-depth="0">代理模式</a>
+          <a href="https://danacoding.github.io/patterns/design-patterns/proxy-patterns/" class="menu__title " data-depth="0">代理模式</a>
         </li>
       
     
@@ -1872,7 +1872,7 @@
         
         
         <li>
-          <a href="https://danacoding.github.io/patterns/design-patterns/presentational-container-pattern/" class="menu__title " data-depth="0">容器/展示模式</a>
+          <a href="https://danacoding.github.io/patterns/design-patterns/presentational-container-pattern/" class="menu__title active" data-depth="0">容器/展示模式</a>
         </li>
       
     
@@ -1920,7 +1920,7 @@
       
     </span>
   </li>
-  <ul class="menu__list " data-data=/render-patterns/ data-link=https://danacoding.github.io/patterns/design-patterns/proxy-patterns/>
+  <ul class="menu__list " data-data=/render-patterns/ data-link=https://danacoding.github.io/patterns/design-patterns/presentational-container-pattern/>
     
       
         
@@ -1958,7 +1958,7 @@
       
     </span>
   </li>
-  <ul class="menu__list " data-data=/performance-patterns/ data-link=https://danacoding.github.io/patterns/design-patterns/proxy-patterns/>
+  <ul class="menu__list " data-data=/performance-patterns/ data-link=https://danacoding.github.io/patterns/design-patterns/presentational-container-pattern/>
     
   </ul>
   
@@ -1976,79 +1976,47 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <p>使用 Proxy 对象，可以更好地控制与某些对象的交互。 每当与对象交互时，代理对象都可以确定行为，例如当我们获取一个值或设置一个值时。</p>
-<p>一般来说，代理是指别人的替身。 您将与联系的人的代理人交谈，而不是直接与该人交谈。 JavaScript 中也会发生同样的情况：我们将与 Proxy 对象交互，而不是直接与目标对象交互。</p>
+    <p>在 React 中，一种强制分离关注点的方法是通过使用容器/演示模式。使用这种模式，我们可以将视图与应用程序逻辑分开。</p>
 <hr/>
-<h2 id="proxy-代理">Proxy 代理</h2>
-<p>创建一个代表 John Doe 的 person 对象。</p>
-<pre tabindex="0"><code class="language-base" data-lang="base">const person = {
-  name: &quot;John Doe&quot;,
-  age: 42,
-  nationality: &quot;American&quot;
-};
-</code></pre><p>我们希望与代理对象进行交互，而不是直接与该对象交互。 在 JavaScript 中，可以通过创建一个新的 Proxy 实例来轻松地创建一个新的代理。</p>
-<pre tabindex="0"><code class="language-base" data-lang="base">const person = {
-  name: &quot;John Doe&quot;,
-  age: 42,
-  nationality: &quot;American&quot;
-};
-
-const personProxy = new Proxy(person, {});
-</code></pre><p>Proxy 的第一个参数是一个代表处理程序的对象。 在处理程序对象中，我们可以根据交互的类型定义特定的行为。 <br />
-虽然有很多方法可以添加到代理处理程序中，但最常见的两个是 get 和 set：</p>
-<ul>
-<li>get：在尝试访问属性时被调用</li>
-<li>set：在尝试修改属性时被调用</li>
-</ul>
-<p>实际上，最终会发生以下情况：</p>
-<img src="https://lh3.googleusercontent.com/-Y9WIouOE98Q/YcCGoMWO81I/AAAAAAAACG0/Xmhk9dE9DLkXMhk0C-30EfohXXeYuNUvgCNcBGAsYHQ/w656-h369/jspat-51_xvbob9.gif" />
-<p>我们将与 personProxy 进行交互，而不是直接与 person 对象交互。</p>
-<p>让我们向 personProxy 代理添加处理程序。 当尝试修改一个属性，从而调用代理上的 set 方法时，我们希望代理记录该属性的先前值和新值。 <br />
-当试图访问一个属性，从而调用代理上的 get 方法时，我们希望代理记录一个更易读的句子，其中包含该属性的任何值。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="kr">const</span> <span class="nx">personProxy</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Proxy</span><span class="p">(</span><span class="nx">person</span><span class="p">,</span> <span class="p">{</span>
-  <span class="nx">get</span><span class="o">:</span> <span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">prop</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">prop</span><span class="si">}</span><span class="sb"> 的值是 </span><span class="si">${</span><span class="nx">obj</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-  <span class="p">},</span>
-  <span class="nx">set</span><span class="o">:</span> <span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">prop</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`将 </span><span class="si">${</span><span class="nx">prop</span><span class="si">}</span><span class="sb"> 从 </span><span class="si">${</span><span class="nx">obj</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span><span class="si">}</span><span class="sb"> 更改为 </span><span class="si">${</span><span class="nx">value</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-    <span class="nx">obj</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">});</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Perfect! 让我们看看当我们尝试修改或检索属性时会发生什么。</p>
+<p>在 React 中，强制分离关注点的一种方法是使用 <code>Container/Presentational</code> 模式。 使用这种模式，我们可以将视图与应用程序逻辑分开。</p>
+<p>假设我们要创建一个应用程序来获取 6 个狗的图像，并将这些图像呈现在屏幕上。</p>
+<p>理想情况下，我们希望通过将此过程分为两部分来强制分离关注点：</p>
+<ol>
+<li>展示组件：关心如何向用户显示数据的组件。 在这个例子中，这是渲染狗图像列表。</li>
+<li>容器组件：关心向用户显示什么数据的组件。 在这个例子中，这是获取狗的图像。</li>
+</ol>
+<p>容器组件 获取狗图像处理应用程序逻辑，而 展示组件 只处理视图。</p>
+<hr/>
+<h2 id="展示组件">展示组件</h2>
+<p>一个展示组件通过 props 接收它的数据。 <br />
+它的主要功能是简单地以我们希望的方式显示它接收到的数据，包括样式，而不修改该数据。</p>
+<p>让我们看一下显示狗图像的示例。 <br />
+在渲染狗图像时，我们只想映射从 API 获取的每个狗图像，并渲染这些图像。 <br />
+为此，可以创建一个功能组件，通过 props 接收数据，并渲染它接收到的数据。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="nx">personProxy</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span> <span class="c1">//name 的值是 John Doe
-</span><span class="c1"></span><span class="nx">personProxy</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mi">43</span><span class="p">;</span> <span class="c1">//年龄从 42 更改为 43
-</span></code></pre></td></tr></table>
+<span class="c1">//展示组件 DogImages.js
+</span><span class="c1"></span><span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">DogImages</span><span class="p">({</span> <span class="nx">dogs</span> <span class="p">})</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">dogs</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">dog</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="nx">dog</span><span class="p">}</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">i</span><span class="p">}</span> <span class="nx">alt</span><span class="o">=</span><span class="s2">&#34;Dog&#34;</span> <span class="o">/&gt;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
 </div>
-</div><p>在访问 name 属性时，Proxy 返回了一个更好听的句子：name 的值是 John Doe。</p>
-<p>在修改 age 属性时，Proxy 返回了该属性的上一个值和新值：将年龄从 42 更改为 43。</p>
-<hr/>
-<hr/>
-<p>代理可用于添加验证。 用户不应该能够将人的年龄更改为字符串值，或者给他一个空的名字。 或者，如果用户试图访问对象上不存在的属性，我们应该让用户知道。</p>
+</div><hr/>
+<h2 id="容器组件">容器组件</h2>
+<p>容器组件的主要功能是将数据传递给它们包含的表示组件。 <br />
+除了关心其数据的展示组件之外，容器组件本身通常不会渲染任何其他组件。 <br />
+因为它们自己不渲染任何东西，所以它们通常也不包含任何样式。</p>
+<p>在示例中，我们希望将狗图像传递给 DogsImages 展示组件。 <br />
+在能够这样做之前，需要从外部 API 获取图像。<br />
+需要创建一个容器组件来获取这些数据，并将这些数据传递给展示组件 DogImages 以便在屏幕上显示它。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2073,58 +2041,36 @@ const personProxy = new Proxy(person, {});
 </span><span class="lnt">20
 </span><span class="lnt">21
 </span><span class="lnt">22
+</span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="kr">const</span> <span class="nx">personProxy</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Proxy</span><span class="p">(</span><span class="nx">person</span><span class="p">,</span> <span class="p">{</span>
-  <span class="nx">get</span><span class="o">:</span> <span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">prop</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">obj</span><span class="p">[</span><span class="nx">prop</span><span class="p">])</span> <span class="p">{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
-        <span class="sb">`嗯..目标对象上似乎不存在此属性`</span>
-      <span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">prop</span><span class="si">}</span><span class="sb"> 的值是 </span><span class="si">${</span><span class="nx">obj</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">},</span>
-  <span class="nx">set</span><span class="o">:</span> <span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">prop</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">prop</span> <span class="o">===</span> <span class="s2">&#34;age&#34;</span> <span class="o">&amp;&amp;</span> <span class="k">typeof</span> <span class="nx">value</span> <span class="o">!==</span> <span class="s2">&#34;number&#34;</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`抱歉，您只能传递年龄的数值。`</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">prop</span> <span class="o">===</span> <span class="s2">&#34;name&#34;</span> <span class="o">&amp;&amp;</span> <span class="nx">value</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`您需要提供一个有效的 name。`</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`将 </span><span class="si">${</span><span class="nx">prop</span><span class="si">}</span><span class="sb"> 从 </span><span class="si">${</span><span class="nx">obj</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span><span class="si">}</span><span class="sb"> 更改为 </span><span class="si">${</span><span class="nx">value</span><span class="si">}</span><span class="sb">。`</span><span class="p">);</span>
-      <span class="nx">obj</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="c1">//容器组件 DogImagesContainer.js
+</span><span class="c1"></span><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">DogImages</span> <span class="nx">from</span> <span class="s2">&#34;./DogImages&#34;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kr">class</span> <span class="nx">DogImagesContainer</span> <span class="kr">extends</span> <span class="nx">React</span><span class="p">.</span><span class="nx">Component</span> <span class="p">{</span>
+  <span class="nx">constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kr">super</span><span class="p">();</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">dogs</span><span class="o">:</span> <span class="p">[]</span>
+    <span class="p">};</span>
   <span class="p">}</span>
-<span class="p">});</span>
+
+  <span class="nx">componentDidMount</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">fetch</span><span class="p">(</span><span class="s2">&#34;https://dog.ceo/api/breed/labrador/images/random/6&#34;</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="p">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">(({</span> <span class="nx">message</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> <span class="nx">dogs</span><span class="o">:</span> <span class="nx">message</span> <span class="p">}));</span>
+  <span class="p">}</span>
+
+  <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">DogImages</span> <span class="nx">dogs</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">dogs</span><span class="p">}</span> <span class="o">/&gt;</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>让我们看看当我们试图传递错误值时会发生什么！</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="nx">personProxy</span><span class="p">.</span><span class="nx">nonExistentProperty</span><span class="p">;</span> <span class="c1">//嗯..这个属性似乎不存在
-</span><span class="c1"></span><span class="nx">personProxy</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="s2">&#34;44&#34;</span><span class="p">;</span> <span class="c1">//抱歉，您只能传递年龄的数值
-</span><span class="c1"></span><span class="nx">personProxy</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span> <span class="c1">//您需要提供一个有效的名称
-</span></code></pre></td></tr></table>
-</div>
-</div><p>Proxy 代理确保我们没有修改具有错误值的 person 对象，这有助于我们保持数据纯净！</p>
-<hr/>
-<h2 id="reflect-映射">Reflect 映射</h2>
-<p>JavaScript 提供了一个名为 的内置对象Reflect，它使我们在使用代理时更容易操作目标对象。</p>
-<p>Reflect 是一个内置的对象，它提供拦截 JavaScript 操作的方法。<br />
-这些方法与 proxy handlers 的方法相同。</p>
-<p>Reflect 不是一个函数对象，因此它是不可构造的。</p>
-<p>在上面，我们尝试通过使用括号表示法直接获取或设置值来修改和访问代理内目标对象的属性。 <br />
-现在，我们可以使用 Reflect 对象。 Reflect 对象上的方法与处理程序对象上的方法同名。</p>
-<p>可以通过 <code>Reflect.get()</code> 和 <code>Reflect.set()</code> 访问或修改目标对象上的属性，而不是通过 <code>obj[prop]</code> 访问属性或通过 <code>obj[prop] = value</code> 设置属性。 <br />
-这些方法接收与处理程序（handlers）对象上的方法相同的参数。</p>
+</div><hr/>
+<h2 id="将组件渲染到页面中">将组件渲染到页面中</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2137,45 +2083,190 @@ const personProxy = new Proxy(person, {});
 </span><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="kr">const</span> <span class="nx">personProxy</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Proxy</span><span class="p">(</span><span class="nx">person</span><span class="p">,</span> <span class="p">{</span>
-  <span class="nx">get</span><span class="o">:</span> <span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">prop</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">prop</span><span class="si">}</span><span class="sb"> 的值是 </span><span class="si">${</span><span class="nx">Reflect</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">prop</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-  <span class="p">},</span>
-  <span class="nx">set</span><span class="o">:</span> <span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">prop</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`将 </span><span class="si">${</span><span class="nx">prop</span><span class="si">}</span><span class="sb"> 从 </span><span class="si">${</span><span class="nx">obj</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span><span class="si">}</span><span class="sb"> 更改为 </span><span class="si">${</span><span class="nx">value</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-    <span class="nx">Reflect</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">prop</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">});</span>
+<span class="c1">//将组件渲染到页面中
+</span><span class="c1"></span><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">render</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react-dom&#34;</span><span class="p">;</span>
+
+<span class="kr">import</span> <span class="nx">DogImagesContainer</span> <span class="nx">from</span> <span class="s2">&#34;./DogImagesContainer&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="s2">&#34;./styles.css&#34;</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;App&#34;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span>
+        <span class="nx">Browse</span> <span class="nx">Dog</span> <span class="nx">Images</span><span class="p">{</span><span class="s2">&#34; &#34;</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="nx">span</span> <span class="nx">role</span><span class="o">=</span><span class="s2">&#34;img&#34;</span> <span class="nx">aria</span><span class="o">-</span><span class="nx">label</span><span class="o">=</span><span class="s2">&#34;emoji&#34;</span><span class="o">&gt;</span>
+          <span class="err">🐕</span>
+        <span class="o">&lt;</span><span class="err">/span&gt;</span>
+      <span class="o">&lt;</span><span class="err">/h1&gt;</span>
+      <span class="o">&lt;</span><span class="nx">DogImagesContainer</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;root&#34;</span><span class="p">));</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>Perfect! 我们可以使用 Reflect 对象轻松访问和修改目标对象的属性。</p>
+</div><img src="https://lh3.googleusercontent.com/-pFkExp608Dc/YcDe58TKaRI/AAAAAAAACH0/G9QPfiVQJrA57EcR99Cx9JPpj9ryZDuyQCNcBGAsYHQ/w680-h383/ezgif.com-gif-maker%2B%25282%2529.gif"/>
+<img src="https://lh3.googleusercontent.com/-Y7RI17In6uE/YcDih5PuVAI/AAAAAAAACH8/s8WXKfaqKeI2jkAYizsbWg7_MsAbtQabgCNcBGAsYHQ/w329-h653/QQ%25E6%2588%25AA%25E5%259B%25BE20211221040655.png"/>
+<hr/>
+<h2 id="hooks">Hooks</h2>
+<p>在很多情况下，Container/Presentational 模式可以用 React Hooks 代替。 <br />
+Hooks 的引入使开发人员可以轻松添加状态，而无需容器组件来提供该状态。</p>
+<p>我们可以创建一个自定义钩子来获取图像并返回狗的数组，而不是在 DogImagesContainer 组件中使用数据获取逻辑。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="c1">//自定义hook useDogImages.js
+</span><span class="c1"></span><span class="kr">import</span> <span class="p">{</span> <span class="nx">useState</span><span class="p">,</span> <span class="nx">useEffect</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">useDogImages</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="p">[</span><span class="nx">dogs</span><span class="p">,</span> <span class="nx">setDogs</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">([]);</span>
+
+  <span class="nx">useEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">fetch</span><span class="p">(</span><span class="s2">&#34;https://dog.ceo/api/breed/labrador/images/random/6&#34;</span><span class="p">)</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="p">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+      <span class="p">.</span><span class="nx">then</span><span class="p">(({</span> <span class="nx">message</span> <span class="p">})</span> <span class="p">=&gt;</span> <span class="nx">setDogs</span><span class="p">(</span><span class="nx">message</span><span class="p">));</span>
+  <span class="p">},</span> <span class="p">[]);</span>
+
+  <span class="k">return</span> <span class="nx">dogs</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>通过使用这个钩子，不再需要包装 DogImagesContainer 容器组件来获取数据，并将其发送到展示的 DogImages 组件。</p>
+<p>相反，我们可以直接在 DogImages 组件中使用这个钩子！</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="nx">personProxy</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span> <span class="c1">//name 的值是 John Doe
-</span><span class="c1"></span><span class="nx">personProxy</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mi">43</span><span class="p">;</span> <span class="c1">//年龄从 42 更改为 43
-</span><span class="c1"></span><span class="nx">personProxy</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s2">&#34;Jane Doe&#34;</span><span class="p">;</span> <span class="c1">//将名字从 John Doe 更改为 Jane Doe
-</span></code></pre></td></tr></table>
+<span class="c1">//展示组件 DogImages.js
+</span><span class="c1"></span><span class="kr">import</span> <span class="nx">useDogImages</span> <span class="nx">from</span> <span class="s2">&#34;./useDogImages&#34;</span><span class="p">;</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">DogImages</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">dogs</span> <span class="o">=</span> <span class="nx">useDogImages</span><span class="p">();</span>
+
+  <span class="k">return</span> <span class="nx">dogs</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">dog</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="nx">dog</span><span class="p">}</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">i</span><span class="p">}</span> <span class="nx">alt</span><span class="o">=</span><span class="s2">&#34;Dog&#34;</span> <span class="o">/&gt;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
 </div>
-</div><hr/>
-<h2 id="结语">结语</h2>
-<p>Proxy 是一种强大的方式来添加对对象行为的控制。 代理可以有各种用例：它可以帮助验证、格式化、通知或调试。</p>
-<p>过度使用 Proxy 对象或对每个处理程序方法调用执行繁重的操作很容易对应用程序的性能产生负面影响。</p>
-<p>最好不要对性能关键代码使用 Proxy。</p>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="c1">//将展示组件渲染到页面
+</span><span class="c1"></span><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">render</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react-dom&#34;</span><span class="p">;</span>
+
+<span class="kr">import</span> <span class="nx">DogImages</span> <span class="nx">from</span> <span class="s2">&#34;./DogImages&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="s2">&#34;./styles.css&#34;</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;App&#34;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">h1</span><span class="o">&gt;</span>
+        <span class="nx">Browse</span> <span class="nx">Dog</span> <span class="nx">Images</span><span class="p">{</span><span class="s2">&#34; &#34;</span><span class="p">}</span>
+        <span class="o">&lt;</span><span class="nx">span</span> <span class="nx">role</span><span class="o">=</span><span class="s2">&#34;img&#34;</span> <span class="nx">aria</span><span class="o">-</span><span class="nx">label</span><span class="o">=</span><span class="s2">&#34;emoji&#34;</span><span class="o">&gt;</span>
+          <span class="err">🐕</span>
+        <span class="o">&lt;</span><span class="err">/span&gt;</span>
+      <span class="o">&lt;</span><span class="err">/h1&gt;</span>
+      <span class="o">&lt;</span><span class="nx">DogImages</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">render</span><span class="p">(</span><span class="o">&lt;</span><span class="nx">App</span> <span class="o">/&gt;</span><span class="p">,</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;root&#34;</span><span class="p">));</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>通过使用 useDogImages 钩子，我们仍然将应用程序逻辑与视图分离。 <br />
+我们只是使用从 useDogImages 钩子返回的数据，而没有在 DogImages 组件中修改该数据。</p>
+<img src="https://lh3.googleusercontent.com/-oCvHdjpJ9PE/YcDncx891oI/AAAAAAAACIE/O2Cfm8ig4dUXrbT2oU84y5daBlskZxrzACNcBGAsYHQ/w669-h376/ezgif.com-gif-maker%2B%25283%2529.gif"/>
+<p>钩子可以很容易地分离组件中的逻辑和视图，就像容器/展示模式一样。 它为我们节省了将展示组件包装在容器组件中所需的额外层。</p>
+<hr/>
+<h2 id="优点">优点</h2>
+<p>使用容器/展示模式有很多好处。</p>
+<p>Container/Presentational 模式鼓励关注点分离。<br />
+展示组件可以是负责 UI 的纯函数，而容器组件则负责应用程序的状态和数据。这使得实施关注点分离变得容易。</p>
+<p>展示组件很容易重用，因为它们只是显示数据而不改变这些数据。可以为不同的目的在整个应用程序中重用展示组件。</p>
+<p>由于展示组件不会改变应用程序逻辑，因此不了解代码库的人（例如设计人员）可以轻松更改表示组件的外观。<br />
+如果在应用程序的许多部分重用了展示组件，则更改可以在整个应用程序中保持一致。</p>
+<p>测试展示组件很容易，因为它们通常是纯函数。我们知道组件将根据我们传递的数据呈现什么，而无需模拟数据存储。</p>
+<hr/>
+<h2 id="缺点">缺点</h2>
+<p>Container/Presentational 模式可以轻松地将应用程序逻辑与呈现逻辑分开。 <br />
+但是，Hooks 可以实现相同的结果，而无需使用容器/展示模式，也无需将无状态功能组件重写为类组件。</p>
+<p>尽管我们仍然可以使用容器/展示模式，甚至使用 React Hooks，但这种模式在较小规模的应用程序中很容易成为一种矫枉过正。</p>
 <hr/>
 <h2 id="知识点">知识点</h2>
 <ul>
-<li>Proxy</li>
-<li>Reflect</li>
+<li>纯函数展示组件</li>
+<li>自定义hooks</li>
 </ul>
 
   </article>
@@ -2185,17 +2276,17 @@ const personProxy = new Proxy(person, {});
 <nav class="pagination-single">
   
     
-      <a href="https://danacoding.github.io/patterns/design-patterns/single-patterns/" title="单例模式" class="pagination-single__left">
+      <a href="https://danacoding.github.io/patterns/design-patterns/prototype-pattern/" title="原型模式" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__right-title">单例模式</div>
+        <div class="pagination-single__right-title">原型模式</div>
       </a>
     
     <div class="grow"></div>
     
-      <a href="https://danacoding.github.io/patterns/design-patterns/provider-pattern/" title="提供者模式" class="pagination-single__right">
-        <div class="pagination-single__left-title">提供者模式</div>
+      <a href="https://danacoding.github.io/patterns/design-patterns/observer-pattern/" title="观察者模式" class="pagination-single__right">
+        <div class="pagination-single__left-title">观察者模式</div>
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
         </div>
@@ -2217,9 +2308,12 @@ const personProxy = new Proxy(person, {});
   <div class="toc__body">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#proxy-代理">Proxy 代理</a></li>
-    <li><a href="#reflect-映射">Reflect 映射</a></li>
-    <li><a href="#结语">结语</a></li>
+    <li><a href="#展示组件">展示组件</a></li>
+    <li><a href="#容器组件">容器组件</a></li>
+    <li><a href="#将组件渲染到页面中">将组件渲染到页面中</a></li>
+    <li><a href="#hooks">Hooks</a></li>
+    <li><a href="#优点">优点</a></li>
+    <li><a href="#缺点">缺点</a></li>
     <li><a href="#知识点">知识点</a></li>
   </ul>
 </nav>

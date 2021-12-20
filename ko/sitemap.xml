@@ -503,12 +503,22 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/patterns/design-patterns/presentational-container-pattern/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react/remix/remix-adv/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://danacoding.github.io/others/yarn/yarn-bp/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/patterns/design-patterns/observer-pattern/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -524,6 +534,11 @@
   
   <url>
     <loc>https://danacoding.github.io/others/cmd/cmdpsl/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/patterns/design-patterns/module-pattern/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   

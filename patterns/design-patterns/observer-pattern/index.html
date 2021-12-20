@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>代理模式 – DanaCoding</title>
+    <title>观察者模式 – DanaCoding</title>
     
 
 
@@ -30,7 +30,7 @@
     
     var baseurl = JSON.parse("\"https://danacoding.github.io/\"");
     
-    var permalink = JSON.parse("\"https://danacoding.github.io/patterns/design-patterns/proxy-patterns/\"");
+    var permalink = JSON.parse("\"https://danacoding.github.io/patterns/design-patterns/observer-pattern/\"");
 
     
     var toggleSidebarElem = document.getElementById("toggle-sidebar");
@@ -1072,21 +1072,21 @@
 <link rel="stylesheet" href="/css/main.min.css">
 
 
-    <meta name="description" content="拦截和控制与目标对象的交互" />
+    <meta name="description" content="使用 observables 在事件发生时通知订阅者" />
 <meta name="keywords" content="">
 <meta name="created" content="2020-01-28T00:34:39&#43;0900">
 <meta name="modified" content="2020-01-28T00:34:39&#43;0900">
 
 
 <meta property="og:site_name" content="DanaCoding">
-<meta property="og:title" content="代理模式">
-<meta property="og:url" content="https://danacoding.github.io/patterns/design-patterns/proxy-patterns/">
+<meta property="og:title" content="观察者模式">
+<meta property="og:url" content="https://danacoding.github.io/patterns/design-patterns/observer-pattern/">
 <meta property="og:type" content="article">
 
 <meta name="generator" content="Hugo 0.90.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
-<link rel="canonical" href="https://danacoding.github.io/patterns/design-patterns/proxy-patterns/">
+<link rel="canonical" href="https://danacoding.github.io/patterns/design-patterns/observer-pattern/">
 <link rel="manifest" href="/manifest.json">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
@@ -1110,11 +1110,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "代理模式",
+    "headline": "观察者模式",
     "datePublished": "2020-01-28T00:34:39+09:00",
     "dateModified": "2020-01-28T00:34:39+09:00",
-    "url" : "https://danacoding.github.io/patterns/design-patterns/proxy-patterns/",
-    "description": "拦截和控制与目标对象的交互",
+    "url" : "https://danacoding.github.io/patterns/design-patterns/observer-pattern/",
+    "description": "使用 observables 在事件发生时通知订阅者",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://danacoding.github.io/"
@@ -1163,7 +1163,7 @@
     <div class="menu">
   <h6 class="menu__label">
     
-      代理模式
+      观察者模式
     
   </h6>
   <ul>
@@ -1193,7 +1193,7 @@
       
     </span>
   </li>
-  <ul class="menu__list active" data-data=/design-patterns/ data-link=https://danacoding.github.io/patterns/design-patterns/proxy-patterns/>
+  <ul class="menu__list active" data-data=/design-patterns/ data-link=https://danacoding.github.io/patterns/design-patterns/observer-pattern/>
     
       
         
@@ -1215,7 +1215,7 @@
         
         
         <li>
-          <a href="https://danacoding.github.io/patterns/design-patterns/proxy-patterns/" class="menu__title active" data-depth="0">代理模式</a>
+          <a href="https://danacoding.github.io/patterns/design-patterns/proxy-patterns/" class="menu__title " data-depth="0">代理模式</a>
         </li>
       
     
@@ -1247,7 +1247,7 @@
         
         
         <li>
-          <a href="https://danacoding.github.io/patterns/design-patterns/observer-pattern/" class="menu__title " data-depth="0">观察者模式</a>
+          <a href="https://danacoding.github.io/patterns/design-patterns/observer-pattern/" class="menu__title active" data-depth="0">观察者模式</a>
         </li>
       
     
@@ -1287,7 +1287,7 @@
       
     </span>
   </li>
-  <ul class="menu__list " data-data=/render-patterns/ data-link=https://danacoding.github.io/patterns/design-patterns/proxy-patterns/>
+  <ul class="menu__list " data-data=/render-patterns/ data-link=https://danacoding.github.io/patterns/design-patterns/observer-pattern/>
     
       
         
@@ -1325,7 +1325,7 @@
       
     </span>
   </li>
-  <ul class="menu__list " data-data=/performance-patterns/ data-link=https://danacoding.github.io/patterns/design-patterns/proxy-patterns/>
+  <ul class="menu__list " data-data=/performance-patterns/ data-link=https://danacoding.github.io/patterns/design-patterns/observer-pattern/>
     
   </ul>
   
@@ -1711,7 +1711,7 @@
   <div class="header__wrapper bgcolor__header">
     <div class="divider">
       <div class="lmr">
-        <h2 class="title">代理模式</h2>
+        <h2 class="title">观察者模式</h2>
       </div>
     </div>
   </div>
@@ -1754,7 +1754,7 @@
   
   <li  class="is-active" >
     
-      <span>代理模式</span>
+      <span>观察者模式</span>
     
   </li>
   
@@ -1796,7 +1796,7 @@
         <div class="menu">
   <h6 class="menu__label">
     
-      代理模式
+      观察者模式
     
   </h6>
   <ul>
@@ -1826,7 +1826,7 @@
       
     </span>
   </li>
-  <ul class="menu__list active" data-data=/design-patterns/ data-link=https://danacoding.github.io/patterns/design-patterns/proxy-patterns/>
+  <ul class="menu__list active" data-data=/design-patterns/ data-link=https://danacoding.github.io/patterns/design-patterns/observer-pattern/>
     
       
         
@@ -1848,7 +1848,7 @@
         
         
         <li>
-          <a href="https://danacoding.github.io/patterns/design-patterns/proxy-patterns/" class="menu__title active" data-depth="0">代理模式</a>
+          <a href="https://danacoding.github.io/patterns/design-patterns/proxy-patterns/" class="menu__title " data-depth="0">代理模式</a>
         </li>
       
     
@@ -1880,7 +1880,7 @@
         
         
         <li>
-          <a href="https://danacoding.github.io/patterns/design-patterns/observer-pattern/" class="menu__title " data-depth="0">观察者模式</a>
+          <a href="https://danacoding.github.io/patterns/design-patterns/observer-pattern/" class="menu__title active" data-depth="0">观察者模式</a>
         </li>
       
     
@@ -1920,7 +1920,7 @@
       
     </span>
   </li>
-  <ul class="menu__list " data-data=/render-patterns/ data-link=https://danacoding.github.io/patterns/design-patterns/proxy-patterns/>
+  <ul class="menu__list " data-data=/render-patterns/ data-link=https://danacoding.github.io/patterns/design-patterns/observer-pattern/>
     
       
         
@@ -1958,7 +1958,7 @@
       
     </span>
   </li>
-  <ul class="menu__list " data-data=/performance-patterns/ data-link=https://danacoding.github.io/patterns/design-patterns/proxy-patterns/>
+  <ul class="menu__list " data-data=/performance-patterns/ data-link=https://danacoding.github.io/patterns/design-patterns/observer-pattern/>
     
   </ul>
   
@@ -1976,35 +1976,18 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <p>使用 Proxy 对象，可以更好地控制与某些对象的交互。 每当与对象交互时，代理对象都可以确定行为，例如当我们获取一个值或设置一个值时。</p>
-<p>一般来说，代理是指别人的替身。 您将与联系的人的代理人交谈，而不是直接与该人交谈。 JavaScript 中也会发生同样的情况：我们将与 Proxy 对象交互，而不是直接与目标对象交互。</p>
+    <p>使用观察者模式，我们可以将某些对象（观察者）订阅到另一个称为 observable（可观察） 的对象。 <br />
+每当一个事件发生时，observable 就会通知它所有的观察者！</p>
+<p>一个 observable 对象通常包含 4 个重要部分：</p>
+<ol>
+<li>observers：观察者数组，每当发生特定事件时都会收到通知</li>
+<li>subscribe()：将观察者添加到观察者数组的方法</li>
+<li>unsubscribe()：从观察者数组中移除观察者的方法</li>
+<li>notify()：一种在特定事件发生时通知所有观察者的方法</li>
+</ol>
 <hr/>
-<h2 id="proxy-代理">Proxy 代理</h2>
-<p>创建一个代表 John Doe 的 person 对象。</p>
-<pre tabindex="0"><code class="language-base" data-lang="base">const person = {
-  name: &quot;John Doe&quot;,
-  age: 42,
-  nationality: &quot;American&quot;
-};
-</code></pre><p>我们希望与代理对象进行交互，而不是直接与该对象交互。 在 JavaScript 中，可以通过创建一个新的 Proxy 实例来轻松地创建一个新的代理。</p>
-<pre tabindex="0"><code class="language-base" data-lang="base">const person = {
-  name: &quot;John Doe&quot;,
-  age: 42,
-  nationality: &quot;American&quot;
-};
-
-const personProxy = new Proxy(person, {});
-</code></pre><p>Proxy 的第一个参数是一个代表处理程序的对象。 在处理程序对象中，我们可以根据交互的类型定义特定的行为。 <br />
-虽然有很多方法可以添加到代理处理程序中，但最常见的两个是 get 和 set：</p>
-<ul>
-<li>get：在尝试访问属性时被调用</li>
-<li>set：在尝试修改属性时被调用</li>
-</ul>
-<p>实际上，最终会发生以下情况：</p>
-<img src="https://lh3.googleusercontent.com/-Y9WIouOE98Q/YcCGoMWO81I/AAAAAAAACG0/Xmhk9dE9DLkXMhk0C-30EfohXXeYuNUvgCNcBGAsYHQ/w656-h369/jspat-51_xvbob9.gif" />
-<p>我们将与 personProxy 进行交互，而不是直接与 person 对象交互。</p>
-<p>让我们向 personProxy 代理添加处理程序。 当尝试修改一个属性，从而调用代理上的 set 方法时，我们希望代理记录该属性的先前值和新值。 <br />
-当试图访问一个属性，从而调用代理上的 get 方法时，我们希望代理记录一个更易读的句子，其中包含该属性的任何值。</p>
+<h2 id="创建一个-observable">创建一个 observable</h2>
+<p>让我们创建一个 observable！ 一种简单方法是使用 ES6 类。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2017,38 +2000,105 @@ const personProxy = new Proxy(person, {});
 </span><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="kr">const</span> <span class="nx">personProxy</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Proxy</span><span class="p">(</span><span class="nx">person</span><span class="p">,</span> <span class="p">{</span>
-  <span class="nx">get</span><span class="o">:</span> <span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">prop</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">prop</span><span class="si">}</span><span class="sb"> 的值是 </span><span class="si">${</span><span class="nx">obj</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-  <span class="p">},</span>
-  <span class="nx">set</span><span class="o">:</span> <span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">prop</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`将 </span><span class="si">${</span><span class="nx">prop</span><span class="si">}</span><span class="sb"> 从 </span><span class="si">${</span><span class="nx">obj</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span><span class="si">}</span><span class="sb"> 更改为 </span><span class="si">${</span><span class="nx">value</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-    <span class="nx">obj</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
+<span class="kr">class</span> <span class="nx">Observable</span> <span class="p">{</span>
+  <span class="nx">constructor</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">observers</span> <span class="o">=</span> <span class="p">[];</span>
   <span class="p">}</span>
-<span class="p">});</span>
+
+  <span class="nx">subscribe</span><span class="p">(</span><span class="nx">func</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">observers</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">func</span><span class="p">);</span> 
+    <span class="c1">//push() 方法将一个或多个元素添加到数组的末尾，并返回该数组的新长度。
+</span><span class="c1"></span>  <span class="p">}</span>
+
+  <span class="nx">unsubscribe</span><span class="p">(</span><span class="nx">func</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">observers</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">observers</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">observer</span> <span class="p">=&gt;</span> <span class="nx">observer</span> <span class="o">!==</span> <span class="nx">func</span><span class="p">);</span>
+    <span class="c1">//filter() 方法创建一个新数组, 它返回所提供函数处理过的所有元素。  
+</span><span class="c1"></span>  <span class="p">}</span>
+
+  <span class="nx">notify</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">observers</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">observer</span> <span class="p">=&gt;</span> <span class="nx">observer</span><span class="p">(</span><span class="nx">data</span><span class="p">));</span>
+    <span class="c1">//forEach() 方法对数组的每个元素执行一次给定的函数。
+</span><span class="c1"></span>  <span class="p">}</span>
+<span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>Perfect! 让我们看看当我们尝试修改或检索属性时会发生什么。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="nx">personProxy</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span> <span class="c1">//name 的值是 John Doe
-</span><span class="c1"></span><span class="nx">personProxy</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mi">43</span><span class="p">;</span> <span class="c1">//年龄从 42 更改为 43
-</span></code></pre></td></tr></table>
-</div>
-</div><p>在访问 name 属性时，Proxy 返回了一个更好听的句子：name 的值是 John Doe。</p>
-<p>在修改 age 属性时，Proxy 返回了该属性的上一个值和新值：将年龄从 42 更改为 43。</p>
-<hr/>
-<hr/>
-<p>代理可用于添加验证。 用户不应该能够将人的年龄更改为字符串值，或者给他一个空的名字。 或者，如果用户试图访问对象上不存在的属性，我们应该让用户知道。</p>
+</div><p>可以使用 subscribe 方法将观察者添加到观察者数组中，使用 unsubscribe 方法删除观察者，并使用 notify 方法通知所有订阅者。</p>
+<p>让我们用这个 observable（可观察） 构建一些东西。有一个非常基本的应用程序，它只包含两个组件：按钮和开关。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">export default function App() {
+  return (
+    &lt;div className=&quot;App&quot;&gt;
+      &lt;Button&gt;Click me!&lt;/Button&gt;
+      &lt;FormControlLabel control={&lt;Switch /&gt;} /&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre><p>我们希望跟踪用户与应用程序的交互。 每当用户单击按钮或切换开关时，我们都希望使用时间戳记录此事件。 <br />
+除了记录它，我们还想创建一个 Toast 通知，在事件发生时显示它！</p>
+<p>本质上，我们想要做的是以下内容：</p>
+<img src="https://lh3.googleusercontent.com/-ewYHAPyqObc/YcDt19ReUaI/AAAAAAAACIM/L2JdILqzzHYD7HLbTIvQJviuUTY7J4fjgCNcBGAsYHQ/w656-h369/ezgif.com-gif-maker%2B%25284%2529.gif"/>
+<p>每当用户调用 handleClick 或 handleToggle 函数时，这些函数都会调用观察者上的通知方法。 <br />
+notify 方法将通过 handleClick 或 handleToggle 函数传递的数据通知所有订阅者！</p>
+<p>首先，让我们创建 logger 和 toastify 函数。 这些函数最终会从 notify 方法接收数据。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">import { ToastContainer, toast } from &quot;react-toastify&quot;;
+
+function logger(data) {
+  console.log(`${Date.now()} ${data}`);
+}
+
+function toastify(data) {
+  toast(data);
+}
+
+export default function App() {
+  return (
+    &lt;div className=&quot;App&quot;&gt;
+      &lt;Button&gt;Click me!&lt;/Button&gt;
+      &lt;FormControlLabel control={&lt;Switch /&gt;} /&gt;
+      &lt;ToastContainer /&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre><p>目前，logger 和 toasity 函数不知道 observable：observable 还不能通知它们！ <br />
+为了让它们成为观察者，我们必须使用 observable 上的 subscribe 方法订阅它们！</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">import { ToastContainer, toast } from &quot;react-toastify&quot;;
+
+function logger(data) {
+  console.log(`${Date.now()} ${data}`);
+}
+
+function toastify(data) {
+  toast(data);
+}
+
+observable.subscribe(logger);
+observable.subscribe(toastify);
+
+export default function App() {
+  return (
+    &lt;div className=&quot;App&quot;&gt;
+      &lt;Button&gt;Click me!&lt;/Button&gt;
+      &lt;FormControlLabel control={&lt;Switch /&gt;} /&gt;
+      &lt;ToastContainer /&gt;
+    &lt;/div&gt;
+  );
+}
+</code></pre><p>每当事件发生时，logger 和 toastify 函数都会收到通知。 <br />
+现在我们只需要实现实际通知 observable 的函数：handleClick 和 handleToggle 函数！ <br />
+这些函数应该调用 observable 上的 notify 方法，并传递观察者应该接收的数据。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2073,109 +2123,98 @@ const personProxy = new Proxy(person, {});
 </span><span class="lnt">20
 </span><span class="lnt">21
 </span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="kr">const</span> <span class="nx">personProxy</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Proxy</span><span class="p">(</span><span class="nx">person</span><span class="p">,</span> <span class="p">{</span>
-  <span class="nx">get</span><span class="o">:</span> <span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">prop</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">obj</span><span class="p">[</span><span class="nx">prop</span><span class="p">])</span> <span class="p">{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span>
-        <span class="sb">`嗯..目标对象上似乎不存在此属性`</span>
-      <span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">prop</span><span class="si">}</span><span class="sb"> 的值是 </span><span class="si">${</span><span class="nx">obj</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-    <span class="p">}</span>
-  <span class="p">},</span>
-  <span class="nx">set</span><span class="o">:</span> <span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">prop</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">prop</span> <span class="o">===</span> <span class="s2">&#34;age&#34;</span> <span class="o">&amp;&amp;</span> <span class="k">typeof</span> <span class="nx">value</span> <span class="o">!==</span> <span class="s2">&#34;number&#34;</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`抱歉，您只能传递年龄的数值。`</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">prop</span> <span class="o">===</span> <span class="s2">&#34;name&#34;</span> <span class="o">&amp;&amp;</span> <span class="nx">value</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`您需要提供一个有效的 name。`</span><span class="p">);</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`将 </span><span class="si">${</span><span class="nx">prop</span><span class="si">}</span><span class="sb"> 从 </span><span class="si">${</span><span class="nx">obj</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span><span class="si">}</span><span class="sb"> 更改为 </span><span class="si">${</span><span class="nx">value</span><span class="si">}</span><span class="sb">。`</span><span class="p">);</span>
-      <span class="nx">obj</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
-    <span class="p">}</span>
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">ToastContainer</span><span class="p">,</span> <span class="nx">toast</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react-toastify&#34;</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">logger</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span><span class="si">}</span><span class="sb"> </span><span class="si">${</span><span class="nx">data</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">toastify</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">toast</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nx">observable</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">logger</span><span class="p">);</span>
+<span class="nx">observable</span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">toastify</span><span class="p">);</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">function</span> <span class="nx">handleClick</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">observable</span><span class="p">.</span><span class="nx">notify</span><span class="p">(</span><span class="s2">&#34;用户点击按钮！&#34;</span><span class="p">);</span>
   <span class="p">}</span>
-<span class="p">});</span>
+
+  <span class="kd">function</span> <span class="nx">handleToggle</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">observable</span><span class="p">.</span><span class="nx">notify</span><span class="p">(</span><span class="s2">&#34;用户拨动开关！&#34;</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">className</span><span class="o">=</span><span class="s2">&#34;App&#34;</span><span class="o">&gt;</span>
+      <span class="o">&lt;</span><span class="nx">Button</span><span class="o">&gt;</span><span class="nx">Click</span> <span class="nx">me</span><span class="o">!&lt;</span><span class="err">/Button&gt;</span>
+      <span class="o">&lt;</span><span class="nx">FormControlLabel</span> <span class="nx">control</span><span class="o">=</span><span class="p">{</span><span class="o">&lt;</span><span class="nx">Switch</span> <span class="o">/&gt;</span><span class="p">}</span> <span class="o">/&gt;</span>
+      <span class="o">&lt;</span><span class="nx">ToastContainer</span> <span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>让我们看看当我们试图传递错误值时会发生什么！</p>
+</div><p>Awesome! 我们刚刚完成了整个流程：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="nx">personProxy</span><span class="p">.</span><span class="nx">nonExistentProperty</span><span class="p">;</span> <span class="c1">//嗯..这个属性似乎不存在
-</span><span class="c1"></span><span class="nx">personProxy</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="s2">&#34;44&#34;</span><span class="p">;</span> <span class="c1">//抱歉，您只能传递年龄的数值
-</span><span class="c1"></span><span class="nx">personProxy</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s2">&#34;&#34;</span><span class="p">;</span> <span class="c1">//您需要提供一个有效的名称
+<span class="mf">1.</span> <span class="o">---&gt;</span> <span class="sb">`handleClick 和 handleToggle 调用观察者上的通知方法`</span>
+
+    <span class="mf">2.</span> <span class="o">---&gt;</span> <span class="sb">`观察者通知订阅者：logger 和 toastify 函数`</span>
+
+        <span class="mf">3.</span> <span class="o">---&gt;</span> <span class="sb">`每当用户与任一组件交互时，logger 和 toastify 函数都会收到 notify 方法的通知！
 </span></code></pre></td></tr></table>
 </div>
-</div><p>Proxy 代理确保我们没有修改具有错误值的 person 对象，这有助于我们保持数据纯净！</p>
+</div><img src="https://lh3.googleusercontent.com/-XduVLF7WRPo/YcD07JQ01aI/AAAAAAAACIU/DJP22MTswnceBJP6gz1DJ1K_Cvjncgb_QCNcBGAsYHQ/w663-h351/o.gif"/>
+<p>尽管我们可以通过多种方式使用观察者模式，但它在处理基于事件的异步数据时非常有用。</p>
+<ul>
+<li>也许您希望某些组件在某些数据下载完成时收到通知</li>
+<li>或者每当用户向留言板发送新消息并且所有其他成员都应该收到通知时</li>
+</ul>
 <hr/>
-<h2 id="reflect-映射">Reflect 映射</h2>
-<p>JavaScript 提供了一个名为 的内置对象Reflect，它使我们在使用代理时更容易操作目标对象。</p>
-<p>Reflect 是一个内置的对象，它提供拦截 JavaScript 操作的方法。<br />
-这些方法与 proxy handlers 的方法相同。</p>
-<p>Reflect 不是一个函数对象，因此它是不可构造的。</p>
-<p>在上面，我们尝试通过使用括号表示法直接获取或设置值来修改和访问代理内目标对象的属性。 <br />
-现在，我们可以使用 Reflect 对象。 Reflect 对象上的方法与处理程序对象上的方法同名。</p>
-<p>可以通过 <code>Reflect.get()</code> 和 <code>Reflect.set()</code> 访问或修改目标对象上的属性，而不是通过 <code>obj[prop]</code> 访问属性或通过 <code>obj[prop] = value</code> 设置属性。 <br />
-这些方法接收与处理程序（handlers）对象上的方法相同的参数。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="kr">const</span> <span class="nx">personProxy</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Proxy</span><span class="p">(</span><span class="nx">person</span><span class="p">,</span> <span class="p">{</span>
-  <span class="nx">get</span><span class="o">:</span> <span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">prop</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">prop</span><span class="si">}</span><span class="sb"> 的值是 </span><span class="si">${</span><span class="nx">Reflect</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">prop</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-  <span class="p">},</span>
-  <span class="nx">set</span><span class="o">:</span> <span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">prop</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`将 </span><span class="si">${</span><span class="nx">prop</span><span class="si">}</span><span class="sb"> 从 </span><span class="si">${</span><span class="nx">obj</span><span class="p">[</span><span class="nx">prop</span><span class="p">]</span><span class="si">}</span><span class="sb"> 更改为 </span><span class="si">${</span><span class="nx">value</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
-    <span class="nx">Reflect</span><span class="p">.</span><span class="nx">set</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span> <span class="nx">prop</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">});</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Perfect! 我们可以使用 Reflect 对象轻松访问和修改目标对象的属性。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="nx">personProxy</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span> <span class="c1">//name 的值是 John Doe
-</span><span class="c1"></span><span class="nx">personProxy</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mi">43</span><span class="p">;</span> <span class="c1">//年龄从 42 更改为 43
-</span><span class="c1"></span><span class="nx">personProxy</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="s2">&#34;Jane Doe&#34;</span><span class="p">;</span> <span class="c1">//将名字从 John Doe 更改为 Jane Doe
-</span></code></pre></td></tr></table>
-</div>
-</div><hr/>
-<h2 id="结语">结语</h2>
-<p>Proxy 是一种强大的方式来添加对对象行为的控制。 代理可以有各种用例：它可以帮助验证、格式化、通知或调试。</p>
-<p>过度使用 Proxy 对象或对每个处理程序方法调用执行繁重的操作很容易对应用程序的性能产生负面影响。</p>
-<p>最好不要对性能关键代码使用 Proxy。</p>
+<h2 id="案例分析-rxjs">案例分析 RxJS</h2>
+<p>使用可观察模式的流行库是 RxJS。</p>
+<blockquote>
+<p>ReactiveX 将观察者模式与迭代器模式以及函数式编程与集合相结合，以满足对管理事件序列的理想方式的需求。 - RxJS</p>
+</blockquote>
+<p>使用 RxJS，我们可以创建 observable 并订阅某些事件！ 让我们看一个在他们的文档中介绍的例子，它记录了用户是否在文档中拖动。</p>
+<img src="https://lh3.googleusercontent.com/-F0m5L5c-ke8/YcD27i_cqsI/AAAAAAAACIc/9gxmeLJ9xx8hcTqbtnXpLVqkmLeNvIh1QCNcBGAsYHQ/w655-h364/o1.gif"/>
+<p>RxJS 有大量使用可观察模式的内置功能和示例。</p>
+<hr/>
+<h2 id="优点">优点</h2>
+<p>使用观察者模式是强制分离关注点和单一职责原则的好方法。 <br />
+观察者对象与可观察对象并不紧密耦合，并且可以随时（解）耦合。 <br />
+observable 对象负责监控事件，而观察者只是处理接收到的数据。</p>
+<hr/>
+<h2 id="缺点">缺点</h2>
+<p>如果观察者变得过于复杂，则在通知所有订阅者时可能会导致性能问题。</p>
 <hr/>
 <h2 id="知识点">知识点</h2>
 <ul>
-<li>Proxy</li>
-<li>Reflect</li>
+<li>Array.prototype.push()</li>
+<li>Array.prototype.filter()</li>
+<li>Array.prototype.forEach()</li>
 </ul>
 
   </article>
@@ -2185,17 +2224,17 @@ const personProxy = new Proxy(person, {});
 <nav class="pagination-single">
   
     
-      <a href="https://danacoding.github.io/patterns/design-patterns/single-patterns/" title="单例模式" class="pagination-single__left">
+      <a href="https://danacoding.github.io/patterns/design-patterns/presentational-container-pattern/" title="容器/展示模式" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__right-title">单例模式</div>
+        <div class="pagination-single__right-title">容器/展示模式</div>
       </a>
     
     <div class="grow"></div>
     
-      <a href="https://danacoding.github.io/patterns/design-patterns/provider-pattern/" title="提供者模式" class="pagination-single__right">
-        <div class="pagination-single__left-title">提供者模式</div>
+      <a href="https://danacoding.github.io/patterns/design-patterns/module-pattern/" title="模块模式" class="pagination-single__right">
+        <div class="pagination-single__left-title">模块模式</div>
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
         </div>
@@ -2217,9 +2256,10 @@ const personProxy = new Proxy(person, {});
   <div class="toc__body">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#proxy-代理">Proxy 代理</a></li>
-    <li><a href="#reflect-映射">Reflect 映射</a></li>
-    <li><a href="#结语">结语</a></li>
+    <li><a href="#创建一个-observable">创建一个 observable</a></li>
+    <li><a href="#案例分析-rxjs">案例分析 RxJS</a></li>
+    <li><a href="#优点">优点</a></li>
+    <li><a href="#缺点">缺点</a></li>
     <li><a href="#知识点">知识点</a></li>
   </ul>
 </nav>

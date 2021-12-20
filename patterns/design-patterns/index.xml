@@ -59,6 +59,33 @@
         <description>原型模式是一种在许多相同类型的对象之间共享属性的有用方法。 原型prototype是 JavaScript 原生的对象，对象可以通过原型链__proto__访问。 在</description>
       </item>
       
+      <item>
+        <title>容器/展示模式</title>
+        <link>https://danacoding.github.io/patterns/design-patterns/presentational-container-pattern/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/patterns/design-patterns/presentational-container-pattern/</guid>
+        <description>在 React 中，一种强制分离关注点的方法是通过使用容器/演示模式。使用这种模式，我们可以将视图与应用程序逻辑分开。 在 React 中，强制分离关注点的一种方法是</description>
+      </item>
+      
+      <item>
+        <title>观察者模式</title>
+        <link>https://danacoding.github.io/patterns/design-patterns/observer-pattern/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/patterns/design-patterns/observer-pattern/</guid>
+        <description>使用观察者模式，我们可以将某些对象（观察者）订阅到另一个称为 observable（可观察） 的对象。 每当一个事件发生时，observable 就</description>
+      </item>
+      
+      <item>
+        <title>模块模式</title>
+        <link>https://danacoding.github.io/patterns/design-patterns/module-pattern/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/patterns/design-patterns/module-pattern/</guid>
+        <description>随着应用程序和代码库的增长，保持代码的可维护性和分离性变得越来越重要。 模块模式将代码拆分为更小的、可重用的部分。 除了能够将代码拆分为更小的可</description>
+      </item>
+      
     
   </channel>
 </rss>
