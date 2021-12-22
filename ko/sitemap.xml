@@ -158,7 +158,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/patterns/design-patterns/</loc>
+    <loc>https://danacoding.github.io/react-patterns/design-patterns/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -223,7 +223,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/patterns/</loc>
+    <loc>https://danacoding.github.io/react-patterns/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -318,7 +318,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/patterns/render-patterns/render-patterns-base/</loc>
+    <loc>https://danacoding.github.io/react-patterns/render-patterns/render-patterns-base/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -328,7 +328,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/patterns/design-patterns/design-patterns/</loc>
+    <loc>https://danacoding.github.io/react-patterns/design-patterns/design-patterns/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -368,7 +368,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/patterns/render-patterns/</loc>
+    <loc>https://danacoding.github.io/react-patterns/render-patterns/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -388,7 +388,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/patterns/design-patterns/single-patterns/</loc>
+    <loc>https://danacoding.github.io/react-patterns/design-patterns/single-patterns/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -418,7 +418,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/patterns/performance-patterns/</loc>
+    <loc>https://danacoding.github.io/react-patterns/performance-patterns/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -443,7 +443,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/patterns/design-patterns/proxy-patterns/</loc>
+    <loc>https://danacoding.github.io/react-patterns/design-patterns/proxy-patterns/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -473,7 +473,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/patterns/design-patterns/provider-pattern/</loc>
+    <loc>https://danacoding.github.io/react-patterns/design-patterns/provider-pattern/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -498,12 +498,12 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/patterns/design-patterns/prototype-pattern/</loc>
+    <loc>https://danacoding.github.io/react-patterns/design-patterns/prototype-pattern/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/patterns/design-patterns/presentational-container-pattern/</loc>
+    <loc>https://danacoding.github.io/react-patterns/design-patterns/presentational-container-pattern/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -518,7 +518,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/patterns/design-patterns/observer-pattern/</loc>
+    <loc>https://danacoding.github.io/react-patterns/design-patterns/observer-pattern/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -538,7 +538,52 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/patterns/design-patterns/module-pattern/</loc>
+    <loc>https://danacoding.github.io/react-patterns/design-patterns/module-pattern/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react-patterns/design-patterns/mixin-pattern/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react-patterns/design-patterns/mediator-pattern/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react-patterns/design-patterns/render-props-pattern/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react-patterns/design-patterns/hooks-pattern/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react-patterns/design-patterns/hoc-pattern/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react-patterns/design-patterns/flyweight-pattern/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react-patterns/design-patterns/factory-pattern/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react-patterns/design-patterns/compound-pattern/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react-patterns/design-patterns/command-pattern/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
