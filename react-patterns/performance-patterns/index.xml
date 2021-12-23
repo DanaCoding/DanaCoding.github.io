@@ -14,6 +14,15 @@
     
     
       
+      <item>
+        <title>优化加载顺序</title>
+        <link>https://danacoding.github.io/react-patterns/performance-patterns/loading-sequence/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react-patterns/performance-patterns/loading-sequence/</guid>
+        <description>注意：本文深受 Chrome 中 Aurora 团队的见解的影响，尤其是 Shubhie Panicker，他一直在研究最佳加载顺序。 在每个成功的网页加载中，一些关键组件和资源会在适当</description>
+      </item>
+      
     
   </channel>
 </rss>

@@ -298,6 +298,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react-patterns/performance-patterns/loading-sequence/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/jsts/prototype/prototype-bp/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -368,6 +373,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react-patterns/render-patterns/overview-react/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react-patterns/render-patterns/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -414,6 +424,11 @@
   
   <url>
     <loc>https://danacoding.github.io/others/git/git-bp/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react-patterns/render-patterns/overview-next/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -473,6 +488,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react-patterns/render-patterns/client-side-rendering/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react-patterns/design-patterns/provider-pattern/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -508,6 +528,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react-patterns/render-patterns/server-side-rendering/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react/remix/remix-adv/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -519,6 +544,11 @@
   
   <url>
     <loc>https://danacoding.github.io/react-patterns/design-patterns/observer-pattern/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react-patterns/render-patterns/static-rendering/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -538,6 +568,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react-patterns/render-patterns/incremental-static-rendering/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react-patterns/design-patterns/module-pattern/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -548,7 +583,22 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react-patterns/render-patterns/progressive-hydration/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react-patterns/design-patterns/mediator-pattern/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react-patterns/render-patterns/streaming-ssr/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react-patterns/render-patterns/react-server-components/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -563,7 +613,17 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react-patterns/render-patterns/react-selective-hydration/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react-patterns/design-patterns/hoc-pattern/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react-patterns/render-patterns/islands-architecture/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
