@@ -568,6 +568,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react-patterns/performance-patterns/route-base/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react-patterns/design-patterns/observer-pattern/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -598,7 +603,17 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react-patterns/performance-patterns/bundle-splitting/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react-patterns/design-patterns/module-pattern/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react-patterns/performance-patterns/prpl/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -618,6 +633,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react-patterns/performance-patterns/tree-shaking/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react-patterns/render-patterns/streaming-ssr/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -633,6 +653,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react-patterns/performance-patterns/preload/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react-patterns/design-patterns/hooks-pattern/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -643,7 +668,17 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react-patterns/performance-patterns/prefetch/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react-patterns/design-patterns/hoc-pattern/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react-patterns/performance-patterns/third-party/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -658,7 +693,17 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react-patterns/performance-patterns/virtual-lists/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react-patterns/design-patterns/factory-pattern/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react-patterns/performance-patterns/%E5%8E%8B%E7%BC%A9-javascript/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   

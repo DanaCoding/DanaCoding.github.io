@@ -510,7 +510,7 @@
       </item>
       
       <item>
-        <title>动态导入 ✔</title>
+        <title>动态导入</title>
         <link>https://danacoding.github.io/react-patterns/performance-patterns/dynamic-import/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
@@ -573,7 +573,7 @@
       </item>
       
       <item>
-        <title>导入可见性 ✔</title>
+        <title>导入可见性</title>
         <link>https://danacoding.github.io/react-patterns/performance-patterns/import-on-visibility/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
@@ -627,7 +627,7 @@
       </item>
       
       <item>
-        <title>交互导入 ✔</title>
+        <title>交互导入</title>
         <link>https://danacoding.github.io/react-patterns/performance-patterns/import-on-interaction/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
@@ -678,6 +678,15 @@
         
         <guid>https://danacoding.github.io/others/yarn/yarn-bp/</guid>
         <description>一、全局配置yarn Step1. 获取yarn的安装位置 yarn global bin Step2. 配置yarn全局变量</description>
+      </item>
+      
+      <item>
+        <title>基于路由的拆分</title>
+        <link>https://danacoding.github.io/react-patterns/performance-patterns/route-base/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react-patterns/performance-patterns/route-base/</guid>
+        <description>可以通过添加基于路由的拆分来请求仅特定路由需要的资源。 通过将 React Suspense 或 loadable-component 与 react-router 等库结合，可以根据当前路由动态加载组件。 1 2 3 4 5 6 7 8 9 10 11 12 13 14</description>
       </item>
       
       <item>
@@ -735,12 +744,30 @@
       </item>
       
       <item>
+        <title>捆绑拆分</title>
+        <link>https://danacoding.github.io/react-patterns/performance-patterns/bundle-splitting/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react-patterns/performance-patterns/bundle-splitting/</guid>
+        <description>在构建现代 Web 应用程序时， 诸如 Webpack 或 Rollup 之类的打包器会获取应用程序的源代码，并将其捆绑到一个或多个包中。 当用户访问网站时，会请求并加载包，以便将数</description>
+      </item>
+      
+      <item>
         <title>模块模式</title>
         <link>https://danacoding.github.io/react-patterns/design-patterns/module-pattern/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/react-patterns/design-patterns/module-pattern/</guid>
         <description>随着应用程序和代码库的增长，保持代码的可维护性和分离性变得越来越重要。 模块模式将代码拆分为更小的、可重用的部分。 除了能够将代码拆分为更小的可</description>
+      </item>
+      
+      <item>
+        <title>PRPL模式</title>
+        <link>https://danacoding.github.io/react-patterns/performance-patterns/prpl/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react-patterns/performance-patterns/prpl/</guid>
+        <description>使应用程序在全球范围内可访问可能是一个挑战！ 我们必须确保应用程序在低端设备和互联网连接较差的地区运行良好。 为了确保应用程序能够在困难的条件下</description>
       </item>
       
       <item>
@@ -771,6 +798,15 @@
       </item>
       
       <item>
+        <title>摇树 tree-shaking</title>
+        <link>https://danacoding.github.io/react-patterns/performance-patterns/tree-shaking/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react-patterns/performance-patterns/tree-shaking/</guid>
+        <description>我们可能会向 bundle 添加代码，而这些代码在应用程序中的任何地方都没有使用。 可以消除这一段死代码，以减少包的大小，并防止不必要地加载更多数据！ 在将死</description>
+      </item>
+      
+      <item>
         <title>流(媒体)式服务器端渲染 ✔</title>
         <link>https://danacoding.github.io/react-patterns/render-patterns/streaming-ssr/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -798,6 +834,15 @@
       </item>
       
       <item>
+        <title>预加载</title>
+        <link>https://danacoding.github.io/react-patterns/performance-patterns/preload/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react-patterns/performance-patterns/preload/</guid>
+        <description>预加载 (&amp;lt;link rel=&amp;quot;preload&amp;quot;&amp;gt;) 是一种浏览器优化，允许更早地请求关键资源（可能发现较晚）。 如果您对如何手动排序关键资源的加载感到满意，它会对 Core Web Vitals 中的加载性能和指</description>
+      </item>
+      
+      <item>
         <title>Hooks 模式</title>
         <link>https://danacoding.github.io/react-patterns/design-patterns/hooks-pattern/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -816,12 +861,30 @@
       </item>
       
       <item>
+        <title>预取</title>
+        <link>https://danacoding.github.io/react-patterns/performance-patterns/prefetch/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react-patterns/performance-patterns/prefetch/</guid>
+        <description>Prefetch (&amp;lt;link rel=&amp;quot;prefetch&amp;quot;&amp;gt;) 是一种浏览器优化，它允许我们在需要之前获取后续路由或页面可能需要的资源。 预取可以通过几种方式实现。 它可以在 HTML 中声明性地完成（例如在下面</description>
+      </item>
+      
+      <item>
         <title>HOC 模式（X）</title>
         <link>https://danacoding.github.io/react-patterns/design-patterns/hoc-pattern/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/react-patterns/design-patterns/hoc-pattern/</guid>
         <description>这是历史遗留问题，所以不建议使用（现在有了Hooks），在这里只是让我们了解这段历史 在我们的应用程序中，我们经常希望在多个组件中使用相同的逻</description>
+      </item>
+      
+      <item>
+        <title>优化加载第三方</title>
+        <link>https://danacoding.github.io/react-patterns/performance-patterns/third-party/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react-patterns/performance-patterns/third-party/</guid>
+        <description>第三方资源可能会降低网站速度，并且可能是优化的挑战。 可以遵循某些最佳实践来有效地加载或延迟不同类型的第三方。 还可以使用框架级组件，例如 Next.js 脚本</description>
       </item>
       
       <item>
@@ -843,12 +906,30 @@
       </item>
       
       <item>
+        <title>列表虚拟化</title>
+        <link>https://danacoding.github.io/react-patterns/performance-patterns/virtual-lists/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react-patterns/performance-patterns/virtual-lists/</guid>
+        <description>在本指南中，讨论列表虚拟化（也称为窗口化）。 这是在动态列表中仅呈现可见内容行而不是整个列表的想法。 呈现的行只是完整列表的一小部分，随着用户滚</description>
+      </item>
+      
+      <item>
         <title>工厂模式</title>
         <link>https://danacoding.github.io/react-patterns/design-patterns/factory-pattern/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/react-patterns/design-patterns/factory-pattern/</guid>
         <description>使用工厂模式，我们可以使用工厂函数来创建新对象。 当一个函数在不使用 new 关键字的情况下返回一个新对象时，它就是一个工厂函数！ 用户案例 假设我们的应</description>
+      </item>
+      
+      <item>
+        <title>压缩 JavaScript</title>
+        <link>https://danacoding.github.io/react-patterns/performance-patterns/%E5%8E%8B%E7%BC%A9-javascript/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react-patterns/performance-patterns/%E5%8E%8B%E7%BC%A9-javascript/</guid>
+        <description>压缩 JavaScript 并密切关注块大小以获得最佳性能。 过高的 JavaScript 包粒度有助于重复数据删除和缓存，但可能会在 50-100 个块范围内受到较差的压缩和影响加载（由于浏览器进程</description>
       </item>
       
       <item>

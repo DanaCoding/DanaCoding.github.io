@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>HOC 模式（X） – DanaCoding</title>
+    <title>优化加载第三方 – DanaCoding</title>
     
 
 
@@ -30,7 +30,7 @@
     
     var baseurl = JSON.parse("\"https://danacoding.github.io/\"");
     
-    var permalink = JSON.parse("\"https://danacoding.github.io/react-patterns/design-patterns/hoc-pattern/\"");
+    var permalink = JSON.parse("\"https://danacoding.github.io/react-patterns/performance-patterns/third-party/\"");
 
     
     var toggleSidebarElem = document.getElementById("toggle-sidebar");
@@ -1072,21 +1072,21 @@
 <link rel="stylesheet" href="/css/main.min.css">
 
 
-    <meta name="description" content="将可重用逻辑作为道具传递给整个应用程序的组件" />
+    <meta name="description" content="减少第三方脚本对网站的性能影响。" />
 <meta name="keywords" content="">
 <meta name="created" content="2020-01-28T00:34:39&#43;0900">
 <meta name="modified" content="2020-01-28T00:34:39&#43;0900">
 
 
 <meta property="og:site_name" content="DanaCoding">
-<meta property="og:title" content="HOC 模式（X）">
-<meta property="og:url" content="https://danacoding.github.io/react-patterns/design-patterns/hoc-pattern/">
+<meta property="og:title" content="优化加载第三方">
+<meta property="og:url" content="https://danacoding.github.io/react-patterns/performance-patterns/third-party/">
 <meta property="og:type" content="article">
 
 <meta name="generator" content="Hugo 0.90.1" />
 <meta name="msapplication-TileColor" content="#ffffff">
 <meta name="theme-color" content="#ffffff">
-<link rel="canonical" href="https://danacoding.github.io/react-patterns/design-patterns/hoc-pattern/">
+<link rel="canonical" href="https://danacoding.github.io/react-patterns/performance-patterns/third-party/">
 <link rel="manifest" href="/manifest.json">
 
   <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
@@ -1110,11 +1110,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "HOC 模式（X）",
+    "headline": "优化加载第三方",
     "datePublished": "2020-01-28T00:34:39+09:00",
     "dateModified": "2020-01-28T00:34:39+09:00",
-    "url" : "https://danacoding.github.io/react-patterns/design-patterns/hoc-pattern/",
-    "description": "将可重用逻辑作为道具传递给整个应用程序的组件",
+    "url" : "https://danacoding.github.io/react-patterns/performance-patterns/third-party/",
+    "description": "减少第三方脚本对网站的性能影响。",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://danacoding.github.io/"
@@ -1163,7 +1163,7 @@
     <div class="menu">
   <h6 class="menu__label">
     
-      HOC 模式（X）
+      优化加载第三方
     
   </h6>
   <ul>
@@ -1183,17 +1183,17 @@
   
   
   
-  <li class="menu__title--collapse active" data-depth="0" data-permalink="https://danacoding.github.io/react-patterns/design-patterns/">
+  <li class="menu__title--collapse " data-depth="0" data-permalink="https://danacoding.github.io/react-patterns/design-patterns/">
     <span class="menu__title--collapse-text">
       Design Patterns 设计模式
     </span>
-    <span class="menu__title--icon down">
+    <span class="menu__title--icon right">
       
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
       
     </span>
   </li>
-  <ul class="menu__list active" data-data=/design-patterns/ data-link=https://danacoding.github.io/react-patterns/design-patterns/hoc-pattern/>
+  <ul class="menu__list " data-data=/design-patterns/ data-link=https://danacoding.github.io/react-patterns/performance-patterns/third-party/>
     
       
         
@@ -1295,7 +1295,7 @@
         
         
         <li>
-          <a href="https://danacoding.github.io/react-patterns/design-patterns/hoc-pattern/" class="menu__title active" data-depth="0">HOC 模式（X）</a>
+          <a href="https://danacoding.github.io/react-patterns/design-patterns/hoc-pattern/" class="menu__title " data-depth="0">HOC 模式（X）</a>
         </li>
       
     
@@ -1359,7 +1359,7 @@
       
     </span>
   </li>
-  <ul class="menu__list " data-data=/render-patterns/ data-link=https://danacoding.github.io/react-patterns/design-patterns/hoc-pattern/>
+  <ul class="menu__list " data-data=/render-patterns/ data-link=https://danacoding.github.io/react-patterns/performance-patterns/third-party/>
     
       
         
@@ -1475,17 +1475,17 @@
   
   
   
-  <li class="menu__title--collapse " data-depth="0" data-permalink="https://danacoding.github.io/react-patterns/performance-patterns/">
+  <li class="menu__title--collapse active" data-depth="0" data-permalink="https://danacoding.github.io/react-patterns/performance-patterns/">
     <span class="menu__title--collapse-text">
       Performance Patterns 性能模式
     </span>
-    <span class="menu__title--icon right">
+    <span class="menu__title--icon down">
       
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
       
     </span>
   </li>
-  <ul class="menu__list " data-data=/performance-patterns/ data-link=https://danacoding.github.io/react-patterns/design-patterns/hoc-pattern/>
+  <ul class="menu__list active" data-data=/performance-patterns/ data-link=https://danacoding.github.io/react-patterns/performance-patterns/third-party/>
     
       
         
@@ -1579,7 +1579,7 @@
         
         
         <li>
-          <a href="https://danacoding.github.io/react-patterns/performance-patterns/third-party/" class="menu__title " data-depth="0">优化加载第三方</a>
+          <a href="https://danacoding.github.io/react-patterns/performance-patterns/third-party/" class="menu__title active" data-depth="0">优化加载第三方</a>
         </li>
       
     
@@ -1983,7 +1983,7 @@
   <div class="header__wrapper bgcolor__header">
     <div class="divider">
       <div class="lmr">
-        <h2 class="title">HOC 模式（X）</h2>
+        <h2 class="title">优化加载第三方</h2>
       </div>
     </div>
   </div>
@@ -2019,14 +2019,14 @@
   
   <li >
     
-      <a href="https://danacoding.github.io/react-patterns/design-patterns/" class="capitalize">Design Patterns 设计模式</a>
+      <a href="https://danacoding.github.io/react-patterns/performance-patterns/" class="capitalize">Performance Patterns 性能模式</a>
     
   </li>
   
   
   <li  class="is-active" >
     
-      <span>HOC 模式（X）</span>
+      <span>优化加载第三方</span>
     
   </li>
   
@@ -2068,7 +2068,7 @@
         <div class="menu">
   <h6 class="menu__label">
     
-      HOC 模式（X）
+      优化加载第三方
     
   </h6>
   <ul>
@@ -2088,17 +2088,17 @@
   
   
   
-  <li class="menu__title--collapse active" data-depth="0" data-permalink="https://danacoding.github.io/react-patterns/design-patterns/">
+  <li class="menu__title--collapse " data-depth="0" data-permalink="https://danacoding.github.io/react-patterns/design-patterns/">
     <span class="menu__title--collapse-text">
       Design Patterns 设计模式
     </span>
-    <span class="menu__title--icon down">
+    <span class="menu__title--icon right">
       
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
       
     </span>
   </li>
-  <ul class="menu__list active" data-data=/design-patterns/ data-link=https://danacoding.github.io/react-patterns/design-patterns/hoc-pattern/>
+  <ul class="menu__list " data-data=/design-patterns/ data-link=https://danacoding.github.io/react-patterns/performance-patterns/third-party/>
     
       
         
@@ -2200,7 +2200,7 @@
         
         
         <li>
-          <a href="https://danacoding.github.io/react-patterns/design-patterns/hoc-pattern/" class="menu__title active" data-depth="0">HOC 模式（X）</a>
+          <a href="https://danacoding.github.io/react-patterns/design-patterns/hoc-pattern/" class="menu__title " data-depth="0">HOC 模式（X）</a>
         </li>
       
     
@@ -2264,7 +2264,7 @@
       
     </span>
   </li>
-  <ul class="menu__list " data-data=/render-patterns/ data-link=https://danacoding.github.io/react-patterns/design-patterns/hoc-pattern/>
+  <ul class="menu__list " data-data=/render-patterns/ data-link=https://danacoding.github.io/react-patterns/performance-patterns/third-party/>
     
       
         
@@ -2380,17 +2380,17 @@
   
   
   
-  <li class="menu__title--collapse " data-depth="0" data-permalink="https://danacoding.github.io/react-patterns/performance-patterns/">
+  <li class="menu__title--collapse active" data-depth="0" data-permalink="https://danacoding.github.io/react-patterns/performance-patterns/">
     <span class="menu__title--collapse-text">
       Performance Patterns 性能模式
     </span>
-    <span class="menu__title--icon right">
+    <span class="menu__title--icon down">
       
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="currentColor" d="M9.29 15.88L13.17 12 9.29 8.12c-.39-.39-.39-1.02 0-1.41.39-.39 1.02-.39 1.41 0l4.59 4.59c.39.39.39 1.02 0 1.41L10.7 17.3c-.39.39-1.02.39-1.41 0-.38-.39-.39-1.03 0-1.42z"/></svg>
       
     </span>
   </li>
-  <ul class="menu__list " data-data=/performance-patterns/ data-link=https://danacoding.github.io/react-patterns/design-patterns/hoc-pattern/>
+  <ul class="menu__list active" data-data=/performance-patterns/ data-link=https://danacoding.github.io/react-patterns/performance-patterns/third-party/>
     
       
         
@@ -2484,7 +2484,7 @@
         
         
         <li>
-          <a href="https://danacoding.github.io/react-patterns/performance-patterns/third-party/" class="menu__title " data-depth="0">优化加载第三方</a>
+          <a href="https://danacoding.github.io/react-patterns/performance-patterns/third-party/" class="menu__title active" data-depth="0">优化加载第三方</a>
         </li>
       
     
@@ -2520,157 +2520,352 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <p><strong>这是历史遗留问题，所以不建议使用（现在有了Hooks），在这里只是让我们了解这段历史</strong></p>
-<p>在我们的应用程序中，我们经常希望在多个组件中使用相同的逻辑。此逻辑可以包括将特定样式应用于组件、要求授权或添加全局状态。</p>
-<p>能够在多个组件中重用相同逻辑的一种方法是使用高阶组件模式。这种模式允许我们在整个应用程序中重用组件逻辑。</p>
-<p>高阶组件 (HOC) 是接收另一个组件的组件。HOC 包含我们想要应用于作为参数传递的组件的某些逻辑。应用该逻辑后，HOC 返回带有附加逻辑的元素。</p>
+    <p>第三方资源可能会降低网站速度，并且可能是优化的挑战。</p>
+<p>可以遵循某些最佳实践来有效地加载或延迟不同类型的第三方。</p>
+<p>还可以使用框架级组件，例如 <code>Next.js</code> 脚本组件，它提供了一个模板，用于构建加载第三方脚本的“何时”和“如何”。</p>
+<p>或者，像 Partytown 这样的实验性想法可能会引起人们的兴趣。</p>
+<p>很难找到一个在孤岛中运作的现代网站。</p>
+<p>大多数站点共存并依赖网络上的其他几个来源来获取数据、功能、内容等。</p>
+<p>位于另一个域并由您的站点使用的任何资源都是您站点的第三方 (3P) 资源。</p>
+<p>站点中包含的典型第三方资源包括</p>
+<ul>
+<li>
+<p>嵌入地图、视频、社交媒体和聊天服务</p>
+</li>
+<li>
+<p>广告</p>
+</li>
+<li>
+<p>分析组件和标签管理器</p>
+</li>
+<li>
+<p>A/B 测试和个性化脚本</p>
+</li>
+<li>
+<p>提供即用型辅助功能的实用程序库，例如用于数据可视化或动画的功能。</p>
+</li>
+<li>
+<p>reCAPTCHA 或 CAPTCHA 用于机器人检测。</p>
+</li>
+</ul>
+<p>可以使用第三方来集成其他功能，<br />
+为内容增加价值或减少从头开始构建网站所涉及的一些苦差事。</p>
+<p>根据 2021 年网络年鉴报告，网络上超过 94% 的页面使用第三方——图像和 JavaScript 是第三方内容的最重要贡献者。</p>
+<p>以下是按内容类型和类别对第三方请求进行的有用细分：</p>
+<p><p class="md__image">
+  <img src="https://lh3.googleusercontent.com/-AaAv025rjkA/YcXLkEwSftI/AAAAAAAACTU/s_Rpefr_-sI4_goqGymfsqzbzwvKXB-kACNcBGAsYHQ/w654-h405/image.png" alt=""  />
+</p></p>
+<p>虽然第三方资源可以通过有价值的功能丰富您的网站，但如果出现以下情况，它们也会减慢速度：</p>
+<ul>
+<li>
+<p>对于每个所需的资源，它们都会导致到第三方域的额外往返。</p>
+</li>
+<li>
+<p>它们大量使用 JavaScript（影响下载和执行时间）或由于未优化的图像/视频而体积庞大。</p>
+</li>
+<li>
+<p>个别网站所有者无法影响实施，他们的行为可能无法预测。</p>
+</li>
+<li>
+<p>它们可以阻止页面上其他关键资源的呈现并影响 Core Web Vitals (CWV)。</p>
+</li>
+</ul>
+<p>尽管存在这些问题，第三方可能对业务至关重要。</p>
+<p>如果不能取消 3P，那么接下来最好的事情就是优化它们以减少性能影响 - 这就是本节中介绍的内容。</p>
+<p>包含了一些适用于不同类型第三方脚本的策略和最佳实践。</p>
+<p>Next.js Script 组件包含许多这些最佳实践，可以在本文的后半部分了解它。</p>
+<p>首先看看如何确定第三方脚本是否会损害页面的性能。</p>
+<h2 id="评估-3p-资源的性能影响">评估 3P 资源的性能影响</h2>
+<p>可以使用多种技术来查找第三方代码如何影响网站。</p>
+<p>以下 Lighthouse 审计有助于识别影响 CWV 的缓慢第三方脚本。</p>
+<ul>
+<li>
+<p>减少第三方代码对阻塞主线程的脚本的影响。</p>
+</li>
+<li>
+<p>减少需要很长时间执行的脚本的 JavaScript 执行时间</p>
+</li>
+<li>
+<p>避免大型脚本的巨大网络负载</p>
+</li>
+</ul>
+<p><p class="md__image">
+  <img src="https://lh3.googleusercontent.com/-ioWqL1ctRaU/YcXMfDYVJUI/AAAAAAAACTc/HWorJprH_5QzyECf5NHowx9tbHu5PdEWACNcBGAsYHQ/w689-h499/image.png" alt=""  />
+</p><br />
+<p class="md__image">
+  <img src="https://lh3.googleusercontent.com/-UDiXXuQ6IdI/YcXMopHXpJI/AAAAAAAACTg/PqDWESdU5AoNehU-cEGiFSpKIA7c8VyogCNcBGAsYHQ/w644-h553/image.png" alt=""  />
+</p><br />
+<p class="md__image">
+  <img src="https://lh3.googleusercontent.com/-KFLF89b9dH4/YcXMz7HNIyI/AAAAAAAACTo/_-5GNxNljkovgBIWoh5wfBxfJdmhroNpgCNcBGAsYHQ/w650-h559/image.png" alt=""  />
+</p></p>
+<ul>
+<li>
+<p>使用 WebPageTest (WPT) 瀑布图来识别<a href="https://nooshu.com/blog/2019/10/02/how-to-read-a-wpt-waterfall-chart/#third-party-blocking-javascript" target="_blank">第三方</a>阻止脚本或 WPT 并排比较来衡量 <a href="https://andydavies.me/blog/2018/02/19/using-webpagetest-to-measure-the-impact-of-3rd-party-tags/" target="_blank">3rd 方标签</a>的影响。</p>
+</li>
+<li>
+<p><a href="https://bundlephobia.com/" target="_blank">Bundlephobia</a> 等网站有助于评估将可用 npm 包添加到您的包中的成本。 <br />
+还可以使用 <a href="https://www.npmjs.com/package/package" target="_blank">npm</a> 包搜索查找任何包中包含的大小和依赖项。</p>
+</li>
+</ul>
+<p>有了识别有问题的第三方代码的背景，让我们探索优化它的方法。</p>
 <hr/>
-<h2 id="容器展示-模式">容器/展示 模式</h2>
-<p>假设我们一直想为应用程序中的多个组件添加某种样式。不是style每次都在本地创建一个对象，我们可以简单地创建一个 HOC，将style对象添加到我们传递给它的组件中</p>
-<pre tabindex="0"><code class="language-base" data-lang="base">function withStyles(Component) {
-  return props =&gt; {
-    const style = { padding: '0.2rem', margin: '1rem' }
-    return &lt;Component style={style} {...props} /&gt;
-  }
-}
-
-const Button = () = &lt;button&gt;Click me!&lt;/button&gt;
-const Text = () =&gt; &lt;p&gt;Hello World!&lt;/p&gt;
-
-const StyledButton = withStyles(Button)
-const StyedText = withStyles(Text)
-</code></pre><p>我们刚刚创建了一个 StyledButton 和 StyledText 组件，它们是 Button 和 Text 组件的修改版本。它们现在都包含在 withStyles HOC 中添加的样式！</p>
-<p>让我们看一下之前在 <code>Container/Presentational</code> 模式中使用的同一个 DogImages 示例！该应用程序仅渲染从 API 获取的狗图像列表。</p>
-<img src="https://blogger.googleusercontent.com/img/a/AVvXsEjFssqzhzhOmqhODNZ9Yb6ctTN6mnu4t4rQp758bVd30dma70BuyT6x8Nr0KRUHmtot7sVUj8Df8TG5dSyOVQVRntqZQ6YFgDgIgB8flx6lTeUpJtvxlecFbFhyjtEQ2dkkxYd2Bi6DGlnAqvmXqRT5KZkRqffaOiwjqJe3y0nf173Mh2IcD7SPGchkhQ=w461-h639"/>
-<h2 id="hoc-模式">HOC 模式</h2>
-<p>让我们稍微改善一下用户体验。 当我们获取数据时，我们希望向用户显示“正在加载&hellip;”屏幕。 <br />
-我们可以使用高阶组件为我们添加此逻辑，而不是直接向 DogImages 组件添加数据。</p>
-<p>让我们创建一个名为 withLoader 的 HOC。 HOC 应该接收一个组件，并返回该组件。 <br />
-在这种情况下，withLoader HOC 应该接收应该显示 Loading&hellip; 的元素，直到获取数据。</p>
-<p>让我们创建我们想要使用的 withLoader HOC h 的最低版本！</p>
-<pre tabindex="0"><code class="language-base" data-lang="base">function withLoader(Element) {
-  return props =&gt; &lt;Element /&gt;;
-}
-</code></pre><p>然而，我们不只是想返回它收到的元素。 相反，我们希望这个元素包含告诉我们数据是否仍在加载的逻辑。</p>
-<p>为了使 withLoader HOC 非常可重用，我们不会在该组件中硬编码 Dog API url。 <br />
-相反，我们可以将 URL 作为参数传递给 withLoader HOC，因此这个加载器可以用于任何需要加载指示器的组件，同时从不同的 API 端点获取数据。</p>
-<pre tabindex="0"><code class="language-base" data-lang="base">function withLoader(Element, url) {
-  return props =&gt; {};
-}
-</code></pre><p>一个 HOC 返回一个元素，一个功能组件 props =&gt; {} <br />
-想要添加逻辑，允许显示带有 Loading&hellip; 的文本，因为数据仍在获取中。 <br />
-获取数据后，组件应将获取的数据作为 prop 传递。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="c1">//DogImages.js
-</span><span class="c1"></span><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="nx">withLoader</span> <span class="nx">from</span> <span class="s2">&#34;./withLoader&#34;</span><span class="p">;</span>
-
-<span class="kd">function</span> <span class="nx">DogImages</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">props</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">message</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">dog</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span>
-    <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="nx">dog</span><span class="p">}</span> <span class="nx">alt</span><span class="o">=</span><span class="s2">&#34;Dog&#34;</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">index</span><span class="p">}</span> <span class="o">/&gt;</span>
-  <span class="p">));</span>
-<span class="p">}</span>
-
-<span class="kr">export</span> <span class="k">default</span> <span class="nx">withLoader</span><span class="p">(</span>
-  <span class="nx">DogImages</span><span class="p">,</span>
-  <span class="s2">&#34;https://dog.ceo/api/breed/labrador/images/random/6&#34;</span>
-<span class="p">);</span>
-</code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="c1">//withLoader.js
-</span><span class="c1"></span><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useEffect</span><span class="p">,</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
-
-<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">withLoader</span><span class="p">(</span><span class="nx">Element</span><span class="p">,</span> <span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="p">[</span><span class="nx">data</span><span class="p">,</span> <span class="nx">setData</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
-
-    <span class="nx">useEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="kr">async</span> <span class="kd">function</span> <span class="nx">getData</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
-        <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
-        <span class="nx">setData</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-      <span class="p">}</span>
-
-      <span class="nx">getData</span><span class="p">();</span>
-    <span class="p">},</span> <span class="p">[]);</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Loading</span><span class="p">...</span><span class="o">&lt;</span><span class="err">/div&gt;;</span>
-    <span class="p">}</span>
-
-    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">Element</span> <span class="p">{...</span><span class="nx">props</span><span class="p">}</span> <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="nx">data</span><span class="p">}</span> <span class="o">/&gt;</span><span class="p">;</span>
-  <span class="p">};</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Perfect！ 完美的！ 我们刚刚创建了一个可以接收任何组件和 url 的 HOC。</p>
+<h2 id="优化策略">优化策略</h2>
+<p>由于第三方代码不受您的控制，因此您无法直接优化库。 这给您留下了两个选择。</p>
 <ol>
 <li>
-<p>在 useEffect 钩子中，withLoader HOC 从我们作为 url 值传递的 API 端点获取数据。 虽然数据尚未返回，但我们返回包含 Loading&hellip; 文本的元素。</p>
+<p>替换或移除：<br />
+如果第三方脚本提供的值与其性能成本不成正比，请考虑将其移除。 <br />
+还可以评估其他轻量级但提供类似功能的替代方案。 <br />
+在本案例研究中，将讨论如何通过切换具有更轻量级替代品和类似功能的软件包来提高电影应用程序的性能。</p>
 </li>
 <li>
-<p>获取数据后，我们将 data 设置为等于已获取的数据。 由于数据不再为空，我们可以显示我们传递给 HOC 的元素！</p>
+<p>优化加载顺序：<br />
+加载过程涉及在浏览器中加载多个第一方和第三方资源。 <br />
+要设计最佳加载策略，需要考虑为不同资源分配的浏览器优先级、它们在页面上的位置以及每个资源在网页中的价值。 <br />
+我们为 React/Next.js 应用程序提出了最佳加载顺序。 我们现在将看到这如何适用于各种第三方资源以及可以采取哪些步骤以最佳方式加载它们。</p>
 </li>
 </ol>
-<p>那么，我们如何将这种行为添加到我们的应用程序中，以便它实际上会在 DogImages 列表上显示 Loading&hellip; 指示器？</p>
-<p>在 DogImages.js 中，我们不再只想导出普通的 DogImages 组件。 <br />
-相反，我们希望围绕 DogImages 组件导出“包装的” withLoading HOC。</p>
-<pre tabindex="0"><code class="language-base" data-lang="base">export default withLoading(DogImages);
-</code></pre><p>withLoading HOC 还希望 url 知道从哪个端点获取数据。 在这种情况下，我们要添加 Dog API 端点。</p>
-<pre tabindex="0"><code class="language-base" data-lang="base">export default withLoader(
-  DogImages,
-  &quot;https://dog.ceo/api/breed/labrador/images/random/6&quot;
-);
-</code></pre><p>由于 withLoader HOC 返回了带有额外数据道具的元素，在本例中为 DogImages，我们可以访问 DogImages 组件中的数据道具。</p>
+<h4 id="高效加载-3p-脚本">高效加载 3P 脚本</h4>
+<p>以下是经过时间考验的最佳实践，如果使用得当，它们可以减少第三方资源的性能影响。</p>
+<p>使用 <code>async</code> 或 <code>defer</code> 来防止脚本阻止其他内容。<br />
+适用于：非关键脚本（标签管理器、分析）</p>
+<p>JavaScript 下载和执行默认是同步的，可以阻止主线程上的 HTML 解析器和 DOM 构建。<br />
+在 <code>&lt;script&gt;</code> 元素中使用 <code>async</code> 或 <code>defer</code> 属性告诉浏览器异步下载脚本。<br />
+可以使用这些来下载关键渲染路径（例如，主 UI 组件）不需要的任何脚本</p>
+<p><code>defer</code>：脚本在解析器执行时并行获取，脚本执行延迟到解析完成。 <br />
+Defer 应该是延迟执行直到 DOM 构建之后的默认选择。</p>
+<p><code>async</code>：脚本在解析时并行获取，但在阻塞解析器时会在可用时立即执行。<br />
+对于有依赖的模块脚本，脚本及其所有依赖都在 defer 队列中执行。<br />
+对需要在加载过程中更早运行的脚本使用 async。<br />
+例如，可能希望在不丢失任何早期页面加载数据的情况下尽早执行特定的分析脚本。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">&lt;script src=&quot;https://example.com/deferthis.js&quot; defer&gt;&lt;/script&gt;
+&lt;script src=&quot;https://example.com/asyncthis.js&quot; async&gt;&lt;/script&gt;
+</code></pre><p><p class="md__image">
+  <img src="https://lh3.googleusercontent.com/-NcSb2MNZm4I/YcXO7iKaWBI/AAAAAAAACT0/8cZK9J01A_wnm-taiDU3Xx0-Nwvb8x3MACNcBGAsYHQ/w670-h375/image.png" alt=""  />
+</p></p>
+<blockquote>
+<p><a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/loading-third-party-javascript" target="_blank">developers.google.com</a></p>
+</blockquote>
+<p>这里值得一提的一个警告是 <code>async</code> 和 <code>defer</code> 降低了浏览器分配的资源优先级，导致其加载时间显着延迟。 <br />
+优先级提示的新功能可以帮助解决此问题。</p>
+<h4 id="使用资源提示建立与所需来源的早期连接">使用资源提示建立与所需来源的早期连接</h4>
+<p>适用于：来自第三方 CDN 的关键脚本、字体、CSS、图像</p>
+<p>由于每个第三方服务器可能需要 DNS 查找、重定向和多次往返，连接到第三方源可能会很慢。</p>
+<p>资源提示 <code>dns-prefetch</code> 和 <code>preconnect</code> 通过在生命周期的早期启动连接来帮助减少此设置所需的时间。</p>
+<p>包含与域对应的 <code>dns-prefetch</code> 资源提示将提前执行 DNS 查找，从而减少与 dns 查找相关的延迟。 可以将其与最关键资源的预连接配对。</p>
+<p>除了 DNS 查找之外，预连接还通过执行 TCP 往返和处理 TLS 协商来启动与第三方域的连接。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">&lt;head&gt;
+    &lt;link rel=&quot;preconnect&quot; href=&quot;http://example.com&quot;&gt;
+    &lt;link rel=&quot;dns-prefetch&quot; href=&quot;http://example.com&quot;&gt;
+&lt;/head&gt;
+</code></pre><h4 id="延迟加载-3p-资源">延迟加载 3P 资源</h4>
+<p>适用于：YouTube、地图、广告和社交媒体等嵌入</p>
+<p>第三方嵌入（例如用于社交媒体提要、广告、YouTube 视频和地图的嵌入）可能会降低网页速度。</p>
+<p>但是，所有此类嵌入在页面加载时可能对用户不可见，并且在用户向下滚动到它们时可能会延迟加载。</p>
+<p>可以根据所需的浏览器支持使用不同的延迟加载方法。</p>
+<ol>
+<li>
+<p><a href="https://web.dev/iframe-lazy-loading/" target="_blank">loading</a> 属性可以与图像和 iframe 一起使用，这些图像和 iframe 通常用于加载第三方嵌入，例如 YouTube 或 Google 地图的嵌入。</p>
+</li>
+<li>
+<p>使用 <a href="https://developers.google.com/web/updates/2016/04/intersectionobserver" target="_blank">IntersectionObserver API</a> 的自定义检测被观察元素何时进入或退出浏览器的视口。</p>
+</li>
+<li>
+<p><a href="https://github.com/aFarkas/lazysizes" target="_blank">Lazy-sizes</a> - 一个流行的 JavaScript 库，可为实现延迟加载。</p>
+</li>
+</ol>
+<p>延迟加载嵌入的一种变体使用在页面加载时向用户显示的静态或动态外观。</p>
+<p>可以使用实际嵌入的静态图像代替地图嵌入来显示地图嵌入上的特定区域。</p>
+<p>或者，使用看起来像嵌入但仅在用户单击或与之交互时加载的外观。</p>
+<p>流行的嵌入实现外观的一些方法包括用于地图的 <a href="https://developers.google.com/maps/documentation/maps-static/overview" target="_blank">Map Static API</a>、用于 Twitter 嵌入的 <a href="https://tweetpik.com/" target="_blank">Tweetpik</a>、用于 YouTube 的 <a href="https://github.com/paulirish/lite-youtube-embed" target="_blank">lite-youtube-embed</a>、用于聊天小部件的 <a href="https://github.com/calibreapp/react-live-chat-loader" target="_blank">React-live-chat-loader</a>。</p>
+<p>有关这些技术的全面讨论可在此处获得。</p>
+<p>关于延迟加载和外墙的一些注意事项</p>
+<ul>
+<li>
+<p>YouTube 外观在 iOS 和 Safari 上的 macOS 11+ 上的行为略有不同。 第一次点击/点击加载实际的视频嵌入。 用户必须再次点击才能播放视频。</p>
+</li>
+<li>
+<p>如果未指定嵌入的大小，延迟加载会导致布局偏移并影响用户体验。 为了防止布局偏移，应该为所有延迟加载的嵌入或其容器元素指定大小。</p>
+</li>
+</ul>
+<h4 id="自托管-3p-脚本以防止往返">自托管 3P 脚本以防止往返</h4>
+<p>适用于：JavaScript 文件、字体</p>
+<ul>
+<li>
+<p>尽管 <code>preconnect</code> 或 <code>dns-prefetch</code> 允许尽早启动与第三方源的连接，但这些连接仍然是必需的。此外，对于第三方来源，需要依赖他们的缓存策略，这可能不是最佳的。</p>
+</li>
+<li>
+<p>在同一源上自托管脚本的副本可更好地控制用于脚本的加载和缓存过程。自托管减少了 DNS 查找所需的时间，并允许您使用 HTTP 缓存改进脚本的缓存策略。还可以使用 HTTP/2 服务器推送来推送您知道用户需要的脚本。自托管第三方脚本的一个很好的例子是 Casper.com，它通过 Optimizely 提供的自托管第三方脚本将其主页的开始渲染时间缩短了 1.7 秒。</p>
+</li>
+</ul>
+<p>对于第三方脚本的自托管副本，必须确保根据对原始脚本的更改定期更新副本。如果没有更新，脚本可能会过时，缺少与依赖项对应的重要修复或更改。在服务器上自托管而不是 CDN 也会阻止您利用 CDN 采用的边缘缓存机制。</p>
+<h4 id="尽可能使用-service-worker-缓存脚本">尽可能使用 Service Worker 缓存脚本</h4>
+<p>适用于：JavaScript 文件、字体</p>
+<p>对于频繁更改的脚本，自托管可能不是一个选项。 <br />
+可以使用 Service Worker 来改进此类第三方脚本的缓存，同时还可以利用 CDN 边缘缓存。 <br />
+这种技术可以更好地控制通过网络重新获取的频率。可以与预连接结合使用，以进一步降低获取操作的网络成本。 <br />
+还可以加载资源，以便将非必要的第三方脚本的请求推迟到页面到达关键用户时刻。</p>
+<p>遵循理想的加载顺序<br />
+考虑上述针对不同类型第三方的指南及其对页面的价值。 根据每个资源的预期用途，可以遵循理想的资源加载顺序，以最佳方式交错第一方和第三方资源，以加快页面加载速度。</p>
+<hr/>
+<h2 id="按脚本类型划分的最佳实践">按脚本类型划分的最佳实践</h2>
+<p>有些脚本比其他脚本更容易优化。</p>
+<p>与 Web 性能专家就优化不同的第三方、观察到的一些典型约束以及他们加载第三方的愿望清单进行讨论后，得出了一些有趣的结论。</p>
+<p>普遍的共识是，大多数用户在看到某个特定阈值的内容之前不会与站点进行交互。</p>
+<p>以下是特定于不同脚本类型的指南。</p>
+<h4 id="非关键-javascript">非关键 JavaScript</h4>
+<p>大多数第三方（如聊天小部件或分析脚本）对用户体验并不重要，可能会延迟。 <br />
+使用 <code>defer</code> 脚本属性是延迟这些脚本的加载和执行的最常用方法。</p>
+<p>广告或分析团队可能会担心推迟脚本对应用程序的可见性和广告收入的影响。 <br />
+<a href="https://medium.com/the-telegraph-engineering/improving-third-party-web-performance-at-the-telegraph-a0a1000be5" target="_blank">Telegraph 案例研</a>究经常在这种情况下被引用，其中推迟所有脚本不会影响任何分析或广告指标。 <br />
+相反，第一个广告加载指标平均提高了 4 秒。 <br />
+一些开发人员还设计了一些解决方案，<a href="https://www.renderbetter.com/guides/improving-shopify-site-speed-can-increase-conversions-case-study" target="_blank">将第三方的加载延迟到页面变为可交互之后</a>。</p>
+<h4 id="机器人检测recaptcha">机器人检测/ReCaptcha</h4>
+<p>由于希望阻止机器人访问 Web 表单，因此开发人员通常会尽早加载这些脚本。</p>
+<p>然而，<code>ReCaptcha</code> 有相当大的 JS 负载和主线程占用空间，因此有动力将它推迟到需要时加载。</p>
+<p>优化此脚本的几种方法是</p>
+<ol>
+<li>
+<p>仅在几个页面上加载它，其中包含可能被机器人发送垃圾邮件的用户表单输入。</p>
+</li>
+<li>
+<p>当用户与表单交互时<a href="https://dev.to/uf4no/improve-page-performance-lazy-loading-recaptcha-442o" target="_blank">延迟加载脚本</a>，例如，在表单焦点上。</p>
+</li>
+<li>
+<p>当需要在页面加载时执行脚本，使用资源提示建立早期连接。</p>
+</li>
+</ol>
+<h4 id="谷歌标签管理器-gtm">谷歌标签管理器 (GTM)</h4>
+<p>大型网站通常允许 Google 跟踪代码管理器访问营销团队或代理机构。</p>
+<p>这允许他们向网站上的所有页面添加新的营销标签，以便更好地进行跟踪。</p>
+<p>性能不是营销团队的主要关注点，他们所有人可能都不知道，不加考虑地添加标签会减慢网站的速度。</p>
+<p>GTM 脚本的优化更多是关于控制谁访问 GTM 并监控他们所做的更改。</p>
+<p>可以首先确保网站所有者拥有帐户而不是外部机构。这允许您为可以添加、编辑和发布标签的人员定义精细的访问权限。</p>
+<p>可以在开发和营销部门之间建立更好的协作来审核新标签并删除未使用的标签。</p>
+<p>网站可能不需要在所有页面上使用 GTM。 <br />
+（例如，营销团队没有理由在电子商务网站的结帐页面上跟踪事件）。</p>
+<p>应单独审核页面，以便删除不必要的 GTM 内容。</p>
+<p>如果用户拒绝 cookie，使用 cookie 横幅的站点也可以选择不加载 GTM。</p>
+<p>最后，如果必须在页面上加载 GTM，可以在加载主要内容后推迟触发脚本。</p>
+<p>另一个适用于旧第三方脚本标签的优化与 document.write() 相关。<br />
+使用 document.write() 注入脚本是不安全的，并且可能会导致基于浏览器和脚本类型的警告或错误。<br />
+一些第三方脚本仍然使用这种方法。 GTM 在其<a href="https://support.google.com/tagmanager/answer/6107167?hl=en" target="_blank">自定义 HTML 标签</a>创建界面中提供了一个名为 Support document.write() 的配置。<br />
+如果启用此功能，Google 标签管理器会临时用自己的安全版本替换默认的 document.write() 函数。</p>
+<h4 id="ab-测试和个性化">A/B 测试和个性化</h4>
+<p>网站进行 <a href="https://www.optimizely.com/optimization-glossary/ab-testing/" target="_blank">A/B 测试</a>以检查哪个版本的网页性能更好。<br />
+页面的两种变体之一是为已识别的用户样本中的不同用户加载的。 <br />
+A/B 测试会显着影响运行它们的页面的性能，每个测试都会增加多达 1 秒的加载时间。<br />
+目前，许多 A/B 测试都是通过第三方从外部获取的，开发人员几乎无法控制为更改这些测试的 UI 而执行的 JavaScript 代码。</p>
+<p><a href="https://www.dynamicyield.com/lesson/web-personalization/" target="_blank">站点个性化</a>是一个相关概念，它涉及运行脚本以根据已知数据为不同用户提供量身定制的体验。<br />
+这些脚本同样很重并且难以优化。与 A/B 测试脚本一样，个性化脚本也需要尽早运行，因为呈现的 UI 取决于脚本的输出。<br />
+为 A/B 测试和个性化开发<a href="https://www.fasterize.com/en/blog/a-b-testing-imperative-to-marketing-perilous-to-web-performance/" target="_blank">基于服务器的自定义解决方案是优化 A/B 测试</a>的理想方法。然而，它可能并不总是可行的。</p>
+<p>为了优化第三方 A/B 测试脚本，您可以<a href="https://support.google.com/optimize/answer/6283420#zippy=%2Cin-this-article" target="_blank">限制接收脚本的用户数</a>。<br />
+该脚本根据试探法确定要显示的版本，并为用户启用正确的版本。这可能会减慢所有用户的页面速度。 <br />
+Google 的优化器允许配置用于定位用户的规则。其中许多规则都可以在 Google 服务器上进行评估，因此对非目标用户的<a href="https://support.google.com/optimize/answer/7071747?hl=en" target="_blank">性能影响很小</a>。</p>
+<h4 id="youtube-和地图嵌入">YouTube 和地图嵌入</h4>
+<p>这些嵌入很重，开发人员必须探索延迟加载或点击加载模式来加载嵌入以优化它们。</p>
+<p>鼓励使用 <a href="https://github.com/paulirish/lite-youtube-embed" target="_blank">lite-youtube-embed</a> 等解决方案，同时注意在 iOS/macOS-Safari 中需要双击/单击才能使用此外观播放视频。</p>
+<h4 id="社交媒体嵌入">社交媒体嵌入</h4>
+<p>一些社交媒体嵌入提供了延迟加载脚本的选项（例如，<a href="https://developers.facebook.com/docs/plugins/embedded-posts/" target="_blank">Facebook 嵌入中的数据延迟</a>）。</p>
+<p>可以探索它以提高性能。</p>
+<p>另一种选择是使用手动创建的图像外观或使用诸如 <a href="https://tweetpik.com/" target="_blank">tweetpik</a> 之类的工具。</p>
+<h4 id="开箱即用的优化">开箱即用的优化</h4>
+<p>为了优化第三方，开发团队应该了解资源提示、延迟加载、HTTP 缓存和服务工作者的细微差别，然后在他们的解决方案中实现这些。一些框架和库以开发人员可以轻松使用的方式封装了这些最佳实践。</p>
+<p>由 Builder.io 创建的 Partytown 是一个实验性库，可帮助在 Web Worker 而不是主线程上运行资源密集型脚本。他们的理念是主线程应该专用于您的代码，关键路径不需要的任何脚本都可以被沙箱化并隔离到网络工作者。 Partytown 允许您配置对主线程 API（如 cookie、localStorage、userAgent 等）的访问。API 调用也可以使用参数记录，以便更好地了解脚本的作用。</p>
+<p>JavaScript 代理和 Service Worker 处理 Web Worker 和主线程之间的通信。 Partytown 脚本必须自托管在与 HTML 文档相同的服务器上。它可以与 React 或 Next.js 应用程序一起使用，甚至可以在没有任何框架的情况下使用。可以在 Web 服务器中执行的每个第三方脚本都应将其打开脚本标记的类型属性设置为 text/partytown，如下所示。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&#34;text/partytown&#34;</span><span class="o">&gt;</span>
+    <span class="c1">// Third-party analytics scripts
+</span><span class="c1"></span><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>该库还提供了一个 React Partytown 组件，您可以直接将其包含在您的 React 或 Next.js 项目中。</p>
+<p>对于 Next.js 文档，它可以包含在文档 <code>&lt;head&gt;</code> 中，如下所示。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">import { Partytown } from '@builder.io/partytown/react';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+
+export default class MyDocument extends Document {
+ render() {
+   return (
+     &lt;Html&gt;
+       &lt;Head&gt;
+         &lt;Partytown /&gt;
+       &lt;/Head&gt;
+       &lt;body&gt;
+         &lt;Main /&gt;
+         &lt;NextScript /&gt;
+       &lt;/body&gt;
+     &lt;/Html&gt;
+   );
+ }
+</code></pre><p>Partytown 还包括用于常见分析库（例如 Google 标签管理器）的 React 组件。</p>
+<p>以下示例展示了如何将其添加到 React/Next.js 项目中。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">import { Partytown, GoogleTagManager, GoogleTagManagerNoScript } from '@builder.io/partytown/react';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+
+export default class MyDocument extends Document {
+ render() {
+   return (
+     &lt;Html&gt;
+       &lt;Head&gt;
+         &lt;GoogleTagManager containerId={'GTM-XXXXX'} /&gt;
+         &lt;Partytown /&gt;
+       &lt;/Head&gt;
+       &lt;body&gt;
+         &lt;GoogleTagManagerNoScript containerId={'GTM-XXXXX'} /&gt;
+         &lt;Main /&gt;
+         &lt;NextScript /&gt;
+       &lt;/body&gt;
+     &lt;/Html&gt;
+   );
+ }
+</code></pre><p>Next.js 本身通过其 Script 组件为第三方脚本提供开箱即用的优化。</p>
+<p>让我们看看这如何让我们提高不同第三方的加载性能。</p>
+<hr/>
+<h2 id="nextjs-脚本组件-">Next.js 脚本组件 ✔</h2>
+<p>Next.js 11 于 2021 年年中发布，其组件基于 Google 的 Aurora 团队引入的一致性方法。</p>
+<p><a href="https://web.dev/conformance/" target="_blank">Conformance</a> 是一个系统，它提供精心设计的解决方案和规则，以支持最佳加载和 Core Web Vitals。</p>
+<p>一致性将最佳实践编入规则集，开发人员可以轻松实施。</p>
+<p>强大的默认设置和可操作的规则构成了该系统的基础。</p>
+<p>它们使开发人员可以轻松地做正确的事情并防止反模式潜入。</p>
+<p><a href="https://nextjs.org/docs/basic-features/script" target="_blank">Next.js 脚本组件</a>通过提供可提高加载性能的可自定义模板来使用一致性。</p>
+<p>Script 组件封装了 <code>&lt;script&gt; 标签</code>，允许使用 <code>strategy</code> 属性设置第三方脚本的加载优先级。</p>
+<p>策略属性可以采用三个值。</p>
+<ol>
+<li>
+<p>beforeInteractive：将此用于浏览器应在页面变为交互式之前执行的关键脚本。 （例如，机器人检测）</p>
+</li>
+<li>
+<p>afterInteractive：用于在页面交互后浏览器可以运行的脚本。 （例如，标签管理器）这是应用的默认策略，相当于使用 defer 加载脚本</p>
+</li>
+<li>
+<p>lazyOnload：用于在浏览器空闲时可以延迟加载的脚本。</p>
+</li>
+</ol>
+<p>设置策略有助于 Next.js 自动应用优化和最佳实践来加载脚本，同时确保最佳加载顺序。</p>
+<p>可以使用带有策略属性的脚本标记，如下所示。</p>
+<p>与原生 HTML 脚本标签不同，不得将 <code>next/scrip</code>t 标签放置在 <code>next/head</code> 组件或 <code>pages/document.js</code> 中。</p>
+<p>Before:</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">import Head from 'next/head'
+
+export default function Home() {
+ return (
+   &lt;&gt;
+     &lt;Head&gt;
+       &lt;script async src=&quot;https://example.com/samplescript.js&quot; /&gt;
+     &lt;/Head&gt;
+   &lt;/&gt;
+ )
+}
+</code></pre><p>After:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -2685,29 +2880,120 @@ const StyedText = withStyles(Text)
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="c1">//DogImages.js
-</span><span class="c1"></span><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="nx">withLoader</span> <span class="nx">from</span> <span class="s2">&#34;./withLoader&#34;</span><span class="p">;</span>
-
-<span class="kd">function</span> <span class="nx">DogImages</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">props</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">message</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">dog</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span>
-    <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="nx">dog</span><span class="p">}</span> <span class="nx">alt</span><span class="o">=</span><span class="s2">&#34;Dog&#34;</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">index</span><span class="p">}</span> <span class="o">/&gt;</span>
-  <span class="p">));</span>
+<span class="c1">// pages/index.js
+</span><span class="c1">// 当未指定策略时，将应用默认策略 afterinteractive。
+</span><span class="c1"></span><span class="kr">import</span> <span class="nx">Script</span> <span class="nx">from</span> <span class="s1">&#39;next/script&#39;</span>
+<span class="o">&lt;</span><span class="nx">br</span><span class="o">&gt;</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">Home</span><span class="p">()</span> <span class="p">{</span>
+ <span class="k">return</span> <span class="p">(</span>
+   <span class="o">&lt;&gt;</span>
+     <span class="o">&lt;</span><span class="nx">Script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;https://example.com/samplescript.js&#34;</span> <span class="o">/&gt;</span>
+   <span class="o">&lt;</span><span class="err">/&gt;</span>
+ <span class="p">)</span>
 <span class="p">}</span>
-
-<span class="kr">export</span> <span class="k">default</span> <span class="nx">withLoader</span><span class="p">(</span>
-  <span class="nx">DogImages</span><span class="p">,</span>
-  <span class="s2">&#34;https://dog.ceo/api/breed/labrador/images/random/6&#34;</span>
-<span class="p">);</span>
 </code></pre></td></tr></table>
 </div>
-</div><div class="highlight"><div class="chroma">
+</div><p>Script 组件允许处理前面讨论的许多用例。</p>
+<p>可以使用它来加载用于分析、社交媒体、实用程序库等的第三方脚本。</p>
+<p>以下示例演示了如何将上述策略应用于不同类型的第三方脚本。</p>
+<h4 id="尽早加载-polyfill">尽早加载 polyfill</h4>
+<p>如果希望提前加载适用于核心内容的特定 polyfill，可以使用 <code>beforeInteractive</code> 策略加载 polyfill，</p>
+<p>如 Next.js 文档中的以下示例所示。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">import Script from 'next/script'
+
+export default function Home() {
+ return (
+   &lt;&gt;
+     &lt;Script src=&quot;https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserverEntry%2CIntersectionObserver&quot;
+       strategy=&quot;beforeInteractive&quot;
+     /&gt;
+   &lt;/&gt;
+ )
+}
+</code></pre><h4 id="延迟加载社交媒体嵌入">延迟加载社交媒体嵌入</h4>
+<p>社交媒体嵌入，尤其是那些在页面加载时不可见的嵌入，<br />
+可以在用户滚动到它们时或在不活动期间延迟或延迟加载。</p>
+<p>可以使用 <code>lazyonload</code> 策略，如以下代码段所示。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">import Script from 'next/script'
+
+export default function Home() {
+ return (
+   &lt;&gt;
+     &lt;Script
+       src=&quot;https://connect.facebook.net/en_US/sdk.js&quot; strategy=&quot;lazyOnload&quot;
+     /&gt;
+   &lt;/&gt;
+ )
+}
+</code></pre><h4 id="在加载时有条件地执行代码">在加载时有条件地执行代码</h4>
+<p>可能有一些代码需要在特定的第三方加载后执行。 <br />
+这可以在脚本组件的 <code>onload</code> 属性中指定。</p>
+<p>例如，以下代码段显示了如何包含将根据用户同意执行的代码。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="o">&lt;</span><span class="nx">Script</span>
+   <span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="nx">url</span><span class="p">}</span> <span class="c1">// 同意管理
+</span><span class="c1"></span>   <span class="nx">strategy</span><span class="o">=</span><span class="s2">&#34;beforeInteractive&#34;</span>
+   <span class="nx">onLoad</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+     <span class="c1">// 如果加载成功，则可以依次加载其他脚本
+</span><span class="c1"></span>   <span class="p">}}</span>
+<span class="err">/&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="在脚本标签中使用内联脚本">在脚本标签中使用内联脚本</h4>
+<p>需要根据第三方组件的负载执行的内联脚本也可能包含在 Script 组件中，如下所示。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">import Script from 'next/script'
+
+&lt;Script id=&quot;show-banner&quot; strategy=&quot;lazyOnload&quot;&gt;
+ {`document.getElementById('banner').removeClass('hidden')`}
+&lt;/Script&gt;
+
+// or
+
+&lt;Script
+ id=&quot;show-banner&quot;
+ dangerouslySetInnerHTML={{
+   __html: `document.getElementById('banner').removeClass('hidden')`
+ }}
+/&gt;
+</code></pre><p>这里的内联脚本用于在延迟加载后更改第三方横幅广告的可见性。 <br />
+请注意，也可以使用危险的 <code>SetInnerHTML</code> 属性包含内联脚本。</p>
+<h4 id="将属性转发给第三方脚本">将属性转发给第三方脚本</h4>
+<p>可以在脚本组件中设置第三方脚本可以使用的特定属性值。</p>
+<p>以下<a href="https://nextjs.org/docs/basic-features/script#forwarding-attributes" target="_blank">示例</a>显示了如何将两个这样的属性传递给分析脚本。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">import Script from 'next/script'
+
+export default function Home() {
+ return (
+   &lt;&gt;
+     &lt;Script
+       src=&quot;https://www.google-analytics.com/analytics.js&quot;
+       id=&quot;analytics&quot;
+       nonce=&quot;XUENAJFW&quot;
+       data-test=&quot;analytics&quot;
+     /&gt;
+   &lt;/&gt;
+ )
+}
+</code></pre><h4 id="加载分析脚本">加载分析脚本</h4>
+<p>使用 Google Analytics (GA) 和 Google Tag Manager (GTM) 可以通过不同的方式在网站上包含分析。</p>
+<p>可以使用脚本组件在 Next.js 网站上以最佳方式加载 <a href="https://developers.google.com/analytics/devguides/collection/gtagjs" target="_blank">gtag.js</a> 或 <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs" target="_blank">analytics.js</a> 脚本。 根据您要执行这些脚本的位置，您可以在 _app.js（适用于所有页面）或特定页面上加载它们。</p>
+<p>通过在 _app.js 中包含脚本组件，可以为站点上的所有页面启用 GTM，如下所示：</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
@@ -2734,225 +3020,102 @@ const StyedText = withStyles(Text)
 </span><span class="lnt">23
 </span><span class="lnt">24
 </span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="c1">//withLoader.js
-</span><span class="c1"></span><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useEffect</span><span class="p">,</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
-
-<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">withLoader</span><span class="p">(</span><span class="nx">Element</span><span class="p">,</span> <span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="p">[</span><span class="nx">data</span><span class="p">,</span> <span class="nx">setData</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
-
-    <span class="nx">useEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="kr">async</span> <span class="kd">function</span> <span class="nx">getData</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kr">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">);</span>
-        <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
-        <span class="nx">setData</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
-      <span class="p">}</span>
-
-      <span class="nx">getData</span><span class="p">();</span>
-    <span class="p">},</span> <span class="p">[]);</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Loading</span><span class="p">...</span><span class="o">&lt;</span><span class="err">/div&gt;;</span>
-    <span class="p">}</span>
-
-    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">Element</span> <span class="p">{...</span><span class="nx">props</span><span class="p">}</span> <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="nx">data</span><span class="p">}</span> <span class="o">/&gt;</span><span class="p">;</span>
-  <span class="p">};</span>
+<span class="kr">import</span> <span class="nx">Script</span> <span class="nx">from</span> <span class="s1">&#39;next/script&#39;</span>
+<span class="c1">// + other imports
+</span><span class="c1"></span>
+<span class="kd">function</span> <span class="nx">MyApp</span><span class="p">({</span> <span class="nx">Component</span><span class="p">,</span> <span class="nx">pageProps</span> <span class="p">})</span> <span class="p">{</span>
+ <span class="c1">// Other app code
+</span><span class="c1"></span>
+ <span class="k">return</span> <span class="p">(</span>
+   <span class="o">&lt;&gt;</span>
+     <span class="p">{</span><span class="cm">/* Google Tag Manager - Global base code */</span><span class="p">}</span>
+     <span class="o">&lt;</span><span class="nx">Script</span>
+       <span class="nx">strategy</span><span class="o">=</span><span class="s2">&#34;afterInteractive&#34;</span>
+       <span class="nx">dangerouslySetInnerHTML</span><span class="o">=</span><span class="p">{{</span>
+         <span class="nx">__html</span><span class="o">:</span> <span class="sb">`
+</span><span class="sb">           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({&#39;gtm.start&#39;:
+</span><span class="sb">           new Date().getTime(),event:&#39;gtm.js&#39;});var f=d.getElementsByTagName(s)[0],
+</span><span class="sb">           j=d.createElement(s),dl=l!=&#39;dataLayer&#39;?&#39;&amp;l=&#39;+l:&#39;&#39;;j.async=true;j.src=
+</span><span class="sb">           &#39;https://www.googletagmanager.com/gtm.js?id=&#39;+i+dl;f.parentNode.insertBefore(j,f);
+</span><span class="sb">           })(window,document,&#39;script&#39;,&#39;dataLayer&#39;, &#39;</span><span class="si">${</span><span class="nx">GTM_ID</span><span class="si">}</span><span class="sb">&#39;);
+</span><span class="sb">         `</span><span class="p">,</span>
+       <span class="p">}}</span>
+     <span class="o">/&gt;</span>
+     <span class="o">&lt;</span><span class="nx">Component</span> <span class="p">{...</span><span class="nx">pageProps</span><span class="p">}</span> <span class="o">/&gt;</span>
+   <span class="o">&lt;</span><span class="err">/&gt;</span>
+ <span class="p">)</span>
 <span class="p">}</span>
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">MyApp</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>Perfect！ 我们现在在获取数据时看到一个 Loading&hellip; 屏幕。</p>
-<p>高阶组件模式允许我们为多个组件提供相同的逻辑，同时将所有逻辑保存在一个地方。</p>
-<p>withLoader HOC 不关心它接收到的组件或 url：只要它是一个有效的组件和一个有效的 API 端点，它就会简单地将数据从该 API 端点传递给我们传递的组件。</p>
-<hr/>
-<h2 id="组合">组合</h2>
-<p>我们还可以组合多个高阶组件。</p>
-<p>假设还想添加显示悬停的功能！ 当用户将鼠标悬停在 DogImages 列表上时的文本框。</p>
-<p>需要创建一个 HOC，为传递的元素提供悬停道具。 <br />
-基于该道具，可以根据用户是否将鼠标悬停在 DogImages 列表上，有条件地呈现文本框。</p>
-<p>现在可以将 withHover HOC 包裹在 withLoader HOC 周围。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="c1">//DogImages.js
-</span><span class="c1"></span><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="nx">withLoader</span> <span class="nx">from</span> <span class="s2">&#34;./withLoader&#34;</span><span class="p">;</span>
-<span class="kr">import</span> <span class="nx">withHover</span> <span class="nx">from</span> <span class="s2">&#34;./withHover&#34;</span><span class="p">;</span>
+</div><p>相反，如果想在特定页面上加载 analytics.js，<br />
+可以将其包含在页面中，如图所示。</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">import Script from 'next/script'
+//other imports
 
-<span class="kd">function</span> <span class="nx">DogImages</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="p">(</span>
-    <span class="o">&lt;</span><span class="nx">div</span> <span class="p">{...</span><span class="nx">props</span><span class="p">}</span><span class="o">&gt;</span>
-      <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">hovering</span> <span class="o">&amp;&amp;</span> <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&#34;hover&#34;</span><span class="o">&gt;</span><span class="nx">Hovering</span><span class="o">!&lt;</span><span class="err">/div&gt;}</span>
-      <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&#34;list&#34;</span><span class="o">&gt;</span>
-        <span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">message</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">dog</span><span class="p">,</span> <span class="nx">index</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span>
-          <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">src</span><span class="o">=</span><span class="p">{</span><span class="nx">dog</span><span class="p">}</span> <span class="nx">alt</span><span class="o">=</span><span class="s2">&#34;Dog&#34;</span> <span class="nx">key</span><span class="o">=</span><span class="p">{</span><span class="nx">index</span><span class="p">}</span> <span class="o">/&gt;</span>
-        <span class="p">))}</span>
-      <span class="o">&lt;</span><span class="err">/div&gt;</span>
-    <span class="o">&lt;</span><span class="err">/div&gt;</span>
-  <span class="p">);</span>
-<span class="p">}</span>
+const Home = () =&gt; {
+ return (
+   &lt;div class=&quot;container&quot;&gt;
+     &lt;Script id=&quot;google-analytics&quot; strategy=&quot;afterInteractive&quot;&gt;
+       {`
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-<span class="kr">export</span> <span class="k">default</span> <span class="nx">withHover</span><span class="p">(</span>
-  <span class="nx">withLoader</span><span class="p">(</span><span class="nx">DogImages</span><span class="p">,</span> <span class="s2">&#34;https://dog.ceo/api/breed/labrador/images/random/6&#34;</span><span class="p">)</span>
-<span class="p">);</span>
-</code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="c1">//withHover.js
-</span><span class="c1"></span><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
+         ga('create', 'UA-XXXXX-Y', 'auto');
+         ga('send', 'pageview');
+       `}
+     &lt;/Script&gt;
+   &lt;/div&gt;
+   //Other UI related HTML
+ )
+}
+</code></pre><pre tabindex="0"><code class="language-base" data-lang="base">import Script from 'next/script'
+//other imports
 
-<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">withHover</span><span class="p">(</span><span class="nx">Element</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">props</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="p">[</span><span class="nx">hovering</span><span class="p">,</span> <span class="nx">setHover</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+const Home = () =&gt; {
+ return (
+   &lt;div class=&quot;container&quot;&gt;
+     &lt;Script id=&quot;google-analytics&quot; strategy=&quot;afterInteractive&quot;&gt;
+       {`
+         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+         })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    <span class="k">return</span> <span class="p">(</span>
-      <span class="o">&lt;</span><span class="nx">Element</span>
-        <span class="p">{...</span><span class="nx">props</span><span class="p">}</span>
-        <span class="nx">hovering</span><span class="o">=</span><span class="p">{</span><span class="nx">hovering</span><span class="p">}</span>
-        <span class="nx">onMouseEnter</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="nx">setHover</span><span class="p">(</span><span class="kc">true</span><span class="p">)}</span>
-        <span class="nx">onMouseLeave</span><span class="o">=</span><span class="p">{()</span> <span class="p">=&gt;</span> <span class="nx">setHover</span><span class="p">(</span><span class="kc">false</span><span class="p">)}</span>
-      <span class="o">/&gt;</span>
-    <span class="p">);</span>
-  <span class="p">};</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="c1">//withLoader.js
-</span><span class="c1"></span><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useEffect</span><span class="p">,</span> <span class="nx">useState</span> <span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react&#34;</span><span class="p">;</span>
-
-<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nx">withLoader</span><span class="p">(</span><span class="nx">Element</span><span class="p">,</span> <span class="nx">url</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">props</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="p">[</span><span class="nx">data</span><span class="p">,</span> <span class="nx">setData</span><span class="p">]</span> <span class="o">=</span> <span class="nx">useState</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
-
-    <span class="nx">useEffect</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-      <span class="nx">fetch</span><span class="p">(</span><span class="nx">url</span><span class="p">)</span>
-        <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">res</span> <span class="p">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
-        <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span> <span class="p">=&gt;</span> <span class="nx">setData</span><span class="p">(</span><span class="nx">data</span><span class="p">));</span>
-    <span class="p">},</span> <span class="p">[]);</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Loading</span><span class="p">...</span><span class="o">&lt;</span><span class="err">/div&gt;;</span>
-    <span class="p">}</span>
-
-    <span class="k">return</span> <span class="o">&lt;</span><span class="nx">Element</span> <span class="p">{...</span><span class="nx">props</span><span class="p">}</span> <span class="nx">data</span><span class="o">=</span><span class="p">{</span><span class="nx">data</span><span class="p">}</span> <span class="o">/&gt;</span><span class="p">;</span>
-  <span class="p">};</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><img src="https://lh3.googleusercontent.com/-D3VpCwpjMhY/YcKTdKXF-VI/AAAAAAAACKg/rg1sqzR_RMIZ02bVMIzX0pt6MvIgDB_-QCNcBGAsYHQ/w571-h544/h2.gif"/>
-<p>DogImages 元素现在包含从 withHover 和 withLoader 传递的所有道具。 <br />
-现在可以有条件地渲染悬停！ 文本框，基于悬停道具的值是真还是假。</p>
-<p><code>一个著名的用于组成 HOC 的库是 recompose</code>。 <br />
-<code>由于 HOC 在很大程度上可以被 React Hooks 替代，因此不再维护 recompose 库，因此本文不会涉及</code>。</p>
-<hr/>
-<h2 id="优点">优点</h2>
-<p>使用高阶组件模式允许我们将所有要重用的逻辑放在一个地方。 <br />
-通过一遍又一遍地复制代码，这降低了在整个应用程序中意外传播错误的风险，每次都可能引入新的错误。 <br />
-通过将逻辑全部放在一个地方，我们可以保持我们的代码 DRY 并轻松实施关注点分离。</p>
-<hr/>
-<h2 id="缺点">缺点</h2>
-<p>HOC 可以传递给元素的 prop 的名称可能会导致命名冲突。</p>
-<pre tabindex="0"><code class="language-base" data-lang="base">function withStyles(Component) {
-  return props =&gt; {
-    const style = { padding: '0.2rem', margin: '1rem' }
-    return &lt;Component style={style} {...props} /&gt;
-  }
+         ga('create', 'UA-XXXXX-Y', 'auto');
+         ga('send', 'pageview');
+       `}
+     &lt;/Script&gt;
+   &lt;/div&gt;
+   //Other UI related HTML
+ )
 }
 
-const Button = () = &lt;button style={{ color: 'red' }}&gt;Click me!&lt;/button&gt;
-const StyledButton = withStyles(Button)
-</code></pre><p>在这种情况下， withStyles HOC 向我们传递给它的元素添加了一个名为 style 的道具。 <br />
-但是，Button 组件已经有一个名为 style 的 prop，它将被覆盖！ <br />
-通过重命名道具或合并道具，确保 HOC 可以处理意外的名称冲突。</p>
-<pre tabindex="0"><code class="language-base" data-lang="base">function withStyles(Component) {
-  return props =&gt; {
-    const style = {
-      padding: '0.2rem',
-      margin: '1rem',
-      ...props.style
-    }
-
-    return &lt;Component style={style} {...props} /&gt;
-  }
-}
-
-const Button = () = &lt;button style={{ color: 'red' }}&gt;Click me!&lt;/button&gt;
-const StyledButton = withStyles(Button)
-</code></pre><p>当使用多个组合的 HOC 将 props 传递给包裹在其中的元素时，可能很难确定哪个 HOC 负责哪个 prop。 这可能会阻碍调试和轻松扩展应用程序。</p>
+export default Home
+</code></pre><p>请注意，在上面的两个示例中，分析脚本加载了 <code>strategy = afterInteractive</code>。</p>
+<hr/>
+<h2 id="结论">结论</h2>
+<p>在将来自服务器的资源与来自 Web 其他角落的资源组合起来编写网页时，必须经常监视这些资源之间的相互作用。</p>
+<p>可以从正确排序资源并遵循最佳实践开始。 还可以依赖在设计中内置了这些最佳实践的框架或解决方案。</p>
+<p>随着站点的发展，性能报告和定期审计可以帮助消除冗余并优化影响性能的脚本。</p>
+<p>最后，我们总是希望有众所周知的性能问题的第三方会在他们的最后优化代码或公开 API 以启用变通方法来解决这些问题。</p>
+<hr/>
+<h2 id="知识点">知识点</h2>
+<ul>
+<li>
+<p>Next.s</p>
+</li>
+<li>
+<p>Partytown</p>
+</li>
+</ul>
 
   </article>
 </div>
@@ -2961,17 +3124,17 @@ const StyledButton = withStyles(Button)
 <nav class="pagination-single">
   
     
-      <a href="https://danacoding.github.io/react-patterns/design-patterns/hooks-pattern/" title="Hooks 模式" class="pagination-single__left">
+      <a href="https://danacoding.github.io/react-patterns/performance-patterns/prefetch/" title="预取" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__right-title">Hooks 模式</div>
+        <div class="pagination-single__right-title">预取</div>
       </a>
     
     <div class="grow"></div>
     
-      <a href="https://danacoding.github.io/react-patterns/design-patterns/flyweight-pattern/" title="亨元模式" class="pagination-single__right">
-        <div class="pagination-single__left-title">亨元模式</div>
+      <a href="https://danacoding.github.io/react-patterns/performance-patterns/virtual-lists/" title="列表虚拟化" class="pagination-single__right">
+        <div class="pagination-single__left-title">列表虚拟化</div>
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
         </div>
@@ -2993,11 +3156,51 @@ const StyledButton = withStyles(Button)
   <div class="toc__body">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#容器展示-模式">容器/展示 模式</a></li>
-    <li><a href="#hoc-模式">HOC 模式</a></li>
-    <li><a href="#组合">组合</a></li>
-    <li><a href="#优点">优点</a></li>
-    <li><a href="#缺点">缺点</a></li>
+    <li><a href="#评估-3p-资源的性能影响">评估 3P 资源的性能影响</a></li>
+    <li><a href="#优化策略">优化策略</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#高效加载-3p-脚本">高效加载 3P 脚本</a></li>
+            <li><a href="#使用资源提示建立与所需来源的早期连接">使用资源提示建立与所需来源的早期连接</a></li>
+            <li><a href="#延迟加载-3p-资源">延迟加载 3P 资源</a></li>
+            <li><a href="#自托管-3p-脚本以防止往返">自托管 3P 脚本以防止往返</a></li>
+            <li><a href="#尽可能使用-service-worker-缓存脚本">尽可能使用 Service Worker 缓存脚本</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#按脚本类型划分的最佳实践">按脚本类型划分的最佳实践</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#非关键-javascript">非关键 JavaScript</a></li>
+            <li><a href="#机器人检测recaptcha">机器人检测/ReCaptcha</a></li>
+            <li><a href="#谷歌标签管理器-gtm">谷歌标签管理器 (GTM)</a></li>
+            <li><a href="#ab-测试和个性化">A/B 测试和个性化</a></li>
+            <li><a href="#youtube-和地图嵌入">YouTube 和地图嵌入</a></li>
+            <li><a href="#社交媒体嵌入">社交媒体嵌入</a></li>
+            <li><a href="#开箱即用的优化">开箱即用的优化</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#nextjs-脚本组件-">Next.js 脚本组件 ✔</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#尽早加载-polyfill">尽早加载 polyfill</a></li>
+            <li><a href="#延迟加载社交媒体嵌入">延迟加载社交媒体嵌入</a></li>
+            <li><a href="#在加载时有条件地执行代码">在加载时有条件地执行代码</a></li>
+            <li><a href="#在脚本标签中使用内联脚本">在脚本标签中使用内联脚本</a></li>
+            <li><a href="#将属性转发给第三方脚本">将属性转发给第三方脚本</a></li>
+            <li><a href="#加载分析脚本">加载分析脚本</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#结论">结论</a></li>
+    <li><a href="#知识点">知识点</a></li>
   </ul>
 </nav>
   </div>
