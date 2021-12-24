@@ -1301,6 +1301,29 @@
   
   
   <li class="">
+    <a href="https://danacoding.github.io/react/redux/hooks-redux/"
+      class="menu__title ">Hooks &amp; Redux</a>
+  </li>
+  
+
+    
+      
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  <li class="">
     <a href="https://danacoding.github.io/react/zustand/zustand-base/"
       class="menu__title ">zustand</a>
   </li>
@@ -1995,6 +2018,29 @@
   <li class="active">
     <a href="https://danacoding.github.io/react/hooks/hooks-bp/"
       class="menu__title active">Hooks 最佳实践</a>
+  </li>
+  
+
+    
+      
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  <li class="">
+    <a href="https://danacoding.github.io/react/redux/hooks-redux/"
+      class="menu__title ">Hooks &amp; Redux</a>
   </li>
   
 
@@ -2852,7 +2898,7 @@ function Counter({initialCount}) {
 （基本上去抖动确保为可能发生多次的事件发送恰好一个信号。<br />
 节流将函数接收的调用频率限制在一个固定的时间间隔内。它用于确保目标函数的调用频率不会超过指定的延迟。）。</li>
 </ol>
-<p>这<code>useCallback(callbackFun, deps)</code>有用的时候：给定相同的<code>依赖值deps</code>，钩子在渲染之间<code>返回相同的函数实例</code>（又名记忆）：</p>
+<p>这时，<code>useCallback(callbackFun, deps)</code> 就派上用场了：给定相同的<code>依赖值deps</code>，钩子在渲染之间<code>返回相同的函数实例</code>（又名记忆）：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -2863,9 +2909,11 @@ function Counter({initialCount}) {
 </span><span class="lnt">6
 </span><span class="lnt">7
 </span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useCallback</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">import</span> <span class="p">{</span> <span class="nx">useCallback</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
 <span class="kd">function</span> <span class="nx">MyComponent</span><span class="p">()</span> <span class="p">{</span>
   <span class="c1">// handleClick is the same function object
 </span><span class="c1"></span>  <span class="kr">const</span> <span class="nx">handleClick</span> <span class="o">=</span> <span class="nx">useCallback</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
@@ -2877,7 +2925,7 @@ function Counter({initialCount}) {
 </div>
 </div><p>handleClick 变量在 MyComponent 的渲染之间始终具有相同的回调函数对象。</p>
 <h4 id="2-usecallback的正确用例">2. useCallback的正确用例</h4>
-<p>想象一下，你有一个呈现大量数据列表的组件：</p>
+<p>想象一下，有一个呈现大量数据列表的组件：</p>
 <pre tabindex="0"><code class="language-base" data-lang="base">import useSearch from './fetch-items';
 function MyBigList({ term, onItemClick }) {
   const items = useSearch(term);
@@ -3314,8 +3362,8 @@ FancyInput = forwardRef(FancyInput);
     
     <div class="grow"></div>
     
-      <a href="https://danacoding.github.io/react/zustand/zustand-base/" title="zustand" class="pagination-single__right">
-        <div class="pagination-single__left-title">zustand</div>
+      <a href="https://danacoding.github.io/react/redux/hooks-redux/" title="Hooks &amp; Redux" class="pagination-single__right">
+        <div class="pagination-single__left-title">Hooks &amp; Redux</div>
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
         </div>

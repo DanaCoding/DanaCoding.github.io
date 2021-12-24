@@ -60,6 +60,15 @@
       </item>
       
       <item>
+        <title>Hooks &amp; Redux</title>
+        <link>https://danacoding.github.io/react/redux/hooks-redux/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react/redux/hooks-redux/</guid>
+        <description>现在，有了 Hooks, 甚至可以自己编写 Reducer，通过 Proxy 对状态进行操作。 但是，为了更融入市场而且现在有了 Redux Tookit（可以减少很多代码量），所以</description>
+      </item>
+      
+      <item>
         <title>zustand</title>
         <link>https://danacoding.github.io/react/zustand/zustand-base/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>

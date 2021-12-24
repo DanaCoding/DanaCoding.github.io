@@ -438,12 +438,30 @@
       </item>
       
       <item>
+        <title>静态导入</title>
+        <link>https://danacoding.github.io/react-patterns/performance-patterns/static-import/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react-patterns/performance-patterns/static-import/</guid>
+        <description>import 关键字允许导入由另一个模块导出的代码。 默认情况下，静态导入的所有模块都会添加到初始包中。 使用默认的 ES2015 导入语法 import module from &#39;module&#39; 导入的模块是静态导入的</description>
+      </item>
+      
+      <item>
         <title>Git 最佳实践</title>
         <link>https://danacoding.github.io/others/git/git-bp/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/others/git/git-bp/</guid>
         <description>一、OpenSSL SSL_connect git clone/git pull/git push 报错 fatal: unable to access &#39;https://github.com/xxx.git/&#39;: OpenSSL SSL_connect: Connection was reset in connection to github.com:443 解决办法：这个办法可以让git速度更快。 git config --global --add remote.origin.proxy &amp;quot;127.0.0.1:(proxy http port number)&amp;quot; //我的是 git config --global --add remote.origin.proxy &amp;quot;127.0.0.1:1080&amp;quot;</description>
+      </item>
+      
+      <item>
+        <title>Hooks &amp; Redux</title>
+        <link>https://danacoding.github.io/react/redux/hooks-redux/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react/redux/hooks-redux/</guid>
+        <description>现在，有了 Hooks, 甚至可以自己编写 Reducer，通过 Proxy 对状态进行操作。 但是，为了更融入市场而且现在有了 Redux Tookit（可以减少很多代码量），所以</description>
       </item>
       
       <item>
@@ -489,6 +507,15 @@
         
         <guid>https://danacoding.github.io/react-patterns/design-patterns/proxy-patterns/</guid>
         <description>使用 Proxy 对象，可以更好地控制与某些对象的交互。 每当与对象交互时，代理对象都可以确定行为，例如当我们获取一个值或设置一个值时。 一般来说，代理是指</description>
+      </item>
+      
+      <item>
+        <title>动态导入 ✔</title>
+        <link>https://danacoding.github.io/react-patterns/performance-patterns/dynamic-import/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react-patterns/performance-patterns/dynamic-import/</guid>
+        <description>在聊天应用程序中，有四个主要部分：UserInfo，ChatList，ChatInput和EmojiPicker。 但是，在初始页面加载时，只</description>
       </item>
       
       <item>
@@ -546,6 +573,15 @@
       </item>
       
       <item>
+        <title>导入可见性 ✔</title>
+        <link>https://danacoding.github.io/react-patterns/performance-patterns/import-on-visibility/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react-patterns/performance-patterns/import-on-visibility/</guid>
+        <description>除了用户交互，经常有在初始页面上不可见的组件。 一个很好的例子是延迟加载在视口中不直接可见的图像，但只有在用户向下滚动时才会加载。 由于不会立即</description>
+      </item>
+      
+      <item>
         <title>提供者模式</title>
         <link>https://danacoding.github.io/react-patterns/design-patterns/provider-pattern/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -588,6 +624,15 @@
         
         <guid>https://danacoding.github.io/others/windows/win-office/</guid>
         <description>操作系统 系统激活 Office激活 U盘系统安装：</description>
+      </item>
+      
+      <item>
+        <title>交互导入 ✔</title>
+        <link>https://danacoding.github.io/react-patterns/performance-patterns/import-on-interaction/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react-patterns/performance-patterns/import-on-interaction/</guid>
+        <description>页面可能包含并非立即需要的组件或资源的代码或数据。 例如，用户不会看到部分用户界面，除非他们单击或滚动页面的某些部分。 这适用于编写的多种第一方</description>
       </item>
       
       <item>

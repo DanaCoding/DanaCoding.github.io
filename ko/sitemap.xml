@@ -423,7 +423,17 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react-patterns/performance-patterns/static-import/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/others/git/git-bp/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react/redux/hooks-redux/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -463,6 +473,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react-patterns/performance-patterns/dynamic-import/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/jsts/function/try-catch/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -493,6 +508,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react-patterns/performance-patterns/import-on-visibility/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react-patterns/design-patterns/provider-pattern/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -514,6 +534,11 @@
   
   <url>
     <loc>https://danacoding.github.io/others/windows/win-office/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react-patterns/performance-patterns/import-on-interaction/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
