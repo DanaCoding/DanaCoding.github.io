@@ -240,6 +240,15 @@
       </item>
       
       <item>
+        <title>Storybook 最佳实践</title>
+        <link>https://danacoding.github.io/react/storybook/sb-bp/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react/storybook/sb-bp/</guid>
+        <description>一、安装配置 在next.js项目中执行 npx sb init yarn storybook .storybook/preview.js 为 Storybook 配置 Next.js Images + import * as NextImage from &amp;quot;next/image&amp;quot;; + const OriginalNextImage = NextImage.default; + Object.defineProperty(NextImage, &amp;quot;default&amp;quot;, { configurable: true, value: (props) =&amp;gt; ( &amp;lt;OriginalNextImage {...props} unoptimized /&amp;gt; ), }); package.json 为 Storybook 提供 Next.js 公共目录 {</description>
+      </item>
+      
+      <item>
         <title>Ubuntu</title>
         <link>https://danacoding.github.io/nodejs/ubuntu/ubuntu/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -255,6 +264,24 @@
         
         <guid>https://danacoding.github.io/react-native/ui/ui-kitten/kitten-base/</guid>
         <description>一、安装 //确保已安装 React Native CLI npm un -g react-native-cli &amp;amp;&amp;amp; npm i -g @react-native-community/cli //用 Kitten 模板创建新项目 npx react-native init MyApp --template @ui-kitten/template-js //启动应用 yarn android 二、配置路由（配置应用程序在屏幕之间导航，基</description>
+      </item>
+      
+      <item>
+        <title>介绍</title>
+        <link>https://danacoding.github.io/react/storybook/sb-started/sb-introduction/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react/storybook/sb-started/sb-introduction/</guid>
+        <description>Storybook 是一个用于 UI 开发的工具。 它通过隔离组件使开发更快更容易。 一次处理一个组件。 可以开发整个 UI，而无需启动复杂的开发堆栈、将某些数据强制输入数</description>
+      </item>
+      
+      <item>
+        <title>介绍</title>
+        <link>https://danacoding.github.io/react/storybook/sb-test/sb-test-introduction/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react/storybook/sb-test/sb-test-introduction/</guid>
+        <description>如何使用 Storybook 测试 UI Storybook 为隔离测试组件提供了一个洁净室环境。 无论多么复杂，故事都可以轻松探索组件的所有变体。 这意味着故事是 UI 测试策略的实用起点。 将</description>
       </item>
       
       <item>
@@ -438,12 +465,30 @@
       </item>
       
       <item>
+        <title>安装</title>
+        <link>https://danacoding.github.io/react/storybook/sb-started/sb-install/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react/storybook/sb-started/sb-install/</guid>
+        <description>在现有项目的根目录中运行： npx sb init 运行： yarn storybook</description>
+      </item>
+      
+      <item>
         <title>箭头函数 vs 常规函数</title>
         <link>https://danacoding.github.io/jsts/function/arrow/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/jsts/function/arrow/</guid>
         <description>JavaScript 的箭头函数从表面上看可能与常规函数相同，但它们有一些非常重要的区别： 关键区别 语法 this 值（执行上下文） 用作类方法 用作构造函数 arguments 参数绑定 #. 语法 1</description>
+      </item>
+      
+      <item>
+        <title>视觉测试</title>
+        <link>https://danacoding.github.io/react/storybook/sb-test/sb-visual-tests/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react/storybook/sb-test/sb-visual-tests/</guid>
+        <description>视觉测试 可视化测试，也称为可视化回归测试，可捕获 UI 外观中的错误。 通过截取每个故事的屏幕截图并将它们提交进行比较以识别更改来工作。 非常适合验证</description>
       </item>
       
       <item>
@@ -519,6 +564,15 @@
       </item>
       
       <item>
+        <title>Story 是什么？</title>
+        <link>https://danacoding.github.io/react/storybook/sb-started/sb-what/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react/storybook/sb-started/sb-what/</guid>
+        <description>Story 介绍 Story（故事）捕获 UI 组件的呈现状态。 开发人员为每个组件编写多个故事，描述组件可以支持的所有“有趣”状态。 每个组件都有一组故事，显示</description>
+      </item>
+      
+      <item>
         <title>zustand</title>
         <link>https://danacoding.github.io/react/zustand/zustand-base/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -546,12 +600,30 @@
       </item>
       
       <item>
+        <title>可访问性测试</title>
+        <link>https://danacoding.github.io/react/storybook/sb-test/sb-accessibility-testing/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react/storybook/sb-test/sb-accessibility-testing/</guid>
+        <description>可访问性是使网站包容所有人的做法。 这意味着支持例如：键盘导航、屏幕阅读器支持、触摸友好、可用的颜色对比度、减少运动和缩放支持。 可访问性测试根</description>
+      </item>
+      
+      <item>
         <title>构造函数</title>
         <link>https://danacoding.github.io/algorithms-data/object-programming/constructor-fn/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/algorithms-data/object-programming/constructor-fn/</guid>
         <description>一、定义构造函数 Constructors 是创建对象的函数。 函数给这个新对象定义属性和行为。 可将它们视为创建的新对象的蓝图。 1 2 3 4 5 6 function Bird() { this.name = &amp;#34;Albert&amp;#34;; this.color = &amp;#34;blue&amp;#34;; this.numLegs = 2; } 这</description>
+      </item>
+      
+      <item>
+        <title>浏览故事</title>
+        <link>https://danacoding.github.io/react/storybook/sb-started/sb-browse/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react/storybook/sb-started/sb-browse/</guid>
+        <description>如何使用 Storybook 作为构建组件的工作区。 侧边栏和 Canvas（画布） *.stories.ts 文件定义了一个组件的所有故事。 每个故事都有一个相应的侧边栏项目。 当单击一个故事</description>
       </item>
       
       <item>
@@ -642,6 +714,15 @@
         
         <guid>https://danacoding.github.io/react-patterns/design-patterns/provider-pattern/</guid>
         <description>在某些情况下，我们希望为应用程序中的许多（如果不是全部）组件提供可用数据。 单向数据流 props 存在的问题 虽然我们可以使用 props 将数据传递给组件，但如果应</description>
+      </item>
+      
+      <item>
+        <title>设置</title>
+        <link>https://danacoding.github.io/react/storybook/sb-started/sb-setup/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/react/storybook/sb-started/sb-setup/</guid>
+        <description>编写 Story 从项目中选择一个简单的组件，比如一个 Button，然后编写一个 .stories.ts 或一个 .stories.mdx 文件来配合它。 它可能看起来像这样： 1 2 3 4 5 6 7 8 9 10 11 12 13 14</description>
       </item>
       
       <item>
@@ -804,15 +885,6 @@
         
         <guid>https://danacoding.github.io/others/babel/babel-base/</guid>
         <description>Babel是Web Developer工具集中的出色条目。 这是一个了不起的工具，已经存在了一段时间，但是如今几乎每个JavaScript开发人</description>
-      </item>
-      
-      <item>
-        <title>Storybook 基础</title>
-        <link>https://danacoding.github.io/react/storybook/sb-base/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/react/storybook/sb-base/</guid>
-        <description>一、安装配置 在next.js项目中执行 npx sb init yarn storybook .storybook/preview.js 为 Storybook 配置 Next.js Images + import * as NextImage from &amp;quot;next/image&amp;quot;; + const OriginalNextImage = NextImage.default; + Object.defineProperty(NextImage, &amp;quot;default&amp;quot;, { configurable: true, value: (props) =&amp;gt; ( &amp;lt;OriginalNextImage {...props} unoptimized /&amp;gt; ), }); package.json 为 Storybook 提供 Next.js 公共目录 {</description>
       </item>
       
       <item>

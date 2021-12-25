@@ -283,6 +283,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react/storybook/sb-bp/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/nodejs/ubuntu/ubuntu/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -294,6 +299,16 @@
   
   <url>
     <loc>https://danacoding.github.io/react-native/ui/ui-kitten/kitten-base/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react/storybook/sb-started/sb-introduction/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react/storybook/sb-test/sb-test-introduction/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -428,7 +443,22 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react/storybook/sb-started/sb-install/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react/storybook/sb-started/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/jsts/function/arrow/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react/storybook/sb-test/sb-visual-tests/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -478,6 +508,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react/storybook/sb-started/sb-what/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react-native/ui/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -493,12 +528,27 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react/storybook/sb-write/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react-patterns/performance-patterns/dynamic-import/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react/storybook/sb-test/sb-accessibility-testing/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/algorithms-data/object-programming/constructor-fn/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react/storybook/sb-started/sb-browse/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -553,6 +603,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react/storybook/sb-started/sb-setup/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/algorithms-data/function-programming/concat-programming/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -603,6 +658,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react/storybook/sb-test/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/algorithms-data/function-programming/reduce-programming/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -643,7 +703,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/react/storybook/sb-base/</loc>
+    <loc>https://danacoding.github.io/react/storybook/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   

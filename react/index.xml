@@ -114,12 +114,12 @@
       </item>
       
       <item>
-        <title>Storybook 基础</title>
-        <link>https://danacoding.github.io/react/storybook/sb-base/</link>
+        <title>Storybook</title>
+        <link>https://danacoding.github.io/react/storybook/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/react/storybook/sb-base/</guid>
-        <description>一、安装配置 在next.js项目中执行 npx sb init yarn storybook .storybook/preview.js 为 Storybook 配置 Next.js Images + import * as NextImage from &amp;quot;next/image&amp;quot;; + const OriginalNextImage = NextImage.default; + Object.defineProperty(NextImage, &amp;quot;default&amp;quot;, { configurable: true, value: (props) =&amp;gt; ( &amp;lt;OriginalNextImage {...props} unoptimized /&amp;gt; ), }); package.json 为 Storybook 提供 Next.js 公共目录 {</description>
+        <guid>https://danacoding.github.io/react/storybook/</guid>
+        <description></description>
       </item>
       
     
