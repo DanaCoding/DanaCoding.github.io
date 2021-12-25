@@ -123,15 +123,6 @@
       </item>
       
       <item>
-        <title>D3.js</title>
-        <link>https://danacoding.github.io/dataview/d3-base/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/dataview/d3-base/</guid>
-        <description></description>
-      </item>
-      
-      <item>
         <title>Docker</title>
         <link>https://danacoding.github.io/nodejs/docker/docker/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -276,6 +267,15 @@
       </item>
       
       <item>
+        <title>函数式编程理念</title>
+        <link>https://danacoding.github.io/algorithms-data/function-programming/fn-programming/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/algorithms-data/function-programming/fn-programming/</guid>
+        <description>一、概述 函数式编程是一种方案简单、功能独立、对作用域外没有任何副作用的编程范式：INPUT -&amp;gt; PROCESS -&amp;gt; OUTPUT 函数式编程： 1）功能独立 —— 不依赖于程序的</description>
+      </item>
+      
+      <item>
         <title>原型链和继承</title>
         <link>https://danacoding.github.io/jsts/prototype/prototype-bp/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -327,6 +327,15 @@
         
         <guid>https://danacoding.github.io/react-patterns/design-patterns/design-patterns/</guid>
         <description>注意：菜单项目中（X）的都为过时或者不建议使用的模式，依然写出来只是为了让我们了解历史 设计模式是软件开发的基本部分， 因为它们为软件设计中经常</description>
+      </item>
+      
+      <item>
+        <title>Array.prototype.map()</title>
+        <link>https://danacoding.github.io/algorithms-data/function-programming/map-programming/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/algorithms-data/function-programming/map-programming/</guid>
+        <description>map() 方法创建一个新数组，其中填充了对调用数组中的每个元素调用提供的函数的结果。 使用 map 方法从数组中提取数据 目前为止，已经使用纯函数来避免程序中的</description>
       </item>
       
       <item>
@@ -411,6 +420,15 @@
       </item>
       
       <item>
+        <title>基本的JS对象（字面量对象）</title>
+        <link>https://danacoding.github.io/algorithms-data/object-programming/create-object/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/algorithms-data/object-programming/create-object/</guid>
+        <description>一、创建对象（字面量对象） 1 2 3 4 5 let duck = { name: &amp;#34;Aflac&amp;#34;, numLegs: 2 } 这个 duck 对象有两组键值对：一个是 name 属性，它的值是 Aflac；另一个是 numLegs 属性，它的值是 2。</description>
+      </item>
+      
+      <item>
         <title>字面量 vs 构造器 vs class</title>
         <link>https://danacoding.github.io/jsts/function/new/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -444,6 +462,15 @@
         
         <guid>https://danacoding.github.io/react-patterns/performance-patterns/static-import/</guid>
         <description>import 关键字允许导入由另一个模块导出的代码。 默认情况下，静态导入的所有模块都会添加到初始包中。 使用默认的 ES2015 导入语法 import module from &#39;module&#39; 导入的模块是静态导入的</description>
+      </item>
+      
+      <item>
+        <title>Array.prototype.filter()</title>
+        <link>https://danacoding.github.io/algorithms-data/function-programming/filter-programming/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/algorithms-data/function-programming/filter-programming/</guid>
+        <description>filter() 方法创建一个新数组，其中包含通过提供的函数实现的测试的所有元素。 使用 filter 方法从数组中提取数据 另一个有用的数组方法是 filter()（即 Arr</description>
       </item>
       
       <item>
@@ -519,12 +546,30 @@
       </item>
       
       <item>
+        <title>构造函数</title>
+        <link>https://danacoding.github.io/algorithms-data/object-programming/constructor-fn/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/algorithms-data/object-programming/constructor-fn/</guid>
+        <description>一、定义构造函数 Constructors 是创建对象的函数。 函数给这个新对象定义属性和行为。 可将它们视为创建的新对象的蓝图。 1 2 3 4 5 6 function Bird() { this.name = &amp;#34;Albert&amp;#34;; this.color = &amp;#34;blue&amp;#34;; this.numLegs = 2; } 这</description>
+      </item>
+      
+      <item>
         <title>错误处理，try{...}catch{...}</title>
         <link>https://danacoding.github.io/jsts/function/try-catch/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/jsts/function/try-catch/</guid>
         <description>try&amp;hellip;catch语句标记要尝试的语句块，并指定一个出现异常时抛出的响应。 1 2 3 4 5 6 7 8 9 10 11 try { // 尝试运行这段代码 } catch(err) { //</description>
+      </item>
+      
+      <item>
+        <title>Array.prototype.slice()</title>
+        <link>https://danacoding.github.io/algorithms-data/function-programming/slice-programming/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/algorithms-data/function-programming/slice-programming/</guid>
+        <description>slice() 方法将数组的一部分的浅拷贝返回到从开始到结束（不包括结束）选择的新数组对象中，其中开始和结束表示该数组中项目的索引。 不会修改原始数组。 使用</description>
       </item>
       
       <item>
@@ -564,6 +609,15 @@
       </item>
       
       <item>
+        <title>原型</title>
+        <link>https://danacoding.github.io/algorithms-data/object-programming/prototype/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/algorithms-data/object-programming/prototype/</guid>
+        <description>一、了解自有属性 hasOwnProperty 下面的实例，Bird 构造函数定义了两个属性：name 和 numLegs： 1 2 3 4 5 6 7 8 function Bird(name) { this.name = name; this.numLegs = 2; } let duck = new Bird(&amp;#34;Donald&amp;#34;); let canary =</description>
+      </item>
+      
+      <item>
         <title>客户端渲染</title>
         <link>https://danacoding.github.io/react-patterns/render-patterns/client-side-rendering/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -588,6 +642,24 @@
         
         <guid>https://danacoding.github.io/react-patterns/design-patterns/provider-pattern/</guid>
         <description>在某些情况下，我们希望为应用程序中的许多（如果不是全部）组件提供可用数据。 单向数据流 props 存在的问题 虽然我们可以使用 props 将数据传递给组件，但如果应</description>
+      </item>
+      
+      <item>
+        <title>Array.prototype.concat()</title>
+        <link>https://danacoding.github.io/algorithms-data/function-programming/concat-programming/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/algorithms-data/function-programming/concat-programming/</guid>
+        <description>concat() 方法用于合并两个或多个数组。 此方法不会更改现有数组，而是返回一个新数组。 使用 concat 方法组合两个数组 Concatenation 意思是将元素连接到尾部。 同理，JavaSc</description>
+      </item>
+      
+      <item>
+        <title>IIFE</title>
+        <link>https://danacoding.github.io/algorithms-data/object-programming/iife/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/algorithms-data/object-programming/iife/</guid>
+        <description>一、了解立即调用函数表达（IIFE） JavaScript 中的一个常见模式就是，函数在声明后立刻执行： 1 2 3 4 (function () { console.log(&amp;#34;Chirp, chirp!&amp;#34;); })(); 这是一个匿名函数表达式，立即执行并输出</description>
       </item>
       
       <item>
@@ -663,6 +735,15 @@
       </item>
       
       <item>
+        <title>Array.prototype.reduce()</title>
+        <link>https://danacoding.github.io/algorithms-data/function-programming/reduce-programming/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/algorithms-data/function-programming/reduce-programming/</guid>
+        <description>reduce() 方法按顺序在数组的每个元素上执行用户提供的“reducer”回调函数，并传入对前一个元素进行计算的返回值。 在数组的所有元素上运行 reducer 的最终结</description>
+      </item>
+      
+      <item>
         <title>Remix 进阶</title>
         <link>https://danacoding.github.io/react/remix/remix-adv/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -705,6 +786,15 @@
         
         <guid>https://danacoding.github.io/react-patterns/render-patterns/static-rendering/</guid>
         <description>根据我们对 SSR 的讨论，知道服务器上较长的请求处理时间会对 TTFB 产生负面影响。 类似地，对于 CSR，由于下载和处理脚本所花费的时间，大型 JavaScript 包可能对应用</description>
+      </item>
+      
+      <item>
+        <title>Array.prototype.sort()</title>
+        <link>https://danacoding.github.io/algorithms-data/function-programming/sort-programming/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/algorithms-data/function-programming/sort-programming/</guid>
+        <description>sort() 方法就地对数组的元素进行排序并返回排序后的数组。 默认排序顺序是升序，建立在将元素转换为字符串，然后比较它们的 UTF-16 代码单元值序列的基础上。 排序</description>
       </item>
       
       <item>
@@ -771,6 +861,15 @@
       </item>
       
       <item>
+        <title>String.prototype.split()</title>
+        <link>https://danacoding.github.io/algorithms-data/function-programming/split-programming/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/algorithms-data/function-programming/split-programming/</guid>
+        <description>split() 方法将一个字符串划分为一个有序的子字符串列表，将这些子字符串放入一个数组中，并返回该数组。 除法是通过搜索模式来完成的； 其中模式作为方法调用</description>
+      </item>
+      
+      <item>
         <title>混合模式（X）</title>
         <link>https://danacoding.github.io/react-patterns/design-patterns/mixin-pattern/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -786,6 +885,15 @@
         
         <guid>https://danacoding.github.io/react-patterns/render-patterns/progressive-hydration/</guid>
         <description>简介 服务器呈现的应用程序使用服务器为当前导航生成 HTML。 一旦服务器完成生成 HTML 内容（其中还包含正确显示静态 UI 所需的 CSS 和 JSON 数据），它就会将数据</description>
+      </item>
+      
+      <item>
+        <title>Array.prototype.join()</title>
+        <link>https://danacoding.github.io/algorithms-data/function-programming/join-programming/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/algorithms-data/function-programming/join-programming/</guid>
+        <description>join() 方法通过连接数组（或类似数组的对象）中的所有元素来创建并返回一个新字符串，用逗号或指定的分隔符字符串分隔。 如果数组只有一项，则该项将在不使</description>
       </item>
       
       <item>
@@ -816,6 +924,15 @@
       </item>
       
       <item>
+        <title>Array.prototype.every()</title>
+        <link>https://danacoding.github.io/algorithms-data/function-programming/every-programming/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/algorithms-data/function-programming/every-programming/</guid>
+        <description>every() 方法测试数组中的所有元素是否通过提供的函数实现的测试。 它返回一个布尔值。 使用 every 方法检查数组中的每个元素是否符合条件 every 方法用于检测数组中所有</description>
+      </item>
+      
+      <item>
         <title>React 服务器组件 ✔</title>
         <link>https://danacoding.github.io/react-patterns/render-patterns/react-server-components/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -840,6 +957,15 @@
         
         <guid>https://danacoding.github.io/react-patterns/performance-patterns/preload/</guid>
         <description>预加载 (&amp;lt;link rel=&amp;quot;preload&amp;quot;&amp;gt;) 是一种浏览器优化，允许更早地请求关键资源（可能发现较晚）。 如果您对如何手动排序关键资源的加载感到满意，它会对 Core Web Vitals 中的加载性能和指</description>
+      </item>
+      
+      <item>
+        <title>Array.prototype.some()</title>
+        <link>https://danacoding.github.io/algorithms-data/function-programming/some-programming/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/algorithms-data/function-programming/some-programming/</guid>
+        <description>some() 方法测试数组中是否至少有一个元素通过了提供的函数实现的测试。 如果在数组中找到一个元素，提供的函数为其返回真值，则返回真值； 否则返回fals</description>
       </item>
       
       <item>
@@ -885,6 +1011,15 @@
         
         <guid>https://danacoding.github.io/react-patterns/performance-patterns/third-party/</guid>
         <description>第三方资源可能会降低网站速度，并且可能是优化的挑战。 可以遵循某些最佳实践来有效地加载或延迟不同类型的第三方。 还可以使用框架级组件，例如 Next.js 脚本</description>
+      </item>
+      
+      <item>
+        <title>函数柯里化和局部调用</title>
+        <link>https://danacoding.github.io/algorithms-data/function-programming/currying-programming/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/algorithms-data/function-programming/currying-programming/</guid>
+        <description>arity（参数个数）是函数所需的形参的数量。 函数柯里化（Currying）意思是把接受多个 arity 的函数变换成接受单一 arity 的函数。 函数柯里化 ari</description>
       </item>
       
       <item>

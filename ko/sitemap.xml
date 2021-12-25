@@ -153,11 +153,6 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/dataview/d3-base/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://danacoding.github.io/react-patterns/design-patterns/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -199,6 +194,11 @@
   
   <url>
     <loc>https://danacoding.github.io/jsts/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/algorithms-data/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -303,6 +303,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/algorithms-data/function-programming/fn-programming/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/jsts/prototype/prototype-bp/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -314,11 +319,6 @@
   
   <url>
     <loc>https://danacoding.github.io/others/devmethod/devmethod/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/dataview/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -350,6 +350,16 @@
                 hreflang="ko"
                 href="https://danacoding.github.io/docs/contentmanagement/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/algorithms-data/function-programming/map-programming/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/algorithms-data/es6/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
   <url>
@@ -408,6 +418,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/algorithms-data/object-programming/create-object/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/jsts/function/new/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -424,6 +439,11 @@
   
   <url>
     <loc>https://danacoding.github.io/react-patterns/performance-patterns/static-import/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/algorithms-data/function-programming/filter-programming/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -478,7 +498,17 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/algorithms-data/object-programming/constructor-fn/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/jsts/function/try-catch/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/algorithms-data/function-programming/slice-programming/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -503,6 +533,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/algorithms-data/object-programming/prototype/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react-patterns/render-patterns/client-side-rendering/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -514,6 +549,16 @@
   
   <url>
     <loc>https://danacoding.github.io/react-patterns/design-patterns/provider-pattern/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/algorithms-data/function-programming/concat-programming/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/algorithms-data/object-programming/iife/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -558,6 +603,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/algorithms-data/function-programming/reduce-programming/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react/remix/remix-adv/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -579,6 +629,11 @@
   
   <url>
     <loc>https://danacoding.github.io/react-patterns/render-patterns/static-rendering/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/algorithms-data/function-programming/sort-programming/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -613,7 +668,22 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/algorithms-data/object-programming/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react-patterns/performance-patterns/prpl/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/algorithms-data/function-programming/split-programming/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/algorithms-data/function-programming/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -624,6 +694,11 @@
   
   <url>
     <loc>https://danacoding.github.io/react-patterns/render-patterns/progressive-hydration/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/algorithms-data/function-programming/join-programming/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -643,6 +718,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/algorithms-data/function-programming/every-programming/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react-patterns/render-patterns/react-server-components/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -654,6 +734,11 @@
   
   <url>
     <loc>https://danacoding.github.io/react-patterns/performance-patterns/preload/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/algorithms-data/function-programming/some-programming/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -679,6 +764,11 @@
   
   <url>
     <loc>https://danacoding.github.io/react-patterns/performance-patterns/third-party/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/algorithms-data/function-programming/currying-programming/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
