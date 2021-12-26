@@ -208,6 +208,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react/next/next-base/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/nodejs/nginx/nginx/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -338,6 +343,16 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/react/tailwindcss/tailwindcss-start.md/tailwindcss-install/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react/tailwindcss/tailwindcss-start.md/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react-patterns/render-patterns/render-patterns-base/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -389,6 +404,11 @@
   
   <url>
     <loc>https://danacoding.github.io/react/hooks/hooks-bp/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react/next/next-tailwindcss-sb-zustand/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -618,7 +638,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/react/next/next-base/</loc>
+    <loc>https://danacoding.github.io/react/next/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -739,6 +759,11 @@
   
   <url>
     <loc>https://danacoding.github.io/algorithms-data/function-programming/split-programming/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/react/tailwindcss/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
