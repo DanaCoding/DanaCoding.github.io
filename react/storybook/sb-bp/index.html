@@ -2827,6 +2827,32 @@ export const parameters = {
 <h3 id="四parameters-静态参数--loaders-加载器">四、parameters 静态参数 &amp; loaders 加载器</h3>
 <p>parameters 通常用于控制 Storybook 功能和插件的行为。（一般情况下不需要使用，但不可不知）</p>
 <p>loaders 用于加载故事的数据，加载器可用于加载任何资产、延迟加载组件或从远程 API 获取数据。（一般不需要使用，但不可不知）</p>
+<h3 id="五添加描述的方式">五、添加描述的方式</h3>
+<p>在组件的 interface 中，用多行注释的方式，SB会自动添加到Docs中的描述</p>
+<p>注意：注释格式一定要这样，否则不能显示; 如果不能自动刷新，则需要重启 <code>yarn storybook</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="kr">interface</span> <span class="nx">ButtonProps</span> <span class="p">{</span>
+  <span class="cm">/**
+</span><span class="cm">  * 测试
+</span><span class="cm">  */</span> 
+  <span class="nx">primary</span><span class="o">?:</span> <span class="kr">boolean</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p><p class="md__image">
+  <img src="https://lh3.googleusercontent.com/--wU4mzB_RlY/YcoWM2U6fQI/AAAAAAAACXI/3ha7q0cXBAskOLKzoW87LrTyKpOZ0wosQCNcBGAsYHQ/w601-h272/image.png" alt=""  />
+</p></p>
 
   </article>
 </div>
@@ -2850,6 +2876,7 @@ export const parameters = {
         <li><a href="#二编写故事流程-组件---故事">二、编写故事流程 （组件 -&gt; 故事）</a></li>
         <li><a href="#三args-获取-状态数据-和-事件">三、args 获取 状态数据 和 事件</a></li>
         <li><a href="#四parameters-静态参数--loaders-加载器">四、parameters 静态参数 &amp; loaders 加载器</a></li>
+        <li><a href="#五添加描述的方式">五、添加描述的方式</a></li>
       </ul>
     </li>
   </ul>
