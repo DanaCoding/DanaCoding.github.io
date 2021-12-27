@@ -3238,6 +3238,7 @@
 </div><p><strong>注意：</strong> 使用 <code>yarn build</code>前，需要把本地服务停掉，否则会构建失败。</p>
 <hr/>
 <h3 id="4-安装-storybook">4. 安装 Storybook</h3>
+<h5 id="step1-安装-sb">Step1. 安装 sb</h5>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3248,7 +3249,7 @@
 <span class="nx">npx</span> <span class="nx">sb</span> <span class="nx">init</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>安装 postCSS 插件</p>
+</div><h5 id="step2-安装-postcss-插件">Step2. 安装 postCSS 插件</h5>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3259,7 +3260,7 @@
 <span class="nx">yarn</span> <span class="nx">add</span> <span class="o">-</span><span class="nx">D</span> <span class="err">@</span><span class="nx">storybook</span><span class="o">/</span><span class="nx">addon</span><span class="o">-</span><span class="nx">postcss</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>将插件添加到 .storybook/main.js</p>
+</div><h5 id="step3-将插件添加到-storybookmainjs">Step3. 将插件添加到 .storybook/main.js</h5>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -3310,7 +3311,7 @@
 <span class="p">};</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>将 css 文件导入 .storybook/preview.js</p>
+</div><h5 id="step4-将-css-文件导入-storybookpreviewjs">Step4. 将 css 文件导入 .storybook/preview.js</h5>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -3319,6 +3320,80 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
 <span class="kr">import</span> <span class="s1">&#39;../styles/globals.css&#39;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h5 id="step5-为-storybook-配置-nextjs-images">Step5. 为 Storybook 配置 NextJS Images</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="c1">// .storybook/preview.js
+</span><span class="c1"></span><span class="o">+</span> <span class="kr">import</span> <span class="o">*</span> <span class="nx">as</span> <span class="nx">NextImage</span> <span class="nx">from</span> <span class="s2">&#34;next/image&#34;</span><span class="p">;</span>
+
+<span class="o">+</span> <span class="kr">const</span> <span class="nx">OriginalNextImage</span> <span class="o">=</span> <span class="nx">NextImage</span><span class="p">.</span><span class="k">default</span><span class="p">;</span>
+
+<span class="o">+</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">defineProperty</span><span class="p">(</span><span class="nx">NextImage</span><span class="p">,</span> <span class="s2">&#34;default&#34;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">configurable</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nx">value</span><span class="o">:</span> <span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">(</span>
+    <span class="o">&lt;</span><span class="nx">OriginalNextImage</span>
+      <span class="p">{...</span><span class="nx">props</span><span class="p">}</span>
+      <span class="nx">unoptimized</span>
+    <span class="o">/&gt;</span>
+  <span class="p">),</span>
+<span class="p">});</span>
+</code></pre></td></tr></table>
+</div>
+</div><h5 id="step6-为-storybook-提供-nextjs-公共目录">Step6. 为 Storybook 提供 Next.js 公共目录</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
+<span class="c1">// package.json
+</span><span class="c1"></span><span class="p">{</span>
+  <span class="p">...</span>
+  
+  <span class="s2">&#34;scripts&#34;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="o">-</span> <span class="s2">&#34;storybook&#34;</span><span class="o">:</span> <span class="s2">&#34;start-storybook -p 6006&#34;</span><span class="p">,</span>
+    <span class="o">-</span> <span class="s2">&#34;build-storybook&#34;</span><span class="o">:</span> <span class="s2">&#34;build-storybook&#34;</span>
+    <span class="o">+</span> <span class="s2">&#34;storybook&#34;</span><span class="o">:</span> <span class="s2">&#34;start-storybook -p 6006 -s ./public&#34;</span><span class="p">,</span>
+    <span class="o">+</span> <span class="s2">&#34;build-storybook&#34;</span><span class="o">:</span> <span class="s2">&#34;build-storybook -s public&#34;</span>
+  <span class="p">},</span>
+  
+ <span class="p">...</span>
+
+<span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
 </div>
@@ -3367,7 +3442,11 @@
             <li></li>
           </ul>
         </li>
-        <li><a href="#4-安装-storybook">4. 安装 Storybook</a></li>
+        <li><a href="#4-安装-storybook">4. 安装 Storybook</a>
+          <ul>
+            <li></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
