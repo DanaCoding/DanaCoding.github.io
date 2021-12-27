@@ -25,10 +25,10 @@
       
       <item>
         <title>Next.js 各种组合</title>
-        <link>https://danacoding.github.io/react/next/next-tailwindcss-sb-zustand/</link>
+        <link>https://danacoding.github.io/react/next/next-multiple/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/react/next/next-tailwindcss-sb-zustand/</guid>
+        <guid>https://danacoding.github.io/react/next/next-multiple/</guid>
         <description>Next.js 与各种技术栈的组合 Next.js + TailwindCSS + SB + zustand 注意： 不支持IE浏览器 1. VSCode 插件 PostCSS Language Support Tailwind CSS IntelliSense 2. TailwindCSS 在 Next.js v10+ 项目中设置 Tailwind CSS Step1. 创建项目 1 2 yarn create next-app --typescript Step2. 安装Tailwi</description>
       </item>
       
