@@ -97,19 +97,19 @@
       
       <item>
         <title>Array</title>
-        <link>https://danacoding.github.io/jsts/array/array-bp/</link>
+        <link>https://danacoding.github.io/javascript/array/array-bp/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/jsts/array/array-bp/</guid>
+        <guid>https://danacoding.github.io/javascript/array/array-bp/</guid>
         <description>一、四个必备的js数组方法 1. Array.prototype.map() 数组元素更新 创建一个新数组。结果是一个与原数组长度相同的数组，并根据提供的函数转换元素。 1 2 3 4 const arr = [1, 2, 3]; const</description>
       </item>
       
       <item>
         <title>Collect &amp; Ramda</title>
-        <link>https://danacoding.github.io/jsts/cr/cr/</link>
+        <link>https://danacoding.github.io/javascript/cr/cr/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/jsts/cr/cr/</guid>
+        <guid>https://danacoding.github.io/javascript/cr/cr/</guid>
         <description>collect.js &amp;amp; ramda（ 处理数组和对象的好帮手 ） Step1. 安装 yarn add collect.js yarn add ramda Step2. 导入 import collect from &#39;collect.js&#39; import * as R from &#39;ramda&#39; Step3. （项目实例，用来渲染多屏，每屏里面有 8 张卡片） 使用 collect.js 示</description>
       </item>
       
@@ -304,28 +304,28 @@
       
       <item>
         <title>函数式编程理念</title>
-        <link>https://danacoding.github.io/algorithms-data/function-programming/fn-programming/</link>
+        <link>https://danacoding.github.io/javascript/algorithms-data/function-programming/fn-programming/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/algorithms-data/function-programming/fn-programming/</guid>
+        <guid>https://danacoding.github.io/javascript/algorithms-data/function-programming/fn-programming/</guid>
         <description>一、概述 函数式编程是一种方案简单、功能独立、对作用域外没有任何副作用的编程范式：INPUT -&amp;gt; PROCESS -&amp;gt; OUTPUT 函数式编程： 1）功能独立 —— 不依赖于程序的</description>
       </item>
       
       <item>
         <title>原型链和继承</title>
-        <link>https://danacoding.github.io/jsts/prototype/prototype-bp/</link>
+        <link>https://danacoding.github.io/javascript/prototype/prototype-bp/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/jsts/prototype/prototype-bp/</guid>
+        <guid>https://danacoding.github.io/javascript/prototype/prototype-bp/</guid>
         <description>一、关键字 对象 object：是数据的集合 原型继承 构造器 原型链 子类继承 JavaScript 中的（几乎）一切都是对象，除了原始值以外（number,string,</description>
       </item>
       
       <item>
         <title>在 JavaScript 中实现单例</title>
-        <link>https://danacoding.github.io/jsts/function/single/</link>
+        <link>https://danacoding.github.io/javascript/function/single/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/jsts/function/single/</guid>
+        <guid>https://danacoding.github.io/javascript/function/single/</guid>
         <description>单例是一种面向对象的软件设计模式，它确保给定的类只被实例化一次。 比如，数据库连接。 Proxy Proxy 对象用于创建一个对象的代理，从而实现基本操作的拦截和自</description>
       </item>
       
@@ -348,6 +348,15 @@
       </item>
       
       <item>
+        <title>快速开始</title>
+        <link>https://danacoding.github.io/server/nodejs/nodebase/node-start/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/server/nodejs/nodebase/node-start/</guid>
+        <description>Node.js 简介 Node.js 是一个开源的跨平台 JavaScript 运行时环境。 Node.js 在浏览器之外运行 V8 JavaScript 引擎，它是 Google Chrome 的核心。 Node.js 应用程序在单个进程中运行，无需为每个请求创建一个新线程</description>
+      </item>
+      
+      <item>
         <title>渲染模式介绍</title>
         <link>https://danacoding.github.io/react-patterns/render-patterns/render-patterns-base/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -358,10 +367,10 @@
       
       <item>
         <title>解构赋值</title>
-        <link>https://danacoding.github.io/jsts/array/jiegou/</link>
+        <link>https://danacoding.github.io/javascript/array/jiegou/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/jsts/array/jiegou/</guid>
+        <guid>https://danacoding.github.io/javascript/array/jiegou/</guid>
         <description>1. 忽略值 1 2 3 const [apple, , banana] = [&amp;#39;apple&amp;#39;, &amp;#39;pear&amp;#39;, &amp;#39;banana&amp;#39;]; console.log(apple, banana); // apple banana 2. 分配剩余值 1 2 3 4 5 6 const [one, two, ...remainingNum] = [1, 2, 3, 4, 5]; console.log(remainingNum); // [3, 4, 5] const { apple, pear, ...remainFruits } = { apple:&amp;#39;apple&amp;#39;, pear:&amp;#39;pear&amp;#39;, banana:&amp;#39;banana&amp;#39;, cherry:&amp;#39;cherry&amp;#39; }; console.log(remainFruits); // { banana:&amp;#39;banana&amp;#39;, cherry:&amp;#39;cherry&amp;#39; } 3. 组合的</description>
       </item>
       
@@ -376,10 +385,10 @@
       
       <item>
         <title>Array.prototype.map()</title>
-        <link>https://danacoding.github.io/algorithms-data/function-programming/map-programming/</link>
+        <link>https://danacoding.github.io/javascript/algorithms-data/function-programming/map-programming/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/algorithms-data/function-programming/map-programming/</guid>
+        <guid>https://danacoding.github.io/javascript/algorithms-data/function-programming/map-programming/</guid>
         <description>map() 方法创建一个新数组，其中填充了对调用数组中的每个元素调用提供的函数的结果。 使用 map 方法从数组中提取数据 目前为止，已经使用纯函数来避免程序中的</description>
       </item>
       
@@ -466,28 +475,28 @@
       
       <item>
         <title>命令式 vs 函数式 vs 链式</title>
-        <link>https://danacoding.github.io/jsts/function/for/</link>
+        <link>https://danacoding.github.io/javascript/function/for/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/jsts/function/for/</guid>
+        <guid>https://danacoding.github.io/javascript/function/for/</guid>
         <description>这里用 For 循环举例 命令式 1 2 3 4 5 6 7 8 9 10 11 12 13 const files = [&amp;#34;foo.txt &amp;#34;, &amp;#34;.bar&amp;#34;, &amp;#34; &amp;#34;, &amp;#34;baz.foo&amp;#34;]; let filePaths = []; for (let file of files) { const fileName = file.trim(); if (fileName) { const filePath = `~/cool_app/${fileName}`; filePaths.push(filePath); } } // filePaths = [ &amp;#39;~/cool_app/foo.txt&amp;#39;, &amp;#39;~/cool_app/.bar&amp;#39;, &amp;#39;~/cool_app/baz.foo&amp;#39;] 函数式 封装性</description>
       </item>
       
       <item>
         <title>基本的JS对象（字面量对象）</title>
-        <link>https://danacoding.github.io/algorithms-data/object-programming/create-object/</link>
+        <link>https://danacoding.github.io/javascript/algorithms-data/object-programming/create-object/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/algorithms-data/object-programming/create-object/</guid>
+        <guid>https://danacoding.github.io/javascript/algorithms-data/object-programming/create-object/</guid>
         <description>一、创建对象（字面量对象） 1 2 3 4 5 let duck = { name: &amp;#34;Aflac&amp;#34;, numLegs: 2 } 这个 duck 对象有两组键值对：一个是 name 属性，它的值是 Aflac；另一个是 numLegs 属性，它的值是 2。</description>
       </item>
       
       <item>
         <title>字面量 vs 构造器 vs class</title>
-        <link>https://danacoding.github.io/jsts/function/new/</link>
+        <link>https://danacoding.github.io/javascript/function/new/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/jsts/function/new/</guid>
+        <guid>https://danacoding.github.io/javascript/function/new/</guid>
         <description>Object 概述 Object 是 JavaScript 的一种 数据类型 。它用于存储各种键值集合和更复杂的实体。 Objects 可以通过 对象字面量、构造函数 或者 class 的方式创建 一、对象字面量 （{&amp;hell</description>
       </item>
       
@@ -501,11 +510,20 @@
       </item>
       
       <item>
-        <title>箭头函数 vs 常规函数</title>
-        <link>https://danacoding.github.io/jsts/function/arrow/</link>
+        <title>异步编程</title>
+        <link>https://danacoding.github.io/server/nodejs/nodebase/node-programming/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/jsts/function/arrow/</guid>
+        <guid>https://danacoding.github.io/server/nodejs/nodebase/node-programming/</guid>
+        <description>JavaScript 默认是同步的，并且是单线程的。这意味着代码不能创建新线程并并行运行。 一行一行的代码依次执行，例如： 1 2 3 4 5 6 const a = 1 const b = 2 const c = a * b</description>
+      </item>
+      
+      <item>
+        <title>箭头函数 vs 常规函数</title>
+        <link>https://danacoding.github.io/javascript/function/arrow/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/javascript/function/arrow/</guid>
         <description>JavaScript 的箭头函数从表面上看可能与常规函数相同，但它们有一些非常重要的区别： 关键区别 语法 this 值（执行上下文） 用作类方法 用作构造函数 arguments 参数绑定 #. 语法 1</description>
       </item>
       
@@ -520,10 +538,10 @@
       
       <item>
         <title>闭包、递归和回调</title>
-        <link>https://danacoding.github.io/jsts/function/callback/</link>
+        <link>https://danacoding.github.io/javascript/function/callback/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/jsts/function/callback/</guid>
+        <guid>https://danacoding.github.io/javascript/function/callback/</guid>
         <description>闭包 涉及变量作用域 内部函数使用外部函数的变量 1 2 3 4 5 6 7 8 9 10 11 12 13 function outerFunc() { const outerVal = 100; function interFunc() { console.log(outerVal); } return interFunc; // 记得返回你的内部函数 } const inter = outerFunc(); inter(); //100 递归 自</description>
       </item>
       
@@ -538,10 +556,10 @@
       
       <item>
         <title>Array.prototype.filter()</title>
-        <link>https://danacoding.github.io/algorithms-data/function-programming/filter-programming/</link>
+        <link>https://danacoding.github.io/javascript/algorithms-data/function-programming/filter-programming/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/algorithms-data/function-programming/filter-programming/</guid>
+        <guid>https://danacoding.github.io/javascript/algorithms-data/function-programming/filter-programming/</guid>
         <description>filter() 方法创建一个新数组，其中包含通过提供的函数实现的测试的所有元素。 使用 filter 方法从数组中提取数据 另一个有用的数组方法是 filter()（即 Arr</description>
       </item>
       
@@ -636,11 +654,20 @@
       </item>
       
       <item>
-        <title>构造函数</title>
-        <link>https://danacoding.github.io/algorithms-data/object-programming/constructor-fn/</link>
+        <title>引擎和运行方式</title>
+        <link>https://danacoding.github.io/server/nodejs/nodebase/node-engine/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/algorithms-data/object-programming/constructor-fn/</guid>
+        <guid>https://danacoding.github.io/server/nodejs/nodebase/node-engine/</guid>
+        <description>一、V8 JavaScript 引擎 V8 是支持 Google Chrome 的 JavaScript 引擎的名称。 V8 是用 C++ 编写的。它是便携式的，可在 Mac、Windows、Linux 和其他几个系统上运行。。 很酷的</description>
+      </item>
+      
+      <item>
+        <title>构造函数</title>
+        <link>https://danacoding.github.io/javascript/algorithms-data/object-programming/constructor-fn/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/javascript/algorithms-data/object-programming/constructor-fn/</guid>
         <description>一、定义构造函数 Constructors 是创建对象的函数。 函数给这个新对象定义属性和行为。 可将它们视为创建的新对象的蓝图。 1 2 3 4 5 6 function Bird() { this.name = &amp;#34;Albert&amp;#34;; this.color = &amp;#34;blue&amp;#34;; this.numLegs = 2; } 这</description>
       </item>
       
@@ -655,19 +682,19 @@
       
       <item>
         <title>错误处理，try{...}catch{...}</title>
-        <link>https://danacoding.github.io/jsts/function/try-catch/</link>
+        <link>https://danacoding.github.io/javascript/function/try-catch/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/jsts/function/try-catch/</guid>
+        <guid>https://danacoding.github.io/javascript/function/try-catch/</guid>
         <description>try&amp;hellip;catch语句标记要尝试的语句块，并指定一个出现异常时抛出的响应。 1 2 3 4 5 6 7 8 9 10 11 try { // 尝试运行这段代码 } catch(err) { //</description>
       </item>
       
       <item>
         <title>Array.prototype.slice()</title>
-        <link>https://danacoding.github.io/algorithms-data/function-programming/slice-programming/</link>
+        <link>https://danacoding.github.io/javascript/algorithms-data/function-programming/slice-programming/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/algorithms-data/function-programming/slice-programming/</guid>
+        <guid>https://danacoding.github.io/javascript/algorithms-data/function-programming/slice-programming/</guid>
         <description>slice() 方法将数组的一部分的浅拷贝返回到从开始到结束（不包括结束）选择的新数组对象中，其中开始和结束表示该数组中项目的索引。 不会修改原始数组。 使用</description>
       </item>
       
@@ -691,10 +718,10 @@
       
       <item>
         <title>Promise, async/await</title>
-        <link>https://danacoding.github.io/jsts/function/promise/</link>
+        <link>https://danacoding.github.io/javascript/function/promise/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/jsts/function/promise/</guid>
+        <guid>https://danacoding.github.io/javascript/function/promise/</guid>
         <description>一、Promise 概述 Promise 对象用于表示一个异步操作的最终完成 (或失败)及其结果值。 #. Promise 有 3 个状态 待定（pending）: 初始状态，既没有被兑现</description>
       </item>
       
@@ -709,10 +736,10 @@
       
       <item>
         <title>原型</title>
-        <link>https://danacoding.github.io/algorithms-data/object-programming/prototype/</link>
+        <link>https://danacoding.github.io/javascript/algorithms-data/object-programming/prototype/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/algorithms-data/object-programming/prototype/</guid>
+        <guid>https://danacoding.github.io/javascript/algorithms-data/object-programming/prototype/</guid>
         <description>一、了解自有属性 hasOwnProperty 下面的实例，Bird 构造函数定义了两个属性：name 和 numLegs： 1 2 3 4 5 6 7 8 function Bird(name) { this.name = name; this.numLegs = 2; } let duck = new Bird(&amp;#34;Donald&amp;#34;); let canary =</description>
       </item>
       
@@ -753,20 +780,29 @@
       </item>
       
       <item>
-        <title>Array.prototype.concat()</title>
-        <link>https://danacoding.github.io/algorithms-data/function-programming/concat-programming/</link>
+        <title>退出 Node.js 程序</title>
+        <link>https://danacoding.github.io/server/nodejs/nodebase/node-exit/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/algorithms-data/function-programming/concat-programming/</guid>
+        <guid>https://danacoding.github.io/server/nodejs/nodebase/node-exit/</guid>
+        <description>有多种方法可以终止 Node.js 应用程序。 1. ctrl + c 在控制台中运行程序时，可以使用 ctrl-C 关闭它，但在这里要讨论的是以编程方式退出。 2. process.exit() process 核心模块提供了一个方便</description>
+      </item>
+      
+      <item>
+        <title>Array.prototype.concat()</title>
+        <link>https://danacoding.github.io/javascript/algorithms-data/function-programming/concat-programming/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/javascript/algorithms-data/function-programming/concat-programming/</guid>
         <description>concat() 方法用于合并两个或多个数组。 此方法不会更改现有数组，而是返回一个新数组。 使用 concat 方法组合两个数组 Concatenation 意思是将元素连接到尾部。 同理，JavaSc</description>
       </item>
       
       <item>
         <title>IIFE</title>
-        <link>https://danacoding.github.io/algorithms-data/object-programming/iife/</link>
+        <link>https://danacoding.github.io/javascript/algorithms-data/object-programming/iife/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/algorithms-data/object-programming/iife/</guid>
+        <guid>https://danacoding.github.io/javascript/algorithms-data/object-programming/iife/</guid>
         <description>一、了解立即调用函数表达（IIFE） JavaScript 中的一个常见模式就是，函数在声明后立刻执行： 1 2 3 4 (function () { console.log(&amp;#34;Chirp, chirp!&amp;#34;); })(); 这是一个匿名函数表达式，立即执行并输出</description>
       </item>
       
@@ -834,11 +870,20 @@
       </item>
       
       <item>
-        <title>Array.prototype.reduce()</title>
-        <link>https://danacoding.github.io/algorithms-data/function-programming/reduce-programming/</link>
+        <title>读取环境变量</title>
+        <link>https://danacoding.github.io/server/nodejs/nodebase/node-var/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/algorithms-data/function-programming/reduce-programming/</guid>
+        <guid>https://danacoding.github.io/server/nodejs/nodebase/node-var/</guid>
+        <description>Node.js 的流程核心模块提供 env 属性，该属性托管在流程启动时设置的所有环境变量。 一、设置变量（测试环境） 下面的代码运行 app.js 并设置 USER_ID 和 USER_KEY。 1</description>
+      </item>
+      
+      <item>
+        <title>Array.prototype.reduce()</title>
+        <link>https://danacoding.github.io/javascript/algorithms-data/function-programming/reduce-programming/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/javascript/algorithms-data/function-programming/reduce-programming/</guid>
         <description>reduce() 方法按顺序在数组的每个元素上执行用户提供的“reducer”回调函数，并传入对前一个元素进行计算的返回值。 在数组的所有元素上运行 reducer 的最终结</description>
       </item>
       
@@ -858,6 +903,15 @@
         
         <guid>https://danacoding.github.io/others/yarn/yarn-bp/</guid>
         <description>一、全局配置yarn Step1. 获取yarn的安装位置 yarn global bin Step2. 配置yarn全局变量</description>
+      </item>
+      
+      <item>
+        <title>使用 REPL 测试代码</title>
+        <link>https://danacoding.github.io/server/nodejs/nodebase/node-repl/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/server/nodejs/nodebase/node-repl/</guid>
+        <description>REPL 表示 Read Evaluate Print Loop，它是一种编程语言环境（基本上是一个控制台窗口）， 它将单个表达式作为用户输入，并在执行后将结果返回到控制台。 REPL 会话提供了</description>
       </item>
       
       <item>
@@ -889,10 +943,10 @@
       
       <item>
         <title>Array.prototype.sort()</title>
-        <link>https://danacoding.github.io/algorithms-data/function-programming/sort-programming/</link>
+        <link>https://danacoding.github.io/javascript/algorithms-data/function-programming/sort-programming/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/algorithms-data/function-programming/sort-programming/</guid>
+        <guid>https://danacoding.github.io/javascript/algorithms-data/function-programming/sort-programming/</guid>
         <description>sort() 方法就地对数组的元素进行排序并返回排序后的数组。 默认排序顺序是升序，建立在将元素转换为字符串，然后比较它们的 UTF-16 代码单元值序列的基础上。 排序</description>
       </item>
       
@@ -912,6 +966,15 @@
         
         <guid>https://danacoding.github.io/others/cmd/cmdpsl/</guid>
         <description>直接新建txt，粘贴进去保存，然后选择另存为，保存类型选所有文件、编码选ANSI、文件名为CmdAndPowershellAll.reg(名</description>
+      </item>
+      
+      <item>
+        <title>命令行</title>
+        <link>https://danacoding.github.io/server/nodejs/nodebase/node-cmd/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/server/nodejs/nodebase/node-cmd/</guid>
+        <description>一、从命令行接受参数 在调用 Node.js 应用程序时，可以使用任意数量的参数 参数可以是独立的，也可以有一个键和一个值。 1 2 3 4 5 6 node app.js joe // or node app.js name=joe 这会改变</description>
       </item>
       
       <item>
@@ -952,11 +1015,20 @@
       
       <item>
         <title>String.prototype.split()</title>
-        <link>https://danacoding.github.io/algorithms-data/function-programming/split-programming/</link>
+        <link>https://danacoding.github.io/javascript/algorithms-data/function-programming/split-programming/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/algorithms-data/function-programming/split-programming/</guid>
+        <guid>https://danacoding.github.io/javascript/algorithms-data/function-programming/split-programming/</guid>
         <description>split() 方法将一个字符串划分为一个有序的子字符串列表，将这些子字符串放入一个数组中，并返回该数组。 除法是通过搜索模式来完成的； 其中模式作为方法调用</description>
+      </item>
+      
+      <item>
+        <title>使用 exports</title>
+        <link>https://danacoding.github.io/server/nodejs/nodebase/node-export/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/server/nodejs/nodebase/node-export/</guid>
+        <description>Node.js 有一个内置的模块系统。 Node.js 文件可以导入其他 Node.js 文件公开的功能。 module.exports 1 2 3 4 5 6 7 8 9 10 // car.js const car = { brand: &amp;#39;Ford&amp;#39;, model: &amp;#39;Fiesta&amp;#39; } module.exports = car // index.js const car = require(&amp;#39;./car&amp;#39;) exports 1 2 3 4 5 6 7 8</description>
       </item>
       
       <item>
@@ -979,10 +1051,10 @@
       
       <item>
         <title>Array.prototype.join()</title>
-        <link>https://danacoding.github.io/algorithms-data/function-programming/join-programming/</link>
+        <link>https://danacoding.github.io/javascript/algorithms-data/function-programming/join-programming/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/algorithms-data/function-programming/join-programming/</guid>
+        <guid>https://danacoding.github.io/javascript/algorithms-data/function-programming/join-programming/</guid>
         <description>join() 方法通过连接数组（或类似数组的对象）中的所有元素来创建并返回一个新字符串，用逗号或指定的分隔符字符串分隔。 如果数组只有一项，则该项将在不使</description>
       </item>
       
@@ -1015,10 +1087,10 @@
       
       <item>
         <title>Array.prototype.every()</title>
-        <link>https://danacoding.github.io/algorithms-data/function-programming/every-programming/</link>
+        <link>https://danacoding.github.io/javascript/algorithms-data/function-programming/every-programming/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/algorithms-data/function-programming/every-programming/</guid>
+        <guid>https://danacoding.github.io/javascript/algorithms-data/function-programming/every-programming/</guid>
         <description>every() 方法测试数组中的所有元素是否通过提供的函数实现的测试。 它返回一个布尔值。 使用 every 方法检查数组中的每个元素是否符合条件 every 方法用于检测数组中所有</description>
       </item>
       
@@ -1051,10 +1123,10 @@
       
       <item>
         <title>Array.prototype.some()</title>
-        <link>https://danacoding.github.io/algorithms-data/function-programming/some-programming/</link>
+        <link>https://danacoding.github.io/javascript/algorithms-data/function-programming/some-programming/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/algorithms-data/function-programming/some-programming/</guid>
+        <guid>https://danacoding.github.io/javascript/algorithms-data/function-programming/some-programming/</guid>
         <description>some() 方法测试数组中是否至少有一个元素通过了提供的函数实现的测试。 如果在数组中找到一个元素，提供的函数为其返回真值，则返回真值； 否则返回fals</description>
       </item>
       
@@ -1105,10 +1177,10 @@
       
       <item>
         <title>函数柯里化和局部调用</title>
-        <link>https://danacoding.github.io/algorithms-data/function-programming/currying-programming/</link>
+        <link>https://danacoding.github.io/javascript/algorithms-data/function-programming/currying-programming/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/algorithms-data/function-programming/currying-programming/</guid>
+        <guid>https://danacoding.github.io/javascript/algorithms-data/function-programming/currying-programming/</guid>
         <description>arity（参数个数）是函数所需的形参的数量。 函数柯里化（Currying）意思是把接受多个 arity 的函数变换成接受单一 arity 的函数。 函数柯里化 ari</description>
       </item>
       
