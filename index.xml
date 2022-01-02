@@ -132,6 +132,15 @@
       </item>
       
       <item>
+        <title>Docker</title>
+        <link>https://danacoding.github.io/server/docker/docker-what/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/server/docker/docker-what/</guid>
+        <description>什么是Docker Docker是一个应用层的抽象容器，将代码和依赖打包在一起。 多个容器可以在同一台机器上运行，并与其他容器共享操作系统内核，</description>
+      </item>
+      
+      <item>
         <title>Expo 基础</title>
         <link>https://danacoding.github.io/react-native/expo/expo-base/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -349,6 +358,15 @@
       
       <item>
         <title>快速开始</title>
+        <link>https://danacoding.github.io/server/egg/egg-start/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/server/egg/egg-start/</guid>
+        <description>选择 Egg.js 并不是因为它在技术上有多出色，重要的是在众多框架中，它的文档对开发者是最友好的。 一、项目初始化 1. 自动 1 2 3 4 5 6 7 8 mkdir hello-egg &amp;amp;&amp;amp; cd hello-egg npm init egg //</description>
+      </item>
+      
+      <item>
+        <title>快速开始</title>
         <link>https://danacoding.github.io/server/nodejs/nodebase/node-start/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
@@ -390,6 +408,15 @@
         
         <guid>https://danacoding.github.io/javascript/algorithms-data/function-programming/map-programming/</guid>
         <description>map() 方法创建一个新数组，其中填充了对调用数组中的每个元素调用提供的函数的结果。 使用 map 方法从数组中提取数据 目前为止，已经使用纯函数来避免程序中的</description>
+      </item>
+      
+      <item>
+        <title>egg-mysql</title>
+        <link>https://danacoding.github.io/server/egg/egg-mysql/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/server/egg/egg-mysql/</guid>
+        <description>一、安装配置 MySQL社区下载 SQL GUI编辑器 1. 安装 1 2 yarn add egg-mysql 2. 开启插件 1 2 3 4 5 6 // config/plugin.js exports.mysql = { enable: true, package: &amp;#39;egg-mysql&amp;#39;, }; 在 config/config.${env}.js 配置各个环境的数据库连接信息。 3. 单</description>
       </item>
       
       <item>
@@ -606,6 +633,15 @@
         
         <guid>https://danacoding.github.io/react-native/expo/react-navigation/</guid>
         <description>一、goBack()返回上一屏幕刷新状态的方法 通过路由传递数据时，当向同一个页面（详情页）传递一些唯一数据，使用push，而不是 naviga</description>
+      </item>
+      
+      <item>
+        <title>sequelize</title>
+        <link>https://danacoding.github.io/server/egg/egg-sequelize/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/server/egg/egg-sequelize/</guid>
+        <description>一、安装配置 1. 安装 1 2 yarn add egg-sequelize mysql2 2. 引用插件 1 2 3 4 5 6 // config/plugin.js exports.sequelize = { enable: true, package: &amp;#39;egg-sequelize&amp;#39;, }; 3. 编写配置 1 2 3 4 5 6 7 8 // config/config.default.js config.sequelize = { dialect: &amp;#39;mysql&amp;#39;, host: &amp;#39;127.0.0.1&amp;#39;, port: 3306, database: &amp;#39;egg-sequelize-doc-default&amp;#39;, }; 4. 配置不同数据</description>
       </item>
       
       <item>
@@ -1029,6 +1065,15 @@
         
         <guid>https://danacoding.github.io/server/nodejs/nodebase/node-export/</guid>
         <description>Node.js 有一个内置的模块系统。 Node.js 文件可以导入其他 Node.js 文件公开的功能。 module.exports 1 2 3 4 5 6 7 8 9 10 // car.js const car = { brand: &amp;#39;Ford&amp;#39;, model: &amp;#39;Fiesta&amp;#39; } module.exports = car // index.js const car = require(&amp;#39;./car&amp;#39;) exports 1 2 3 4 5 6 7 8</description>
+      </item>
+      
+      <item>
+        <title>有趣的文章</title>
+        <link>https://danacoding.github.io/others/blog/blog/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/others/blog/blog/</guid>
+        <description>那些争议最大的编程观点</description>
       </item>
       
       <item>

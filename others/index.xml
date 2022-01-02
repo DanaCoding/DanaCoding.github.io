@@ -104,6 +104,15 @@
         <description>直接新建txt，粘贴进去保存，然后选择另存为，保存类型选所有文件、编码选ANSI、文件名为CmdAndPowershellAll.reg(名</description>
       </item>
       
+      <item>
+        <title>有趣的文章</title>
+        <link>https://danacoding.github.io/others/blog/blog/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/others/blog/blog/</guid>
+        <description>那些争议最大的编程观点</description>
+      </item>
+      
     
   </channel>
 </rss>

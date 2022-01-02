@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on DanaCoding</title>
+    <link>https://danacoding.github.io/server/docker/</link>
+    <description>Recent content in Docker on DanaCoding</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <copyright>&amp;copy;{year}, DanaCoding</copyright>
+    <lastBuildDate>Tue, 28 Jan 2020 00:34:39 +0900</lastBuildDate>
+    
+        <atom:link href="https://danacoding.github.io/server/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      
+      <item>
+        <title>Docker</title>
+        <link>https://danacoding.github.io/server/docker/docker-what/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/server/docker/docker-what/</guid>
+        <description>什么是Docker Docker是一个应用层的抽象容器，将代码和依赖打包在一起。 多个容器可以在同一台机器上运行，并与其他容器共享操作系统内核，</description>
+      </item>
+      
+    
+  </channel>
+</rss>
