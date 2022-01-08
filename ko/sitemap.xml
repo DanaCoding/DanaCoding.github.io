@@ -163,6 +163,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/server/docker/docker-what/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react-native/expo/expo-base/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -1290,10 +1295,6 @@
                 hreflang="ko"
                 href="https://danacoding.github.io/blog/emoji-support/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/server/docker/docker-what/</loc>
   </url>
   
 </urlset>
