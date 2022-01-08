@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>sequelize – DanaCoding</title>
+    <title>sequelize（推荐） – DanaCoding</title>
     
 
 
@@ -1079,7 +1079,7 @@
 
 
 <meta property="og:site_name" content="DanaCoding">
-<meta property="og:title" content="sequelize">
+<meta property="og:title" content="sequelize（推荐）">
 <meta property="og:url" content="https://danacoding.github.io/server/egg/egg-sequelize/">
 <meta property="og:type" content="article">
 
@@ -1110,7 +1110,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "sequelize",
+    "headline": "sequelize（推荐）",
     "datePublished": "2020-01-28T00:34:39+09:00",
     "dateModified": "2020-01-28T00:34:39+09:00",
     "url" : "https://danacoding.github.io/server/egg/egg-sequelize/",
@@ -1163,7 +1163,7 @@
     <div class="menu">
   <h6 class="menu__label">
     
-      sequelize
+      sequelize（推荐）
     
   </h6>
   <ul>
@@ -1341,7 +1341,7 @@
         
         
         <li>
-          <a href="https://danacoding.github.io/server/egg/egg-sequelize/" class="menu__title active" data-depth="0">sequelize</a>
+          <a href="https://danacoding.github.io/server/egg/egg-sequelize/" class="menu__title active" data-depth="0">sequelize（推荐）</a>
         </li>
       
     
@@ -1379,7 +1379,7 @@
         
         
         <li>
-          <a href="https://danacoding.github.io/server/docker/docker-what/" class="menu__title " data-depth="0">Docker</a>
+          <a href="https://danacoding.github.io/server/docker/docker-what/" class="menu__title " data-depth="0"></a>
         </li>
       
     
@@ -1767,7 +1767,7 @@
   <div class="header__wrapper bgcolor__header">
     <div class="divider">
       <div class="lmr">
-        <h2 class="title">sequelize</h2>
+        <h2 class="title">sequelize（推荐）</h2>
       </div>
     </div>
   </div>
@@ -1810,7 +1810,7 @@
   
   <li  class="is-active" >
     
-      <span>sequelize</span>
+      <span>sequelize（推荐）</span>
     
   </li>
   
@@ -1852,7 +1852,7 @@
         <div class="menu">
   <h6 class="menu__label">
     
-      sequelize
+      sequelize（推荐）
     
   </h6>
   <ul>
@@ -2030,7 +2030,7 @@
         
         
         <li>
-          <a href="https://danacoding.github.io/server/egg/egg-sequelize/" class="menu__title active" data-depth="0">sequelize</a>
+          <a href="https://danacoding.github.io/server/egg/egg-sequelize/" class="menu__title active" data-depth="0">sequelize（推荐）</a>
         </li>
       
     
@@ -2068,7 +2068,7 @@
         
         
         <li>
-          <a href="https://danacoding.github.io/server/docker/docker-what/" class="menu__title " data-depth="0">Docker</a>
+          <a href="https://danacoding.github.io/server/docker/docker-what/" class="menu__title " data-depth="0"></a>
         </li>
       
     
@@ -2088,7 +2088,8 @@
   
 
   <article class="single__contents" data-dir="ltr">
-    <h2 id="一安装配置">一、安装配置</h2>
+    <p>通过 egg-mysql 插件来访问数据库。而在一些较为复杂的应用中，需要一个 ORM 框架来帮助管理数据层的代码。</p>
+<h2 id="一安装配置">一、安装配置</h2>
 <h4 id="1-安装">1. 安装</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2119,7 +2120,7 @@
 <span class="p">};</span>
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="3-编写配置">3. 编写配置</h4>
+</div><h4 id="3-编写配置x">3. 编写配置（X）</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -2138,11 +2139,11 @@
   <span class="nx">dialect</span><span class="o">:</span> <span class="s1">&#39;mysql&#39;</span><span class="p">,</span>
   <span class="nx">host</span><span class="o">:</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span>
   <span class="nx">port</span><span class="o">:</span> <span class="mi">3306</span><span class="p">,</span>
-  <span class="nx">database</span><span class="o">:</span> <span class="s1">&#39;egg-sequelize-doc-default&#39;</span><span class="p">,</span>
+  <span class="nx">database</span><span class="o">:</span> <span class="s1">&#39;database_development&#39;</span><span class="p">,</span>
 <span class="p">};</span>
 </code></pre></td></tr></table>
 </div>
-</div><h4 id="4-配置不同数据源">4. 配置不同数据源</h4>
+</div><h4 id="4-配置不同数据源x">4. 配置不同数据源（X）</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -2161,27 +2162,29 @@
   <span class="nx">dialect</span><span class="o">:</span> <span class="s1">&#39;mysql&#39;</span><span class="p">,</span>
   <span class="nx">host</span><span class="o">:</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span>
   <span class="nx">port</span><span class="o">:</span> <span class="mi">3306</span><span class="p">,</span>
-  <span class="nx">database</span><span class="o">:</span> <span class="s1">&#39;egg-sequelize-doc-unittest&#39;</span><span class="p">,</span>
+  <span class="nx">database</span><span class="o">:</span> <span class="s1">&#39;database_test&#39;</span><span class="p">,</span>
 <span class="p">};</span>
 </code></pre></td></tr></table>
 </div>
 </div><hr/>
 <h2 id="二初始化数据库和-migrations">二、初始化数据库和 Migrations</h2>
-<h5 id="设计和初始化一下数据库">设计和初始化一下数据库。</h5>
+<h3 id="1-设计和初始化数据库x推荐使用beekeeper">1. 设计和初始化数据库（X，推荐使用Beekeeper）</h3>
 <p>首先通过 mysql 命令在本地快速创建开发和测试要用到的两个 database：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
+</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
-<span class="nx">mysql</span> <span class="o">-</span><span class="nx">u</span> <span class="nx">root</span> <span class="o">-</span><span class="nx">e</span> <span class="s1">&#39;CREATE DATABASE IF NOT EXISTS `egg-sequelize-doc-default`;&#39;</span>
-<span class="nx">mysql</span> <span class="o">-</span><span class="nx">u</span> <span class="nx">root</span> <span class="o">-</span><span class="nx">e</span> <span class="s1">&#39;CREATE DATABASE IF NOT EXISTS `egg-sequelize-doc-unittest`;&#39;</span>
+<span class="nx">mysql</span> <span class="o">-</span><span class="nx">u</span> <span class="nx">root</span> <span class="o">-</span><span class="nx">e</span> <span class="s1">&#39;CREATE DATABASE IF NOT EXISTS `database_development`&#39;</span><span class="p">;</span>
+<span class="nx">mysql</span> <span class="o">-</span><span class="nx">u</span> <span class="nx">root</span> <span class="o">-</span><span class="nx">e</span> <span class="s1">&#39;CREATE DATABASE IF NOT EXISTS `database_test`&#39;</span><span class="p">;</span>
+<span class="nx">mysql</span> <span class="o">-</span><span class="nx">u</span> <span class="nx">root</span> <span class="o">-</span><span class="nx">e</span> <span class="s1">&#39;CREATE DATABASE IF NOT EXISTS `database_production`&#39;</span><span class="p">;</span>
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="1-设计-users-表">1. 设计 users 表</h3>
+</div><h3 id="2-设计-users-表">2. 设计 users 表</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -2209,7 +2212,7 @@
 </div><p>可以直接通过 mysql 命令将表直接建好，但是这并不是一个对多人协作非常友好的开发模式。<br />
 在项目的演进过程中，每一个迭代都有可能对数据库数据结构做变更，怎样跟踪每一个迭代的数据变更，并在不同的环境（开发、测试、CI）和迭代切换中，快速变更数据结构呢？<br />
 这时候就需要 Migrations 来管理数据结构的变更了。</p>
-<h3 id="2-migrations-迁移">2. Migrations 迁移</h3>
+<h3 id="3-migrations-迁移直接推荐">3. Migrations 迁移（直接推荐）</h3>
 <h4 id="1-安装-1">1）. 安装</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2287,21 +2290,35 @@
 </span><span class="lnt">15
 </span><span class="lnt">16
 </span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">
 <span class="p">{</span>
   <span class="s2">&#34;development&#34;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&#34;username&#34;</span><span class="o">:</span> <span class="s2">&#34;root&#34;</span><span class="p">,</span>
-    <span class="s2">&#34;password&#34;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="s2">&#34;database&#34;</span><span class="o">:</span> <span class="s2">&#34;egg-sequelize-doc-default&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;password&#34;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span> <span class="c1">// 如果MySQL设置了密码，那就改写为密码字符串
+</span><span class="c1"></span>    <span class="s2">&#34;database&#34;</span><span class="o">:</span> <span class="s2">&#34;database_development&#34;</span><span class="p">,</span>
     <span class="s2">&#34;host&#34;</span><span class="o">:</span> <span class="s2">&#34;127.0.0.1&#34;</span><span class="p">,</span>
     <span class="s2">&#34;dialect&#34;</span><span class="o">:</span> <span class="s2">&#34;mysql&#34;</span>
   <span class="p">},</span>
   <span class="s2">&#34;test&#34;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&#34;username&#34;</span><span class="o">:</span> <span class="s2">&#34;root&#34;</span><span class="p">,</span>
-    <span class="s2">&#34;password&#34;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span>
-    <span class="s2">&#34;database&#34;</span><span class="o">:</span> <span class="s2">&#34;egg-sequelize-doc-unittest&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;password&#34;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span> <span class="c1">// 如果MySQL设置了密码，那就改写为密码字符串
+</span><span class="c1"></span>    <span class="s2">&#34;database&#34;</span><span class="o">:</span> <span class="s2">&#34;database_test&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;host&#34;</span><span class="o">:</span> <span class="s2">&#34;127.0.0.1&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;dialect&#34;</span><span class="o">:</span> <span class="s2">&#34;mysql&#34;</span>
+  <span class="p">},</span>
+  <span class="s2">&#34;test&#34;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&#34;username&#34;</span><span class="o">:</span> <span class="s2">&#34;root&#34;</span><span class="p">,</span>
+    <span class="s2">&#34;password&#34;</span><span class="o">:</span> <span class="kc">null</span><span class="p">,</span> <span class="c1">// 如果MySQL设置了密码，那就改写为密码字符串
+</span><span class="c1"></span>    <span class="s2">&#34;database&#34;</span><span class="o">:</span> <span class="s2">&#34;database_production&#34;</span><span class="p">,</span>
     <span class="s2">&#34;host&#34;</span><span class="o">:</span> <span class="s2">&#34;127.0.0.1&#34;</span><span class="p">,</span>
     <span class="s2">&#34;dialect&#34;</span><span class="o">:</span> <span class="s2">&#34;mysql&#34;</span>
   <span class="p">}</span>
@@ -2848,21 +2865,17 @@
           <ul>
             <li><a href="#1-安装">1. 安装</a></li>
             <li><a href="#2-引用插件">2. 引用插件</a></li>
-            <li><a href="#3-编写配置">3. 编写配置</a></li>
-            <li><a href="#4-配置不同数据源">4. 配置不同数据源</a></li>
+            <li><a href="#3-编写配置x">3. 编写配置（X）</a></li>
+            <li><a href="#4-配置不同数据源x">4. 配置不同数据源（X）</a></li>
           </ul>
         </li>
       </ul>
     </li>
     <li><a href="#二初始化数据库和-migrations">二、初始化数据库和 Migrations</a>
       <ul>
-        <li>
-          <ul>
-            <li></li>
-          </ul>
-        </li>
-        <li><a href="#1-设计-users-表">1. 设计 users 表</a></li>
-        <li><a href="#2-migrations-迁移">2. Migrations 迁移</a>
+        <li><a href="#1-设计和初始化数据库x推荐使用beekeeper">1. 设计和初始化数据库（X，推荐使用Beekeeper）</a></li>
+        <li><a href="#2-设计-users-表">2. 设计 users 表</a></li>
+        <li><a href="#3-migrations-迁移直接推荐">3. Migrations 迁移（直接推荐）</a>
           <ul>
             <li><a href="#1-安装-1">1）. 安装</a></li>
             <li><a href="#2-新建-sequelizerc">2）. 新建 <code>.sequelizerc</code></a></li>

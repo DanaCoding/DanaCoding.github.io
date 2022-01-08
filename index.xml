@@ -132,15 +132,6 @@
       </item>
       
       <item>
-        <title>Docker</title>
-        <link>https://danacoding.github.io/server/docker/docker-what/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/server/docker/docker-what/</guid>
-        <description>什么是Docker Docker是一个应用层的抽象容器，将代码和依赖打包在一起。 多个容器可以在同一台机器上运行，并与其他容器共享操作系统内核，</description>
-      </item>
-      
-      <item>
         <title>Expo 基础</title>
         <link>https://danacoding.github.io/react-native/expo/expo-base/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -636,12 +627,12 @@
       </item>
       
       <item>
-        <title>sequelize</title>
+        <title>sequelize（推荐）</title>
         <link>https://danacoding.github.io/server/egg/egg-sequelize/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/server/egg/egg-sequelize/</guid>
-        <description>一、安装配置 1. 安装 1 2 yarn add egg-sequelize mysql2 2. 引用插件 1 2 3 4 5 6 // config/plugin.js exports.sequelize = { enable: true, package: &amp;#39;egg-sequelize&amp;#39;, }; 3. 编写配置 1 2 3 4 5 6 7 8 // config/config.default.js config.sequelize = { dialect: &amp;#39;mysql&amp;#39;, host: &amp;#39;127.0.0.1&amp;#39;, port: 3306, database: &amp;#39;egg-sequelize-doc-default&amp;#39;, }; 4. 配置不同数据</description>
+        <description>通过 egg-mysql 插件来访问数据库。而在一些较为复杂的应用中，需要一个 ORM 框架来帮助管理数据层的代码。 一、安装配置 1. 安装 1 2 yarn add egg-sequelize mysql2 2. 引用插件 1 2 3 4 5 6</description>
       </item>
       
       <item>
@@ -1398,6 +1389,15 @@ caluere tempus&lt;/p&gt;</description>
 pectora summo. Redit teque digerit hominumque toris verebor lumina non cervice&lt;br /&gt;
 subde tollit usus habet Arctonque, furores quas nec ferunt. Quoque montibus nunc&lt;br /&gt;
 caluere tempus&lt;/p&gt;</description>
+      </item>
+      
+      <item>
+        <title></title>
+        <link>https://danacoding.github.io/server/docker/docker-what/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://danacoding.github.io/server/docker/docker-what/</guid>
+        <description>1. Docker Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从 Apache2.0 协议开源。 Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任</description>
       </item>
       
     
