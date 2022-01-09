@@ -138,6 +138,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/nodejs/adonis/adonis/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/javascript/array/array-bp/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -163,17 +168,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/server/docker/docker-what/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://danacoding.github.io/react-native/expo/expo-base/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/nodejs/fastify/fastify/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -193,22 +188,12 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/nodejs/hapi/hapi-base/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://danacoding.github.io/javascript/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://danacoding.github.io/javascript/algorithms-data/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/nodejs/kali/kali/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -223,7 +208,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/server/nodejs/</loc>
+    <loc>https://danacoding.github.io/nodejs/nodebase/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -298,17 +283,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/server/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://danacoding.github.io/react/storybook/sb-bp/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/nodejs/ubuntu/ubuntu/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -353,11 +328,6 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/server/nodejs/nodebase/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://danacoding.github.io/others/devmethod/devmethod/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -373,12 +343,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/server/egg/egg-start/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/server/nodejs/nodebase/node-start/</loc>
+    <loc>https://danacoding.github.io/nodejs/nodebase/node-start/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -413,17 +378,12 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/nodejs/adonis/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/javascript/algorithms-data/function-programming/map-programming/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/server/egg/egg-mysql/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/server/egg/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -513,7 +473,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/server/nodejs/nodebase/node-programming/</loc>
+    <loc>https://danacoding.github.io/nodejs/nodebase/node-programming/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -543,11 +503,6 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/server/docker/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://danacoding.github.io/others/git/git-bp/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -563,6 +518,11 @@
   </url>
   
   <url>
+    <loc>https://danacoding.github.io/nodejs/orm/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://danacoding.github.io/react-patterns/performance-patterns/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
@@ -574,11 +534,6 @@
   
   <url>
     <loc>https://danacoding.github.io/react-native/expo/react-navigation/</loc>
-    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danacoding.github.io/server/egg/egg-sequelize/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -618,7 +573,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/server/nodejs/nodebase/node-engine/</loc>
+    <loc>https://danacoding.github.io/nodejs/nodebase/node-engine/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -649,6 +604,11 @@
   
   <url>
     <loc>https://danacoding.github.io/others/php/iisphp/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/nodejs/nginx/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -688,12 +648,17 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/server/nodejs/nodebase/node-exit/</loc>
+    <loc>https://danacoding.github.io/nodejs/nodebase/node-exit/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://danacoding.github.io/javascript/algorithms-data/function-programming/concat-programming/</loc>
+    <lastmod>2020-01-28T00:34:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://danacoding.github.io/nodejs/docker/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -748,7 +713,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/server/nodejs/nodebase/node-var/</loc>
+    <loc>https://danacoding.github.io/nodejs/nodebase/node-var/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -768,7 +733,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/server/nodejs/nodebase/node-repl/</loc>
+    <loc>https://danacoding.github.io/nodejs/nodebase/node-repl/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -808,7 +773,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/server/nodejs/nodebase/node-cmd/</loc>
+    <loc>https://danacoding.github.io/nodejs/nodebase/node-cmd/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   
@@ -848,7 +813,7 @@
   </url>
   
   <url>
-    <loc>https://danacoding.github.io/server/nodejs/nodebase/node-export/</loc>
+    <loc>https://danacoding.github.io/nodejs/nodebase/node-export/</loc>
     <lastmod>2020-01-28T00:34:39+09:00</lastmod>
   </url>
   

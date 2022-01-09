@@ -96,6 +96,15 @@
       </item>
       
       <item>
+        <title>Adonis.js</title>
+        <link>https://danacoding.github.io/nodejs/adonis/adonis/</link>
+        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
+        
+        <guid>https://danacoding.github.io/nodejs/adonis/adonis/</guid>
+        <description>一、初始化 版本要求：Node.js v14 创建项目 yarn create adonis-ts-app hello-adonis 1 2 3 4 5 6 CUSTOMIZE PROJECT &amp;gt; Select the project structure · api &amp;gt; Enter the project name · hello-adonis &amp;gt; Setup eslint? (y/N) · true &amp;gt; Setup prettier? (y/N) » false 启动开发服务器 node ace serve</description>
+      </item>
+      
+      <item>
         <title>Array</title>
         <link>https://danacoding.github.io/javascript/array/array-bp/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -128,15 +137,6 @@
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/nodejs/docker/docker/</guid>
-        <description></description>
-      </item>
-      
-      <item>
-        <title>Docker</title>
-        <link>https://danacoding.github.io/server/docker/docker-what/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/server/docker/docker-what/</guid>
         <description>1. Docker Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从 Apache2.0 协议开源。 Docker 可以让开发者打包他们的应用以及依赖包到一个轻量级、可移植的容器中，然后发布到任</description>
       </item>
       
@@ -147,33 +147,6 @@
         
         <guid>https://danacoding.github.io/react-native/expo/expo-base/</guid>
         <description>一、运行设备 Expo客户端App 浏览器 模拟器(使用genymotion) 下载并安装 Android Studio 3.0+ 在Android Studio中，转到首选项&amp;gt;外</description>
-      </item>
-      
-      <item>
-        <title>Fastify</title>
-        <link>https://danacoding.github.io/nodejs/fastify/fastify/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/nodejs/fastify/fastify/</guid>
-        <description></description>
-      </item>
-      
-      <item>
-        <title>Hapi</title>
-        <link>https://danacoding.github.io/nodejs/hapi/hapi-base/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/nodejs/hapi/hapi-base/</guid>
-        <description>Hapi起初是给沃尔玛的“黑色星期五”开发的，是企业级的开发框架。 Express等开发框架的大部分功能都严重依赖中间件，中间件只是不良设计的</description>
-      </item>
-      
-      <item>
-        <title>Kali Linux</title>
-        <link>https://danacoding.github.io/nodejs/kali/kali/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/nodejs/kali/kali/</guid>
-        <description></description>
       </item>
       
       <item>
@@ -267,15 +240,6 @@
       </item>
       
       <item>
-        <title>Ubuntu</title>
-        <link>https://danacoding.github.io/nodejs/ubuntu/ubuntu/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/nodejs/ubuntu/ubuntu/</guid>
-        <description></description>
-      </item>
-      
-      <item>
         <title>UI-Kitten 基础</title>
         <link>https://danacoding.github.io/react-native/ui/ui-kitten/kitten-base/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -358,19 +322,10 @@
       
       <item>
         <title>快速开始</title>
-        <link>https://danacoding.github.io/server/egg/egg-start/</link>
+        <link>https://danacoding.github.io/nodejs/nodebase/node-start/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/server/egg/egg-start/</guid>
-        <description>选择 Egg.js 并不是因为它在技术上有多出色，重要的是在众多框架中，它的文档对开发者是最友好的。 一、项目初始化 1. 自动 1 2 3 4 5 6 7 8 mkdir hello-egg &amp;amp;&amp;amp; cd hello-egg npm init egg //</description>
-      </item>
-      
-      <item>
-        <title>快速开始</title>
-        <link>https://danacoding.github.io/server/nodejs/nodebase/node-start/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/server/nodejs/nodebase/node-start/</guid>
+        <guid>https://danacoding.github.io/nodejs/nodebase/node-start/</guid>
         <description>Node.js 简介 Node.js 是一个开源的跨平台 JavaScript 运行时环境。 Node.js 在浏览器之外运行 V8 JavaScript 引擎，它是 Google Chrome 的核心。 Node.js 应用程序在单个进程中运行，无需为每个请求创建一个新线程</description>
       </item>
       
@@ -408,15 +363,6 @@
         
         <guid>https://danacoding.github.io/javascript/algorithms-data/function-programming/map-programming/</guid>
         <description>map() 方法创建一个新数组，其中填充了对调用数组中的每个元素调用提供的函数的结果。 使用 map 方法从数组中提取数据 目前为止，已经使用纯函数来避免程序中的</description>
-      </item>
-      
-      <item>
-        <title>egg-mysql</title>
-        <link>https://danacoding.github.io/server/egg/egg-mysql/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/server/egg/egg-mysql/</guid>
-        <description>一、安装配置 MySQL社区下载 SQL GUI编辑器 1. 安装 1 2 yarn add egg-mysql 2. 开启插件 1 2 3 4 5 6 // config/plugin.js exports.mysql = { enable: true, package: &amp;#39;egg-mysql&amp;#39;, }; 在 config/config.${env}.js 配置各个环境的数据库连接信息。 3. 单</description>
       </item>
       
       <item>
@@ -538,10 +484,10 @@
       
       <item>
         <title>异步编程</title>
-        <link>https://danacoding.github.io/server/nodejs/nodebase/node-programming/</link>
+        <link>https://danacoding.github.io/nodejs/nodebase/node-programming/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/server/nodejs/nodebase/node-programming/</guid>
+        <guid>https://danacoding.github.io/nodejs/nodebase/node-programming/</guid>
         <description>JavaScript 默认是同步的，并且是单线程的。这意味着代码不能创建新线程并并行运行。 一行一行的代码依次执行，例如： 1 2 3 4 5 6 const a = 1 const b = 2 const c = a * b</description>
       </item>
       
@@ -636,15 +582,6 @@
       </item>
       
       <item>
-        <title>sequelize（推荐）</title>
-        <link>https://danacoding.github.io/server/egg/egg-sequelize/</link>
-        <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
-        
-        <guid>https://danacoding.github.io/server/egg/egg-sequelize/</guid>
-        <description>通过 egg-mysql 插件来访问数据库。而在一些较为复杂的应用中，需要一个 ORM 框架来帮助管理数据层的代码。 一、安装配置 1. 安装 1 2 yarn add egg-sequelize mysql2 2. 引用插件 1 2 3 4 5 6</description>
-      </item>
-      
-      <item>
         <title>Story 是什么？</title>
         <link>https://danacoding.github.io/react/storybook/sb-started/sb-what/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
@@ -691,10 +628,10 @@
       
       <item>
         <title>引擎和运行方式</title>
-        <link>https://danacoding.github.io/server/nodejs/nodebase/node-engine/</link>
+        <link>https://danacoding.github.io/nodejs/nodebase/node-engine/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/server/nodejs/nodebase/node-engine/</guid>
+        <guid>https://danacoding.github.io/nodejs/nodebase/node-engine/</guid>
         <description>一、V8 JavaScript 引擎 V8 是支持 Google Chrome 的 JavaScript 引擎的名称。 V8 是用 C++ 编写的。它是便携式的，可在 Mac、Windows、Linux 和其他几个系统上运行。。 很酷的</description>
       </item>
       
@@ -817,10 +754,10 @@
       
       <item>
         <title>退出 Node.js 程序</title>
-        <link>https://danacoding.github.io/server/nodejs/nodebase/node-exit/</link>
+        <link>https://danacoding.github.io/nodejs/nodebase/node-exit/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/server/nodejs/nodebase/node-exit/</guid>
+        <guid>https://danacoding.github.io/nodejs/nodebase/node-exit/</guid>
         <description>有多种方法可以终止 Node.js 应用程序。 1. ctrl + c 在控制台中运行程序时，可以使用 ctrl-C 关闭它，但在这里要讨论的是以编程方式退出。 2. process.exit() process 核心模块提供了一个方便</description>
       </item>
       
@@ -907,10 +844,10 @@
       
       <item>
         <title>读取环境变量</title>
-        <link>https://danacoding.github.io/server/nodejs/nodebase/node-var/</link>
+        <link>https://danacoding.github.io/nodejs/nodebase/node-var/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/server/nodejs/nodebase/node-var/</guid>
+        <guid>https://danacoding.github.io/nodejs/nodebase/node-var/</guid>
         <description>Node.js 的流程核心模块提供 env 属性，该属性托管在流程启动时设置的所有环境变量。 一、设置变量（测试环境） 下面的代码运行 app.js 并设置 USER_ID 和 USER_KEY。 1</description>
       </item>
       
@@ -943,10 +880,10 @@
       
       <item>
         <title>使用 REPL 测试代码</title>
-        <link>https://danacoding.github.io/server/nodejs/nodebase/node-repl/</link>
+        <link>https://danacoding.github.io/nodejs/nodebase/node-repl/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/server/nodejs/nodebase/node-repl/</guid>
+        <guid>https://danacoding.github.io/nodejs/nodebase/node-repl/</guid>
         <description>REPL 表示 Read Evaluate Print Loop，它是一种编程语言环境（基本上是一个控制台窗口）， 它将单个表达式作为用户输入，并在执行后将结果返回到控制台。 REPL 会话提供了</description>
       </item>
       
@@ -1006,10 +943,10 @@
       
       <item>
         <title>命令行</title>
-        <link>https://danacoding.github.io/server/nodejs/nodebase/node-cmd/</link>
+        <link>https://danacoding.github.io/nodejs/nodebase/node-cmd/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/server/nodejs/nodebase/node-cmd/</guid>
+        <guid>https://danacoding.github.io/nodejs/nodebase/node-cmd/</guid>
         <description>一、从命令行接受参数 在调用 Node.js 应用程序时，可以使用任意数量的参数 参数可以是独立的，也可以有一个键和一个值。 1 2 3 4 5 6 node app.js joe // or node app.js name=joe 这会改变</description>
       </item>
       
@@ -1060,10 +997,10 @@
       
       <item>
         <title>使用 exports</title>
-        <link>https://danacoding.github.io/server/nodejs/nodebase/node-export/</link>
+        <link>https://danacoding.github.io/nodejs/nodebase/node-export/</link>
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
-        <guid>https://danacoding.github.io/server/nodejs/nodebase/node-export/</guid>
+        <guid>https://danacoding.github.io/nodejs/nodebase/node-export/</guid>
         <description>Node.js 有一个内置的模块系统。 Node.js 文件可以导入其他 Node.js 文件公开的功能。 module.exports 1 2 3 4 5 6 7 8 9 10 // car.js const car = { brand: &amp;#39;Ford&amp;#39;, model: &amp;#39;Fiesta&amp;#39; } module.exports = car // index.js const car = require(&amp;#39;./car&amp;#39;) exports 1 2 3 4 5 6 7 8</description>
       </item>
       
