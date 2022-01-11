@@ -2752,7 +2752,22 @@
 以及用于开发测试的 <code>redux-devtools</code> 工具。</p>
 <p>注意：以上的安装方式是在已有的项目中安装的（Next.js 项目中）。</p>
 <h4 id="3-改变目录结构">3. 改变目录结构</h4>
-<p>将 pages 放入 新建的 src 目录中：</p>
+<pre tabindex="0"><code class="language-base" data-lang="base">📦src
+ ├─ 📂app
+ │ ├─ 📜hooks.ts
+ │ └─ 📜store.ts
+ ├─ 📂features
+ │ └─ 📂counter
+ │ │ ├─ 📜Counter.module.css
+ │ │ ├─ 📜Counter.tsx
+ │ │ ├─ 📜counterAPI.ts
+ │ │ └─ 📜counterSlice.ts
+ └─ 📂pages
+ │ ├─ 📂api
+ │ │ └─ 📜hello.ts
+ │ ├─ 📜index.tsx
+ │ └─ 📜_app.tsx
+</code></pre><p>将 pages 放入 新建的 src 目录中：</p>
 <p><p class="md__image">
   <img src="https://blogger.googleusercontent.com/img/a/AVvXsEingeNbpTTVUd3sS__Hv8ojmJpWDGXkmDMCnpIexkqdFrR03o_F6MdO8g5iFkPEzG8Ffv9l6HH_lO4qitxDhomEmXr4nG_vAOvpiAzYVAzDiVG8fhMXLU_MRpTghJy6F33ge_RAP1gzi6lmUMl7assEbF7_yaYoqFBEkLe2FnKTHcoQRW7xpX9zJUtXvA=w386-h492" alt=""  />
 </p></p>
