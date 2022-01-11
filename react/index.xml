@@ -47,7 +47,7 @@
         <pubDate>Tue, 28 Jan 2020 00:34:39 +0900</pubDate>
         
         <guid>https://danacoding.github.io/react/redux/redux-base/</guid>
-        <description>Redux 是一个状态管理框架，可以与包括 React 在内的许多不同的 Web 技术一起使用。 在 Redux 中，有一个状态对象负责应用程序的整个状态， 这意味着如果你有一个包含十个</description>
+        <description>Redux 是一个状态管理框架， 但我觉得它同时也是一门语言，因为它有自己的一套行事规则。 Redux 代码库本身很小，核心概念也很简洁明了，但是它的 “语言” 却不寻</description>
       </item>
       
       <item>
